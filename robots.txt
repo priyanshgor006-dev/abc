@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /edit.html
+
+Sitemap: https://YOUR-DOMAIN-HERE.org/sitemap.xml

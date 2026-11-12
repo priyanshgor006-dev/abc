@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kutch &amp; Bhuj &mdash; Bhuj Chamber of Commerce and Industries Federation</title>
+<meta name="description" content="Kutch district and Bhuj: history, tourism, ports, trade and business opportunities in India's largest district." />
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE.org/kutch.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Kutch &amp; Bhuj &mdash; Bhuj Chamber of Commerce and Industries Federation" />
+<meta property="og:description" content="Kutch district and Bhuj: history, tourism, ports, trade and business opportunities in India's largest district." />
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE.org/kutch.html" />
+<meta property="og:image" content="https://res.cloudinary.com/c3josacx/image/upload/v1788577765/coc-bhuj-news/rf72yu5ypjxwy3wbxas9.jpg" />
+<meta property="og:site_name" content="Bhuj Chamber of Commerce and Industries Federation" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Kutch &amp; Bhuj &mdash; Bhuj Chamber of Commerce and Industries Federation" />
+<meta name="twitter:description" content="Kutch district and Bhuj: history, tourism, ports, trade and business opportunities in India's largest district." />
+<meta name="twitter:image" content="https://res.cloudinary.com/c3josacx/image/upload/v1788577765/coc-bhuj-news/rf72yu5ypjxwy3wbxas9.jpg" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+
+:root {
+  --navy: #6b1f2a; --navy-dark: #4a1420; --navy-light: #8c3341;
+  --gold: #d97706; --gold-light: #f2a93c; --gold-hover: #b45309;
+  --bg: #ffffff; --bg-soft: #f8fafc; --text: #1f2937;
+  --muted: #6b7280; --border: #e5e7eb; --wine-tint: #f8f0f1;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; cursor: pointer; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.gradient-text {
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px; font-size: 10.5px; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--navy-light);
+}
+.eyebrow::before { content: ""; height: 1px; width: 24px; background: var(--gold); flex-shrink: 0; }
+
+/* ===== Header ===== */
+.site-header {
+  background: rgba(255,255,255,.98); border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 50; transition: box-shadow .25s var(--ease);
+}
+.site-header.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.06); }
+.header-inner {
+  max-width: 1240px; margin: 0 auto; padding: 6px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; position: relative;
+}
+.logo { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+.logo-mark { width: 84px; height: 84px; object-fit: contain; flex-shrink: 0; display: none; opacity: 0; transition: opacity .5s var(--ease); }
+.logo-mark.loaded { display: block; opacity: 1; }
+.logo-text { line-height: 1.2; font-size: 1.15rem; color: var(--navy-dark); }
+.logo-sub { display: block; font-size: 9px; font-weight: 500; color: var(--muted); letter-spacing: .16em; text-transform: uppercase; margin-top: 5px; }
+@media (max-width: 480px) {
+  .header-inner { padding: 6px 16px; }
+  .logo-mark { width: 56px; height: 56px; }
+  .logo-text { font-size: .95rem; }
+  .logo-sub { display: none; }
+}
+
+.nav-menu ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+.nav-menu a {
+  position: relative; display: inline-block; padding: 16px 0; font-size: 12.5px; font-weight: 550;
+  color: #4e5157; white-space: nowrap; transition: color .2s var(--ease);
+}
+.nav-menu a::after {
+  content: ""; position: absolute; left: 0; bottom: 8px; width: 0; height: 2px;
+  border-radius: 1px; background: var(--gold); transition: width .25s var(--ease);
+}
+.nav-menu a:hover, .nav-menu a.active { color: var(--navy); }
+.nav-menu a:hover::after, .nav-menu a.active::after { width: 100%; }
+
+.nav-toggle {
+  display: none; background: transparent; border: 1px solid var(--border); border-radius: 6px;
+  width: 42px; height: 42px; cursor: pointer; padding: 0; position: relative; flex-shrink: 0;
+}
+.nav-toggle span {
+  position: absolute; left: 11px; right: 11px; height: 2px; background: var(--navy);
+  border-radius: 2px; transition: transform .2s var(--ease), top .2s var(--ease), opacity .2s var(--ease);
+}
+.nav-toggle span:nth-child(1) { top: 13px; }
+.nav-toggle span:nth-child(2) { top: 20px; }
+.nav-toggle span:nth-child(3) { top: 27px; }
+.nav-toggle.open span:nth-child(1) { top: 20px; transform: rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { top: 20px; transform: rotate(-45deg); }
+@media (max-width: 1080px) {
+  .nav-toggle { display: block; }
+  .nav-menu {
+    display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff;
+    border-bottom: 1px solid var(--border); padding: 10px 20px 20px;
+    box-shadow: 0 12px 26px rgba(35,14,22,.09);
+  }
+  .nav-menu.open { display: block; }
+  .nav-menu ul { flex-direction: column; gap: 2px; }
+  .nav-menu a { display: block; padding: 13px 0; font-size: 14px; }
+  .nav-menu a::after { bottom: 7px; }
+}
+
+/* ===== Buttons ===== */
+.btn {
+  position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px; padding: 13px 24px; min-height: 46px; border-radius: 8px; font-size: 13.5px; font-weight: 650;
+  border: 1px solid transparent; transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%); color: #fff;
+  box-shadow: 0 4px 14px rgba(217,119,6,.35);
+}
+.btn-primary::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,.28) 50%, transparent 75%);
+  transform: translateX(-120%); transition: transform .6s var(--ease); pointer-events: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 20px rgba(217,119,6,.43); }
+.btn-primary:hover::after { transform: translateX(120%); }
+.btn-outline { background: transparent; color: var(--navy); border-color: #d8bec3; }
+.btn-outline:hover { background: var(--wine-tint); border-color: var(--navy-light); transform: translateY(-2px); }
+.btn-outline-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+.btn-outline-light:hover { background: rgba(255,255,255,.12); border-color: #fff; transform: translateY(-2px); }
+.btn-small { min-height: 38px; padding: 9px 16px; font-size: 12px; }
+.btn:disabled { opacity: .6; cursor: not-allowed; transform: none !important; }
+
+/* ===== Cards ===== */
+.card {
+  background: #fff; border: 1px solid var(--border); border-radius: 13px;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+}
+.card:hover {
+  transform: translateY(-4px); box-shadow: 0 12px 32px rgba(107,31,42,.12), 0 2px 8px rgba(0,0,0,.04);
+  border-color: var(--navy-light);
+}
+.photo-wrap { position: relative; overflow: hidden; background: #efe8e9; }
+.photo-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.card:hover .photo-wrap img, a:hover .photo-wrap img, button:hover .photo-wrap img { transform: scale(1.05); }
+.image-fallback {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  color: #b99ba2; background: var(--wine-tint);
+}
+
+/* ===== Reveal animation ===== */
+.reveal {
+  opacity: 0; transform: translateX(-40px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+.reveal.reveal-right { transform: translateX(40px); }
+.reveal.reveal-visible { opacity: 1; transform: translateX(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ===== Page header ===== */
+.page-hero {
+  position: relative; overflow: hidden; padding: 52px 0 54px;
+  background: radial-gradient(ellipse at 100% 0%, rgba(217,119,6,.07), transparent 48%),
+              radial-gradient(ellipse at 0% 100%, rgba(107,31,42,.06), transparent 55%), #fcf9f8;
+  border-bottom: 1px solid var(--border);
+}
+.page-hero::after {
+  content: ""; position: absolute; right: 8%; top: -74px; width: 220px; height: 300px;
+  border: 1px solid rgba(107,31,42,.07); border-radius: 120px 120px 0 0; transform: rotate(23deg);
+  pointer-events: none;
+  box-shadow: 20px 0 0 16px rgba(107,31,42,.018), 40px 0 0 30px rgba(217,119,6,.025);
+}
+.page-hero .container { position: relative; z-index: 1; }
+
+.page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 700; margin: 0 0 10px; letter-spacing: -.02em; }
+.page-hero .eyebrow { margin-bottom: 14px; }
+.page-hero p { color: var(--muted); margin: 0; max-width: 600px; font-size: 15px; }
+
+/* ===== Section basics ===== */
+.section { padding: 72px 0; }
+.section-soft { background: var(--bg-soft); }
+.section-heading { text-align: center; margin-bottom: 38px; }
+.section-heading h2 { font-size: clamp(1.5rem, 2.6vw, 1.8rem); font-weight: 700; margin: 0 0 10px; }
+.section-heading p { color: var(--muted); margin: 0; max-width: 560px; margin-inline: auto; font-size: .98rem; }
+
+/* ===== Icons ===== */
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; vertical-align: middle; }
+
+/* ===== States (loading / empty / error) ===== */
+.state-block { text-align: center; padding: 64px 20px; grid-column: 1 / -1; }
+.state-icon {
+  display: inline-flex; align-items: center; justify-content: center; width: 68px; height: 68px;
+  color: var(--navy-light); background: var(--wine-tint); border-radius: 50%; margin-bottom: 20px;
+}
+.state-icon .icon { width: 28px; height: 28px; }
+.state-block h3 { font-size: 1.2rem; font-weight: 650; color: var(--navy); margin: 0 0 8px; }
+.state-block p { color: var(--muted); font-size: .92rem; max-width: 420px; margin: 0 auto; }
+.state-block .btn { margin-top: 20px; }
+.spinner {
+  width: 30px; height: 30px; border: 3px solid var(--border); border-top-color: var(--navy);
+  border-radius: 50%; animation: spin .8s linear infinite; margin: 0 auto 14px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== Forms ===== */
+.admin-form { max-width: 640px; background: #fff; border: 1px solid var(--border); border-radius: 13px; padding: 26px; margin-bottom: 32px; }
+.admin-form h2 { margin: 0 0 18px; font-size: 1.15rem; color: var(--navy); font-weight: 700; }
+.form-row { margin-bottom: 15px; }
+.form-row label { display: block; font-size: .85rem; font-weight: 650; margin-bottom: 6px; color: var(--text); }
+.form-row .req { color: #a63842; margin-left: 2px; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; padding: 10px 13px; font-size: .93rem; font-family: inherit;
+  background: #fff; border: 1px solid var(--border); border-radius: 8px; outline: none; color: var(--text);
+  transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  border-color: var(--navy-light); box-shadow: 0 0 0 3px rgba(107,31,42,.08);
+}
+.form-row textarea { min-height: 90px; resize: vertical; }
+.form-status { padding: 10px 13px; border-radius: 8px; font-size: .88rem; margin-bottom: 12px; border: 1px solid transparent; display: none; }
+.form-status.visible { display: block; }
+.form-status.success { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+.form-status.error { background: #fef2f2; color: #a63842; border-color: #fecaca; }
+
+/* ===== Footer ===== */
+.site-footer { background: var(--navy-dark); color: rgba(255,255,255,.85); padding: 34px 20px; text-align: center; font-size: .88rem; }
+.site-footer p { margin: 0; }
+.site-footer .footer-brand { font-weight: 650; color: #fff; margin-bottom: 4px; }
+.site-footer .contact { opacity: .7; margin-top: 10px; font-size: .82rem; }
+
+
+  .editorial-grid { display: grid; grid-template-columns: .75fr 1.35fr; gap: 70px; align-items: start; }
+  .editorial-grid .section-heading { margin: 0; text-align: left; }
+  .editorial-grid .section-heading p { margin-inline: 0; }
+  .about-text { font-size: 1.02rem; line-height: 1.75; color: var(--text); }
+  .about-text p { margin: 0 0 18px; }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-subhead { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin: 26px 0 12px; }
+  .about-objectives { margin: 0; padding-left: 20px; display: grid; gap: 12px; }
+  .about-objectives li { padding-left: 4px; }
+  .about-objectives li::marker { color: var(--gold, #d97706); }
+  .leadership-bio { margin-top: 22px; font-size: .98rem; line-height: 1.75; color: var(--text); text-align: left; }
+  .leadership-bio p { margin: 0 0 14px; }
+  .leadership-bio p:last-child { margin-bottom: 0; }
+  @media (max-width: 720px) {
+    .editorial-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+  .activities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (min-width: 768px) { .activities-grid { grid-template-columns: repeat(4, 1fr); } }
+  .activity-card { padding: 27px 24px; display: block; }
+  .activity-icon-box {
+    display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px;
+    color: var(--navy); background: var(--wine-tint); border-radius: 10px; margin-bottom: 18px;
+    transition: transform .3s var(--ease);
+  }
+  .activity-card:hover .activity-icon-box { transform: scale(1.08); }
+  .activity-card h3 { font-size: 1rem; margin: 0; font-weight: 650; color: var(--navy-dark); }
+  .activity-card p { font-size: .78rem; color: var(--muted); margin-top: 8px; line-height: 1.6; }
+
+  .leadership-layout {
+    display: grid; grid-template-columns: 220px 1fr; align-items: start; gap: 56px; max-width: 1000px;
+  }
+  .leadership-photo {
+    width: 220px; height: 220px; border-radius: 50%; background: var(--wine-tint); border: 3px solid var(--border);
+    overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .leadership-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .leadership-photo .initials { font-size: 3.4rem; font-weight: 700; color: var(--navy-light); }
+  .leadership-copy .leadership-name { font-size: 1.5rem; margin: 0 0 6px; color: var(--navy); font-weight: 700; }
+  .leadership-role { font-size: .85rem; color: var(--muted); }
+  .leadership-copy blockquote {
+    margin: 24px 0 0; color: #57505a; font-size: 1.25rem; line-height: 1.55; max-width: 480px; font-style: normal;
+  }
+  .leadership-note { font-size: .72rem; color: #92939a; margin-top: 12px; }
+  @media (max-width: 720px) {
+    .leadership-layout { grid-template-columns: 1fr; text-align: center; gap: 26px; }
+    .leadership-photo { margin: 0 auto; width: 170px; height: 170px; }
+    .leadership-copy .eyebrow { justify-content: center; }
+    .leadership-copy blockquote { font-size: 1.1rem; margin-inline: auto; }
+  }
+
+  .photo-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  @media (min-width: 640px) { .photo-strip { grid-template-columns: repeat(4, 1fr); } }
+  .photo-strip-item { aspect-ratio: 1; border-radius: 12px; overflow: hidden; }
+
+  .cta-section { text-align: center; padding: 60px 20px; background: var(--navy); color: #fff; }
+  .cta-section h2 { font-size: 1.8rem; margin: 0 auto 14px; font-weight: 700; max-width: 520px; }
+  .cta-section p { font-size: 1.02rem; margin: 0 auto 26px; opacity: .9; max-width: 480px; }
+
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-size: 10px; color: #8f7e81; letter-spacing: .02em; }
+.breadcrumb a { transition: color .15s var(--ease); }
+.breadcrumb a:hover { color: var(--navy); }
+.breadcrumb svg { width: 11px; height: 11px; }
+
+/* ===== Kutch page ===== */
+.kx-hero { position: relative; min-height: 460px; display: grid; align-items: end; color: #fff; overflow: hidden; background: linear-gradient(135deg, var(--navy-dark), var(--navy)); }
+.kx-hero figure { position: absolute; inset: 0; margin: 0; }
+.kx-hero figure img { width: 100%; height: 100%; object-fit: cover; }
+.kx-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,6,10,.15) 20%, rgba(20,6,10,.78)); }
+.kx-hero .container { position: relative; z-index: 2; padding-top: 80px; padding-bottom: 48px; }
+.kx-hero .eyebrow { color: #fcd9a0; }
+.kx-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin: 8px 0 12px; color: #fff; }
+.kx-hero p { max-width: 640px; font-size: 1.05rem; line-height: 1.7; color: rgba(255,255,255,.92); margin: 0; }
+.kx-hero .kx-credit { z-index: 3; }
+.kx-hero .kx-fallback { display: none !important; }
+.kx-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.kx-jump a { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); color: #fff; border-radius: 999px; padding: 7px 14px; font-size: .84rem; font-weight: 600; backdrop-filter: blur(4px); }
+.kx-jump a:hover { background: rgba(255,255,255,.28); }
+.kx-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: -36px; position: relative; z-index: 3; }
+.kx-stat { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 18px 16px; box-shadow: 0 10px 26px rgba(74,20,32,.08); }
+.kx-stat b { display: block; font-size: 1.45rem; color: var(--navy); line-height: 1.15; }
+.kx-stat span { display: block; font-size: .8rem; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+.kx-section { padding: 70px 0; }
+.kx-section.soft { background: var(--bg-soft); }
+.kx-split { display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; }
+.kx-split.flip > :first-child { order: 2; }
+.kx-text h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 6px 0 14px; color: var(--navy-dark); }
+.kx-text p { font-size: 1rem; line-height: 1.8; color: var(--text); margin: 0 0 14px; }
+.kx-text ul { margin: 0; padding-left: 20px; line-height: 1.85; }
+.kx-img { position: relative; margin: 0; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, var(--navy), var(--navy-dark)); aspect-ratio: 4 / 3; box-shadow: 0 14px 34px rgba(74,20,32,.12); }
+.kx-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kx-fallback { display: none; position: absolute; inset: 0; place-items: center; text-align: center; padding: 20px; color: rgba(255,255,255,.9); font-weight: 700; }
+.no-img .kx-fallback { display: grid; }
+.kx-credit { position: absolute; right: 8px; bottom: 8px; font-size: .68rem; color: #fff; background: rgba(0,0,0,.5); padding: 3px 8px; border-radius: 999px; z-index: 2; }
+.no-img .kx-credit { display: none; }
+.kx-timeline { list-style: none; margin: 18px 0 0; padding: 0; border-left: 2px solid #ecd2a8; }
+.kx-timeline li { position: relative; padding: 0 0 14px 20px; line-height: 1.65; }
+.kx-timeline li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--gold); }
+.kx-timeline b { color: var(--navy); }
+.kx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.kx-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+.kx-card .kx-img { border-radius: 0; box-shadow: none; aspect-ratio: 16 / 10; }
+.kx-card-body { padding: 18px 20px 20px; }
+.kx-card h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--navy-dark); }
+.kx-card p { margin: 0; font-size: .92rem; line-height: 1.65; color: var(--muted); }
+.kx-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-hover); margin-bottom: 6px; }
+.kx-heading { max-width: 760px; margin-bottom: 30px; }
+.kx-heading h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 6px 0 10px; color: var(--navy-dark); }
+.kx-heading p { color: var(--muted); line-height: 1.75; margin: 0; }
+.kx-opps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.kx-opp { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.kx-opp .ico { width: 42px; height: 42px; border-radius: 10px; background: var(--wine-tint); color: var(--navy); display: grid; place-items: center; font-size: 1.25rem; margin-bottom: 12px; }
+.kx-opp h3 { margin: 0 0 6px; font-size: 1rem; color: var(--navy-dark); }
+.kx-opp p { margin: 0; font-size: .88rem; line-height: 1.6; color: var(--muted); }
+.kx-sources { font-size: .84rem; color: var(--muted); line-height: 1.8; }
+.kx-sources a { color: var(--navy); text-decoration: underline; }
+.kx-note { font-size: .82rem; color: var(--muted); margin-top: 18px; }
+@media (max-width: 1000px) { .kx-stats { grid-template-columns: repeat(3, 1fr); } .kx-opps { grid-template-columns: repeat(2, 1fr); } .kx-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .kx-split, .kx-split.flip { grid-template-columns: 1fr; gap: 24px; } .kx-split.flip > :first-child { order: 0; } .kx-stats { grid-template-columns: 1fr 1fr; } .kx-grid { grid-template-columns: 1fr; } .kx-hero { min-height: 420px; } }
+@media (max-width: 480px) { .kx-opps { grid-template-columns: 1fr; } .kx-stats { margin-top: -24px; } }
+
+/* ===== Company cards ===== */
+.co-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.co-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; box-shadow: 0 6px 20px rgba(74,20,32,.05); }
+.co-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.co-logo { flex: 0 0 64px; width: 64px; height: 64px; border-radius: 12px; border: 1px solid var(--border); background: #fff; display: grid; place-items: center; padding: 8px; overflow: hidden; }
+.co-logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.co-logo.mono { background: linear-gradient(135deg, var(--navy), var(--navy-dark)); color: #fff; font-weight: 800; font-size: 1.05rem; letter-spacing: .04em; border: 0; }
+.co-tag { display: block; margin-top: 3px; }
+.co-head h3 { margin: 0; font-size: 1.2rem; color: var(--navy-dark); }
+.co-tag { font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--gold-hover); }
+.co-does { margin: 0 0 14px; line-height: 1.75; color: var(--text); font-size: .95rem; }
+.co-facts { margin: 0 0 14px; display: grid; gap: 4px; }
+.co-facts dt { font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+.co-facts dd { margin: 0; line-height: 1.7; font-size: .93rem; color: var(--text); }
+.co-na { color: var(--muted); font-style: italic; }
+.co-src { margin: auto 0 0; padding-top: 12px; border-top: 1px solid var(--border); font-size: .78rem; color: var(--muted); line-height: 1.6; }
+.co-src a { color: var(--navy); text-decoration: underline; }
+@media (max-width: 860px) { .co-grid { grid-template-columns: 1fr; } }
+/* ===== Long-form article layout ===== */
+.kx-topic.solo { grid-template-columns: 1fr; max-width: 820px; }
+.kx-figs.pair { grid-template-columns: 1fr 1fr; align-content: start; }
+.kx-fig .kx-cap { display: block; margin-top: 8px; }
+.kx-figs.pair .kx-img.small { aspect-ratio: 4 / 3; }
+.kx-topic:has(.kx-figs.pair) { align-items: center; }
+.kx-welcome { position: relative; z-index: 3; max-width: 900px; margin: 56px auto 0; background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 34px 38px; box-shadow: 0 14px 34px rgba(74,20,32,.10); }
+.kx-welcome h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); color: var(--navy-dark); margin: 6px 0 14px; }
+.kx-welcome p { font-size: 1.02rem; line-height: 1.85; color: var(--text); margin: 0 0 14px; }
+.kx-welcome p:last-child { margin-bottom: 0; color: var(--muted); }
+.kx-mapcard { position: relative; z-index: 3; margin: -48px auto 0; background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 28px; box-shadow: 0 14px 34px rgba(74,20,32,.10); display: grid; grid-template-columns: 1fr; gap: 24px; align-items: stretch; }
+.kx-mapcard > .kx-text { max-width: 860px; }
+.kx-maphint { display: none; font-size: .8rem; color: var(--muted); margin: 8px 2px 0; }
+.kx-map { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: var(--wine-tint); min-height: 420px; }
+.kx-map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; }
+.kx-map:has(.kx-svgmap) { min-height: 0; align-self: start; background: #e3eef4; }
+.kx-svgmap { width: 100%; height: auto; display: block; }
+@media (max-width: 600px) { .kx-map:has(.kx-svgmap) { overflow-x: auto; -webkit-overflow-scrolling: touch; } .kx-svgmap { min-width: 760px; } .kx-maphint { display: block; } }
+.kx-mapcard h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); color: var(--navy-dark); margin: 6px 0 12px; }
+.kx-mapcard p { font-size: .97rem; line-height: 1.8; color: var(--text); margin: 0 0 12px; }
+.kx-mapcard .btn { margin-top: 6px; }
+@media (max-width: 860px) { .kx-mapcard { grid-template-columns: 1fr; padding: 20px; } .kx-map iframe { min-height: 340px; } }
+@media (max-width: 600px) { .kx-mapcard { margin-top: -28px; border-radius: 14px; padding: 16px; } .kx-mapcard .btn { width: 100%; justify-content: center; } }
+@media (max-width: 600px) { .kx-welcome { margin-top: 36px; padding: 24px 20px; border-radius: 14px; } }
+.kx-article { max-width: 1120px; margin: 0 auto; }
+.kx-intro { max-width: 820px; margin: 0 auto 44px; text-align: center; }
+.kx-intro h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 6px 0 14px; color: var(--navy-dark); }
+.kx-intro p { font-size: 1.04rem; line-height: 1.85; color: var(--text); margin: 0; }
+.kx-topic { display: grid; grid-template-columns: 1fr 1.15fr; gap: 46px; align-items: start; padding: 34px 0; border-top: 1px solid var(--border); }
+.kx-topic:first-of-type { border-top: 0; }
+.kx-topic.flip > figure, .kx-topic.flip > .kx-figs { order: 2; }
+.kx-topic h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); color: var(--navy-dark); margin: 4px 0 14px; line-height: 1.3; }
+.kx-topic p { font-size: 1rem; line-height: 1.85; color: var(--text); margin: 0 0 14px; }
+.kx-topic p:last-child { margin-bottom: 0; }
+.kx-topic .kx-img { position: sticky; top: 100px; }
+.kx-figs { display: grid; gap: 14px; position: sticky; top: 100px; }
+.kx-figs .kx-img { position: relative; top: auto; }
+.kx-figs .kx-img.small { aspect-ratio: 16 / 9; }
+.kx-cap { display: block; font-size: .8rem; color: var(--muted); margin-top: -6px; line-height: 1.5; }
+.kx-figs .kx-fig .kx-cap { margin-top: 8px; }
+.kx-pull { border-left: 4px solid var(--gold); background: var(--wine-tint); padding: 14px 18px; border-radius: 0 12px 12px 0; font-size: .98rem; line-height: 1.75; color: var(--navy-dark); margin: 18px 0 14px; }
+@media (max-width: 860px) {
+  .kx-topic, .kx-topic.flip { grid-template-columns: 1fr; gap: 20px; padding: 28px 0; }
+  .kx-topic.flip > figure, .kx-topic.flip > .kx-figs { order: 0; }
+  .kx-topic .kx-img, .kx-figs { position: relative; top: auto; }
+}
+
+.kx-next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; background: linear-gradient(135deg, var(--navy-dark), var(--navy)); color: #fff; border-radius: 18px; padding: 34px 38px; }
+.kx-next .eyebrow { color: #fcd9a0; }
+.kx-next h2 { color: #fff; margin: 6px 0 10px; font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
+.kx-next p { margin: 0; max-width: 680px; color: rgba(255,255,255,.88); line-height: 1.75; }
+.kx-next .btn { background: #fff; color: var(--navy-dark); }
+@media (max-width: 600px) { .kx-next { padding: 24px 20px; } .kx-next .btn { width: 100%; justify-content: center; } }
+</style>
+<!--t-theme-start--><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@500;600&display=swap"></noscript><style id="t-theme">/* ===== BCCIF theme (new look) ===== */
+:root{
+  --navy:#6b1f2a;--navy-dark:#3d0f19;--navy-light:#8c3341;
+  --gold:#b07a1c;--gold-light:#d9a441;--gold-hover:#8f6214;
+  --bg:#fbf6ee;--bg-soft:#f4ebdc;--text:#231a1c;--muted:#6e6461;--border:#e8dccb;--wine-tint:#f6ece4;
+  --t-wine-dd:#2a0911;--t-gold:#d9a441;--t-gold-l:#f3d58f;
+  --t-serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --t-sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --t-guj:"Noto Sans Gujarati","Manrope",sans-serif;
+  --t-ease:cubic-bezier(.16,1,.3,1);
+}
+html{overflow-x:clip}
+body{font-family:var(--t-sans);background:var(--bg);color:var(--text);overflow-x:clip}
+::selection{background:var(--t-gold);color:var(--t-wine-dd)}
+h1,h2,h3,.section-title,.section-heading h2,.logo-text,.footer-brand{font-family:var(--t-serif)}
+h1,h2,.section-title,.section-heading h2{font-weight:400!important;letter-spacing:-.022em}
+h3{font-weight:500;letter-spacing:-.01em}
+.gradient-text{background:none!important;-webkit-text-fill-color:currentColor!important;color:var(--navy-dark)}
+.t-it{font-style:italic;color:var(--gold)}
+.eyebrow{font-family:var(--t-sans);font-weight:800;letter-spacing:.24em;color:var(--gold)}
+.eyebrow::before{width:30px;background:currentColor}
+
+/* ---- header ---- */
+.site-header{background:rgba(251,246,238,.86)!important;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:0!important;transition:transform .55s var(--t-ease),box-shadow .3s!important}
+.site-header::after{content:"";position:absolute;left:0;right:0;bottom:0;border-top:1.5px dashed rgba(176,122,28,.45);pointer-events:none}
+.site-header.scrolled{box-shadow:0 10px 30px rgba(42,9,17,.08)!important}
+.site-header.t-hide{transform:translateY(-102%)}
+.logo-text{color:var(--navy-dark)!important;font-weight:600!important;letter-spacing:-.005em}
+.logo-sub{color:var(--gold)!important;font-family:var(--t-sans);font-weight:800!important;letter-spacing:.24em!important}
+.nav-menu a{font-family:var(--t-sans);font-weight:650!important;color:var(--text)!important}
+.nav-menu a::after{background:var(--t-gold)!important;height:2px!important}
+.nav-menu a.active,.nav-menu a[aria-current="page"]{color:var(--navy)!important}
+.nav-toggle{border:0!important;border-radius:50%!important;background:var(--t-gold)!important;width:46px!important;height:46px!important}
+.nav-toggle span{background:var(--t-wine-dd)!important;left:13px!important;right:13px!important}
+.nav-toggle span:nth-child(1){top:15px!important}.nav-toggle span:nth-child(2){top:22px!important}.nav-toggle span:nth-child(3){top:29px!important}
+.nav-toggle.open span:nth-child(1),.nav-toggle.open span:nth-child(3){top:22px!important}
+@media (max-width:1080px){
+  .nav-menu{position:fixed!important;top:var(--t-hh,72px)!important;left:0;right:0;bottom:0;height:calc(100dvh - var(--t-hh,72px));overflow-y:auto;background:var(--t-wine-dd)!important;border:0!important;padding:28px 24px 40px!important;box-shadow:none!important}
+  .nav-menu.open{display:block!important;animation:tMenu .5s var(--t-ease)}
+  .nav-menu ul{gap:0!important}
+  .nav-menu li{border-bottom:1px solid rgba(255,255,255,.08);opacity:0;transform:translateY(16px)}
+  .nav-menu.open li{animation:tUp .6s var(--t-ease) forwards}
+  .nav-menu a{color:#fff!important;font-family:var(--t-serif)!important;font-weight:400!important;font-size:clamp(1.5rem,6vw,2.1rem)!important;padding:12px 0!important;letter-spacing:-.01em}
+  .nav-menu a.active,.nav-menu a[aria-current="page"]{color:var(--t-gold)!important;font-style:italic}
+  .nav-menu a::after{display:none}
+}
+@keyframes tMenu{from{opacity:0;clip-path:inset(0 0 100% 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes tUp{to{opacity:1;transform:none}}
+
+/* ---- page hero (inner pages) ---- */
+.page-hero{background:var(--t-wine-dd)!important;color:#fff!important;padding:clamp(70px,9vw,120px) 0 clamp(64px,8vw,104px)!important;isolation:isolate}
+.page-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 82% 40%,rgba(140,51,65,.75),transparent 55%),radial-gradient(ellipse at 0% 100%,rgba(217,164,65,.16),transparent 45%)}
+.page-hero::after{content:""!important;position:absolute!important;inset:0!important;width:auto!important;height:auto!important;border:0!important;border-radius:0!important;transform:none!important;box-shadow:none!important;z-index:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.page-hero .container{position:relative;z-index:2}
+.page-hero h1,.page-hero h1.gradient-text{color:#fff!important;font-size:clamp(2.6rem,6.4vw,5.4rem)!important;line-height:1!important;margin:0 0 20px!important;max-width:16ch}
+.page-hero h1 .t-it{color:var(--t-gold)}
+.page-hero p{color:rgba(255,255,255,.8)!important;font-size:clamp(1rem,1.3vw,1.15rem)!important;line-height:1.75;max-width:620px}
+.page-hero .eyebrow{color:var(--t-gold-l)!important}
+.page-hero .breadcrumb{color:rgba(255,255,255,.55)!important;font-size:.72rem!important;letter-spacing:.14em!important;text-transform:uppercase;font-weight:700}
+.page-hero .breadcrumb a:hover{color:var(--t-gold)!important}
+.page-hero p a{color:var(--t-gold-l)!important;text-decoration:underline;text-underline-offset:3px}
+.page-hero .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.4)!important}
+.t-kmap{position:absolute;right:-2%;top:50%;width:min(620px,58vw);transform:translateY(-50%);z-index:1;pointer-events:none;opacity:.9}
+.t-kmap path{fill:rgba(217,164,65,.05);stroke:rgba(217,164,65,.55);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;will-change:stroke-dashoffset;animation:tDraw 4.2s cubic-bezier(.65,0,.35,1) .2s forwards}
+.t-kmap circle.h{fill:var(--t-gold);transform-origin:491px 495px;transform:scale(0);animation:tPop 1s var(--t-ease) 3.4s forwards}
+.t-kmap circle.r{fill:none;stroke:var(--t-gold);stroke-width:2;transform-origin:491px 495px;opacity:0;animation:tRing 2.8s 3.8s infinite}
+@keyframes tDraw{to{stroke-dashoffset:0}}
+@keyframes tPop{to{transform:scale(1)}}
+@keyframes tRing{0%{transform:scale(1);opacity:.9}100%{transform:scale(5);opacity:0}}
+@media (max-width:760px){.t-kmap{width:120vw;right:-40vw;opacity:.45}}
+.t-ln{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em}
+.t-ln>span{display:inline-block;transform:translateY(105%);animation:tWord 1.1s var(--t-ease) forwards}
+@keyframes tWord{to{transform:none}}
+.page-hero .t-fade{opacity:0;transform:translateY(18px);animation:tUp 1s var(--t-ease) forwards}
+
+/* ---- sections, cards, buttons ---- */
+.section-soft{background:var(--bg-soft)!important}
+.section-heading h2,.section-title{font-size:clamp(2rem,4.2vw,3.3rem)!important;line-height:1.05!important}
+.btn{border-radius:99px!important;font-family:var(--t-sans);font-weight:700!important;letter-spacing:.01em;transition:transform .45s var(--t-ease),box-shadow .45s var(--t-ease),background .3s,color .3s,border-color .3s!important}
+.btn-primary{background:var(--navy)!important;color:#fff!important;box-shadow:0 12px 26px rgba(107,31,42,.22)!important}
+.btn-primary:hover{background:var(--t-wine-dd)!important;transform:translateY(-3px)!important;box-shadow:0 18px 34px rgba(42,9,17,.28)!important}
+.btn-outline{border:1.5px solid var(--navy)!important;color:var(--navy)!important;background:transparent!important}
+.btn-outline:hover{background:var(--navy)!important;color:#fff!important}
+.card{border-radius:22px!important;border-color:var(--border)!important;background:#fff}
+.card:hover{transform:translateY(-6px)!important;box-shadow:0 26px 54px rgba(61,15,25,.12)!important;border-color:rgba(176,122,28,.45)!important}
+input,select,textarea{font-family:var(--t-sans)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--t-gold)!important;box-shadow:0 0 0 4px rgba(217,164,65,.18)!important}
+img{image-rendering:auto}
+
+/* ---- reveal (smoother) ---- */
+@media (prefers-reduced-motion:no-preference){
+  .reveal{transform:translateY(34px)!important;transition:opacity 1s var(--t-ease),transform 1s var(--t-ease)!important}
+  .reveal.reveal-right{transform:translateY(34px)!important}
+  .reveal.reveal-visible{transform:none!important}
+}
+
+/* ---- footer ---- */
+.site-footer{background:var(--t-wine-dd)!important;color:rgba(255,255,255,.72)!important;padding:clamp(56px,7vw,90px) 20px 40px!important;position:relative;overflow:hidden}
+.site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--t-gold),transparent)}
+.site-footer .footer-brand{font-size:clamp(1.4rem,2.6vw,2rem)!important;font-weight:400!important;color:#fff!important;margin-bottom:12px!important}
+.site-footer a:hover{color:var(--t-gold)!important}
+.t-foot-mark{display:block;font-family:var(--t-serif);font-size:clamp(4rem,16vw,12rem);line-height:.9;color:transparent;-webkit-text-stroke:1px rgba(217,164,65,.22);letter-spacing:.06em;margin:28px 0 0;user-select:none}
+
+/* ---- progress bar + page curtain ---- */
+#t-prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--t-gold-l));z-index:9999;pointer-events:none}
+#t-curtain{position:fixed;inset:0;z-index:9998;background:var(--t-wine-dd);display:grid;place-items:center;transition:transform .8s var(--t-ease);pointer-events:none}
+#t-curtain span{font-family:var(--t-serif);color:var(--t-gold);font-size:1.6rem;letter-spacing:.2em;opacity:.9}
+#t-curtain.up{transform:translateY(-100%)}
+@media (prefers-reduced-motion:reduce){#t-curtain{display:none}.t-kmap path{animation:none;stroke-dashoffset:0}.t-ln>span,.page-hero .t-fade{animation:none;transform:none;opacity:1}.nav-menu li{opacity:1;transform:none}}
+
+/* ===== header v2: transparent over the hero, solid on scroll ===== */
+.site-header{position:fixed!important;top:0;left:0;right:0;z-index:100!important}
+.site-header .header-inner{max-width:1240px!important;min-height:82px;padding:0 20px!important}
+.site-header::after{transition:opacity .3s}
+.site-header.t-tr{background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important}
+.site-header.t-tr::after{opacity:0}
+.site-header .logo{gap:14px!important}
+.site-header .logo-mark{width:52px!important;height:52px!important}
+.t-seal{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex:none;font-family:var(--t-serif);font-weight:700;font-size:.72rem;letter-spacing:.02em;background:var(--t-gold);color:var(--t-wine-dd);box-shadow:0 0 0 4px rgba(217,164,65,.22)}
+.logo-mark.loaded~.t-seal{display:none}
+.site-header .logo-text.t-lt{font-size:inherit!important;line-height:1.1!important;color:var(--navy-dark)!important;transition:color .3s}
+.t-lt b{display:block;font-family:var(--t-serif);font-weight:600;font-size:1.08rem}
+.t-lt small{display:block;font-family:var(--t-sans);font-size:.6rem;font-weight:800;letter-spacing:.26em;color:var(--gold);margin-top:4px}
+.site-header.t-tr .logo-text.t-lt,.site-header.t-open .logo-text.t-lt{color:#fff!important}
+.site-header.t-tr .t-lt small,.site-header.t-open .t-lt small{color:var(--t-gold-l)}
+.t-join{display:inline-flex;align-items:center;gap:10px;padding:10px 12px 10px 20px;border-radius:99px;background:var(--t-gold);color:var(--t-wine-dd)!important;font:700 .9rem var(--t-sans);white-space:nowrap;transition:transform .4s var(--t-ease),background .3s;flex:none}
+.t-join:hover{transform:translateY(-2px);background:#fff}
+.t-join i{font-style:normal;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--t-wine-dd);color:var(--t-gold);transition:transform .4s var(--t-ease)}
+.t-join:hover i{transform:rotate(-45deg)}
+@media (min-width:1081px){
+  .site-header .nav-menu{display:block!important;position:static!important;margin-left:auto}
+  .site-header .nav-menu ul{display:flex!important;gap:2px!important;padding:6px!important;border-radius:99px;background:rgba(107,31,42,.05);transition:background .3s}
+  .site-header.t-tr .nav-menu ul{background:rgba(255,255,255,.09);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .site-header .nav-menu li.t-desk-hide{display:none!important}
+  .site-header .nav-menu a,.t-more>button{display:block;padding:9px 15px!important;border-radius:99px;font:650 .88rem var(--t-sans)!important;color:var(--text)!important;transition:background .3s,color .3s;white-space:nowrap}
+  .site-header.t-tr .nav-menu a,.site-header.t-tr .t-more>button{color:#fff!important}
+  .site-header .nav-menu a::after{display:none!important}
+  .site-header .nav-menu a.active,.site-header .nav-menu a[aria-current="page"],.t-more.cur>button{background:rgba(107,31,42,.09)!important;color:var(--navy)!important}
+  .site-header.t-tr .nav-menu a.active,.site-header.t-tr .nav-menu a[aria-current="page"],.site-header.t-tr .t-more.cur>button{background:rgba(255,255,255,.14)!important;color:var(--t-gold-l)!important}
+  .site-header .nav-menu a:hover,.t-more>button:hover,.t-more.open>button{background:var(--t-gold)!important;color:var(--t-wine-dd)!important}
+  .t-more{position:relative}
+  .t-more>button{border:0;background:none;cursor:pointer}
+  .t-drop{position:absolute;right:0;top:calc(100% + 14px);min-width:210px;background:#fff;border-radius:18px;padding:8px;box-shadow:0 24px 50px rgba(42,9,17,.2);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .3s,transform .4s var(--t-ease)}
+  .t-drop::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+  .t-more:hover .t-drop,.t-more.open .t-drop,.t-more:focus-within .t-drop{opacity:1;transform:none;pointer-events:auto}
+  .site-header .nav-menu .t-drop a,.site-header.t-tr .nav-menu .t-drop a{color:var(--text)!important;background:none!important}
+  .site-header .nav-menu .t-drop a:hover,.site-header.t-tr .nav-menu .t-drop a:hover{background:var(--bg-soft)!important;color:var(--navy)!important}
+  .site-header .nav-menu .t-drop a.active{color:var(--navy)!important;background:rgba(107,31,42,.07)!important}
+  .site-header .header-inner{gap:18px!important}
+}
+@media (min-width:1081px) and (max-width:1240px){.site-header .nav-menu a,.t-more>button{padding:9px 10px!important;font-size:.82rem!important}.t-lt b{font-size:.98rem}}
+@media (max-width:1080px){.t-more{display:none!important}.t-join{display:none!important}.site-header .header-inner{min-height:72px}}
+.site-header.t-open{background:var(--t-wine-dd)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.site-header.t-open::after{opacity:0}
+/* room for the fixed header */
+.page-hero{padding-top:calc(var(--t-hh,82px) + clamp(52px,7vw,96px))!important}
+.kx-hero{min-height:calc(460px + var(--t-hh,82px))!important}
+.kx-hero .container{padding-top:calc(var(--t-hh,82px) + 56px)!important}
+.kx-hero::before{content:"";position:absolute;left:0;right:0;top:0;height:220px;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(20,6,10,.72),transparent)}
+body.t-nohero{padding-top:var(--t-hh,82px)}
+
+/* buttons on dark wine sections: gold so they stand out */
+.cta-section .btn-primary{background:var(--t-gold)!important;color:var(--t-wine-dd,#2a0911)!important;box-shadow:0 12px 28px rgba(0,0,0,.28)!important}
+.cta-section .btn-primary:hover{background:#fff!important;color:var(--t-wine-dd,#2a0911)!important}
+</style><!--t-theme-end--><style id="kx-mobile">
+/* phone: heading first, then its photo, then the text, so each photo clearly belongs to its section */
+@media (max-width: 860px) {
+  .kx-topic, .kx-topic.flip, .kx-topic:has(.kx-figs.pair) { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 40px 0 34px; border-top: 0; position: relative; }
+  .kx-topic + .kx-topic::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, var(--gold, #b07a1c) 0 56px, rgba(176,122,28,.18) 56px); }
+  .kx-topic > .kx-text { display: contents; }
+  .kx-topic > .kx-text > .eyebrow { order: -3; align-self: flex-start; }
+  .kx-topic > .kx-text > h3 { order: -2; margin: 6px 0 16px; }
+  .kx-topic > .kx-figs, .kx-topic > figure { order: -1; margin: 0 0 20px; }
+}
+</style>
+<style id="kx-mapfull">
+/* map: whole map always visible; tap to enlarge */
+.kx-map:has(.kx-svgmap){overflow:hidden!important;cursor:zoom-in;position:relative}
+.kx-svgmap{min-width:0!important}
+.kx-mapzoom{position:absolute;right:12px;bottom:12px;background:rgba(255,255,255,.94);border:1px solid #e2d6cf;color:#5a1426;border-radius:999px;padding:8px 14px;font:700 .8rem/1 inherit;box-shadow:0 6px 16px rgba(0,0,0,.12);pointer-events:none}
+.kx-maphint{display:block!important}
+@media (max-width:600px){.kx-mapzoom{right:8px;bottom:8px;padding:5px 10px;font-size:.7rem}}
+#kxMapBox{position:fixed;top:0;left:0;width:100vw;height:100vh;height:100dvh;z-index:2147483000;background:#14060a;display:none;overflow:auto;-webkit-overflow-scrolling:touch}
+#kxMapBox.open{display:block}
+#kxMapBox .in{min-width:1000px;max-width:1400px;margin:0 auto;padding:64px 16px 24px}
+#kxMapBox svg{width:100%;height:auto;display:block;border-radius:12px;background:#e3eef4}
+#kxMapBox button{position:fixed;top:14px;right:14px;z-index:2;background:#fff;color:#5a1426;border:0;border-radius:999px;padding:10px 16px;font:700 .9rem/1 inherit;cursor:pointer}
+@media (min-width:1001px){#kxMapBox .in{min-width:0}}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%236b1f2a'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23d9a441'%3EB%3C/text%3E%3C/svg%3E">
+<script>/* Wikimedia photos: if the direct address fails, try the redirect address, then retry once, then show the placeholder */
+function wmErr(i){var n=+(i.dataset.t||0);i.dataset.t=n+1;i.removeAttribute('srcset');i.removeAttribute('sizes');
+if(n===0&&i.dataset.fp){i.src=i.dataset.fp;return}
+if(n===1){setTimeout(function(){i.src=(i.dataset.fp||i.src)+'&r=1'},2500);return}
+var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textContent=i.dataset.fb}else{p.classList.add('no-img');i.remove()}}</script>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+</head>
+<body><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img id="siteLogo" class="logo-mark" alt="Bhuj Chamber of Commerce and Industries Federation" />
+      <span class="logo-text">Bhuj Chamber of Commerce<br>and Industries Federation<span class="logo-sub">Kutch &middot; Gujarat</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="business.html">Business</a></li>
+        <li><a href="kutch.html" class="active" aria-current="page">Kutch</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="kx-hero">
+    <figure class="kx-hero-img"><img src="images/wm/white-rann-of-kutch-0e41f5.webp" width="800" height="533" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/White_Rann_of_Kutch.jpg?width=1280" fetchpriority="high" decoding="async" alt="The White Rann of Kutch" onerror="wmErr(this)"><span class="kx-fallback">The White Rann of Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:White_Rann_of_Kutch.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure>
+    <div class="container reveal">
+      <span class="eyebrow">Kachchh, Gujarat</span>
+      <h1>Kutch &amp; Bhuj</h1>
+      <p>India&rsquo;s largest district &mdash; a land of Harappan heritage, royal palaces, a white salt desert, two of India&rsquo;s busiest ports and some of the world&rsquo;s biggest renewable energy projects.</p>
+      <nav class="kx-jump" aria-label="On this page"><a href="#map">Map</a><a href="#land">The land</a><a href="#history">History</a><a href="#bhuj">Bhuj</a><a href="#heritage">Heritage</a><a href="#tourism">Tourism</a><a href="business.html">Business &amp; Opportunities &rarr;</a></nav>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="kx-mapcard reveal" id="map" aria-labelledby="mapTitle">
+      <div class="kx-map">
+        <svg class="kx-svgmap" viewBox="0 0 1000 761" role="img" aria-labelledby="kmapT kmapD" xmlns="http://www.w3.org/2000/svg"><title id="kmapT">Map of Kutch district, Gujarat</title><desc id="kmapD">Outline map of Kutch district showing Bhuj, the main towns, the ports on the Gulf of Kutch and the main places to visit.</desc><style>.kx-svgmap text{font-family:inherit;paint-order:stroke;stroke:#fff;stroke-width:3.5px;stroke-linejoin:round}.m-sea{fill:#9fb9c9;font-style:italic;letter-spacing:.12em;stroke:none}.m-rann{fill:#8a7a62;font-style:italic;letter-spacing:.14em;stroke:none}.m-region{fill:#9a8f7c;letter-spacing:.1em;stroke:none}.m-town{fill:#3a2a2e;font-weight:600}.m-hq{fill:#5a1426;font-weight:800}.m-visit{fill:#8a5a00;font-weight:600}.m-port{fill:#1f4d6b;font-weight:600}.m-small{fill:#6b6b6b;stroke:none}.m-vil{fill:#5e514a;font-weight:500;stroke-width:3px}</style><rect width="1000" height="761" fill="#e3eef4"/><path d="M44.8,322.5L35.8,331.5L34.5,328.1L40.3,299.8L32.6,279.4L32.6,292.9L36.5,301.0L28.3,327.0L32.6,348.5L30.0,349.0L15.8,336.0L14.8,344.1L9.6,344.4L3.9,339.6L1.2,332.8L7.4,325.8L7.0,319.6L9.6,312.3L15.8,311.0L15.8,308.9L6.8,300.3L2.9,293.7L1.2,286.2L4.2,273.4L0.0,274.0L0.0,0.0L1000.0,0.0L1000.0,76.5L982.5,75.7L972.6,79.0L973.4,72.0L984.5,61.8L987.5,53.3L981.0,51.2L981.6,43.9L928.2,24.0L923.0,19.4L916.1,28.4L896.0,37.5L889.2,51.0L889.5,68.4L894.7,75.3L893.1,101.6L905.1,105.7L925.0,104.5L931.3,109.3L930.4,113.3L919.1,117.0L908.5,129.6L900.0,132.3L889.5,126.6L877.6,132.2L855.2,150.3L855.6,155.7L864.3,162.2L835.1,174.4L793.4,174.8L764.7,164.4L768.6,152.1L761.9,131.4L767.3,128.4L774.1,113.2L764.6,107.8L715.5,123.3L702.4,131.4L686.7,131.7L666.5,140.2L624.1,150.0L610.7,181.7L598.3,190.8L509.7,190.8L468.0,150.5L436.8,158.9L422.7,154.7L401.5,158.4L382.6,154.3L346.6,169.2L316.6,156.7L288.8,173.6L283.7,172.2L271.2,147.3L259.2,155.1L251.1,175.9L247.2,176.9L242.2,168.6L237.1,144.5L229.6,143.7L216.0,150.1L212.5,256.9L103.5,258.5L99.9,252.6L93.1,254.0L86.9,259.0L84.9,272.4L69.5,270.4L60.8,281.7L47.6,289.0L44.2,302.3L45.6,325.2L44.8,327.3L44.8,322.5ZM995.1,89.4L1000.0,77.3L1000.0,96.1L995.1,89.4ZM998.9,119.5L991.6,114.8L998.5,107.5L991.9,100.6L994.5,96.4L1000.0,97.3L998.9,119.5ZM993.5,187.1L994.3,183.0L986.6,179.1L988.4,174.3L982.3,173.0L979.6,169.9L982.9,165.7L980.5,167.0L977.8,163.0L980.1,160.9L986.2,162.5L983.9,148.7L989.5,142.2L1000.0,139.9L1000.0,186.4L993.5,187.1ZM986.2,364.6L961.6,361.0L959.3,354.6L962.4,351.3L960.5,337.2L946.8,331.9L947.0,337.1L937.1,337.1L939.8,343.6L943.3,340.9L947.6,342.3L938.5,352.3L938.6,357.3L934.9,358.8L934.5,370.6L926.2,373.7L922.8,373.7L921.1,371.5L920.7,373.7L913.1,373.7L906.4,365.9L906.5,354.1L915.5,351.4L912.1,336.1L916.6,337.1L910.8,332.5L911.5,318.5L908.0,316.9L907.7,313.3L912.7,313.0L915.5,308.9L914.1,306.2L917.0,304.2L914.0,301.3L924.7,280.9L947.5,275.1L948.3,272.1L952.7,274.8L960.0,270.0L966.2,275.6L971.3,274.6L971.4,271.9L974.5,274.8L977.3,270.5L985.2,272.4L982.2,265.3L991.2,253.3L987.9,249.6L981.1,250.1L982.9,241.8L992.0,230.9L987.4,227.3L990.2,224.5L990.4,216.8L996.5,213.1L995.4,209.0L985.6,207.3L977.7,201.4L980.8,198.1L973.1,195.0L976.7,190.6L985.4,195.9L993.5,191.9L996.3,194.5L998.4,190.2L1000.0,190.7L1000.0,361.0L986.2,364.6ZM0.0,302.1L1.2,304.4L0.0,307.0L0.0,302.1Z" fill="#f1ece2" stroke="none"/><path d="M308.8,751.2L313.3,752.4L308.6,760.6L295.0,760.6L308.8,751.2ZM498.9,759.5L504.1,752.3L511.1,749.1L513.3,760.2L498.9,759.5ZM515.5,757.0L519.5,752.2L524.6,754.8L525.3,760.6L515.8,760.6L515.5,757.0ZM531.7,755.5L543.8,753.3L550.0,757.3L555.3,751.9L563.8,759.7L555.5,751.8L559.7,751.0L564.7,760.1L564.6,755.8L568.6,755.8L564.4,754.8L557.5,745.6L570.7,748.4L562.2,744.7L570.4,739.2L571.2,743.8L573.5,740.0L573.9,744.1L575.4,741.6L582.1,744.1L577.6,741.8L583.7,742.9L578.8,740.9L582.2,737.1L576.9,741.0L574.7,734.8L578.6,736.5L576.7,735.6L579.5,735.3L578.9,732.5L583.4,733.6L582.5,730.8L586.2,730.4L583.5,730.0L596.7,728.8L602.8,722.1L608.9,725.5L629.1,726.6L631.6,719.5L636.9,720.7L640.5,716.5L637.6,716.0L638.6,712.9L645.9,712.9L644.4,709.6L654.1,698.1L649.6,696.7L658.6,690.8L655.3,685.2L658.3,682.6L657.2,672.0L666.3,662.4L679.5,656.1L682.2,645.4L704.5,609.5L711.2,605.7L711.7,610.2L715.4,603.0L716.6,607.5L712.1,615.4L716.7,607.4L715.5,602.9L717.9,605.6L717.0,609.5L718.3,605.7L720.2,610.3L717.0,619.1L708.6,628.4L715.9,621.0L713.5,625.2L716.9,626.2L713.6,627.7L716.3,629.6L711.2,629.7L720.3,630.9L716.6,633.5L709.5,631.8L716.3,633.6L711.1,633.8L715.1,635.0L711.1,637.6L713.3,639.5L719.1,635.3L718.6,638.6L727.1,630.5L729.2,633.0L731.8,624.8L732.1,630.1L732.9,622.5L735.4,623.9L734.1,617.6L737.2,618.8L734.2,617.2L735.5,609.8L739.6,618.3L736.3,609.2L737.8,607.5L740.6,613.0L742.3,610.6L737.5,607.2L737.3,601.1L739.5,602.9L737.2,600.0L739.8,602.8L741.9,607.2L738.8,600.5L742.1,604.3L741.4,600.5L736.3,599.4L721.9,589.5L736.0,586.9L755.0,591.9L761.0,569.0L764.2,566.3L773.3,567.2L771.8,558.5L781.6,557.9L784.3,551.8L799.6,539.9L822.8,530.5L822.5,523.7L827.9,526.2L830.5,523.7L829.4,528.8L838.1,524.2L837.9,533.4L843.7,536.1L840.3,542.1L841.7,552.2L842.8,546.7L844.8,548.2L844.1,541.6L850.9,535.7L841.6,529.1L842.2,526.5L855.9,533.1L856.2,538.3L857.8,533.9L865.1,533.9L860.5,532.0L861.6,524.9L874.8,524.9L877.1,529.0L872.7,533.0L877.5,532.3L878.7,535.1L881.3,533.7L879.7,531.7L884.6,532.6L879.7,530.7L881.8,530.6L880.0,522.2L883.0,521.0L883.3,527.3L895.9,520.2L907.5,522.6L908.1,525.2L907.6,522.7L920.9,514.7L927.1,505.3L931.0,510.7L939.8,511.7L943.5,520.1L947.3,516.3L956.5,518.3L961.9,526.1L957.1,533.1L961.3,530.2L965.1,531.9L966.9,527.2L968.7,529.9L975.4,527.2L980.6,529.2L978.8,523.6L981.0,524.6L985.1,519.3L988.5,523.7L990.9,517.1L994.6,525.5L1000.0,523.0L1000.0,760.6L532.0,760.6L531.7,755.5ZM986.2,365.3L961.2,361.7L958.6,354.4L961.8,351.2L960.0,337.5L946.9,332.6L947.7,337.7L937.7,337.3L940.1,343.0L943.1,340.2L948.7,342.0L939.0,352.7L939.3,357.8L935.4,359.1L935.1,371.1L923.3,375.5L921.1,372.2L922.0,378.1L918.5,380.7L905.8,366.1L905.9,353.5L915.0,351.0L911.2,334.9L916.0,337.2L910.2,332.8L910.9,318.6L907.5,317.4L907.0,312.6L912.5,312.4L915.0,308.6L913.1,306.0L916.4,304.3L913.3,301.5L924.3,280.3L947.3,274.5L947.8,271.0L952.6,274.2L960.1,269.2L966.3,274.9L971.0,274.0L970.6,270.1L974.3,274.2L977.0,269.8L984.7,272.0L981.4,265.2L990.6,253.4L987.7,250.3L980.3,250.8L982.3,241.5L991.4,230.7L986.4,227.4L989.6,224.3L989.8,216.4L995.9,213.2L995.1,209.6L985.4,207.9L976.7,201.3L980.4,198.6L972.1,195.3L976.5,189.7L985.5,195.2L993.6,191.2L996.2,193.9L998.0,189.4L1000.0,190.0L1000.0,361.7L986.2,365.3ZM992.7,187.9L993.8,183.4L985.8,179.4L987.9,174.6L982.0,173.6L978.7,169.9L982.3,166.0L980.4,168.0L977.0,162.9L980.0,160.1L985.6,162.2L983.3,148.5L989.2,141.6L1000.0,139.3L1000.0,187.0L992.7,187.9ZM1000.0,119.9L990.6,114.9L997.9,107.4L991.1,100.7L994.3,95.6L999.7,96.7L994.4,89.5L999.5,76.9L982.6,76.3L971.9,80.0L972.8,71.6L984.0,61.4L986.9,53.1L980.3,51.7L981.2,44.3L989.0,33.7L999.4,29.4L1000.0,119.9ZM478.5,757.7L480.8,760.6L472.5,760.6L478.5,757.7ZM321.7,760.6L316.8,760.6L316.3,757.0L328.8,751.8L333.4,754.4L331.8,760.6L331.0,756.3L322.8,755.1L321.7,760.6ZM533.3,751.5L525.9,747.8L535.7,742.6L538.6,745.5L533.3,751.5ZM591.1,726.0L579.9,728.8L580.9,726.3L579.1,728.0L574.5,722.2L582.4,715.4L582.0,721.0L582.7,718.4L584.6,720.7L582.7,717.0L591.1,726.0ZM590.9,720.3L587.9,712.1L595.8,710.7L602.2,714.8L602.6,719.7L591.4,726.0L586.4,714.8L590.9,720.3ZM715.0,603.2L711.7,610.0L711.3,605.6L715.0,603.2Z" fill="#ebe3d3" stroke="#fff" stroke-width="1.2"/><defs><pattern id="rannHatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="9" height="9" fill="#eef2f1"/><line x1="0" y1="0" x2="0" y2="9" stroke="#b9cfd8" stroke-width="2.2"/></pattern></defs><path d="M980.3,51.7L986.9,53.1L984.0,61.4L972.8,71.6L971.9,80.0L982.6,76.3L999.5,76.9L994.4,89.5L999.7,96.7L994.3,95.6L991.1,100.7L997.9,107.4L990.6,114.9L998.8,120.2L1000.0,119.9L1000.0,139.3L989.2,141.6L983.3,148.5L985.6,162.2L980.0,160.1L977.0,162.9L980.4,168.0L982.3,166.0L978.7,169.9L982.0,173.6L987.9,174.6L985.8,179.4L993.8,183.4L992.7,187.9L1000.0,187.0L1000.0,190.0L998.0,189.4L996.2,193.9L993.6,191.2L985.5,195.2L976.5,189.7L972.1,195.3L980.4,198.6L976.7,201.3L985.4,207.9L995.1,209.6L995.9,213.2L989.8,216.4L989.6,224.3L986.4,227.4L991.4,230.7L982.3,241.5L980.3,250.8L987.7,250.3L990.6,253.4L981.4,265.2L984.7,272.0L977.0,269.8L974.3,274.2L970.6,270.1L971.0,274.0L966.3,274.9L960.1,269.2L952.6,274.2L947.8,271.0L947.3,274.5L924.3,280.3L912.9,301.8L909.3,304.6L905.8,305.2L901.6,304.0L897.3,299.7L888.3,295.3L873.6,294.0L868.6,291.1L843.7,287.7L840.0,285.1L837.7,280.9L832.2,279.7L828.7,276.3L801.7,273.8L796.6,277.3L795.0,282.2L797.1,286.7L796.6,293.9L799.5,301.7L805.0,305.2L808.5,312.2L809.4,319.6L807.9,326.2L809.2,331.6L806.8,337.9L804.0,340.2L800.5,341.1L780.2,338.0L775.5,356.4L771.7,361.4L761.0,365.7L748.4,363.3L736.5,375.9L733.3,377.1L727.7,377.0L712.6,388.2L701.3,389.4L688.5,398.5L685.4,403.9L676.5,410.6L674.0,418.9L679.5,429.1L679.5,433.0L678.1,436.7L673.9,440.3L668.7,441.0L653.0,452.0L649.2,452.3L644.9,451.2L640.6,446.4L639.8,440.6L641.1,436.9L643.5,434.2L644.3,426.8L642.1,424.3L633.5,424.0L628.5,429.1L624.4,431.0L617.7,430.1L607.4,422.9L605.3,419.7L604.5,415.5L598.0,411.9L591.1,403.6L589.3,398.2L590.3,389.4L570.3,385.9L565.4,383.1L563.1,380.3L561.9,374.9L565.8,343.7L568.6,337.9L574.9,332.5L578.3,330.8L583.4,330.0L584.7,323.4L582.7,314.7L584.3,306.7L587.8,296.9L596.4,286.6L598.0,279.9L595.4,274.3L588.6,271.3L585.4,266.5L575.0,262.6L570.5,256.9L561.4,250.5L542.5,247.3L536.1,250.9L533.8,255.9L531.1,258.5L527.6,259.8L523.5,259.6L520.6,267.2L515.1,274.3L513.4,280.4L510.5,283.8L506.1,293.4L499.9,298.2L497.4,303.3L493.9,306.3L490.5,307.2L479.0,306.4L475.0,309.6L468.4,310.6L463.0,307.3L460.4,300.8L455.3,300.4L445.9,308.4L439.0,310.3L399.8,307.7L395.1,305.8L390.3,299.9L383.0,298.5L377.0,293.1L369.3,292.5L366.0,307.8L364.2,311.2L361.3,313.6L357.9,314.6L347.1,312.6L346.1,321.2L344.5,325.0L335.8,333.4L333.3,337.5L328.5,340.0L323.8,339.4L320.1,336.8L313.6,335.9L308.9,331.8L303.0,330.6L298.8,326.6L297.1,320.8L281.2,314.3L277.4,310.7L259.2,308.7L251.1,301.4L246.4,300.9L243.3,299.3L240.1,294.6L237.7,292.9L216.5,292.6L210.7,289.4L205.5,289.0L194.5,295.8L192.1,299.7L188.2,301.9L172.1,300.3L169.7,313.2L165.8,319.2L161.3,321.9L153.8,321.9L147.2,326.0L141.3,335.0L132.3,343.3L132.7,361.3L131.1,365.7L127.8,368.9L127.4,373.3L125.2,377.8L124.8,393.1L121.8,398.2L117.1,400.6L118.6,411.4L110.9,417.8L83.7,414.6L78.8,387.3L75.6,382.6L67.0,382.0L65.0,385.0L27.8,379.9L21.0,375.0L13.6,362.7L15.3,354.4L32.5,352.3L37.0,348.5L46.2,325.4L44.8,302.3L48.1,289.4L61.2,282.3L69.8,271.0L85.4,273.2L87.5,259.2L93.4,254.6L99.6,253.2L103.2,259.1L213.0,257.6L216.6,150.1L229.8,144.3L236.6,144.9L241.7,168.9L246.9,177.7L251.6,176.5L259.6,155.5L271.3,147.9L283.3,172.7L288.8,174.3L316.7,157.4L346.6,169.9L382.7,155.0L401.5,159.0L422.7,155.4L436.8,159.6L467.9,151.1L509.5,191.5L598.5,191.5L611.2,182.2L624.3,150.6L666.7,140.8L686.8,132.4L702.6,132.1L715.6,123.9L764.6,108.5L773.5,113.2L766.8,128.0L761.1,131.1L768.0,152.1L763.9,164.8L793.3,175.5L835.2,175.0L865.6,162.3L856.1,155.3L855.8,150.6L877.9,132.8L889.6,127.2L900.0,133.0L908.8,130.2L919.4,117.6L930.9,113.8L932.0,109.0L925.2,103.9L905.2,105.1L893.5,101.1L895.3,75.0L890.1,68.3L889.8,51.1L896.5,37.9L916.4,29.0L923.3,20.0L927.9,24.6L981.2,44.3L980.3,51.7ZM935.4,359.1L939.3,357.8L939.0,352.7L948.7,342.0L943.1,340.2L940.1,343.0L937.7,337.3L947.7,337.7L946.9,332.6L960.0,337.5L961.8,351.2L958.6,354.4L961.2,361.7L986.2,365.3L1000.0,361.7L1000.0,523.0L994.6,525.5L990.9,517.1L988.5,523.7L985.1,519.3L981.0,524.6L978.8,523.6L980.6,529.2L975.4,527.2L968.7,529.9L966.9,527.2L965.1,531.9L961.3,530.2L957.1,533.1L961.9,526.1L956.5,518.3L947.3,516.3L943.5,520.1L939.8,511.7L931.0,510.7L927.1,505.3L920.9,514.7L907.6,522.7L908.1,525.2L907.5,522.6L895.9,520.2L883.3,527.3L883.0,521.0L880.0,522.2L881.8,530.6L879.7,530.7L884.6,532.6L879.7,531.7L881.3,533.7L878.7,535.1L877.5,532.3L872.7,533.0L877.1,529.0L874.8,524.9L861.6,524.9L860.5,532.0L865.1,533.9L857.8,533.9L856.2,538.3L855.9,533.1L842.2,526.5L841.6,529.1L850.9,535.7L844.1,541.6L844.8,548.2L842.8,546.7L841.7,552.2L840.3,542.1L843.7,536.1L837.9,533.4L838.1,524.2L829.4,528.8L830.5,523.7L827.9,526.2L822.5,523.7L822.8,530.5L799.6,539.9L798.3,532.3L806.9,527.5L804.2,521.6L808.5,516.1L806.6,507.8L802.1,508.8L796.4,505.1L793.5,501.5L792.6,497.9L792.9,492.7L794.9,487.5L797.6,485.1L800.9,483.9L836.6,480.9L837.2,476.4L835.9,471.5L836.8,467.0L839.5,463.3L846.2,458.6L857.3,456.6L859.2,452.0L863.5,448.7L877.0,449.2L878.3,444.9L881.3,441.4L884.7,440.0L890.0,439.5L906.5,427.0L924.1,424.9L925.4,419.4L921.1,414.9L920.2,408.3L922.1,398.0L927.3,383.5L927.9,377.0L930.8,373.1L935.1,371.1L935.4,359.1ZM152.8,469.9L147.1,472.6L142.5,483.3L140.9,480.5L143.7,475.9L136.3,472.3L135.7,468.7L142.6,462.6L148.4,463.8L152.3,463.3L152.8,469.9Z" fill="url(#rannHatch)" stroke="none"/><path d="M916.4,304.3L913.1,306.0L915.0,308.6L912.5,312.4L907.0,312.6L907.5,317.4L910.9,318.6L910.2,332.8L916.0,337.2L911.2,334.9L915.0,351.0L905.9,353.5L905.8,366.1L918.5,380.7L922.0,378.1L921.1,372.2L923.3,375.5L933.2,371.8L930.1,373.8L927.6,377.9L927.3,383.5L922.1,398.0L920.2,408.3L920.1,411.2L921.1,414.9L925.4,419.4L924.1,424.9L906.5,427.0L890.0,439.5L884.7,440.0L881.3,441.4L878.3,444.9L877.0,449.2L866.2,448.3L863.5,448.7L859.2,452.0L857.3,456.6L848.9,457.5L846.2,458.6L839.5,463.3L836.8,467.0L835.9,471.5L837.2,476.4L836.6,480.9L800.9,483.9L797.6,485.1L794.9,487.5L793.6,490.0L792.5,496.9L793.5,501.5L797.1,505.6L792.9,503.0L786.9,508.0L783.6,517.4L767.5,520.0L743.9,520.3L735.0,513.7L719.4,510.4L721.8,507.6L719.6,507.2L685.5,507.5L680.1,510.1L684.5,518.8L671.2,525.2L664.4,521.2L664.4,524.3L660.0,525.8L665.2,524.7L662.9,533.1L656.3,531.8L660.1,536.4L656.3,536.0L654.3,542.9L646.9,550.2L646.3,556.7L644.2,555.5L643.1,559.2L640.9,556.5L636.2,566.5L639.1,567.2L633.0,570.0L623.6,586.1L616.2,586.1L618.4,588.5L611.7,592.7L609.9,589.8L607.1,595.1L601.8,594.3L608.8,595.6L607.8,599.3L613.0,597.5L609.5,601.0L616.7,601.0L615.2,605.2L593.4,607.5L593.1,610.0L588.8,608.0L590.8,609.6L578.5,612.1L579.5,614.0L568.8,613.2L560.2,621.3L553.8,620.4L530.5,628.0L520.8,636.2L494.6,644.9L484.1,646.2L484.1,641.9L480.1,641.0L471.4,643.9L462.4,639.1L462.5,641.5L449.9,642.0L448.7,645.0L440.1,641.8L440.9,645.2L437.7,646.0L434.2,643.0L432.6,646.4L426.4,640.2L414.2,641.4L430.3,652.7L437.8,651.6L430.9,653.5L419.5,648.8L422.4,651.5L403.4,638.7L380.2,632.4L369.1,636.5L358.0,633.4L362.7,632.2L357.0,628.8L355.2,632.9L347.2,632.4L346.8,627.8L338.2,625.0L340.9,627.9L327.5,620.3L323.5,614.7L325.8,614.0L321.7,614.6L320.9,611.8L320.5,614.9L311.3,608.4L311.9,604.9L308.7,605.7L308.7,603.0L307.0,605.8L289.3,594.8L289.5,596.1L227.9,557.5L215.0,552.3L176.5,522.4L161.8,504.7L161.1,499.6L168.5,500.5L175.3,494.4L172.1,484.6L177.1,479.3L170.4,483.5L167.0,494.0L152.3,491.7L156.2,497.4L148.5,496.6L146.1,485.9L149.8,479.2L155.1,475.0L159.4,478.4L157.5,474.0L172.9,470.1L154.3,466.8L155.9,458.4L160.9,456.1L156.6,455.2L151.5,461.1L136.6,456.5L132.5,463.1L132.5,458.9L123.8,457.3L124.1,449.3L119.0,445.6L121.1,434.2L111.9,444.3L106.0,439.8L110.1,426.6L119.1,422.4L111.6,422.4L130.4,407.5L123.2,409.6L120.6,406.1L121.8,400.9L117.2,400.6L121.8,398.2L124.8,393.1L125.2,377.8L127.4,373.3L127.8,368.9L131.1,365.7L132.7,361.3L132.3,343.3L141.3,335.0L147.2,326.0L153.8,321.9L161.3,321.9L165.8,319.2L169.7,313.2L172.1,300.3L184.7,302.2L188.2,301.9L192.1,299.7L194.5,295.8L205.5,289.0L210.7,289.4L213.2,291.5L216.5,292.6L237.7,292.9L240.1,294.6L243.3,299.3L246.4,300.9L251.1,301.4L259.2,308.7L262.6,309.6L277.4,310.7L281.2,314.3L297.1,320.8L298.8,326.6L303.0,330.6L308.9,331.8L313.6,335.9L320.1,336.8L323.8,339.4L328.5,340.0L333.3,337.5L335.8,333.4L344.5,325.0L346.1,321.2L347.1,312.6L352.3,312.9L355.2,314.3L357.9,314.6L361.3,313.6L364.2,311.2L366.0,307.8L369.3,292.5L377.0,293.1L383.0,298.5L390.3,299.9L395.1,305.8L399.8,307.7L439.0,310.3L445.9,308.4L455.3,300.4L460.4,300.8L463.0,307.3L465.8,309.7L468.4,310.6L475.0,309.6L479.0,306.4L492.3,306.9L496.2,304.7L499.9,298.2L506.1,293.4L510.5,283.8L513.4,280.4L515.1,274.3L520.6,267.2L523.5,259.6L527.6,259.8L531.1,258.5L533.8,255.9L536.1,250.9L542.3,247.3L561.4,250.5L570.5,256.9L575.0,262.6L585.4,266.5L588.6,271.3L595.4,274.3L598.0,279.9L596.4,286.6L587.8,296.9L584.3,306.7L582.7,314.7L584.7,323.4L583.4,330.0L578.3,330.8L574.9,332.5L568.6,337.9L565.8,343.7L562.0,374.0L562.7,379.4L565.4,383.1L569.4,385.6L590.3,389.4L589.3,398.2L591.1,403.6L598.0,411.9L604.5,415.5L605.3,419.7L607.4,422.9L617.7,430.1L620.5,431.0L624.4,431.0L628.5,429.1L633.5,424.0L642.1,424.3L644.3,427.0L643.5,434.2L641.1,436.9L640.0,439.6L640.2,445.5L642.1,448.8L644.1,450.7L650.1,452.4L654.7,451.2L668.7,441.0L673.9,440.3L677.6,437.4L679.5,433.0L679.5,429.1L674.0,418.9L676.5,410.6L685.4,403.9L688.5,398.5L701.3,389.4L712.6,388.2L727.7,377.0L733.3,377.1L736.5,375.9L748.4,363.3L761.0,365.7L771.7,361.4L774.2,358.9L775.5,356.4L780.2,338.0L800.5,341.1L804.0,340.2L806.8,337.9L808.3,335.4L809.2,331.6L807.9,326.2L809.4,319.6L808.5,312.2L805.0,305.2L802.4,302.9L799.5,301.7L796.6,293.9L797.1,286.7L795.0,282.2L796.6,277.3L801.7,273.8L828.7,276.3L832.2,279.7L837.7,280.9L840.0,285.1L843.7,287.7L868.6,291.1L873.6,294.0L888.3,295.3L897.3,299.7L900.8,303.5L904.1,305.0L909.3,304.6L911.6,303.1L913.9,300.2L913.3,301.5L916.4,304.3Z" fill="#f7e6d6" stroke="#7a1f33" stroke-width="2.4" stroke-linejoin="round"/><path d="M980.3,51.7L986.9,53.1L984.0,61.4L972.8,71.6L971.9,80.0L982.6,76.3L999.5,76.9L994.4,89.5L999.7,96.7L994.3,95.6L991.1,100.7L997.9,107.4L990.6,114.9L998.8,120.2L1000.0,119.9L1000.0,139.3L989.2,141.6L983.3,148.5L985.6,162.2L980.0,160.1L977.0,162.9L980.4,168.0L982.3,166.0L978.7,169.9L982.0,173.6L987.9,174.6L985.8,179.4L993.8,183.4L992.7,187.9L1000.0,187.0L1000.0,190.0L998.0,189.4L996.2,193.9L993.6,191.2L985.5,195.2L976.5,189.7L972.1,195.3L980.4,198.6L976.7,201.3L985.4,207.9L995.1,209.6L995.9,213.3L989.8,216.4L989.6,224.3L986.4,227.4L991.4,230.7L982.3,241.5L980.3,250.8L987.7,250.3L990.6,253.4L981.4,265.2L984.7,272.0L977.0,269.8L974.3,274.2L970.6,270.1L971.0,274.0L966.3,274.9L960.1,269.2L952.6,274.2L947.8,271.0L947.3,274.5L924.3,280.3L913.3,301.5L916.4,304.3L913.1,306.0L915.0,308.6L912.5,312.4L907.0,312.6L907.5,317.4L910.9,318.6L910.2,332.8L916.0,337.2L911.2,334.9L915.0,351.0L905.9,353.5L905.8,366.1L918.5,380.7L922.0,378.1L921.1,372.2L923.3,375.5L935.1,371.1L935.4,359.1L939.3,357.8L939.0,352.7L948.7,342.0L943.1,340.2L940.1,343.0L937.7,337.3L947.7,337.7L946.9,332.6L960.0,337.5L961.8,351.2L958.6,354.4L961.2,361.7L986.2,365.3L1000.0,361.7L1000.0,523.0L994.6,525.5L990.9,517.1L988.5,523.7L985.1,519.3L981.0,524.6L978.8,523.6L980.6,529.2L975.4,527.2L968.7,529.9L966.9,527.2L965.1,531.9L961.3,530.2L957.1,533.1L961.9,526.1L956.5,518.3L947.3,516.3L943.5,520.1L939.8,511.7L931.0,510.7L927.1,505.3L920.9,514.7L907.6,522.7L908.1,525.2L907.5,522.6L895.9,520.2L883.3,527.3L883.0,521.0L880.0,522.2L881.8,530.6L879.7,530.7L884.6,532.6L879.7,531.7L881.3,533.7L878.7,535.1L877.5,532.3L872.7,533.0L877.1,529.0L874.8,524.9L861.6,524.9L860.5,532.0L865.1,533.9L857.8,533.9L856.2,538.3L855.9,533.1L842.2,526.5L841.6,529.1L850.9,535.7L844.1,541.6L844.8,548.2L842.8,546.7L841.7,552.2L840.3,542.1L843.7,536.1L837.9,533.4L838.1,524.2L829.4,528.8L830.5,523.7L827.9,526.2L822.5,523.7L822.8,530.5L799.6,539.9L798.3,532.3L806.9,527.5L804.2,521.6L808.5,516.1L806.6,507.8L802.1,508.8L792.9,503.0L786.9,508.0L783.6,517.4L767.5,520.0L743.9,520.3L735.0,513.7L719.4,510.4L721.8,507.6L719.6,507.2L685.5,507.5L680.1,510.1L684.5,518.8L671.2,525.2L664.4,521.2L664.4,524.3L660.0,525.8L665.2,524.7L662.9,533.1L656.3,531.8L660.1,536.4L656.3,536.0L654.3,542.9L646.9,550.2L646.3,556.7L644.2,555.5L643.1,559.2L640.9,556.5L636.2,566.5L639.1,567.2L633.0,570.0L623.6,586.1L616.2,586.1L618.4,588.5L611.7,592.7L609.9,589.8L607.1,595.1L601.8,594.3L608.8,595.6L607.8,599.3L613.0,597.5L609.5,601.0L616.7,601.0L615.2,605.2L593.4,607.5L593.1,610.0L588.8,608.0L590.8,609.6L578.5,612.1L579.5,614.0L568.8,613.2L560.2,621.3L553.8,620.4L530.5,628.0L520.8,636.2L494.6,644.9L484.1,646.2L484.1,641.9L480.1,641.0L471.4,643.9L462.4,639.1L462.5,641.5L449.9,642.0L448.7,645.0L440.1,641.8L440.9,645.2L437.7,646.0L434.2,643.0L432.6,646.4L426.4,640.2L414.2,641.4L430.3,652.7L437.8,651.6L430.9,653.5L419.5,648.8L422.4,651.5L403.4,638.7L380.2,632.4L369.1,636.5L358.0,633.4L362.7,632.2L357.0,628.8L355.2,632.9L347.2,632.4L346.8,627.8L338.2,625.0L340.9,627.9L327.5,620.3L323.5,614.7L325.8,614.0L321.7,614.6L320.9,611.8L320.5,614.9L311.3,608.4L311.9,604.9L308.7,605.7L308.7,603.0L307.0,605.8L289.3,594.8L289.5,596.1L227.9,557.5L215.0,552.3L176.5,522.4L161.8,504.7L161.1,499.6L168.5,500.5L175.3,494.4L172.1,484.6L177.1,479.3L170.4,483.5L167.0,494.0L152.3,491.7L156.2,497.4L148.5,496.6L146.1,485.9L149.8,479.2L155.1,475.0L159.4,478.4L157.5,474.0L172.9,470.1L154.3,466.8L155.9,458.4L160.9,456.1L156.6,455.2L151.5,461.1L136.6,456.5L132.5,463.1L132.5,458.9L123.8,457.3L124.1,449.3L119.0,445.6L121.1,434.2L111.9,444.3L106.0,439.8L110.1,426.6L119.1,422.4L111.6,422.4L130.4,407.5L123.2,409.6L120.6,406.1L121.8,400.9L117.1,400.6L118.6,411.4L110.9,417.8L83.7,414.6L78.8,387.3L75.6,382.6L67.0,382.0L65.0,385.0L27.8,379.9L21.0,375.0L13.6,362.7L15.3,354.4L32.5,352.3L37.0,348.5L46.2,325.4L44.8,302.3L48.1,289.4L61.2,282.3L69.8,271.0L85.4,273.2L87.5,259.2L93.4,254.6L99.6,253.2L103.2,259.1L213.0,257.6L216.6,150.1L229.8,144.3L236.6,144.9L241.7,168.9L246.9,177.7L251.6,176.5L259.6,155.5L271.3,147.9L283.3,172.7L288.8,174.3L316.7,157.4L346.6,169.9L382.7,155.0L401.5,159.0L422.7,155.4L436.8,159.6L467.9,151.1L509.5,191.5L598.5,191.5L611.2,182.2L624.3,150.6L666.7,140.8L686.8,132.4L702.6,132.1L715.6,123.9L764.6,108.5L773.5,113.2L766.8,128.0L761.1,131.1L768.0,152.1L763.9,164.8L793.3,175.5L835.2,175.0L865.6,162.3L856.1,155.3L855.8,150.6L877.9,132.8L889.6,127.2L900.0,133.0L908.8,130.2L919.4,117.6L930.9,113.8L932.0,109.0L925.2,103.9L905.2,105.1L893.5,101.1L895.3,75.0L890.1,68.3L889.8,51.1L896.5,37.9L916.4,29.0L923.3,20.0L927.9,24.6L981.2,44.3L980.3,51.7ZM152.3,463.3L152.8,469.9L147.1,472.6L142.5,483.3L140.9,480.5L143.7,475.9L136.3,472.3L135.7,468.7L142.6,462.6L148.4,463.8L152.3,463.3Z" fill="none" stroke="#7a1f33" stroke-width="1.3" stroke-dasharray="7 5" stroke-opacity=".7" stroke-linejoin="round"/><text x="576" y="215" class="m-rann" font-size="22" text-anchor="middle">GREAT RANN OF KUTCH</text><text x="900" y="470" class="m-rann" font-size="15" text-anchor="middle">LITTLE RANN</text><text x="515" y="711" class="m-sea" font-size="18" text-anchor="middle" transform="rotate(-8 515 711)">GULF OF KUTCH</text><text x="121" y="628" class="m-sea" font-size="19" text-anchor="middle">ARABIAN SEA</text><text x="818" y="728" class="m-region" font-size="14" text-anchor="middle">SAURASHTRA</text><text x="379" y="380" class="m-region" font-size="13" text-anchor="middle">BANNI</text><circle cx="375" cy="297" r="3" fill="#6b5a50"/><text x="382" y="301" class="m-vil" font-size="11.5" text-anchor="start">Luna</text><circle cx="515" cy="383" r="3" fill="#6b5a50"/><text x="522" y="387" class="m-vil" font-size="11.5" text-anchor="start">Bhojardo</text><circle cx="268" cy="323" r="3" fill="#6b5a50"/><text x="275" y="327" class="m-vil" font-size="11.5" text-anchor="start">Ghaduli</text><circle cx="297" cy="371" r="3" fill="#6b5a50"/><text x="304" y="375" class="m-vil" font-size="11.5" text-anchor="start">Rawapur</text><circle cx="334" cy="403" r="3" fill="#6b5a50"/><text x="341" y="407" class="m-vil" font-size="11.5" text-anchor="start">Ratadiya</text><circle cx="194" cy="392" r="3" fill="#6b5a50"/><text x="201" y="396" class="m-vil" font-size="11.5" text-anchor="start">Baranda</text><circle cx="136" cy="397" r="3" fill="#6b5a50"/><text x="136" y="412" class="m-vil" font-size="11.5" text-anchor="middle">Pipar</text><circle cx="205" cy="475" r="3" fill="#6b5a50"/><text x="212" y="479" class="m-vil" font-size="11.5" text-anchor="start">Wadsar</text><circle cx="203" cy="506" r="3" fill="#6b5a50"/><text x="210" y="510" class="m-vil" font-size="11.5" text-anchor="start">Jakhau</text><circle cx="340" cy="496" r="3" fill="#6b5a50"/><text x="347" y="500" class="m-vil" font-size="11.5" text-anchor="start">Bitta</text><circle cx="380" cy="518" r="3" fill="#6b5a50"/><text x="387" y="522" class="m-vil" font-size="11.5" text-anchor="start">Roha</text><circle cx="451" cy="519" r="3" fill="#6b5a50"/><text x="458" y="523" class="m-vil" font-size="11.5" text-anchor="start">Desalpar</text><circle cx="264" cy="546" r="3" fill="#6b5a50"/><text x="271" y="550" class="m-vil" font-size="11.5" text-anchor="start">Kothara</text><circle cx="275" cy="583" r="3" fill="#6b5a50"/><text x="282" y="587" class="m-vil" font-size="11.5" text-anchor="start">Suthri</text><circle cx="345" cy="567" r="3" fill="#6b5a50"/><text x="352" y="571" class="m-vil" font-size="11.5" text-anchor="start">Kodai</text><circle cx="378" cy="596" r="3" fill="#6b5a50"/><text x="371" y="600" class="m-vil" font-size="11.5" text-anchor="end">Gadhsisa</text><circle cx="482" cy="549" r="3" fill="#6b5a50"/><text x="489" y="553" class="m-vil" font-size="11.5" text-anchor="start">Kera</text><circle cx="428" cy="598" r="3" fill="#6b5a50"/><text x="428" y="613" class="m-vil" font-size="11.5" text-anchor="middle">Rayan Moti</text><circle cx="488" cy="592" r="3" fill="#6b5a50"/><text x="495" y="596" class="m-vil" font-size="11.5" text-anchor="start">Patri</text><circle cx="565" cy="588" r="3" fill="#6b5a50"/><text x="572" y="592" class="m-vil" font-size="11.5" text-anchor="start">Gundala</text><circle cx="582" cy="518" r="3" fill="#6b5a50"/><text x="589" y="522" class="m-vil" font-size="11.5" text-anchor="start">Lakhapar</text><circle cx="611" cy="464" r="3" fill="#6b5a50"/><text x="618" y="468" class="m-vil" font-size="11.5" text-anchor="start">Dudhai</text><circle cx="557" cy="439" r="3" fill="#6b5a50"/><text x="564" y="443" class="m-vil" font-size="11.5" text-anchor="start">Lodai</text><circle cx="673" cy="510" r="3" fill="#6b5a50"/><text x="680" y="514" class="m-vil" font-size="11.5" text-anchor="start">Chirai</text><circle cx="779" cy="513" r="3" fill="#6b5a50"/><text x="786" y="517" class="m-vil" font-size="11.5" text-anchor="start">Jangi</text><circle cx="747" cy="427" r="3" fill="#6b5a50"/><text x="754" y="431" class="m-vil" font-size="11.5" text-anchor="start">Adhoi</text><circle cx="717" cy="400" r="3" fill="#6b5a50"/><text x="724" y="404" class="m-vil" font-size="11.5" text-anchor="start">Chobari</text><circle cx="790" cy="440" r="3" fill="#6b5a50"/><text x="797" y="444" class="m-vil" font-size="11.5" text-anchor="start">Chitrod</text><circle cx="803" cy="367" r="3" fill="#6b5a50"/><text x="810" y="371" class="m-vil" font-size="11.5" text-anchor="start">Ramvav</text><circle cx="810" cy="340" r="3" fill="#6b5a50"/><text x="817" y="344" class="m-vil" font-size="11.5" text-anchor="start">Gedi</text><circle cx="838" cy="311" r="3" fill="#6b5a50"/><text x="845" y="315" class="m-vil" font-size="11.5" text-anchor="start">Jatawada</text><circle cx="885" cy="406" r="3" fill="#6b5a50"/><text x="892" y="410" class="m-vil" font-size="11.5" text-anchor="start">Adesar</text><circle cx="506" cy="298" r="3" fill="#6b5a50"/><text x="514" y="310" class="m-vil" font-size="11.5" text-anchor="start">Khavda</text><circle cx="506" cy="504" r="3" fill="#6b5a50"/><text x="514" y="518" class="m-vil" font-size="11.5" text-anchor="start">Madhapar</text><circle cx="491" cy="495" r="8" fill="#7a1f33" stroke="#fff" stroke-width="2.5"/><text x="503" y="487" class="m-hq" font-size="21" text-anchor="start">Bhuj</text><circle cx="631" cy="552" r="5" fill="#3a2a2e" stroke="#fff" stroke-width="2"/><text x="641" y="546" class="m-town" font-size="14.5" text-anchor="start">Gandhidham</text><rect x="644" y="562" width="11" height="11" fill="#1f4d6b" stroke="#fff" stroke-width="2"/><text x="660" y="583" class="m-port" font-size="14.5" text-anchor="start">Deendayal Port (Kandla)</text><rect x="496" y="638" width="11" height="11" fill="#1f4d6b" stroke="#fff" stroke-width="2"/><text x="512" y="659" class="m-port" font-size="14.5" text-anchor="start">Mundra Port</text><circle cx="395" cy="634" r="5" fill="#3a2a2e" stroke="#fff" stroke-width="2"/><text x="385" y="650" class="m-town" font-size="14.5" text-anchor="end">Mandvi</text><circle cx="599" cy="541" r="5" fill="#3a2a2e" stroke="#fff" stroke-width="2"/><text x="589" y="557" class="m-town" font-size="14.5" text-anchor="end">Anjar</text><circle cx="695" cy="481" r="5" fill="#3a2a2e" stroke="#fff" stroke-width="2"/><text x="705" y="475" class="m-town" font-size="14.5" text-anchor="start">Bhachau</text><circle cx="786" cy="389" r="5" fill="#3a2a2e" stroke="#fff" stroke-width="2"/><text x="796" y="394" class="m-town" font-size="14.5" text-anchor="start">Rapar</text><circle cx="368" cy="465" r="5" fill="#3a2a2e" stroke="#fff" stroke-width="2"/><text x="358" y="459" class="m-town" font-size="14.5" text-anchor="end">Nakhatrana</text><circle cx="236" cy="493" r="5" fill="#3a2a2e" stroke="#fff" stroke-width="2"/><text x="226" y="498" class="m-town" font-size="14.5" text-anchor="end">Naliya</text><path d="M220,298L227,311L213,311Z" fill="#d18a00" stroke="#fff" stroke-width="1.8"/><text x="230" y="298" class="m-visit" font-size="14.5" text-anchor="start">Lakhpat Fort</text><path d="M148,347L155,360L141,360Z" fill="#d18a00" stroke="#fff" stroke-width="1.8"/><text x="148" y="342" class="m-visit" font-size="14.5" text-anchor="middle">Narayan Sarovar</text><path d="M489,295L496,308L482,308Z" fill="#d18a00" stroke="#fff" stroke-width="1.8"/><text x="489" y="290" class="m-visit" font-size="14.5" text-anchor="middle">White Rann (Dhordo)</text><path d="M655,277L662,290L648,290Z" fill="#d18a00" stroke="#fff" stroke-width="1.8"/><text x="665" y="277" class="m-visit" font-size="14.5" text-anchor="start">Dholavira</text><path d="M404,482L411,495L397,495Z" fill="#d18a00" stroke="#fff" stroke-width="1.8"/><text x="394" y="484" class="m-visit" font-size="14.5" text-anchor="end">Palar Dhuna</text><g><path d="M954,24L963,54L954,48L945,54Z" fill="#5a1426"/><text x="954" y="74" font-size="14" text-anchor="middle" class="m-town">N</text></g><g><rect x="30" y="727" width="136" height="6" fill="#3a2a2e"/><text x="30" y="719" font-size="13" class="m-town" text-anchor="start">0</text><text x="166" y="719" font-size="13" class="m-town" text-anchor="middle">50 km</text></g><text x="988" y="749" class="m-small" font-size="11" text-anchor="end">District boundary: Census of India 2011 via DataMeet (CC BY) &#183; Coastline: Natural Earth</text><g><rect x="26" y="26" width="250" height="166" rx="10" fill="#fff" fill-opacity=".9" stroke="#e2d6cf"/><circle cx="40" cy="46" r="7" fill="#7a1f33" stroke="#fff" stroke-width="2"/><text x="56" y="51" font-size="13.5" class="m-town">District headquarters</text><circle cx="40" cy="70" r="5" fill="#3a2a2e"/><text x="56" y="75" font-size="13.5" class="m-town">Town</text><circle cx="120" cy="70" r="3" fill="#6b5a50"/><text x="132" y="75" font-size="13.5" class="m-town">Village</text><rect x="35" y="89" width="10" height="10" fill="#1f4d6b"/><text x="56" y="99" font-size="13.5" class="m-town">Port</text><path d="M40,111L47,124L33,124Z" fill="#d18a00"/><text x="56" y="123" font-size="13.5" class="m-town">Place to visit</text><rect x="32" y="136" width="16" height="12" fill="url(#rannHatch)" stroke="#b9cfd8"/><text x="56" y="147" font-size="13.5" class="m-town">Rann (salt marsh)</text><line x1="32" y1="166" x2="48" y2="166" stroke="#7a1f33" stroke-width="1.6" stroke-dasharray="5 3"/><text x="56" y="171" font-size="13.5" class="m-town">District boundary</text></g></svg>
+      </div>
+      <p class="kx-maphint">Tap the map to see it larger.</p>
+      <script>(function(){var m=document.querySelector(".kx-map");if(m&&m.scrollWidth>m.clientWidth){m.scrollLeft=(m.scrollWidth-m.clientWidth)*0.45;}})();</script>
+      <div class="kx-text">
+        <span class="eyebrow">Where is Kutch?</span>
+        <h2 id="mapTitle">Map of Kutch</h2>
+        <p>Kutch lies at the north-western tip of Gujarat. The Great Rann and the international border with Pakistan lie to its north, the Little Rann to its east, and the Gulf of Kutch and the Arabian Sea to its south and west.</p>
+        <p><strong>Bhuj</strong>, the district headquarters, is near the centre of the district. The port towns of <strong>Kandla</strong>, <strong>Gandhidham</strong> and <strong>Mundra</strong> are on the Gulf of Kutch in the south-east and south, <strong>Mandvi</strong> is on the southern coast, the White Rann at <strong>Dhordo</strong> is to the north, and <strong>Dholavira</strong> is on Khadir Bet island in the Great Rann to the north-east.</p>
+        <p>To zoom in and explore the district, or to get directions, open it in Google Maps.</p>
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Kachchh+district,+Gujarat,+India" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+      </div>
+    </section>
+    <div class="kx-welcome reveal">
+      <span class="eyebrow">Welcome to Kutch</span>
+      <h2>A land of the desert, the sea and enterprise</h2>
+      <p>Kutch, in the north-west corner of Gujarat, is the largest district in India. On one side it is surrounded by the white salt desert of the Rann, and on the other by the Gulf of Kutch and the Arabian Sea. For thousands of years people have lived and traded here &mdash; from the Harappan city of Dholavira, through four centuries of rule by the Jadeja kings, to the busy ports and industries of today.</p>
+      <p>Kutch is also a land that has rebuilt itself. After the earthquake of 26 January 2001 destroyed much of Bhuj and the towns around it, its people, with the help of the government and industry, rebuilt their homes and businesses. Today Kutch is home to two of India&rsquo;s busiest ports at Kandla and Mundra, one of the world&rsquo;s largest renewable energy parks at Khavda, rich handicrafts, and tourist places that draw visitors from across the world.</p>
+      <p>On this page you can read about the land and its people, the history of Kutch, the city of Bhuj, and the places to visit. The ports, industries and business opportunities of Kutch are on our <a href="business.html" style="color:var(--navy);text-decoration:underline">Business &amp; Opportunities</a> page.</p>
+    </div>
+  </div>
+
+  <section class="kx-section" id="land">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">The land</span>
+        <h2>A district unlike any other</h2>
+        <p>Kutch covers 45,674 square kilometres &mdash; more than the whole state of Kerala, and almost the size of Haryana. It sits at the north-western corner of Gujarat, between the Gulf of Kutch and the Arabian Sea in the south and west, and the salt desert of the Rann in the north and east. The name &ldquo;Kutch&rdquo; is often explained as a land that becomes wet and dry by turns, and that describes it well.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/little-rann-of-kutch-landscape-575e4c.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Little_rann_of_kutch_landscape.JPG?width=960" decoding="async" alt="The flat landscape of the Little Rann of Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">The flat landscape of the Little Rann of Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Little_rann_of_kutch_landscape.JPG" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The Little Rann of Kutch after the water has dried.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">The Rann</span>
+          <h3>The White Rann and the Little Rann</h3>
+          <p>The Rann of Kutch is a vast, flat, low-lying area that is neither fully land nor fully sea. During the monsoon, sea water and rain water flood large parts of it. When the water dries up in the following months, it leaves behind a thick crust of salt. By winter, the Great Rann in the north turns into a white desert that seems to stretch to the horizon &mdash; this is the famous &ldquo;White Rann&rdquo;.</p><p>To the east lies the Little Rann of Kutch. Here, families of salt workers known as <em>Agariyas</em> have produced salt for generations by pumping underground brine into shallow pans and letting the sun evaporate it. Gujarat produces about three-quarters of India&rsquo;s salt, most of it from Kutch and Saurashtra.</p><p>The highest point in the district is Kalo Dungar (the Black Hill), 458 metres high, from where visitors can look out over the endless white of the Great Rann.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/indian-wild-ass-at-the-little-rann-of-kutch-a59c7c.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Wild_Ass_at_the_Little_Rann_of_Kutch.jpg?width=960" decoding="async" alt="Indian wild ass in the Little Rann of Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Indian wild ass in the Little Rann of Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Indian_Wild_Ass_at_the_Little_Rann_of_Kutch.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Indian wild ass, found only in this region.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/camel-herd-kutch-img-1895-c94755.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Camel_herd_Kutch_IMG_1895.jpg?width=960" decoding="async" alt="A camel herd in Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">A camel herd in Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Camel_herd_Kutch_IMG_1895.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Camels grazing in Kutch.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Nature</span>
+          <h3>Grasslands, wildlife and birds</h3>
+          <p>Around the edge of the Rann lie the Banni grasslands, one of the largest grasslands in Asia. For centuries, the Maldhari herding communities have grazed buffaloes, cattle and camels here, and the milk and ghee of Banni are well known in the region.</p><p>The Little Rann is the last home of the Indian wild ass (<em>ghudkhar</em>), protected in the Wild Ass Sanctuary. The district also has the Kutch Desert Wildlife Sanctuary, the Kutch Bustard Sanctuary, the Narayan Sarovar Sanctuary and the Chari-Dhand wetland. In winter, the wetlands of the Rann attract huge flocks of migratory birds, including flamingos and cranes.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/white-rann-of-kutch-0e41f5.webp" width="800" height="533" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/White_Rann_of_Kutch.jpg?width=960" decoding="async" alt="The White Rann of Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">The White Rann of Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:White_Rann_of_Kutch.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The Great Rann in winter.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">People</span>
+          <h3>People and languages</h3>
+          <p>According to the 2011 Census, Kutch had a population of about 20.9 lakh people spread across 10 talukas, with Bhuj as the district headquarters. Because the land is so large, it is one of the most thinly populated districts in Gujarat.</p><p>Gujarati and Kutchi are the main languages. Kutchi is closely related to Sindhi and is today mostly written in the Gujarati script. Hindus, Muslims, Jains and many other communities have lived side by side here for centuries, and this mix is seen in the region&rsquo;s food, music, dress and crafts.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kx-section soft" id="history">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">History</span>
+        <h2>Five thousand years of history</h2>
+        <p>From one of the oldest planned cities in the world to a princely state, and from a devastating earthquake to one of India&rsquo;s fastest-growing industrial regions, the story of Kutch is one of people who keep rebuilding.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/dholavira-archaeological-site-2f2c69.webp" width="960" height="640" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Dholavira_archaeological_site.jpg?width=960" decoding="async" alt="Ruins of Dholavira" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Ruins of Dholavira</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Dholavira_archaeological_site.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The excavated city of Dholavira.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/water-reservoir-at-dholavira-site-78310c.webp" width="960" height="638" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Water_reservoir_at_Dholavira_site.jpg?width=960" decoding="async" alt="Stone water reservoir at Dholavira" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Stone water reservoir at Dholavira</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Water_reservoir_at_Dholavira_site.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">One of Dholavira&rsquo;s stone reservoirs.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Harappan era</span>
+          <h3>Dholavira &mdash; a city of the Indus Valley</h3>
+          <p>Long before the cities of today, Kutch was part of the Harappan or Indus Valley civilisation. Its greatest site is Dholavira, on Khadir Bet island in the Great Rann. The city was lived in from roughly 2650 BCE, covered about 47 hectares, and is counted among the five largest Harappan sites.</p><p>Dholavira is famous for its water management. In a dry land, its people cut at least sixteen stone reservoirs to store rain water &mdash; some of them about 7 metres deep and 79 metres long. A large signboard with ten Indus characters, one of the longest Indus inscriptions ever found, was discovered near its northern gate.</p><p>The site was brought to notice by a local resident in the 1960s, officially identified by J. P. Joshi of the Archaeological Survey of India in 1967&ndash;68, and excavated from 1990 to 2005. In July 2021, UNESCO declared &ldquo;Dholavira: A Harappan City&rdquo; a World Heritage Site.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/prag-mahal-bhuj-d78882.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Prag_Mahal_Bhuj.jpg?width=960" decoding="async" alt="Prag Mahal, built by the rulers of Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Prag Mahal, built by the rulers of Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Prag_Mahal_Bhuj.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Prag Mahal, Bhuj &mdash; a palace of the Kutch rulers.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Kutch State</span>
+          <h3>The Jadeja rulers and the Kutch State</h3>
+          <p>For about three centuries, Kutch was divided among three branches of the Jadeja Rajputs. In the 16th century Rao Khengarji I united the region and, in 1549, made Bhuj his capital. The Jadeja rulers, who used the title <em>Rao</em> and later <em>Maharao</em>, ruled Kutch as a princely state for the next four hundred years. Kutch even had its own currency, the <em>Kori</em>.</p><p>In 1819 a powerful earthquake struck the region, and in the same year Kutch came under the supremacy of the British East India Company after a military defeat, while remaining a princely state. Many of the palaces, temples and lakes seen in Bhuj today were built by the Jadeja rulers during these centuries.</p><p>After Independence, Kutch joined India in 1947 and became a separate state of the Indian Union in 1950. It was merged into Bombay State in 1956, and when Gujarat was formed in 1960, Kutch became one of its districts.</p>
+        </div>
+      </article>
+      <article class="kx-topic solo reveal">
+        <div class="kx-text">
+          <span class="eyebrow">2001</span>
+          <h3>The 2001 earthquake and the rebuilding of Kutch</h3>
+          <p>On the morning of 26 January 2001, Republic Day, a severe earthquake with its centre near Bhachau shook Kutch. Around 20,000 people lost their lives in Gujarat, and the worst damage was in Kutch &mdash; in Bhuj, Bhachau, Anjar, Rapar and hundreds of villages. Large parts of old Bhuj were destroyed.</p><p>What followed is one of the great recovery stories of India. Towns were rebuilt with new roads and infrastructure, and in the years that followed large investment came into Kutch &mdash; in ports, power plants, cement, steel, salt-based chemicals and many other industries &mdash; changing the economy of the district.</p><p>Today, the Smritivan Earthquake Memorial and Museum on Bhujia Hill in Bhuj honours those who died and tells the story of the earthquake and the people who rebuilt Kutch.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kx-section" id="bhuj">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">Our city</span>
+        <h2>Bhuj &mdash; the heart of Kutch</h2>
+        <p>Bhuj takes its name from Bhujia Hill, which rises beside the town. Rao Hamir occupied it in 1510, and Rao Khengarji I made it the capital of Kutch in 1549. For four centuries it was a walled royal city with five main gates. Today it is the district headquarters, the centre of trade, education and administration for the whole of Kutch, and the base from which most visitors explore the region.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/aina-mahal-01-5d8948.webp" width="960" height="641" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Aina_Mahal_01.jpg?width=960" decoding="async" alt="Aina Mahal, Bhuj" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Aina Mahal, Bhuj</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Aina_Mahal_01.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Aina Mahal, Bhuj.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Heritage</span>
+          <h3>Aina Mahal &mdash; the Palace of Mirrors</h3>
+          <p>Aina Mahal was built around 1750 by Rao Lakhpatji. It was designed by Ram Singh Malam, a master craftsman from Kutch who had learnt the arts of glass-making, enamelling and clock-making in Europe. The palace is famous for its walls covered with Venetian glass and mirrors, its marble floors and its fountain hall.</p><p>The palace was badly damaged in the 2001 earthquake, but part of it has been restored and now works as a museum. Its collection includes paintings, a long scroll painting of a royal procession, and many objects from the old court of Kutch.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Prag_Mahal_Palace_Bhuj.jpg/960px-Prag_Mahal_Palace_Bhuj.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Prag_Mahal_Palace_Bhuj.jpg/500px-Prag_Mahal_Palace_Bhuj.jpg 500w, https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Prag_Mahal_Palace_Bhuj.jpg/960px-Prag_Mahal_Palace_Bhuj.jpg 960w" sizes="(max-width:860px) 92vw, 48vw" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Prag_Mahal_Palace_Bhuj.jpg?width=960" decoding="async" alt="Prag Mahal and its clock tower" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Prag Mahal and its clock tower</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Prag_Mahal_Palace_Bhuj.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Prag Mahal and its clock tower.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Heritage</span>
+          <h3>Prag Mahal</h3>
+          <p>Next to Aina Mahal stands Prag Mahal, built between 1865 and 1879 for Rao Pragmalji II. It was designed by Colonel Henry St Clair Wilkins in an Italian Gothic style, using the local yellow sandstone, and was built by Italian artisans together with Kutchi craftsmen.</p><p>Its tall clock tower can be seen from much of the old city and gives a wide view of Bhuj. Inside are the Durbar Hall, with its chandeliers and old furniture, and a large collection of royal objects. Prag Mahal has also appeared in several Hindi films.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/kutch-museum-bhuj-kutch-gujarat-india-aacf94.webp" width="960" height="540" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Kutch_Museum_Bhuj_Kutch_Gujarat_India.jpg?width=960" decoding="async" alt="Kutch Museum, Bhuj" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Kutch Museum, Bhuj</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Kutch_Museum_Bhuj_Kutch_Gujarat_India.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The Kutch Museum building.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Museum</span>
+          <h3>Kutch Museum</h3>
+          <p>Founded in 1877 by Maharao Khengarji III, the Kutch Museum is the oldest museum in Gujarat. It stands on the bank of Hamirsar Lake in a building in the Italian Gothic style.</p><p>The museum has inscriptions from the time of the Kshatrapa rulers, seals from the Indus Valley civilisation, old <em>Kori</em> coins, weapons, textiles, musical instruments and a section on the tribal cultures of Kutch. It is one of the best places to understand the long history of the region in a single visit.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/hamirsar-lake-bhuj-2013-08-01-00-20-5dab97.webp" width="960" height="190" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Hamirsar_Lake_Bhuj_2013-08-01_00-20.jpg?width=960" decoding="async" alt="Hamirsar Lake, Bhuj" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Hamirsar Lake, Bhuj</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Hamirsar_Lake_Bhuj_2013-08-01_00-20.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Hamirsar Lake.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/chhatedi-of-bhuj-f40a22.webp" width="960" height="602" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Chhatedi_of_Bhuj.jpg?width=960" decoding="async" alt="Chhatardi cenotaphs, Bhuj" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Chhatardi cenotaphs, Bhuj</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Chhatedi_of_Bhuj.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The Chhatardi of the Kutch rulers.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">City</span>
+          <h3>Hamirsar Lake, Chhatardi and the old city</h3>
+          <p>Hamirsar Lake lies at the heart of Bhuj. It was fed by a system of canals that brought rain water from the surrounding hills, and when it fills after a good monsoon, the people of Bhuj celebrate. Around the lake are gardens, the Kutch Museum and many of the city&rsquo;s old landmarks.</p><p>Not far away are the Chhatardi &mdash; carved sandstone cenotaphs built in memory of the rulers of Kutch, the largest of them for Rao Lakhpatji. Bhuj is also known for the Swaminarayan Temple, first built in 1822, Sharad Baug Palace, and Bhujia Fort on the hill above the city.</p><p>Bhuj is the main market for the crafts of the villages around it. Embroidery, Rogan art, bandhani, leatherwork and woven shawls can be bought directly from artisans at Bhuj Haat. Bhuj Airport has daily flights to Mumbai, and trains connect the city to Ahmedabad, Delhi and other parts of India.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/new-temple-shri-swaminarayan-mandir-bhuj-cda3ce.webp" width="796" height="327" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/New_Temple_Shri_Swaminarayan_Mandir_Bhuj.jpg?width=960" decoding="async" alt="The new marble Shri Swaminarayan Mandir, Bhuj" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">The new marble Shri Swaminarayan Mandir, Bhuj</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:New_Temple_Shri_Swaminarayan_Mandir_Bhuj.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The new marble temple of Shri Swaminarayan Mandir, Bhuj.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Temple</span>
+          <h3>Shri Swaminarayan Mandir, Bhuj</h3>
+          <p>The Swaminarayan Mandir of Bhuj is one of the oldest temples of the Swaminarayan faith. The first temple was built in 1822 at the wish of Bhagwan Swaminarayan himself, and its idols were installed in 1823.</p><p>The old temple was badly damaged in the 2001 earthquake. A grand new temple of carved white marble was then built near it and opened in 2010. With its domes, pillars and fine carvings, it is now one of the most visited places in Bhuj, and draws devotees from Kutch and from Kutchis living around the world.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img small"><img width="1280" height="720" decoding="async" src="images/kutch-01.webp" alt="Bhujiyo Dungar with the walls of Bhujia Fort and the Bhujang Nag temple" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">Bhujiyo Dungar with the walls of Bhujia Fort and the Bhujang Nag temple</span></figure><span class="kx-cap">Bhujiyo Dungar, with the walls of Bhujia Fort.</span></div><div class="kx-fig"><figure class="kx-img small"><img width="795" height="1400" decoding="async" src="images/kutch-02.webp" alt="Smritivan earthquake memorial garden, Bhuj" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">Smritivan earthquake memorial garden, Bhuj</span></figure><span class="kx-cap">Smritivan, the earthquake memorial on Bhujia Hill.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Bhujiyo Dungar</span>
+          <h3>Bhujiyo Dungar, Smritivan and the Science Centre</h3>
+          <p><strong>Bhujiyo Dungar</strong> (Bhujia Hill), on the edge of the city, gave Bhuj its name. On top stand the walls of <strong>Bhujia Fort</strong>, built in the 18th century to guard the capital, and the old temple of <strong>Bhujang Nag</strong>, the snake deity after whom the hill is named. The hill gives a wide view over the city and the countryside.</p><p>On the slopes of the hill is <strong>Smritivan</strong>, the memorial and museum built in memory of those who lost their lives in the 2001 earthquake. Opened by the Prime Minister in August 2022, it has a memorial garden with the names of the victims, many small check dams that collect rain water on the hill, and a large museum that tells the story of the earthquake, of Kutch&rsquo;s land and of how its people rebuilt their lives, including an earthquake simulator.</p><p>Close by, on Madhapar Road, is the <strong>Regional Science Centre, Bhuj</strong>, built at a cost of about &#8377;90 crore on 10 acres and opened in August 2022. It has galleries on space science, marine navigation, energy, nanotechnology, a bonsai garden and mathematics, a submarine simulator and a 3D theatre. Its observatory, opened on 25 December 2024 with a 24-inch telescope, is described as the largest public observatory in India.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kx-section soft" id="heritage">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">Heritage</span>
+        <h2>The living heritage of Kutch</h2>
+        <p>Kutch&rsquo;s heritage is not only in its palaces and museums. It lives on in the music of its villages, the homes its people build, and the crafts they make by hand.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/sunset-at-rann-of-kutch-dhordo-gujarat-21273f.webp" width="960" height="540" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_at_Rann_of_Kutch%2C_Dhordo%2C_Gujarat.jpg?width=960" decoding="async" alt="Sunset over the White Rann at Dhordo" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Sunset over the White Rann at Dhordo</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Sunset_at_Rann_of_Kutch%2C_Dhordo%2C_Gujarat.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Sunset over the Rann at Dhordo, where folk musicians perform during the Rann Utsav.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Folk music</span>
+          <h3>The folk music of Kutch</h3>
+          <p>Music is part of everyday life in Kutch. Folk musicians from the herding and farming communities play traditional instruments such as the <em>jodiya pava</em> (a double flute), the <em>surando</em> (a stringed instrument played with a bow), the <em>morchang</em> (jaw harp) and the dhol. Their songs tell of love, the desert, saints and the old stories of the land.</p><p>Many of these musicians perform for visitors at the Rann Utsav and in villages around Bhuj, and groups working with local artists have helped to record and keep this music alive for the next generation.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img small"><img width="1400" height="788" decoding="async" src="images/kutch-03.webp" alt="A painted bhunga with a thatched roof and white folk art on its mud walls" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">A painted bhunga with a thatched roof and white folk art on its mud walls</span></figure><span class="kx-cap">A painted bhunga with mud-and-mirror work around the door and window.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/2018-07-18-bhunga-a22cf4.webp" width="960" height="1076" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/2018-07-18_bhunga.jpg?width=960" decoding="async" alt="A bhunga house in Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">A bhunga house in Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:2018-07-18_bhunga.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">A bhunga, the round house of Kutch.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Bhunga homes</span>
+          <h3>The bhunga: homes built for the desert</h3>
+          <p>In the villages of Banni and around the Rann, many families live in <strong>bhungas</strong> &mdash; round houses with thick mud walls and a cone-shaped thatched roof. Their round shape and thick walls keep them cool in the hot desert summers and warm in winter.</p><p>The round shape also makes the bhunga strong against earthquakes and storms; many of them stood firm in the 2001 earthquake. The walls are decorated by the women of the house with colourful paintings, mud relief work and small mirrors. Villages such as Hodka and Dhordo now welcome visitors to stay in bhunga-style homestays.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kx-section soft" id="tourism">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">Tourism</span>
+        <h2>Places to see in Kutch</h2>
+        <p>Kutch has become one of the most visited parts of Gujarat. Within a few hours of Bhuj, a traveller can see a white salt desert, a 4,500-year-old city, royal palaces, sea beaches, ancient temples and wildlife sanctuaries.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/the-great-rann-of-kutch-flooded-with-tourists-071e8f.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/The_great_rann_of_kutch_flooded_with_tourists.jpg?width=960" decoding="async" alt="Visitors at the White Rann of Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Visitors at the White Rann of Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:The_great_rann_of_kutch_flooded_with_tourists.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Visitors on the White Rann.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Great Rann</span>
+          <h3>The White Rann and Rann Utsav</h3>
+          <p>The best-known sight of Kutch is the White Rann near the village of Dhordo, about 86 km from Bhuj. On a winter evening, and especially on a full-moon night, the white salt plain shines under the sky, and thousands of visitors come to see it.</p><p>Every winter, the Gujarat government holds the Rann Utsav, a festival of about three months with a tent city at Dhordo, folk music and dance, local food and craft stalls, camel rides and visits to nearby villages. In October 2023, the UN World Tourism Organization named Dhordo a &ldquo;Best Tourism Village&rdquo;.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img width="1142" height="1400" decoding="async" src="images/kutch-04.webp" alt="The Road to Heaven, a straight road running across the white salt desert of the Great Rann" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">The Road to Heaven, a straight road running across the white salt desert of the Great Rann</span></figure><span class="kx-cap">The Road to Heaven across the Great Rann.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Road to Heaven</span>
+          <h3>The Road to Heaven</h3>
+          <p>One of the newest attractions of Kutch is the road between Khavda and Dholavira that runs straight across the Great Rann. For about 30 km it passes through the white salt desert, with water and salt flats on both sides, so that the road seems to float between the land and the sky. Visitors have named it the <strong>&ldquo;Road to Heaven&rdquo;</strong>.</p><p>Construction began in 2019, and the road has made it much easier to travel from the White Rann side to Dholavira, the UNESCO World Heritage Site. In winter, flamingos and other birds are often seen in the waters near the road, and at sunrise and sunset the whole Rann turns pink and gold. It is now one of the most photographed places in Gujarat.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/kot-lakhpat-in-kutch-02-60e792.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Kot_Lakhpat_in_Kutch_02.JPG?width=960" decoding="async" alt="The walls of Lakhpat Fort" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">The walls of Lakhpat Fort</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Kot_Lakhpat_in_Kutch_02.JPG" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The walls of Lakhpat Fort.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Lakhpat</span>
+          <h3>Lakhpat Fort &mdash; the town of millionaires</h3>
+          <p>At the far north-western corner of Kutch, where the land meets the Rann and the sea, stands the fort town of <strong>Lakhpat</strong>. Its name is often explained as &ldquo;the town of lakhpatis&rdquo;, because it was once a rich port on the Kori Creek, where the Indus river reached the sea and trade from Sindh passed through.</p><p>Its great fort walls, about 7 km long, were rebuilt and enlarged in 1801 by Fateh Muhammad. After the earthquake of 1819 the course of the Indus changed, the port lost its water and trade, and the town slowly emptied. Today Lakhpat is a quiet, almost empty town inside its old walls, with a historic gurudwara, old tombs and wide views over the Rann, and it is a favourite stop for history lovers.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-figs pair"><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/vijay-vilas-palace-mandvi-01-b22839.webp" width="960" height="641" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Vijay_Vilas_Palace_Mandvi_01.jpg?width=960" decoding="async" alt="Vijay Vilas Palace, Mandvi" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Vijay Vilas Palace, Mandvi</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Vijay_Vilas_Palace_Mandvi_01.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Vijay Vilas Palace, Mandvi.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/mandvi-beach-af0569.webp" width="591" height="787" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Mandvi_Beach.jpg?width=960" decoding="async" alt="Mandvi beach" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Mandvi beach</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Mandvi_Beach.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Mandvi beach.</span></div></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Coast</span>
+          <h3>Mandvi and Pingleshwar &mdash; the beaches of Kutch</h3>
+          <p>Mandvi, about 60 km from Bhuj on the Gulf of Kutch, was once the chief port of the Kutch State. Its sailors traded with East Africa, the Gulf and beyond, and the town is still known for building large wooden ships, called <em>dhows</em>, by hand, using skills passed down for generations.</p><p>Today Mandvi is a popular seaside town with a long, clean beach. Close to it stands the Vijay Vilas Palace, a summer palace of the rulers of Kutch, set in large gardens and open to visitors. Mandvi is also the birthplace of the freedom fighter Shyamji Krishna Varma, and the Kranti Tirth memorial near the town honours him.</p><p>Further west, in Abdasa taluka, lies the quiet <strong>Pingleshwar beach</strong>, named after the old Pingleshwar Mahadev temple that stands beside it. With its long stretch of clean sand and few crowds, it is a peaceful place for those who want to see the Kutch coast away from the towns.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img width="720" height="405" decoding="async" src="images/kutch-05.webp" alt="Palar Dhuna waterfall falling over dark rock cliffs into a blue pool surrounded by green trees" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">Palar Dhuna waterfall</span></figure><span class="kx-cap">Palar Dhuna after the monsoon rains.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Monsoon</span>
+          <h3>Palar Dhuna &mdash; the monsoon waterfall</h3>
+          <p>Kutch is a dry land, so a waterfall here is a special sight. In the rocky hills near the village of <strong>Lakhadi</strong>, on the Bhuj&ndash;Nakhatrana side of the district, is <strong>Palar Dhuna</strong> (also called Palar Dhodh), a seasonal waterfall that comes alive only after good monsoon rain.</p><p>The water falls over cliffs of rock that have been shaped by water over a very long time, into a pool at the bottom surrounded by grass, trees and large boulders. After the rains the whole area turns green, and local families and young people go there for picnics and short trips. The fall is reached on foot from the road, so visitors should go only in daylight, wear good shoes and stay away from the edge when the water is strong. For most of the year, outside the monsoon, it is dry.</p><p>Also in this part of Kutch, near Nakhatrana, are the rock canyons of <strong>Kadiya (Kaliya) Dhrow</strong>, where wind and water have carved the soft rock into deep, colourful gorges. The two are often visited together on a monsoon day out from Bhuj.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/narayan-sarovar-awesome-temple-4ae201.webp" width="800" height="480" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Narayan_Sarovar%2C_awesome_temple.JPG?width=960" decoding="async" alt="Temple at Narayan Sarovar" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Temple at Narayan Sarovar</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Narayan_Sarovar%2C_awesome_temple.JPG" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Narayan Sarovar.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/koteshwar-mahadev-temple-kutch-gujarat-1-f638ee.webp" width="960" height="640" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Koteshwar_Mahadev_Temple%2C_Kutch%2C_Gujarat_1.jpg?width=960" decoding="async" alt="Koteshwar Mahadev temple" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Koteshwar Mahadev temple</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Koteshwar_Mahadev_Temple%2C_Kutch%2C_Gujarat_1.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Koteshwar Mahadev temple.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Pilgrimage</span>
+          <h3>Narayan Sarovar, Mata no Madh and the Jesal&ndash;Toral Samadhi</h3>
+          <p>At the far western edge of India, where the land meets the sea near the border, lie two important places of pilgrimage. Narayan Sarovar is one of the five sacred lakes of Hinduism, and nearby, on the sea shore, stands the ancient Koteshwar Mahadev temple dedicated to Lord Shiva.</p><p>Mata no Madh is the temple of Ashapura Mata, the family goddess of the Jadeja rulers and of many communities in Kutch; large numbers of devotees walk there during Navratri. Kutch also has the Hajipir dargah and the Jain temples of Bhadreshwar and Kothara, which reflect the many faiths of the region.</p><p>In the old town of <strong>Anjar</strong> is the <strong>Samadhi of Jesal and Toral</strong>. According to the well-known legend, Jesal was a feared outlaw of the 14th century who was changed into a devoted saint by the faith and goodness of Toral. The two rest side by side in Anjar, and their story of change of heart is still sung in Kutchi and Gujarati bhajans and was made into a Gujarati film. Many people visit the samadhi every year.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/rogan-painting-98f61f.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Rogan_painting.jpg?width=960" decoding="async" alt="Rogan art painting from Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Rogan art painting from Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Rogan_painting.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Rogan art.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/wedding-dress-abho-memon-or-jat-banni-kutch-guja-1c5504.webp" width="960" height="1440" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Wedding_dress_%28abho%29%2C_Memon_or_Jat%2C_Banni%2C_Kutch%2C_Gujarat%2C_India%2C_late_19th_to_early_20th_century%2C_silk%2C_glass_mirrors_-_DSC00971.JPG?width=960" decoding="async" alt="Old embroidered wedding dress from Banni, Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Old embroidered wedding dress from Banni, Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Wedding_dress_%28abho%29%2C_Memon_or_Jat%2C_Banni%2C_Kutch%2C_Gujarat%2C_India%2C_late_19th_to_early_20th_century%2C_silk%2C_glass_mirrors_-_DSC00971.JPG" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Embroidered wedding dress from Banni, Kutch.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Crafts</span>
+          <h3>The living crafts of Kutch</h3>
+          <p>Kutch is one of the richest regions of India for handicrafts, and most of them are still made by hand in villages around Bhuj. Kutch embroidery, with its dense patterns and small mirrors, differs from one community to another, so an expert can often tell where a piece was made just by looking at it.</p><p>Rogan art, painted on cloth with a thick paste made from castor oil, is practised by a few families in the village of Nirona. Bandhani (tie-dye), Ajrakh block printing at Ajrakhpur, hand-woven shawls from Bhujodi, leatherwork, pottery and silver jewellery are also made here. These crafts support thousands of families and are sold across India and abroad.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/rann-of-kutch-9e7871.webp" width="960" height="540" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Rann_of_Kutch.jpg?width=960" decoding="async" alt="The Rann of Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">The Rann of Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Rann_of_Kutch.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The Rann of Kutch.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Visitors</span>
+          <h3>Who comes to Kutch, and from where</h3>
+          <p>Tourism in Kutch has grown very quickly in recent years. According to the Gujarat government&rsquo;s figures, the Rann Utsav drew about 2.07 lakh visitors in 2022 and more than 7.28 lakh in 2023. In the year 2025-26 the number crossed 10 lakh for the first time, reaching about 10.41 lakh visitors, and the craft and food stalls alone earned about &#8377;14 crore.</p><p>Visitors come from every part of India &mdash; from other districts of Gujarat and from states across the country &mdash; and also from abroad: more than 8,000 foreign nationals visited the Rann Utsav in 2023. The busiest time is the winter, especially the Christmas and New Year holidays and Uttarayan in January, and full-moon nights on the White Rann.</p><p>Most visitors reach Kutch by train or road from Ahmedabad and other cities, or fly into Bhuj, which has daily flights from Mumbai. From Bhuj they travel to the White Rann, Dholavira, Mandvi and the craft villages. Many also come for pilgrimage to Mata no Madh, Narayan Sarovar and Koteshwar, and the number of business travellers to Gandhidham, Kandla and Mundra keeps growing with industry.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="kx-section">
+    <div class="container">
+      <div class="kx-next reveal">
+        <div>
+          <span class="eyebrow">Next</span>
+          <h2>Business &amp; Opportunities in Kutch</h2>
+          <p>Read about the ports of Kandla and Mundra, the Khavda energy park, Adani&rsquo;s projects, minerals, industries, farming, the government&rsquo;s plans for Kutch and the opportunities they create for local businesses.</p>
+        </div>
+        <a class="btn btn-primary" href="business.html">Explore business in Kutch</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-brand">Bhuj Chamber of Commerce and Industries Federation</p>
+    <p>&copy; Bhuj Chamber of Commerce and Industries Federation. All rights reserved.</p>
+    <p class="contact">Surmandir Cineplex Building, Opp. Jilla Panchayat, Bhuj-Kachchh 370001, Gujarat, India</p>
+    <p class="contact"><a href="mailto:infoatccifb@gmail.com" style="color:inherit">infoatccifb@gmail.com</a></p>
+    <p class="contact"><a href="contact.html" style="color:inherit">Contact Us</a> &middot; <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Nav toggle + header scroll shadow ---------- */
+  (function () {
+    var toggle = document.getElementById("navToggle");
+    var menu = document.getElementById("navMenu");
+    toggle.addEventListener("click", function () {
+      var open = menu.classList.toggle("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        menu.classList.remove("open");
+        toggle.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+    var header = document.getElementById("siteHeader");
+    function updateShadow() { header.classList.toggle("scrolled", window.scrollY > 4); }
+    window.addEventListener("scroll", updateShadow, { passive: true });
+    updateShadow();
+  })();
+
+/* ---------- Scroll reveal animations ---------- */
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var slideCounter = 0;
+    function assignDirection(el) {
+      if (!el.dataset.slideAssigned) {
+        if (slideCounter % 2 === 1) el.classList.add('reveal-right');
+        el.dataset.slideAssigned = "true";
+        slideCounter++;
+      }
+    }
+    // Reveal once and stop observing, with threshold 0 so it fires as soon as
+    // any part of an element enters the viewport -- a percentage threshold
+    // like 0.15 can take a very long scroll (or never fire) for tall elements,
+    // since the ratio IntersectionObserver reports is visible-area divided by
+    // the TARGET's own total area, not the viewport's.
+    var observer = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0 });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      assignDirection(el); observer.observe(el);
+    });
+    window.__observeReveal = function (el) {
+      if (el) { assignDirection(el); observer.observe(el); }
+    };
+  })();
+
+/* ---------- Site logo (from site_media) ---------- */
+  (function () {
+    if (typeof supabase === "undefined") return;
+    var supabaseClient = supabase.createClient("https://rvpiliwyqjowegmjcanr.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2cGlsaXd5cWpvd2VnbWpjYW5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczMDM2MjksImV4cCI6MjEwMjg3OTYyOX0.9ZQj69FLcFgqp8huYTqlWy4JGl-vYGmYZiiVUBo4Sio");
+    var logoImg = document.getElementById("siteLogo");
+    if (!logoImg) return;
+    supabaseClient
+      .from("site_media")
+      .select("image_url")
+      .eq("type", "logo")
+      .eq("active", true)
+      .order("sort_order", { ascending: true })
+      .limit(1)
+      .then(function (result) {
+        if (result.error) { console.error("Couldn't load site logo:", result.error.message); return; }
+        var rows = result.data || [];
+        if (rows.length > 0 && rows[0].image_url) {
+          logoImg.onload = function () { logoImg.classList.add("loaded"); };
+          logoImg.onerror = function () { console.warn("Site logo failed to load"); };
+          logoImg.src = rows[0].image_url;
+        }
+      })
+      .catch(function (err) { console.error("Logo fetch error:", err); });
+  })();
+</script>
+
+<!--t-theme-start--><script id="t-theme-js">(function () {
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var KPATH = 'M111.6,422.4L123.1,412.2L120.3,402.6L117.2,400.6L121.9,398.0L124.9,392.9L125.2,377.8L127.8,368.9L132.7,361.5L132.3,343.4L141.4,334.9L147.2,326.0L153.8,321.9L161.2,322.0L165.7,319.3L169.8,313.0L172.1,300.3L188.4,301.9L194.6,295.7L205.5,289.0L210.7,289.4L216.3,292.6L237.7,292.9L243.4,299.4L251.1,301.4L259.1,308.6L277.4,310.7L281.4,314.4L297.1,320.8L298.5,325.9L302.9,330.5L308.9,331.8L313.8,336.0L328.3,340.0L333.2,337.6L344.6,324.8L347.1,312.6L358.0,314.6L364.1,311.4L369.3,292.5L377.0,293.1L383.2,298.6L390.3,299.9L394.9,305.7L399.7,307.7L439.1,310.3L445.2,308.8L455.4,300.5L460.4,300.8L463.1,307.4L468.5,310.6L474.9,309.7L479.0,306.4L493.8,306.4L499.9,298.2L506.2,293.3L523.5,259.7L531.2,258.4L536.1,250.9L542.3,247.3L561.5,250.5L570.5,256.9L575.1,262.7L585.3,266.5L588.7,271.4L595.4,274.3L598.0,279.9L596.4,286.6L587.9,296.7L584.2,306.8L582.8,314.5L584.7,323.4L583.4,330.0L575.0,332.4L568.5,338.0L565.8,343.6L561.9,374.1L563.1,380.1L570.1,385.9L590.3,389.4L589.3,398.4L591.0,403.4L598.1,412.0L604.5,415.5L607.5,423.0L617.6,430.0L624.6,430.9L633.5,424.0L642.1,424.3L644.3,426.8L643.5,433.9L640.4,438.5L639.8,443.7L641.9,448.7L646.5,451.8L654.0,451.6L668.6,441.1L677.1,438.0L679.6,430.8L674.0,419.1L676.5,410.6L685.3,404.1L688.4,398.6L701.0,389.5L712.5,388.3L727.7,377.0L735.9,376.2L748.4,363.3L760.8,365.7L771.5,361.5L775.4,356.6L780.2,338.0L800.3,341.1L806.7,338.0L809.2,331.8L808.5,312.4L804.9,305.1L799.4,301.6L795.0,282.2L796.6,277.3L801.7,273.9L828.7,276.3L832.4,279.7L837.7,280.9L843.5,287.6L868.5,291.1L873.8,294.0L888.3,295.3L904.2,305.0L909.9,304.2L913.9,300.2L916.4,304.3L910.2,315.0L910.3,331.0L916.0,337.2L912.8,340.9L915.0,351.0L906.5,354.3L905.9,365.7L916.9,378.1L920.7,376.5L921.1,372.2L924.8,374.7L933.2,371.8L927.7,377.7L920.2,408.2L921.0,414.7L925.4,419.4L924.1,424.9L906.3,427.0L890.0,439.5L881.2,441.5L877.0,449.2L863.7,448.7L859.3,451.9L857.3,456.6L846.0,458.7L836.7,467.1L836.6,480.9L797.4,485.2L793.6,489.8L792.6,496.7L793.6,501.7L797.0,505.6L792.6,503.8L787.7,507.4L783.6,517.3L767.3,520.0L743.9,520.3L734.9,513.8L719.4,510.4L716.5,507.3L685.2,507.7L681.6,511.7L684.5,518.8L671.2,525.2L668.1,524.0L665.5,525.1L662.9,533.1L660.1,536.4L656.3,537.4L654.3,542.9L647.4,549.8L646.3,556.7L638.9,560.8L637.7,564.2L639.0,567.2L632.9,570.4L623.6,586.1L620.1,586.5L612.8,592.4L613.4,598.8L616.7,601.0L615.2,605.2L595.9,607.2L593.1,610.0L581.9,611.4L579.5,613.9L568.9,613.5L560.2,621.3L553.5,620.6L531.2,627.8L520.8,636.2L494.6,644.9L484.1,646.2L483.2,642.6L480.6,641.2L471.4,643.9L464.9,640.7L451.8,642.0L448.7,645.0L442.3,643.9L437.7,647.1L437.8,651.6L430.9,653.5L422.4,651.4L403.2,638.7L381.2,632.7L369.1,636.5L356.9,632.9L347.3,632.4L345.1,627.3L340.9,627.9L327.6,620.4L323.8,615.5L320.5,614.9L309.8,606.3L289.4,596.0L228.2,557.7L215.0,552.3L176.5,522.4L161.8,504.7L159.8,497.9L148.5,496.6L146.1,485.9L149.8,479.2L158.7,471.7L157.7,468.1L154.3,466.8L153.5,462.3L138.1,457.1L132.5,463.1L130.8,458.9L123.8,457.3L123.6,449.5L117.6,443.0L114.6,442.3L111.9,444.3L106.0,439.8L111.6,422.4ZM426.5,648.2L428.6,646.3L428.8,643.2L426.8,640.7L421.9,642.4L421.6,645.5L423.4,647.8L426.5,648.2Z';
+  function qa(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+
+  /* header height for the mobile menu */
+  var header = document.querySelector('.site-header'), menu = document.getElementById('navMenu');
+  function setHH() { if (header) document.documentElement.style.setProperty('--t-hh', header.getBoundingClientRect().height + 'px'); }
+  setHH(); addEventListener('resize', setHH);
+
+
+  /* ---------- header v2: logo, More menu, Join button, transparent over hero ---------- */
+  var hero0 = document.querySelector('.page-hero, .kx-hero, .hero2');
+  if (!hero0) document.body.classList.add('t-nohero');
+  if (header) {
+    var lt = header.querySelector('.logo-text');
+    if (lt && !lt.classList.contains('t-lt')) { lt.classList.add('t-lt'); lt.innerHTML = '<b>Bhuj Chamber of Commerce</b><small>AND INDUSTRIES FEDERATION</small>'; }
+    var lg = header.querySelector('.logo-mark');
+    if (lg && !header.querySelector('.t-seal')) { var seal = document.createElement('span'); seal.className = 't-seal'; seal.setAttribute('aria-hidden', 'true'); seal.textContent = 'BCCIF'; lg.parentNode.insertBefore(seal, lg.nextSibling); }
+    var ul = header.querySelector('.nav-menu ul');
+    if (ul && !ul.querySelector('.t-more')) {
+      var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase(), moreHrefs = ['projects.html', 'media.html', 'committee.html'], drop = '', cur = false;
+      qa('li', ul).forEach(function (li) {
+        var a = li.querySelector('a'); if (!a) return; var h = (a.getAttribute('href') || '').toLowerCase();
+        if (h === 'index.html' || h === 'membership.html' || moreHrefs.indexOf(h) > -1) li.classList.add('t-desk-hide');
+        if (moreHrefs.indexOf(h) > -1) { drop += '<a href="' + h + '"' + (h === here ? ' class="active"' : '') + '>' + a.textContent + '</a>'; if (h === here) cur = true; }
+      });
+      var more = document.createElement('li'); more.className = 't-more' + (cur ? ' cur' : '');
+      more.innerHTML = '<button type="button" aria-haspopup="true" aria-expanded="false">More &#9662;</button><div class="t-drop">' + drop + '</div>';
+      ul.appendChild(more);
+      var mb = more.querySelector('button');
+      mb.addEventListener('click', function (e) { e.stopPropagation(); var o = more.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+      document.addEventListener('click', function () { more.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); });
+    }
+    var tog = header.querySelector('.nav-toggle');
+    if (!header.querySelector('.t-join')) { var j = document.createElement('a'); j.className = 't-join'; j.href = 'membership.html'; j.innerHTML = 'Join <i>&#8599;</i>'; var inner = header.querySelector('.header-inner'), nm = header.querySelector('.nav-menu'); if (nm && nm.parentNode === inner) inner.insertBefore(j, nm.nextSibling); else inner.appendChild(j); }
+    if (menu && window.MutationObserver) new MutationObserver(function () { header.classList.toggle('t-open', menu.classList.contains('open')); onScroll(); }).observe(menu, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  setHH();
+  /* scroll progress + hide header on scroll down */
+  var prog = document.createElement('div'); prog.id = 't-prog'; document.body.appendChild(prog);
+  var lastY = scrollY, ticking = false;
+  function onScroll() {
+    var y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+    prog.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    if (header) {
+      var open = menu && menu.classList.contains('open');
+      header.classList.toggle('t-hide', !open && y > lastY && y > 280);
+      header.classList.toggle('scrolled', y > 10);
+      header.classList.toggle('t-tr', !!hero0 && !open && y < 40);
+    }
+    lastY = y; ticking = false;
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  /* mobile menu: staggered links */
+  qa('.nav-menu li').forEach(function (li, i) { li.style.animationDelay = (0.04 * i + 0.08) + 's'; });
+
+  /* gold italic last word in big titles */
+  function italLast(el) {
+    if (!el || el.dataset.tIt || el.children.length) return;
+    var t = el.textContent.replace(/\s+$/, ''); var i = t.lastIndexOf(' ');
+    var head = i > 0 ? t.slice(0, i + 1) : '', last = i > 0 ? t.slice(i + 1) : t;
+    el.textContent = head; var em = document.createElement('span'); em.className = 't-it'; em.textContent = last; el.appendChild(em);
+    el.dataset.tIt = '1';
+  }
+  qa('.section-heading h2, h2.section-title').forEach(italLast);
+
+  /* inner page hero: word reveal, fades, Kutch outline */
+  var hero = document.querySelector('.page-hero');
+  if (hero) {
+    var h1 = hero.querySelector('h1');
+    if (h1 && !h1.children.length) {
+      var words = h1.textContent.trim().split(/\s+/);
+      h1.innerHTML = words.map(function (w, i) {
+        var cls = i === words.length - 1 ? ' class="t-it"' : '';
+        return '<span class="t-ln"><span' + cls + ' style="animation-delay:' + (0.12 + i * 0.08).toFixed(2) + 's">' + w.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }) + '</span></span>';
+      }).join(' ');
+    }
+    qa('.breadcrumb, .eyebrow, p, .btn, .button-group', hero.querySelector('.container') || hero).forEach(function (el, i) {
+      if (el.closest('.t-fade')) return; el.classList.add('t-fade'); el.style.animationDelay = (0.35 + i * 0.1).toFixed(2) + 's';
+    });
+    var NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 1000 761'); svg.setAttribute('class', 't-kmap'); svg.setAttribute('aria-hidden', 'true');
+    svg.innerHTML = '<path pathLength="1" d="' + KPATH + '"/><circle class="r" cx="491" cy="495" r="9"/><circle class="h" cx="491" cy="495" r="9"/>';
+    hero.appendChild(svg);
+    var p = svg.querySelector('path'); try { p.style.setProperty('--len', Math.ceil(p.getTotalLength())); } catch (e) {}
+  }
+
+  /* make sure revealed content always appears, even if a page script fails */
+  qa('.page-hero .reveal').forEach(function (el) { el.classList.add('reveal-visible'); });
+  if ('IntersectionObserver' in window) {
+    var rio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('reveal-visible'); rio.unobserve(e.target); } }); }, { threshold: 0.12 });
+    qa('.reveal').forEach(function (el) { rio.observe(el); });
+  } else qa('.reveal').forEach(function (el) { el.classList.add('reveal-visible'); });
+
+  /* footer watermark */
+  var foot = document.querySelector('.site-footer .container') || document.querySelector('.site-footer');
+  if (foot && !foot.querySelector('.t-foot-mark')) { var m = document.createElement('span'); m.className = 't-foot-mark'; m.setAttribute('aria-hidden', 'true'); m.textContent = 'BCCIF'; foot.appendChild(m); }
+
+  /* page transition: curtain on internal links */
+  if (!reduce) {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var href = a.getAttribute('href') || '';
+      if (a.target && a.target !== '_self') return; if (a.hasAttribute('download')) return;
+      if (!/^[a-z0-9_-]+\.html(\?[^#]*)?(#.*)?$/i.test(href)) return;
+      var here = location.pathname.split('/').pop() || 'index.html';
+      if (href.split('#')[0] === here) return;
+      e.preventDefault();
+      try { sessionStorage.setItem('t-nav', '1'); } catch (x) {}
+      var c = document.getElementById('t-curtain');
+      if (!c) { c = document.createElement('div'); c.id = 't-curtain'; c.innerHTML = '<span>BCCIF</span>'; document.body.appendChild(c); }
+      c.style.transition = 'none'; c.style.transform = 'translateY(100%)'; c.classList.remove('up');
+      void c.offsetWidth; c.style.transition = ''; c.style.transform = 'translateY(0)';
+      setTimeout(function () { location.href = href; }, 520);
+    });
+  }
+  var cur = document.getElementById('t-curtain');
+  if (cur) { requestAnimationFrame(function () { setTimeout(function () { cur.style.transform = ''; cur.classList.add('up'); setTimeout(function () { cur.remove(); }, 900); }, 120); }); }
+  addEventListener('pageshow', function (ev) { if (ev.persisted) { var c = document.getElementById('t-curtain'); if (c) c.remove(); } });
+})();
+</script><!--t-theme-end--><script id="kx-mapfull-js">(function(){var m=document.querySelector('.kx-map');if(!m)return;var sv=m.querySelector('svg');if(!sv)return;
+var tag=document.createElement('span');tag.className='kx-mapzoom';tag.textContent=(matchMedia('(hover:hover)').matches?'Click':'Tap')+' to enlarge \u2922';m.appendChild(tag);
+var box=document.createElement('div');box.id='kxMapBox';box.setAttribute('role','dialog');box.setAttribute('aria-label','Map of Kutch, enlarged');
+box.innerHTML='<button type="button">Close \u2715</button><div class="in"></div>';var c=sv.cloneNode(true);c.removeAttribute('aria-labelledby');c.setAttribute('aria-hidden','true');box.querySelector('.in').appendChild(c);document.body.appendChild(box);
+function close(){box.classList.remove('open');document.documentElement.style.overflow='';}
+m.addEventListener('click',function(){box.classList.add('open');document.documentElement.style.overflow='hidden';box.scrollLeft=(box.scrollWidth-box.clientWidth)/2;});
+box.querySelector('button').addEventListener('click',close);box.addEventListener('click',function(e){if(e.target===box)close();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();</script>
+</body>
+</html>

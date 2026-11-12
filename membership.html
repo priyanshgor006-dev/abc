@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Membership &mdash; Bhuj Chamber of Commerce and Industries Federation | Join Today</title>
+<meta name="description" content="Join the Bhuj Chamber of Commerce and Industries Federation -- learn about membership, benefits and fees, and download the membership application form." />
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE.org/membership.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Membership &mdash; Bhuj Chamber of Commerce and Industries Federation" />
+<meta property="og:description" content="Join the Bhuj Chamber of Commerce and Industries Federation -- learn about membership, benefits and fees, and download the membership application form." />
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE.org/membership.html" />
+<meta property="og:image" content="https://res.cloudinary.com/c3josacx/image/upload/v1788577765/coc-bhuj-news/rf72yu5ypjxwy3wbxas9.jpg" />
+<meta property="og:site_name" content="Bhuj Chamber of Commerce and Industries Federation" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Membership &mdash; Bhuj Chamber of Commerce and Industries Federation" />
+<meta name="twitter:description" content="Join the Bhuj Chamber of Commerce and Industries Federation -- learn about membership, benefits and fees, and download the membership application form." />
+<meta name="twitter:image" content="https://res.cloudinary.com/c3josacx/image/upload/v1788577765/coc-bhuj-news/rf72yu5ypjxwy3wbxas9.jpg" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+
+:root {
+  --navy: #6b1f2a; --navy-dark: #4a1420; --navy-light: #8c3341;
+  --gold: #d97706; --gold-light: #f2a93c; --gold-hover: #b45309;
+  --bg: #ffffff; --bg-soft: #f8fafc; --text: #1f2937;
+  --muted: #6b7280; --border: #e5e7eb; --wine-tint: #f8f0f1;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; cursor: pointer; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.gradient-text {
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px; font-size: 10.5px; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--navy-light);
+}
+.eyebrow::before { content: ""; height: 1px; width: 24px; background: var(--gold); flex-shrink: 0; }
+
+/* ===== Header ===== */
+.site-header {
+  background: rgba(255,255,255,.98); border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 50; transition: box-shadow .25s var(--ease);
+}
+.site-header.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.06); }
+.header-inner {
+  max-width: 1240px; margin: 0 auto; padding: 6px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; position: relative;
+}
+.logo { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+.logo-mark { width: 84px; height: 84px; object-fit: contain; flex-shrink: 0; display: none; opacity: 0; transition: opacity .5s var(--ease); }
+.logo-mark.loaded { display: block; opacity: 1; }
+.logo-text { line-height: 1.2; font-size: 1.15rem; color: var(--navy-dark); }
+.logo-sub { display: block; font-size: 9px; font-weight: 500; color: var(--muted); letter-spacing: .16em; text-transform: uppercase; margin-top: 5px; }
+@media (max-width: 480px) {
+  .header-inner { padding: 6px 16px; }
+  .logo-mark { width: 56px; height: 56px; }
+  .logo-text { font-size: .95rem; }
+  .logo-sub { display: none; }
+}
+
+.nav-menu ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+.nav-menu a {
+  position: relative; display: inline-block; padding: 16px 0; font-size: 12.5px; font-weight: 550;
+  color: #4e5157; white-space: nowrap; transition: color .2s var(--ease);
+}
+.nav-menu a::after {
+  content: ""; position: absolute; left: 0; bottom: 8px; width: 0; height: 2px;
+  border-radius: 1px; background: var(--gold); transition: width .25s var(--ease);
+}
+.nav-menu a:hover, .nav-menu a.active { color: var(--navy); }
+.nav-menu a:hover::after, .nav-menu a.active::after { width: 100%; }
+
+.nav-toggle {
+  display: none; background: transparent; border: 1px solid var(--border); border-radius: 6px;
+  width: 42px; height: 42px; cursor: pointer; padding: 0; position: relative; flex-shrink: 0;
+}
+.nav-toggle span {
+  position: absolute; left: 11px; right: 11px; height: 2px; background: var(--navy);
+  border-radius: 2px; transition: transform .2s var(--ease), top .2s var(--ease), opacity .2s var(--ease);
+}
+.nav-toggle span:nth-child(1) { top: 13px; }
+.nav-toggle span:nth-child(2) { top: 20px; }
+.nav-toggle span:nth-child(3) { top: 27px; }
+.nav-toggle.open span:nth-child(1) { top: 20px; transform: rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { top: 20px; transform: rotate(-45deg); }
+@media (max-width: 1080px) {
+  .nav-toggle { display: block; }
+  .nav-menu {
+    display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff;
+    border-bottom: 1px solid var(--border); padding: 10px 20px 20px;
+    box-shadow: 0 12px 26px rgba(35,14,22,.09);
+  }
+  .nav-menu.open { display: block; }
+  .nav-menu ul { flex-direction: column; gap: 2px; }
+  .nav-menu a { display: block; padding: 13px 0; font-size: 14px; }
+  .nav-menu a::after { bottom: 7px; }
+}
+
+/* ===== Buttons ===== */
+.btn {
+  position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px; padding: 13px 24px; min-height: 46px; border-radius: 8px; font-size: 13.5px; font-weight: 650;
+  border: 1px solid transparent; transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%); color: #fff;
+  box-shadow: 0 4px 14px rgba(217,119,6,.35);
+}
+.btn-primary::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,.28) 50%, transparent 75%);
+  transform: translateX(-120%); transition: transform .6s var(--ease); pointer-events: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 20px rgba(217,119,6,.43); }
+.btn-primary:hover::after { transform: translateX(120%); }
+.btn-outline { background: transparent; color: var(--navy); border-color: #d8bec3; }
+.btn-outline:hover { background: var(--wine-tint); border-color: var(--navy-light); transform: translateY(-2px); }
+.btn-small { min-height: 38px; padding: 9px 16px; font-size: 12px; }
+.btn:disabled { opacity: .6; cursor: not-allowed; transform: none !important; }
+
+/* ===== Reveal animation ===== */
+.reveal { opacity: 0; transform: translateX(-40px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal.reveal-right { transform: translateX(40px); }
+.reveal.reveal-visible { opacity: 1; transform: translateX(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* ===== Page header ===== */
+.page-hero {
+  position: relative; overflow: hidden; padding: 52px 0 54px;
+  background: radial-gradient(ellipse at 100% 0%, rgba(217,119,6,.07), transparent 48%),
+              radial-gradient(ellipse at 0% 100%, rgba(107,31,42,.06), transparent 55%), #fcf9f8;
+  border-bottom: 1px solid var(--border);
+}
+.page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 700; margin: 0 0 10px; letter-spacing: -.02em; }
+.page-hero p { color: var(--muted); margin: 0; max-width: 620px; font-size: 15px; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-size: 10px; color: #8f7e81; letter-spacing: .02em; }
+.breadcrumb a { transition: color .15s var(--ease); }
+.breadcrumb a:hover { color: var(--navy); }
+.breadcrumb svg { width: 11px; height: 11px; }
+
+/* ===== Section basics ===== */
+.section { padding: 60px 0; }
+.section-soft { background: var(--bg-soft); }
+.section-heading { margin-bottom: 26px; }
+.section-heading h2 { font-size: clamp(1.4rem, 2.4vw, 1.7rem); font-weight: 700; margin: 0 0 8px; }
+.section-heading p { color: var(--muted); margin: 0; max-width: 640px; font-size: .95rem; }
+
+/* ===== Icons ===== */
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; vertical-align: middle; }
+.state-icon {
+  display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px;
+  color: var(--navy-light); background: var(--wine-tint); border-radius: 50%; margin-bottom: 20px;
+}
+.state-icon .icon { width: 26px; height: 26px; }
+
+/* ===== Membership category table ===== */
+.category-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 13px; background: #fff; }
+.category-table { width: 100%; border-collapse: collapse; font-size: .84rem; min-width: 720px; }
+.category-table th, .category-table td { padding: 11px 15px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.category-table th {
+  background: var(--wine-tint); color: var(--navy); font-weight: 700; font-size: .72rem;
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.category-table tr:last-child td { border-bottom: none; }
+.category-table tbody tr:hover td { background: var(--bg-soft); }
+.foundation-note {
+  margin-top: 18px; padding: 16px 20px; background: var(--wine-tint); border-radius: 10px;
+  border-left: 3px solid var(--gold);
+}
+.foundation-note strong { color: var(--navy); display: block; margin-bottom: 6px; font-size: .9rem; }
+.foundation-note ul { margin: 0; padding-left: 18px; font-size: .84rem; color: var(--text); line-height: 1.8; }
+
+/* ===== Application form ===== */
+.form-shell { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+.form-panel { border: 1px solid var(--border); border-radius: 14px; padding: 32px; background: #fff; }
+.form-panel h2 { font-size: 1.3rem; font-weight: 700; margin: 0 0 6px; }
+.form-intro { color: var(--muted); font-size: .85rem; margin-bottom: 10px; }
+.form-status { padding: 10px 13px; border-radius: 8px; font-size: .88rem; margin-bottom: 16px; border: 1px solid transparent; display: none; }
+.form-status.visible { display: block; }
+.form-status.success { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+.form-status.error { background: #fef2f2; color: #a63842; border-color: #fecaca; }
+
+.form-section-title {
+  font-size: .98rem; font-weight: 700; color: var(--navy); margin: 30px 0 16px;
+  padding-top: 22px; border-top: 1px solid var(--border);
+}
+.form-section-title:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+.field-wide { grid-column: 1 / -1; }
+.form-row label { display: block; font-size: .85rem; font-weight: 650; margin-bottom: 6px; color: var(--text); }
+.form-row .req { color: #a63842; margin-left: 2px; }
+.form-row .optional-tag { color: var(--muted); font-weight: 400; font-size: .78rem; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; padding: 10px 13px; font-size: .93rem; font-family: inherit;
+  background: #fff; border: 1px solid var(--border); border-radius: 8px; outline: none; color: var(--text);
+  transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  border-color: var(--navy-light); box-shadow: 0 0 0 3px rgba(107,31,42,.08);
+}
+.form-row textarea { min-height: 80px; resize: vertical; }
+
+.fee-preview {
+  margin-top: 12px; padding: 14px 16px; background: var(--wine-tint); border-radius: 10px;
+  font-size: .86rem; color: var(--navy-dark); display: none; border-left: 3px solid var(--navy-light);
+}
+.fee-preview.visible { display: block; }
+.fee-preview strong { color: var(--navy); }
+.fee-preview .fee-row { display: flex; justify-content: space-between; margin-top: 4px; }
+
+/* ===== Document uploads ===== */
+.upload-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 640px) { .upload-grid { grid-template-columns: 1fr; } }
+.upload-slot { border: 1px dashed var(--border); border-radius: 11px; padding: 14px 16px; transition: all .2s var(--ease); }
+.upload-slot.uploaded { border-style: solid; border-color: #a7d7b8; background: #f3faf5; }
+.upload-slot-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.upload-slot-label { font-size: .85rem; font-weight: 650; }
+.upload-slot-status { font-size: .76rem; color: var(--muted); margin-top: 4px; }
+.upload-slot.uploaded .upload-slot-status { color: #047857; font-weight: 600; }
+.upload-btn-small {
+  padding: 7px 14px; font-size: .76rem; border-radius: 7px; background: #fff;
+  border: 1px solid var(--border); color: var(--navy); font-weight: 650; flex-shrink: 0;
+}
+.upload-btn-small:hover { background: var(--wine-tint); border-color: var(--navy-light); }
+.upload-remove-small {
+  padding: 7px 10px; font-size: .76rem; border-radius: 7px; background: transparent;
+  border: 1px solid transparent; color: #a63842; font-weight: 650; margin-left: 6px; flex-shrink: 0;
+}
+.upload-remove-small:hover { background: #fef2f2; }
+.upload-hint { font-size: .78rem; color: var(--muted); margin-bottom: 16px; }
+
+/* ===== Bank details ===== */
+.bank-details-card { background: var(--wine-tint); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-bottom: 18px; }
+.bank-details-card dl { display: grid; grid-template-columns: auto 1fr; gap: 7px 18px; margin: 0; font-size: .88rem; }
+.bank-details-card dt { font-weight: 650; color: var(--navy-dark); }
+.bank-details-card dd { margin: 0; color: var(--text); }
+.bank-note { font-size: .84rem; color: var(--navy-dark); background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+
+.declaration-row {
+  display: flex; gap: 10px; align-items: flex-start; margin: 24px 0 6px;
+  font-size: .85rem; color: var(--text); line-height: 1.6;
+}
+.declaration-row input { margin-top: 3px; flex-shrink: 0; width: 16px; height: 16px; accent-color: var(--navy); }
+
+.confirmation { text-align: center; padding: 30px 0; }
+
+/* ===== Footer ===== */
+.site-footer { background: var(--navy-dark); color: rgba(255,255,255,.85); padding: 34px 20px; text-align: center; font-size: .88rem; }
+.site-footer p { margin: 0; }
+.site-footer .footer-brand { font-weight: 650; color: #fff; margin-bottom: 4px; }
+.site-footer .contact { opacity: .7; margin-top: 10px; font-size: .82rem; }
+
+/* ===== Printable application copy ===== */
+#printSheet { display: none; }
+.copy-box { background: var(--wine-tint); border: 1px solid #ead9dc; border-radius: 12px; padding: 18px 20px; margin: 0 auto 22px; max-width: 520px; text-align: left; }
+.copy-box h3 { margin: 0 0 6px; font-size: 1rem; color: var(--navy); }
+.copy-box p { margin: 0 0 14px; font-size: .88rem; color: var(--muted); line-height: 1.55; }
+.copy-box ol { margin: 0 0 14px; padding-left: 18px; font-size: .88rem; color: var(--text); line-height: 1.6; }
+.copy-note { font-size: .78rem; color: var(--muted); margin-top: 8px; }
+@media print {
+  @page { size: A4; margin: 14mm; }
+  body > *:not(#printSheet) { display: none !important; }
+  #printSheet { display: block !important; color: #000; font-family: -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans Gujarati", sans-serif; font-size: 11pt; line-height: 1.45; }
+  #printSheet .ps-head { display: flex; align-items: center; gap: 12px; border-bottom: 2px solid #6b1f2a; padding-bottom: 8px; margin-bottom: 10px; }
+  #printSheet .ps-head img { width: 54px; height: 54px; object-fit: contain; }
+  #printSheet h1 { font-size: 16pt; margin: 0; color: #4a1420; }
+  #printSheet .ps-sub { font-size: 9.5pt; color: #444; }
+  #printSheet h2 { font-size: 11.5pt; margin: 14px 0 6px; padding: 3px 8px; background: #f3e9ea; color: #4a1420; break-after: avoid; }
+  #printSheet table { width: 100%; border-collapse: collapse; }
+  #printSheet td { border: 1px solid #bbb; padding: 4px 7px; vertical-align: top; font-size: 10pt; }
+  #printSheet td.k { width: 36%; background: #f7f7f7; font-weight: 600; }
+  #printSheet tr { break-inside: avoid; }
+  #printSheet .ps-decl { margin-top: 12px; font-size: 9.5pt; }
+  #printSheet .ps-sign { display: flex; gap: 20px; margin-top: 46px; }
+  #printSheet .ps-sign div { flex: 1; border-top: 1px solid #000; padding-top: 4px; font-size: 9.5pt; text-align: center; }
+  #printSheet .ps-doc { break-before: page; }
+  #printSheet .ps-doc h2 { margin-top: 0; }
+  #printSheet .ps-doc img.ps-page { display: block; max-width: 100%; max-height: 235mm; margin: 6px auto 0; border: 1px solid #ccc; object-fit: contain; }
+  #printSheet .ps-doc .ps-warn { border: 1px dashed #888; padding: 10px; font-size: 10pt; }
+}
+/* ===== Membership info page (Oct 2026) ===== */
+.intro-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }
+.intro-text p { color: var(--text); line-height: 1.8; margin: 0 0 14px; font-size: .97rem; }
+.who-card { background: var(--wine-tint); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; }
+.who-card h3 { margin: 0 0 10px; font-size: 1.02rem; color: var(--navy); }
+.who-card ul { margin: 0; padding-left: 18px; line-height: 1.9; font-size: .92rem; }
+.benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.benefit { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+.benefit .b-icon { width: 42px; height: 42px; border-radius: 10px; background: var(--wine-tint); color: var(--navy); display: grid; place-items: center; margin-bottom: 12px; }
+.benefit .b-icon svg { width: 22px; height: 22px; }
+.benefit h3 { margin: 0 0 6px; font-size: 1rem; color: var(--navy-dark); }
+.benefit p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.65; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: step; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 44px 1fr; gap: 14px; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+.steps li::before { content: counter(step); width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 700; display: grid; place-items: center; }
+.steps h3 { margin: 4px 0 6px; font-size: 1rem; color: var(--navy-dark); }
+.steps p { margin: 0 0 10px; color: var(--muted); font-size: .92rem; line-height: 1.65; }
+.steps p:last-child { margin-bottom: 0; }
+.mail-box { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--wine-tint); border: 1px dashed #d8bec3; border-radius: 10px; padding: 10px 14px; font-weight: 650; color: var(--navy); word-break: break-all; }
+.doc-list { columns: 2; column-gap: 28px; margin: 6px 0 0; padding-left: 18px; font-size: .9rem; line-height: 1.9; color: var(--text); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.apply-text { color: var(--text); font-size: .92rem; line-height: 1.7; margin: 0 0 12px; }
+.help-note { margin-top: 22px; font-size: .9rem; color: var(--muted); }
+@media (max-width: 900px) { .intro-grid { grid-template-columns: 1fr; } .benefit-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .benefit-grid { grid-template-columns: 1fr; } .doc-list { columns: 1; } .steps li { grid-template-columns: 1fr; } }
+
+</style>
+<!--t-theme-start--><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@500;600&display=swap"></noscript><style id="t-theme">/* ===== BCCIF theme (new look) ===== */
+:root{
+  --navy:#6b1f2a;--navy-dark:#3d0f19;--navy-light:#8c3341;
+  --gold:#b07a1c;--gold-light:#d9a441;--gold-hover:#8f6214;
+  --bg:#fbf6ee;--bg-soft:#f4ebdc;--text:#231a1c;--muted:#6e6461;--border:#e8dccb;--wine-tint:#f6ece4;
+  --t-wine-dd:#2a0911;--t-gold:#d9a441;--t-gold-l:#f3d58f;
+  --t-serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --t-sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --t-guj:"Noto Sans Gujarati","Manrope",sans-serif;
+  --t-ease:cubic-bezier(.16,1,.3,1);
+}
+html{overflow-x:clip}
+body{font-family:var(--t-sans);background:var(--bg);color:var(--text);overflow-x:clip}
+::selection{background:var(--t-gold);color:var(--t-wine-dd)}
+h1,h2,h3,.section-title,.section-heading h2,.logo-text,.footer-brand{font-family:var(--t-serif)}
+h1,h2,.section-title,.section-heading h2{font-weight:400!important;letter-spacing:-.022em}
+h3{font-weight:500;letter-spacing:-.01em}
+.gradient-text{background:none!important;-webkit-text-fill-color:currentColor!important;color:var(--navy-dark)}
+.t-it{font-style:italic;color:var(--gold)}
+.eyebrow{font-family:var(--t-sans);font-weight:800;letter-spacing:.24em;color:var(--gold)}
+.eyebrow::before{width:30px;background:currentColor}
+
+/* ---- header ---- */
+.site-header{background:rgba(251,246,238,.86)!important;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:0!important;transition:transform .55s var(--t-ease),box-shadow .3s!important}
+.site-header::after{content:"";position:absolute;left:0;right:0;bottom:0;border-top:1.5px dashed rgba(176,122,28,.45);pointer-events:none}
+.site-header.scrolled{box-shadow:0 10px 30px rgba(42,9,17,.08)!important}
+.site-header.t-hide{transform:translateY(-102%)}
+.logo-text{color:var(--navy-dark)!important;font-weight:600!important;letter-spacing:-.005em}
+.logo-sub{color:var(--gold)!important;font-family:var(--t-sans);font-weight:800!important;letter-spacing:.24em!important}
+.nav-menu a{font-family:var(--t-sans);font-weight:650!important;color:var(--text)!important}
+.nav-menu a::after{background:var(--t-gold)!important;height:2px!important}
+.nav-menu a.active,.nav-menu a[aria-current="page"]{color:var(--navy)!important}
+.nav-toggle{border:0!important;border-radius:50%!important;background:var(--t-gold)!important;width:46px!important;height:46px!important}
+.nav-toggle span{background:var(--t-wine-dd)!important;left:13px!important;right:13px!important}
+.nav-toggle span:nth-child(1){top:15px!important}.nav-toggle span:nth-child(2){top:22px!important}.nav-toggle span:nth-child(3){top:29px!important}
+.nav-toggle.open span:nth-child(1),.nav-toggle.open span:nth-child(3){top:22px!important}
+@media (max-width:1080px){
+  .nav-menu{position:fixed!important;top:var(--t-hh,72px)!important;left:0;right:0;bottom:0;height:calc(100dvh - var(--t-hh,72px));overflow-y:auto;background:var(--t-wine-dd)!important;border:0!important;padding:28px 24px 40px!important;box-shadow:none!important}
+  .nav-menu.open{display:block!important;animation:tMenu .5s var(--t-ease)}
+  .nav-menu ul{gap:0!important}
+  .nav-menu li{border-bottom:1px solid rgba(255,255,255,.08);opacity:0;transform:translateY(16px)}
+  .nav-menu.open li{animation:tUp .6s var(--t-ease) forwards}
+  .nav-menu a{color:#fff!important;font-family:var(--t-serif)!important;font-weight:400!important;font-size:clamp(1.5rem,6vw,2.1rem)!important;padding:12px 0!important;letter-spacing:-.01em}
+  .nav-menu a.active,.nav-menu a[aria-current="page"]{color:var(--t-gold)!important;font-style:italic}
+  .nav-menu a::after{display:none}
+}
+@keyframes tMenu{from{opacity:0;clip-path:inset(0 0 100% 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes tUp{to{opacity:1;transform:none}}
+
+/* ---- page hero (inner pages) ---- */
+.page-hero{background:var(--t-wine-dd)!important;color:#fff!important;padding:clamp(70px,9vw,120px) 0 clamp(64px,8vw,104px)!important;isolation:isolate}
+.page-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 82% 40%,rgba(140,51,65,.75),transparent 55%),radial-gradient(ellipse at 0% 100%,rgba(217,164,65,.16),transparent 45%)}
+.page-hero::after{content:""!important;position:absolute!important;inset:0!important;width:auto!important;height:auto!important;border:0!important;border-radius:0!important;transform:none!important;box-shadow:none!important;z-index:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.page-hero .container{position:relative;z-index:2}
+.page-hero h1,.page-hero h1.gradient-text{color:#fff!important;font-size:clamp(2.6rem,6.4vw,5.4rem)!important;line-height:1!important;margin:0 0 20px!important;max-width:16ch}
+.page-hero h1 .t-it{color:var(--t-gold)}
+.page-hero p{color:rgba(255,255,255,.8)!important;font-size:clamp(1rem,1.3vw,1.15rem)!important;line-height:1.75;max-width:620px}
+.page-hero .eyebrow{color:var(--t-gold-l)!important}
+.page-hero .breadcrumb{color:rgba(255,255,255,.55)!important;font-size:.72rem!important;letter-spacing:.14em!important;text-transform:uppercase;font-weight:700}
+.page-hero .breadcrumb a:hover{color:var(--t-gold)!important}
+.page-hero p a{color:var(--t-gold-l)!important;text-decoration:underline;text-underline-offset:3px}
+.page-hero .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.4)!important}
+.t-kmap{position:absolute;right:-2%;top:50%;width:min(620px,58vw);transform:translateY(-50%);z-index:1;pointer-events:none;opacity:.9}
+.t-kmap path{fill:rgba(217,164,65,.05);stroke:rgba(217,164,65,.55);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;will-change:stroke-dashoffset;animation:tDraw 4.2s cubic-bezier(.65,0,.35,1) .2s forwards}
+.t-kmap circle.h{fill:var(--t-gold);transform-origin:491px 495px;transform:scale(0);animation:tPop 1s var(--t-ease) 3.4s forwards}
+.t-kmap circle.r{fill:none;stroke:var(--t-gold);stroke-width:2;transform-origin:491px 495px;opacity:0;animation:tRing 2.8s 3.8s infinite}
+@keyframes tDraw{to{stroke-dashoffset:0}}
+@keyframes tPop{to{transform:scale(1)}}
+@keyframes tRing{0%{transform:scale(1);opacity:.9}100%{transform:scale(5);opacity:0}}
+@media (max-width:760px){.t-kmap{width:120vw;right:-40vw;opacity:.45}}
+.t-ln{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em}
+.t-ln>span{display:inline-block;transform:translateY(105%);animation:tWord 1.1s var(--t-ease) forwards}
+@keyframes tWord{to{transform:none}}
+.page-hero .t-fade{opacity:0;transform:translateY(18px);animation:tUp 1s var(--t-ease) forwards}
+
+/* ---- sections, cards, buttons ---- */
+.section-soft{background:var(--bg-soft)!important}
+.section-heading h2,.section-title{font-size:clamp(2rem,4.2vw,3.3rem)!important;line-height:1.05!important}
+.btn{border-radius:99px!important;font-family:var(--t-sans);font-weight:700!important;letter-spacing:.01em;transition:transform .45s var(--t-ease),box-shadow .45s var(--t-ease),background .3s,color .3s,border-color .3s!important}
+.btn-primary{background:var(--navy)!important;color:#fff!important;box-shadow:0 12px 26px rgba(107,31,42,.22)!important}
+.btn-primary:hover{background:var(--t-wine-dd)!important;transform:translateY(-3px)!important;box-shadow:0 18px 34px rgba(42,9,17,.28)!important}
+.btn-outline{border:1.5px solid var(--navy)!important;color:var(--navy)!important;background:transparent!important}
+.btn-outline:hover{background:var(--navy)!important;color:#fff!important}
+.card{border-radius:22px!important;border-color:var(--border)!important;background:#fff}
+.card:hover{transform:translateY(-6px)!important;box-shadow:0 26px 54px rgba(61,15,25,.12)!important;border-color:rgba(176,122,28,.45)!important}
+input,select,textarea{font-family:var(--t-sans)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--t-gold)!important;box-shadow:0 0 0 4px rgba(217,164,65,.18)!important}
+img{image-rendering:auto}
+
+/* ---- reveal (smoother) ---- */
+@media (prefers-reduced-motion:no-preference){
+  .reveal{transform:translateY(34px)!important;transition:opacity 1s var(--t-ease),transform 1s var(--t-ease)!important}
+  .reveal.reveal-right{transform:translateY(34px)!important}
+  .reveal.reveal-visible{transform:none!important}
+}
+
+/* ---- footer ---- */
+.site-footer{background:var(--t-wine-dd)!important;color:rgba(255,255,255,.72)!important;padding:clamp(56px,7vw,90px) 20px 40px!important;position:relative;overflow:hidden}
+.site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--t-gold),transparent)}
+.site-footer .footer-brand{font-size:clamp(1.4rem,2.6vw,2rem)!important;font-weight:400!important;color:#fff!important;margin-bottom:12px!important}
+.site-footer a:hover{color:var(--t-gold)!important}
+.t-foot-mark{display:block;font-family:var(--t-serif);font-size:clamp(4rem,16vw,12rem);line-height:.9;color:transparent;-webkit-text-stroke:1px rgba(217,164,65,.22);letter-spacing:.06em;margin:28px 0 0;user-select:none}
+
+/* ---- progress bar + page curtain ---- */
+#t-prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--t-gold-l));z-index:9999;pointer-events:none}
+#t-curtain{position:fixed;inset:0;z-index:9998;background:var(--t-wine-dd);display:grid;place-items:center;transition:transform .8s var(--t-ease);pointer-events:none}
+#t-curtain span{font-family:var(--t-serif);color:var(--t-gold);font-size:1.6rem;letter-spacing:.2em;opacity:.9}
+#t-curtain.up{transform:translateY(-100%)}
+@media (prefers-reduced-motion:reduce){#t-curtain{display:none}.t-kmap path{animation:none;stroke-dashoffset:0}.t-ln>span,.page-hero .t-fade{animation:none;transform:none;opacity:1}.nav-menu li{opacity:1;transform:none}}
+
+/* ===== header v2: transparent over the hero, solid on scroll ===== */
+.site-header{position:fixed!important;top:0;left:0;right:0;z-index:100!important}
+.site-header .header-inner{max-width:1240px!important;min-height:82px;padding:0 20px!important}
+.site-header::after{transition:opacity .3s}
+.site-header.t-tr{background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important}
+.site-header.t-tr::after{opacity:0}
+.site-header .logo{gap:14px!important}
+.site-header .logo-mark{width:52px!important;height:52px!important}
+.t-seal{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex:none;font-family:var(--t-serif);font-weight:700;font-size:.72rem;letter-spacing:.02em;background:var(--t-gold);color:var(--t-wine-dd);box-shadow:0 0 0 4px rgba(217,164,65,.22)}
+.logo-mark.loaded~.t-seal{display:none}
+.site-header .logo-text.t-lt{font-size:inherit!important;line-height:1.1!important;color:var(--navy-dark)!important;transition:color .3s}
+.t-lt b{display:block;font-family:var(--t-serif);font-weight:600;font-size:1.08rem}
+.t-lt small{display:block;font-family:var(--t-sans);font-size:.6rem;font-weight:800;letter-spacing:.26em;color:var(--gold);margin-top:4px}
+.site-header.t-tr .logo-text.t-lt,.site-header.t-open .logo-text.t-lt{color:#fff!important}
+.site-header.t-tr .t-lt small,.site-header.t-open .t-lt small{color:var(--t-gold-l)}
+.t-join{display:inline-flex;align-items:center;gap:10px;padding:10px 12px 10px 20px;border-radius:99px;background:var(--t-gold);color:var(--t-wine-dd)!important;font:700 .9rem var(--t-sans);white-space:nowrap;transition:transform .4s var(--t-ease),background .3s;flex:none}
+.t-join:hover{transform:translateY(-2px);background:#fff}
+.t-join i{font-style:normal;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--t-wine-dd);color:var(--t-gold);transition:transform .4s var(--t-ease)}
+.t-join:hover i{transform:rotate(-45deg)}
+@media (min-width:1081px){
+  .site-header .nav-menu{display:block!important;position:static!important;margin-left:auto}
+  .site-header .nav-menu ul{display:flex!important;gap:2px!important;padding:6px!important;border-radius:99px;background:rgba(107,31,42,.05);transition:background .3s}
+  .site-header.t-tr .nav-menu ul{background:rgba(255,255,255,.09);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .site-header .nav-menu li.t-desk-hide{display:none!important}
+  .site-header .nav-menu a,.t-more>button{display:block;padding:9px 15px!important;border-radius:99px;font:650 .88rem var(--t-sans)!important;color:var(--text)!important;transition:background .3s,color .3s;white-space:nowrap}
+  .site-header.t-tr .nav-menu a,.site-header.t-tr .t-more>button{color:#fff!important}
+  .site-header .nav-menu a::after{display:none!important}
+  .site-header .nav-menu a.active,.site-header .nav-menu a[aria-current="page"],.t-more.cur>button{background:rgba(107,31,42,.09)!important;color:var(--navy)!important}
+  .site-header.t-tr .nav-menu a.active,.site-header.t-tr .nav-menu a[aria-current="page"],.site-header.t-tr .t-more.cur>button{background:rgba(255,255,255,.14)!important;color:var(--t-gold-l)!important}
+  .site-header .nav-menu a:hover,.t-more>button:hover,.t-more.open>button{background:var(--t-gold)!important;color:var(--t-wine-dd)!important}
+  .t-more{position:relative}
+  .t-more>button{border:0;background:none;cursor:pointer}
+  .t-drop{position:absolute;right:0;top:calc(100% + 14px);min-width:210px;background:#fff;border-radius:18px;padding:8px;box-shadow:0 24px 50px rgba(42,9,17,.2);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .3s,transform .4s var(--t-ease)}
+  .t-drop::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+  .t-more:hover .t-drop,.t-more.open .t-drop,.t-more:focus-within .t-drop{opacity:1;transform:none;pointer-events:auto}
+  .site-header .nav-menu .t-drop a,.site-header.t-tr .nav-menu .t-drop a{color:var(--text)!important;background:none!important}
+  .site-header .nav-menu .t-drop a:hover,.site-header.t-tr .nav-menu .t-drop a:hover{background:var(--bg-soft)!important;color:var(--navy)!important}
+  .site-header .nav-menu .t-drop a.active{color:var(--navy)!important;background:rgba(107,31,42,.07)!important}
+  .site-header .header-inner{gap:18px!important}
+}
+@media (min-width:1081px) and (max-width:1240px){.site-header .nav-menu a,.t-more>button{padding:9px 10px!important;font-size:.82rem!important}.t-lt b{font-size:.98rem}}
+@media (max-width:1080px){.t-more{display:none!important}.t-join{display:none!important}.site-header .header-inner{min-height:72px}}
+.site-header.t-open{background:var(--t-wine-dd)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.site-header.t-open::after{opacity:0}
+/* room for the fixed header */
+.page-hero{padding-top:calc(var(--t-hh,82px) + clamp(52px,7vw,96px))!important}
+.kx-hero{min-height:calc(460px + var(--t-hh,82px))!important}
+.kx-hero .container{padding-top:calc(var(--t-hh,82px) + 56px)!important}
+.kx-hero::before{content:"";position:absolute;left:0;right:0;top:0;height:220px;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(20,6,10,.72),transparent)}
+body.t-nohero{padding-top:var(--t-hh,82px)}
+
+/* buttons on dark wine sections: gold so they stand out */
+.cta-section .btn-primary{background:var(--t-gold)!important;color:var(--t-wine-dd,#2a0911)!important;box-shadow:0 12px 28px rgba(0,0,0,.28)!important}
+.cta-section .btn-primary:hover{background:#fff!important;color:var(--t-wine-dd,#2a0911)!important}
+</style><!--t-theme-end--><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%236b1f2a'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23d9a441'%3EB%3C/text%3E%3C/svg%3E">
+</head>
+<body><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
+
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img id="siteLogo" class="logo-mark" alt="Bhuj Chamber of Commerce and Industries Federation" />
+      <span class="logo-text">Bhuj Chamber of Commerce<br>and Industries Federation<span class="logo-sub">Kutch &middot; Gujarat</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="business.html">Business</a></li>
+        <li><a href="kutch.html">Kutch</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="membership.html" class="active" aria-current="page">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container reveal">
+      <span class="eyebrow">Join the Chamber</span>
+      <div class="breadcrumb reveal"><a href="index.html">Home</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg><span>Membership</span></div>
+      <h1 class="gradient-text">Membership</h1>
+      <p>Join the Bhuj Chamber of Commerce &amp; Industries Federation and become part of Kutch&rsquo;s business community.</p>
+    </div>
+  </section>
+
+  <!-- ===== About membership ===== -->
+  <section class="section" id="about-membership">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">About membership</span>
+        <h2>What it means to be a member</h2>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-text reveal">
+          <p>The Bhuj Chamber of Commerce &amp; Industries Federation (BCCIF) is the common platform of traders, industries, professionals and trade associations of Bhuj and Kutch. It was founded with the support of 51 trade associations, and works to protect and grow the business interests of the region.</p>
+          <p>When you become a member, your business becomes part of this federation. You get a voice in the matters that affect trade and industry, a network of fellow business owners, and the support of the Chamber when you need it.</p>
+          <p>Membership is available for every size of business, from small traders and startups to large industries, as well as trade associations and institutions. Choose the category that fits your business from the fee table below.</p>
+        </div>
+        <div class="who-card reveal">
+          <h3>Who can become a member?</h3>
+          <ul>
+            <li>Private and public limited companies</li>
+            <li>Industries of every size (minerals, import&ndash;export, logistics)</li>
+            <li>Proprietorships, partnerships and LLPs</li>
+            <li>Traders and shop owners</li>
+            <li>Startups and young entrepreneurs</li>
+            <li>Trade associations</li>
+            <li>Institutions, trusts and NGOs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Benefits ===== -->
+  <section class="section section-soft" id="benefits">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Why join</span>
+        <h2>Benefits of becoming a member</h2>
+      </div>
+      <div class="benefit-grid"><div class="benefit reveal"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><h3>A voice for your business</h3><p>The Chamber takes members’ issues to the government, local authorities and other bodies, and works for policies that help trade and industry in Kutch.</p></div><div class="benefit reveal"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Networking</h3><p>Meet business owners, industry leaders and the 51 trade associations connected with the Chamber.</p></div><div class="benefit reveal"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><h3>Events and seminars</h3><p>Invitations to the Chamber’s meetings, seminars, workshops and business events.</p></div><div class="benefit reveal"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><h3>Information and updates</h3><p>Updates on government schemes, circulars, notifications and changes that affect your business.</p></div><div class="benefit reveal"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><h3>Guidance and support</h3><p>Help and guidance from the Chamber office when you face a business problem or need the right contact.</p></div><div class="benefit reveal"><span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></span><h3>Recognition</h3><p>Be part of the official business body of Kutch, and grow your business’s standing in the community.</p></div></div>
+      <div class="foundation-note reveal" style="margin-top:22px">
+        <strong>Special Foundation Membership Scheme</strong>
+        <ul>
+          <li>Founding Member Certificate</li>
+          <li>Priority Networking Access</li>
+          <li>Admission Fee Waiver for MSMEs during initial period</li>
+          <li>Special Startup &amp; Youth Entrepreneur Promotion</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Categories & fees ===== -->
+  <section class="section" id="fees">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Choose what fits your business</span>
+        <h2>Membership Categories &amp; Fees</h2>
+        <p>Admission fee is paid once, when you join. Annual fee is paid every year.</p>
+      </div>
+      <div class="category-table-wrap reveal">
+        <table class="category-table" id="categoryTable">
+          <thead>
+            <tr><th>Category</th><th>Eligibility</th><th>Admission Fee (&#8377;)</th><th>Annual Fee (&#8377;)</th><th>GST</th></tr>
+          </thead>
+          <tbody>
+            <tr data-cat="Startup / Small Trader Member" data-admission="2500" data-annual="2000"><td>Startup / Small Trader Member</td><td>Small traders, startups</td><td>2,500</td><td>2,000</td><td>Applicable</td></tr>
+            <tr data-cat="General Business Member" data-admission="4500" data-annual="2250"><td>General Business Member</td><td>Partnership / LLP / MSME</td><td>4,500</td><td>2,250</td><td>Applicable</td></tr>
+            <tr data-cat="Corporate Member – Small" data-admission="0" data-annual="6500"><td>Corporate Member &ndash; Small</td><td>Turnover upto &#8377;5 Crores</td><td>Waived</td><td>6,500</td><td>Applicable</td></tr>
+            <tr data-cat="Corporate Member – Medium" data-admission="0" data-annual="17500"><td>Corporate Member &ndash; Medium</td><td>&#8377;6&ndash;35 Crores</td><td>Waived</td><td>17,500</td><td>Applicable</td></tr>
+            <tr data-cat="Corporate Member – Large" data-admission="0" data-annual="30000"><td>Corporate Member &ndash; Large</td><td>&#8377;36&ndash;100 Crores</td><td>Waived</td><td>30,000</td><td>Applicable</td></tr>
+            <tr data-cat="Corporate Member – Premium" data-admission="17500" data-annual="65000"><td>Corporate Member &ndash; Premium</td><td>&#8377;101&ndash;250 Crores</td><td>17,500</td><td>65,000</td><td>Applicable</td></tr>
+            <tr data-cat="Corporate Member – Elite" data-admission="65000" data-annual="130000"><td>Corporate Member &ndash; Elite</td><td>&#8377;251&ndash;500 Crores</td><td>65,000</td><td>1,30,000</td><td>Applicable</td></tr>
+            <tr data-cat="Mega Industry Member" data-admission="110000" data-annual="185000"><td>Mega Industry Member</td><td>Above &#8377;500 Crores</td><td>1,10,000</td><td>1,85,000</td><td>Applicable</td></tr>
+            <tr data-cat="Association Member" data-admission="0" data-annual="9500"><td>Association Member</td><td>Trade Associations</td><td>Waived</td><td>9,500</td><td>Applicable</td></tr>
+            <tr data-cat="Institutional Member" data-admission="0" data-annual="6500"><td>Institutional Member</td><td>Institutions / NGOs</td><td>Waived</td><td>6,500</td><td>Applicable</td></tr>
+            <tr data-cat="Patron Member – Individual" data-admission="20000" data-annual="0"><td>Patron Member &ndash; Individual</td><td>Business Personalities</td><td>20,000</td><td>NIL</td><td>Applicable</td></tr>
+            <tr data-cat="Lifetime Member – Firm/Company" data-admission="60000" data-annual="0"><td>Lifetime Member &ndash; Firm/Company</td><td>Firms / Companies</td><td>60,000</td><td>NIL</td><td>Inclusive</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Application Form (download + email) ===== -->
+  <section class="section section-soft" id="apply">
+    <div class="form-shell">
+      <div class="form-panel reveal">
+        <h2>Membership Application Form</h2>
+        <p class="form-intro">Fill in the official form, send it to the Chamber by email and by courier, and wait for the Chamber&rsquo;s decision. <strong>Pay the fee only after your application is approved.</strong></p>
+
+        <h3 class="form-section-title">Step 1 &ndash; Download and fill in the form</h3>
+        <p class="apply-text">Download the official BCCIF membership application form (PDF), print it and fill in all the details. Sign it and put your company stamp where marked.</p>
+        <div class="btn-row"><a class="btn btn-primary" href="membership-form.pdf" target="_blank" rel="noopener">Download membership form (PDF)</a></div>
+
+        <h3 class="form-section-title">Step 2 &ndash; Email the soft copy</h3>
+        <p class="apply-text">Scan or take clear photos of the filled form and the documents below, and email them together to:</p>
+        <p><span class="mail-box">ccibbhuj@gmail.com</span></p>
+        <p class="apply-text">Please write <strong>&ldquo;Membership Application &ndash; your firm name&rdquo;</strong> in the email subject.</p>
+        <p class="apply-text"><strong>Documents required:</strong></p>
+        <ul class="doc-list">
+          <li>Filled and signed membership form</li>
+          <li>Certificate</li>
+          <li>PAN Card</li>
+          <li>Registration Certificate</li>
+          <li>GST / Registration Certificate</li>
+          <li>Address Proof</li>
+          <li>Partnership Deed / MOA / AOA</li>
+          <li>Passport Size Photograph</li>
+        </ul>
+        <div class="btn-row" style="margin-top:16px"><a class="btn btn-outline" href="mailto:ccibbhuj@gmail.com?subject=Membership%20Application%20-%20%5BYour%20firm%20name%5D&amp;body=Dear%20Sir%2FMadam%2C%0A%0APlease%20find%20attached%20our%20filled%20membership%20application%20form%20and%20documents.%20The%20signed%20hard%20copy%20is%20being%20sent%20to%20your%20office%20by%20courier.%0A%0AFirm%20name%3A%20%0AMembership%20category%3A%20%0AContact%20person%3A%20%0AMobile%3A%20%0A%0AThank%20you.">Open email to send documents</a></div>
+
+        <h3 class="form-section-title">Step 3 &ndash; Courier the hard copy</h3>
+        <p class="apply-text">Send the <strong>original signed form</strong> along with <strong>self-attested photocopies (xerox) of the same documents</strong> by courier or post to the Chamber office:</p>
+        <p class="apply-text" style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px;line-height:1.7">Bhuj Chamber of Commerce &amp; Industries Federation<br>Surmandir Cineplex Building, Opp. Jilla Panchayat,<br>Bhuj-Kachchh 370001, Gujarat, India</p>
+        <p class="apply-text" style="font-size:.86rem;color:var(--muted)">Your documents are kept private and used only for your membership. See our <a href="privacy.html" style="color:var(--navy);text-decoration:underline">Privacy Policy</a>.</p>
+
+        <h3 class="form-section-title">Step 4 &ndash; Review by the Chamber</h3>
+        <p class="apply-text">The Chamber will review your form and documents. We will then inform you whether your application has been <strong>approved</strong> or <strong>not approved</strong>.</p>
+
+        <h3 class="form-section-title">Step 5 &ndash; Pay the fee after approval</h3>
+        <p class="apply-text">Once your application is approved, pay the admission fee and annual fee for your category (as per the fee table above) to the Chamber&rsquo;s bank account:</p>
+        <div class="bank-details-card">
+          <dl>
+            <dt>Bank Name</dt><dd>Bandhan Bank</dd>
+            <dt>Account Name</dt><dd>M/S BHUJ CHAMBER OF COMMERCE &amp; INDUSTRIES FEDERATION</dd>
+            <dt>Account Number</dt><dd>20200151193650</dd>
+            <dt>Branch</dt><dd>Bhuj</dd>
+            <dt>IFSC Code</dt><dd>BDBL0001761</dd>
+            <dt>Branch Code</dt><dd>1761</dd>
+            <dt>Branch Address</dt><dd>MB Bhagat Complex, Lal Tekry, Bhuj-Kutch, Gujarat &ndash; 370001</dd>
+          </dl>
+        </div>
+        <p class="bank-note">Please do not pay before you receive approval. Mention the applicant / organization name while making the payment.</p>
+
+        <h3 class="form-section-title">Step 6 &ndash; Email the payment receipt</h3>
+        <p class="apply-text">Email the payment receipt or transaction (UTR) details to <span class="mail-box">ccibbhuj@gmail.com</span>. The Chamber will then confirm your membership and share your membership number.</p>
+        <div class="btn-row" style="margin-top:6px"><a class="btn btn-outline" href="mailto:ccibbhuj@gmail.com?subject=Membership%20Fee%20Paid%20-%20%5BYour%20firm%20name%5D&amp;body=Dear%20Sir%2FMadam%2C%0A%0AThank%20you%20for%20approving%20our%20membership%20application.%20Please%20find%20attached%20the%20payment%20receipt.%0A%0AFirm%20name%3A%20%0AMembership%20category%3A%20%0AAmount%20paid%3A%20%0APayment%20date%3A%20%0ATransaction%20%2F%20UTR%20No.%3A%20%0A%0AThank%20you.">Open email to send receipt</a></div>
+
+        <p class="help-note">Questions about membership? Email <a href="mailto:ccibbhuj@gmail.com">ccibbhuj@gmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Renew membership ===== -->
+  <section class="section" id="renew">
+    <div class="form-shell">
+      <div class="form-panel reveal">
+        <h2>Renew your membership</h2>
+        <p class="form-intro">Membership is renewed every year on the date you joined. For example, if you joined on 10 August, your renewal is due on 10 August each year.</p>
+
+        <h3 class="form-section-title">Step 1 &ndash; Pay the annual fee</h3>
+        <p class="apply-text">Pay the annual fee for your membership category (as per the fee table above, plus GST) to the Chamber&rsquo;s bank account shown above, on or before your renewal date.</p>
+
+        <h3 class="form-section-title">Step 2 &ndash; Email the payment receipt</h3>
+        <p class="apply-text">Email the payment receipt or transaction (UTR) details to:</p>
+        <p><span class="mail-box">ccibbhuj@gmail.com</span></p>
+        <p class="apply-text">Please write <strong>&ldquo;Membership Renewal &ndash; your firm name &ndash; Membership No.&rdquo;</strong> in the email subject.</p>
+        <div class="btn-row" style="margin-top:6px"><a class="btn btn-outline" href="mailto:ccibbhuj@gmail.com?subject=Membership%20Renewal%20-%20%5BFirm%20name%5D%20-%20%5BMembership%20No.%5D&amp;body=Dear%20Sir%2FMadam%2C%0A%0APlease%20find%20attached%20the%20payment%20receipt%20for%20our%20membership%20renewal.%0A%0AFirm%20name%3A%20%0AMembership%20No.%3A%20%0AAmount%20paid%3A%20%0APayment%20date%3A%20%0ATransaction%20%2F%20UTR%20No.%3A%20%0A%0AThank%20you.">Open email to send receipt</a></div>
+
+        <h3 class="form-section-title">Step 3 &ndash; Confirmation</h3>
+        <p class="apply-text">The Chamber office will confirm your renewal, and your membership continues for one more year.</p>
+        <p class="help-note">Patron and Lifetime members do not need to renew.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-brand">Bhuj Chamber of Commerce and Industries Federation</p>
+    <p>&copy; Bhuj Chamber of Commerce and Industries Federation. All rights reserved.</p>
+    <p class="contact">Surmandir Cineplex Building, Opp. Jilla Panchayat, Bhuj-Kachchh 370001, Gujarat, India</p>
+    <p class="contact"><a href="mailto:infoatccifb@gmail.com" style="color:inherit">infoatccifb@gmail.com</a></p>
+    <p class="contact"><a href="contact.html" style="color:inherit">Contact Us</a> &middot; <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Nav toggle + header scroll shadow ---------- */
+  (function () {
+    var toggle = document.getElementById("navToggle");
+    var menu = document.getElementById("navMenu");
+    toggle.addEventListener("click", function () {
+      var open = menu.classList.toggle("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        menu.classList.remove("open");
+        toggle.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+    var header = document.getElementById("siteHeader");
+    function updateShadow() { header.classList.toggle("scrolled", window.scrollY > 4); }
+    window.addEventListener("scroll", updateShadow, { passive: true });
+    updateShadow();
+  })();
+
+/* ---------- Scroll reveal animations ---------- */
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var slideCounter = 0;
+    function assignDirection(el) {
+      if (!el.dataset.slideAssigned) {
+        if (slideCounter % 2 === 1) el.classList.add('reveal-right');
+        el.dataset.slideAssigned = "true";
+        slideCounter++;
+      }
+    }
+    // Reveal once and stop observing. Threshold is 0 (not 0.15) because the
+    // ratio IntersectionObserver reports is visible-area / the TARGET's own
+    // total area -- for a very tall element like .form-panel, even a full
+    // screen of visible content can be a small fraction of its total height,
+    // so a percentage threshold could take most of a scroll-through to fire,
+    // or never fire at all for tall enough content. Zero fires the moment
+    // any part of the element enters the viewport, which is what "reveal on
+    // scroll" actually means regardless of the element's height.
+    var observer = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0 });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      assignDirection(el); observer.observe(el);
+    });
+    window.__observeReveal = function (el) {
+      if (el) { assignDirection(el); observer.observe(el); }
+    };
+  })();
+
+/* ---------- Site logo (from site_media) ---------- */
+  (function () {
+    if (typeof supabase === "undefined") return;
+    var supabaseClient = supabase.createClient("https://rvpiliwyqjowegmjcanr.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2cGlsaXd5cWpvd2VnbWpjYW5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczMDM2MjksImV4cCI6MjEwMjg3OTYyOX0.9ZQj69FLcFgqp8huYTqlWy4JGl-vYGmYZiiVUBo4Sio");
+    var logoImg = document.getElementById("siteLogo");
+    if (!logoImg) return;
+    supabaseClient
+      .from("site_media")
+      .select("image_url")
+      .eq("type", "logo")
+      .eq("active", true)
+      .order("sort_order", { ascending: true })
+      .limit(1)
+      .then(function (result) {
+        if (result.error) { console.error("Couldn't load site logo:", result.error.message); return; }
+        var rows = result.data || [];
+        if (rows.length > 0 && rows[0].image_url) {
+          logoImg.onload = function () { logoImg.classList.add("loaded"); };
+          logoImg.onerror = function () { console.warn("Site logo failed to load"); };
+          logoImg.src = rows[0].image_url;
+        }
+      })
+      .catch(function (err) { console.error("Logo fetch error:", err); });
+  })();
+</script>
+
+<!--t-theme-start--><script id="t-theme-js">(function () {
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var KPATH = 'M111.6,422.4L123.1,412.2L120.3,402.6L117.2,400.6L121.9,398.0L124.9,392.9L125.2,377.8L127.8,368.9L132.7,361.5L132.3,343.4L141.4,334.9L147.2,326.0L153.8,321.9L161.2,322.0L165.7,319.3L169.8,313.0L172.1,300.3L188.4,301.9L194.6,295.7L205.5,289.0L210.7,289.4L216.3,292.6L237.7,292.9L243.4,299.4L251.1,301.4L259.1,308.6L277.4,310.7L281.4,314.4L297.1,320.8L298.5,325.9L302.9,330.5L308.9,331.8L313.8,336.0L328.3,340.0L333.2,337.6L344.6,324.8L347.1,312.6L358.0,314.6L364.1,311.4L369.3,292.5L377.0,293.1L383.2,298.6L390.3,299.9L394.9,305.7L399.7,307.7L439.1,310.3L445.2,308.8L455.4,300.5L460.4,300.8L463.1,307.4L468.5,310.6L474.9,309.7L479.0,306.4L493.8,306.4L499.9,298.2L506.2,293.3L523.5,259.7L531.2,258.4L536.1,250.9L542.3,247.3L561.5,250.5L570.5,256.9L575.1,262.7L585.3,266.5L588.7,271.4L595.4,274.3L598.0,279.9L596.4,286.6L587.9,296.7L584.2,306.8L582.8,314.5L584.7,323.4L583.4,330.0L575.0,332.4L568.5,338.0L565.8,343.6L561.9,374.1L563.1,380.1L570.1,385.9L590.3,389.4L589.3,398.4L591.0,403.4L598.1,412.0L604.5,415.5L607.5,423.0L617.6,430.0L624.6,430.9L633.5,424.0L642.1,424.3L644.3,426.8L643.5,433.9L640.4,438.5L639.8,443.7L641.9,448.7L646.5,451.8L654.0,451.6L668.6,441.1L677.1,438.0L679.6,430.8L674.0,419.1L676.5,410.6L685.3,404.1L688.4,398.6L701.0,389.5L712.5,388.3L727.7,377.0L735.9,376.2L748.4,363.3L760.8,365.7L771.5,361.5L775.4,356.6L780.2,338.0L800.3,341.1L806.7,338.0L809.2,331.8L808.5,312.4L804.9,305.1L799.4,301.6L795.0,282.2L796.6,277.3L801.7,273.9L828.7,276.3L832.4,279.7L837.7,280.9L843.5,287.6L868.5,291.1L873.8,294.0L888.3,295.3L904.2,305.0L909.9,304.2L913.9,300.2L916.4,304.3L910.2,315.0L910.3,331.0L916.0,337.2L912.8,340.9L915.0,351.0L906.5,354.3L905.9,365.7L916.9,378.1L920.7,376.5L921.1,372.2L924.8,374.7L933.2,371.8L927.7,377.7L920.2,408.2L921.0,414.7L925.4,419.4L924.1,424.9L906.3,427.0L890.0,439.5L881.2,441.5L877.0,449.2L863.7,448.7L859.3,451.9L857.3,456.6L846.0,458.7L836.7,467.1L836.6,480.9L797.4,485.2L793.6,489.8L792.6,496.7L793.6,501.7L797.0,505.6L792.6,503.8L787.7,507.4L783.6,517.3L767.3,520.0L743.9,520.3L734.9,513.8L719.4,510.4L716.5,507.3L685.2,507.7L681.6,511.7L684.5,518.8L671.2,525.2L668.1,524.0L665.5,525.1L662.9,533.1L660.1,536.4L656.3,537.4L654.3,542.9L647.4,549.8L646.3,556.7L638.9,560.8L637.7,564.2L639.0,567.2L632.9,570.4L623.6,586.1L620.1,586.5L612.8,592.4L613.4,598.8L616.7,601.0L615.2,605.2L595.9,607.2L593.1,610.0L581.9,611.4L579.5,613.9L568.9,613.5L560.2,621.3L553.5,620.6L531.2,627.8L520.8,636.2L494.6,644.9L484.1,646.2L483.2,642.6L480.6,641.2L471.4,643.9L464.9,640.7L451.8,642.0L448.7,645.0L442.3,643.9L437.7,647.1L437.8,651.6L430.9,653.5L422.4,651.4L403.2,638.7L381.2,632.7L369.1,636.5L356.9,632.9L347.3,632.4L345.1,627.3L340.9,627.9L327.6,620.4L323.8,615.5L320.5,614.9L309.8,606.3L289.4,596.0L228.2,557.7L215.0,552.3L176.5,522.4L161.8,504.7L159.8,497.9L148.5,496.6L146.1,485.9L149.8,479.2L158.7,471.7L157.7,468.1L154.3,466.8L153.5,462.3L138.1,457.1L132.5,463.1L130.8,458.9L123.8,457.3L123.6,449.5L117.6,443.0L114.6,442.3L111.9,444.3L106.0,439.8L111.6,422.4ZM426.5,648.2L428.6,646.3L428.8,643.2L426.8,640.7L421.9,642.4L421.6,645.5L423.4,647.8L426.5,648.2Z';
+  function qa(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+
+  /* header height for the mobile menu */
+  var header = document.querySelector('.site-header'), menu = document.getElementById('navMenu');
+  function setHH() { if (header) document.documentElement.style.setProperty('--t-hh', header.getBoundingClientRect().height + 'px'); }
+  setHH(); addEventListener('resize', setHH);
+
+
+  /* ---------- header v2: logo, More menu, Join button, transparent over hero ---------- */
+  var hero0 = document.querySelector('.page-hero, .kx-hero, .hero2');
+  if (!hero0) document.body.classList.add('t-nohero');
+  if (header) {
+    var lt = header.querySelector('.logo-text');
+    if (lt && !lt.classList.contains('t-lt')) { lt.classList.add('t-lt'); lt.innerHTML = '<b>Bhuj Chamber of Commerce</b><small>AND INDUSTRIES FEDERATION</small>'; }
+    var lg = header.querySelector('.logo-mark');
+    if (lg && !header.querySelector('.t-seal')) { var seal = document.createElement('span'); seal.className = 't-seal'; seal.setAttribute('aria-hidden', 'true'); seal.textContent = 'BCCIF'; lg.parentNode.insertBefore(seal, lg.nextSibling); }
+    var ul = header.querySelector('.nav-menu ul');
+    if (ul && !ul.querySelector('.t-more')) {
+      var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase(), moreHrefs = ['projects.html', 'media.html', 'committee.html'], drop = '', cur = false;
+      qa('li', ul).forEach(function (li) {
+        var a = li.querySelector('a'); if (!a) return; var h = (a.getAttribute('href') || '').toLowerCase();
+        if (h === 'index.html' || h === 'membership.html' || moreHrefs.indexOf(h) > -1) li.classList.add('t-desk-hide');
+        if (moreHrefs.indexOf(h) > -1) { drop += '<a href="' + h + '"' + (h === here ? ' class="active"' : '') + '>' + a.textContent + '</a>'; if (h === here) cur = true; }
+      });
+      var more = document.createElement('li'); more.className = 't-more' + (cur ? ' cur' : '');
+      more.innerHTML = '<button type="button" aria-haspopup="true" aria-expanded="false">More &#9662;</button><div class="t-drop">' + drop + '</div>';
+      ul.appendChild(more);
+      var mb = more.querySelector('button');
+      mb.addEventListener('click', function (e) { e.stopPropagation(); var o = more.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+      document.addEventListener('click', function () { more.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); });
+    }
+    var tog = header.querySelector('.nav-toggle');
+    if (!header.querySelector('.t-join')) { var j = document.createElement('a'); j.className = 't-join'; j.href = 'membership.html'; j.innerHTML = 'Join <i>&#8599;</i>'; var inner = header.querySelector('.header-inner'), nm = header.querySelector('.nav-menu'); if (nm && nm.parentNode === inner) inner.insertBefore(j, nm.nextSibling); else inner.appendChild(j); }
+    if (menu && window.MutationObserver) new MutationObserver(function () { header.classList.toggle('t-open', menu.classList.contains('open')); onScroll(); }).observe(menu, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  setHH();
+  /* scroll progress + hide header on scroll down */
+  var prog = document.createElement('div'); prog.id = 't-prog'; document.body.appendChild(prog);
+  var lastY = scrollY, ticking = false;
+  function onScroll() {
+    var y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+    prog.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    if (header) {
+      var open = menu && menu.classList.contains('open');
+      header.classList.toggle('t-hide', !open && y > lastY && y > 280);
+      header.classList.toggle('scrolled', y > 10);
+      header.classList.toggle('t-tr', !!hero0 && !open && y < 40);
+    }
+    lastY = y; ticking = false;
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  /* mobile menu: staggered links */
+  qa('.nav-menu li').forEach(function (li, i) { li.style.animationDelay = (0.04 * i + 0.08) + 's'; });
+
+  /* gold italic last word in big titles */
+  function italLast(el) {
+    if (!el || el.dataset.tIt || el.children.length) return;
+    var t = el.textContent.replace(/\s+$/, ''); var i = t.lastIndexOf(' ');
+    var head = i > 0 ? t.slice(0, i + 1) : '', last = i > 0 ? t.slice(i + 1) : t;
+    el.textContent = head; var em = document.createElement('span'); em.className = 't-it'; em.textContent = last; el.appendChild(em);
+    el.dataset.tIt = '1';
+  }
+  qa('.section-heading h2, h2.section-title').forEach(italLast);
+
+  /* inner page hero: word reveal, fades, Kutch outline */
+  var hero = document.querySelector('.page-hero');
+  if (hero) {
+    var h1 = hero.querySelector('h1');
+    if (h1 && !h1.children.length) {
+      var words = h1.textContent.trim().split(/\s+/);
+      h1.innerHTML = words.map(function (w, i) {
+        var cls = i === words.length - 1 ? ' class="t-it"' : '';
+        return '<span class="t-ln"><span' + cls + ' style="animation-delay:' + (0.12 + i * 0.08).toFixed(2) + 's">' + w.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }) + '</span></span>';
+      }).join(' ');
+    }
+    qa('.breadcrumb, .eyebrow, p, .btn, .button-group', hero.querySelector('.container') || hero).forEach(function (el, i) {
+      if (el.closest('.t-fade')) return; el.classList.add('t-fade'); el.style.animationDelay = (0.35 + i * 0.1).toFixed(2) + 's';
+    });
+    var NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 1000 761'); svg.setAttribute('class', 't-kmap'); svg.setAttribute('aria-hidden', 'true');
+    svg.innerHTML = '<path pathLength="1" d="' + KPATH + '"/><circle class="r" cx="491" cy="495" r="9"/><circle class="h" cx="491" cy="495" r="9"/>';
+    hero.appendChild(svg);
+    var p = svg.querySelector('path'); try { p.style.setProperty('--len', Math.ceil(p.getTotalLength())); } catch (e) {}
+  }
+
+  /* make sure revealed content always appears, even if a page script fails */
+  qa('.page-hero .reveal').forEach(function (el) { el.classList.add('reveal-visible'); });
+  if ('IntersectionObserver' in window) {
+    var rio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('reveal-visible'); rio.unobserve(e.target); } }); }, { threshold: 0.12 });
+    qa('.reveal').forEach(function (el) { rio.observe(el); });
+  } else qa('.reveal').forEach(function (el) { el.classList.add('reveal-visible'); });
+
+  /* footer watermark */
+  var foot = document.querySelector('.site-footer .container') || document.querySelector('.site-footer');
+  if (foot && !foot.querySelector('.t-foot-mark')) { var m = document.createElement('span'); m.className = 't-foot-mark'; m.setAttribute('aria-hidden', 'true'); m.textContent = 'BCCIF'; foot.appendChild(m); }
+
+  /* page transition: curtain on internal links */
+  if (!reduce) {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var href = a.getAttribute('href') || '';
+      if (a.target && a.target !== '_self') return; if (a.hasAttribute('download')) return;
+      if (!/^[a-z0-9_-]+\.html(\?[^#]*)?(#.*)?$/i.test(href)) return;
+      var here = location.pathname.split('/').pop() || 'index.html';
+      if (href.split('#')[0] === here) return;
+      e.preventDefault();
+      try { sessionStorage.setItem('t-nav', '1'); } catch (x) {}
+      var c = document.getElementById('t-curtain');
+      if (!c) { c = document.createElement('div'); c.id = 't-curtain'; c.innerHTML = '<span>BCCIF</span>'; document.body.appendChild(c); }
+      c.style.transition = 'none'; c.style.transform = 'translateY(100%)'; c.classList.remove('up');
+      void c.offsetWidth; c.style.transition = ''; c.style.transform = 'translateY(0)';
+      setTimeout(function () { location.href = href; }, 520);
+    });
+  }
+  var cur = document.getElementById('t-curtain');
+  if (cur) { requestAnimationFrame(function () { setTimeout(function () { cur.style.transform = ''; cur.classList.add('up'); setTimeout(function () { cur.remove(); }, 900); }, 120); }); }
+  addEventListener('pageshow', function (ev) { if (ev.persisted) { var c = document.getElementById('t-curtain'); if (c) c.remove(); } });
+})();
+</script><!--t-theme-end--></body>
+</html>

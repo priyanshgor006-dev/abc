@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Business &amp; Opportunities in Kutch &mdash; Bhuj Chamber of Commerce and Industries Federation</title>
+<meta name="description" content="Ports, energy, minerals, industries, farming and business opportunities in Kutch, Gujarat." />
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE.org/business.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Business &amp; Opportunities in Kutch &mdash; Bhuj Chamber of Commerce and Industries Federation" />
+<meta property="og:description" content="Ports, energy, minerals, industries, farming and business opportunities in Kutch, Gujarat." />
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE.org/business.html" />
+<meta property="og:image" content="https://res.cloudinary.com/c3josacx/image/upload/v1788577765/coc-bhuj-news/rf72yu5ypjxwy3wbxas9.jpg" />
+<meta property="og:site_name" content="Bhuj Chamber of Commerce and Industries Federation" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Business &amp; Opportunities in Kutch &mdash; Bhuj Chamber of Commerce and Industries Federation" />
+<meta name="twitter:description" content="Ports, energy, minerals, industries, farming and business opportunities in Kutch, Gujarat." />
+<meta name="twitter:image" content="https://res.cloudinary.com/c3josacx/image/upload/v1788577765/coc-bhuj-news/rf72yu5ypjxwy3wbxas9.jpg" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+
+:root {
+  --navy: #6b1f2a; --navy-dark: #4a1420; --navy-light: #8c3341;
+  --gold: #d97706; --gold-light: #f2a93c; --gold-hover: #b45309;
+  --bg: #ffffff; --bg-soft: #f8fafc; --text: #1f2937;
+  --muted: #6b7280; --border: #e5e7eb; --wine-tint: #f8f0f1;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0; background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; cursor: pointer; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.gradient-text {
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px; font-size: 10.5px; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--navy-light);
+}
+.eyebrow::before { content: ""; height: 1px; width: 24px; background: var(--gold); flex-shrink: 0; }
+
+/* ===== Header ===== */
+.site-header {
+  background: rgba(255,255,255,.98); border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 50; transition: box-shadow .25s var(--ease);
+}
+.site-header.scrolled { box-shadow: 0 2px 14px rgba(0,0,0,.06); }
+.header-inner {
+  max-width: 1240px; margin: 0 auto; padding: 6px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; position: relative;
+}
+.logo { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+.logo-mark { width: 84px; height: 84px; object-fit: contain; flex-shrink: 0; display: none; opacity: 0; transition: opacity .5s var(--ease); }
+.logo-mark.loaded { display: block; opacity: 1; }
+.logo-text { line-height: 1.2; font-size: 1.15rem; color: var(--navy-dark); }
+.logo-sub { display: block; font-size: 9px; font-weight: 500; color: var(--muted); letter-spacing: .16em; text-transform: uppercase; margin-top: 5px; }
+@media (max-width: 480px) {
+  .header-inner { padding: 6px 16px; }
+  .logo-mark { width: 56px; height: 56px; }
+  .logo-text { font-size: .95rem; }
+  .logo-sub { display: none; }
+}
+
+.nav-menu ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+.nav-menu a {
+  position: relative; display: inline-block; padding: 16px 0; font-size: 12.5px; font-weight: 550;
+  color: #4e5157; white-space: nowrap; transition: color .2s var(--ease);
+}
+.nav-menu a::after {
+  content: ""; position: absolute; left: 0; bottom: 8px; width: 0; height: 2px;
+  border-radius: 1px; background: var(--gold); transition: width .25s var(--ease);
+}
+.nav-menu a:hover, .nav-menu a.active { color: var(--navy); }
+.nav-menu a:hover::after, .nav-menu a.active::after { width: 100%; }
+
+.nav-toggle {
+  display: none; background: transparent; border: 1px solid var(--border); border-radius: 6px;
+  width: 42px; height: 42px; cursor: pointer; padding: 0; position: relative; flex-shrink: 0;
+}
+.nav-toggle span {
+  position: absolute; left: 11px; right: 11px; height: 2px; background: var(--navy);
+  border-radius: 2px; transition: transform .2s var(--ease), top .2s var(--ease), opacity .2s var(--ease);
+}
+.nav-toggle span:nth-child(1) { top: 13px; }
+.nav-toggle span:nth-child(2) { top: 20px; }
+.nav-toggle span:nth-child(3) { top: 27px; }
+.nav-toggle.open span:nth-child(1) { top: 20px; transform: rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { top: 20px; transform: rotate(-45deg); }
+@media (max-width: 1080px) {
+  .nav-toggle { display: block; }
+  .nav-menu {
+    display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff;
+    border-bottom: 1px solid var(--border); padding: 10px 20px 20px;
+    box-shadow: 0 12px 26px rgba(35,14,22,.09);
+  }
+  .nav-menu.open { display: block; }
+  .nav-menu ul { flex-direction: column; gap: 2px; }
+  .nav-menu a { display: block; padding: 13px 0; font-size: 14px; }
+  .nav-menu a::after { bottom: 7px; }
+}
+
+/* ===== Buttons ===== */
+.btn {
+  position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px; padding: 13px 24px; min-height: 46px; border-radius: 8px; font-size: 13.5px; font-weight: 650;
+  border: 1px solid transparent; transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%); color: #fff;
+  box-shadow: 0 4px 14px rgba(217,119,6,.35);
+}
+.btn-primary::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,.28) 50%, transparent 75%);
+  transform: translateX(-120%); transition: transform .6s var(--ease); pointer-events: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 7px 20px rgba(217,119,6,.43); }
+.btn-primary:hover::after { transform: translateX(120%); }
+.btn-outline { background: transparent; color: var(--navy); border-color: #d8bec3; }
+.btn-outline:hover { background: var(--wine-tint); border-color: var(--navy-light); transform: translateY(-2px); }
+.btn-outline-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+.btn-outline-light:hover { background: rgba(255,255,255,.12); border-color: #fff; transform: translateY(-2px); }
+.btn-small { min-height: 38px; padding: 9px 16px; font-size: 12px; }
+.btn:disabled { opacity: .6; cursor: not-allowed; transform: none !important; }
+
+/* ===== Cards ===== */
+.card {
+  background: #fff; border: 1px solid var(--border); border-radius: 13px;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+}
+.card:hover {
+  transform: translateY(-4px); box-shadow: 0 12px 32px rgba(107,31,42,.12), 0 2px 8px rgba(0,0,0,.04);
+  border-color: var(--navy-light);
+}
+.photo-wrap { position: relative; overflow: hidden; background: #efe8e9; }
+.photo-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.card:hover .photo-wrap img, a:hover .photo-wrap img, button:hover .photo-wrap img { transform: scale(1.05); }
+.image-fallback {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  color: #b99ba2; background: var(--wine-tint);
+}
+
+/* ===== Reveal animation ===== */
+.reveal {
+  opacity: 0; transform: translateX(-40px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+.reveal.reveal-right { transform: translateX(40px); }
+.reveal.reveal-visible { opacity: 1; transform: translateX(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ===== Page header ===== */
+.page-hero {
+  position: relative; overflow: hidden; padding: 52px 0 54px;
+  background: radial-gradient(ellipse at 100% 0%, rgba(217,119,6,.07), transparent 48%),
+              radial-gradient(ellipse at 0% 100%, rgba(107,31,42,.06), transparent 55%), #fcf9f8;
+  border-bottom: 1px solid var(--border);
+}
+.page-hero::after {
+  content: ""; position: absolute; right: 8%; top: -74px; width: 220px; height: 300px;
+  border: 1px solid rgba(107,31,42,.07); border-radius: 120px 120px 0 0; transform: rotate(23deg);
+  pointer-events: none;
+  box-shadow: 20px 0 0 16px rgba(107,31,42,.018), 40px 0 0 30px rgba(217,119,6,.025);
+}
+.page-hero .container { position: relative; z-index: 1; }
+
+.page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 700; margin: 0 0 10px; letter-spacing: -.02em; }
+.page-hero .eyebrow { margin-bottom: 14px; }
+.page-hero p { color: var(--muted); margin: 0; max-width: 600px; font-size: 15px; }
+
+/* ===== Section basics ===== */
+.section { padding: 72px 0; }
+.section-soft { background: var(--bg-soft); }
+.section-heading { text-align: center; margin-bottom: 38px; }
+.section-heading h2 { font-size: clamp(1.5rem, 2.6vw, 1.8rem); font-weight: 700; margin: 0 0 10px; }
+.section-heading p { color: var(--muted); margin: 0; max-width: 560px; margin-inline: auto; font-size: .98rem; }
+
+/* ===== Icons ===== */
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; vertical-align: middle; }
+
+/* ===== States (loading / empty / error) ===== */
+.state-block { text-align: center; padding: 64px 20px; grid-column: 1 / -1; }
+.state-icon {
+  display: inline-flex; align-items: center; justify-content: center; width: 68px; height: 68px;
+  color: var(--navy-light); background: var(--wine-tint); border-radius: 50%; margin-bottom: 20px;
+}
+.state-icon .icon { width: 28px; height: 28px; }
+.state-block h3 { font-size: 1.2rem; font-weight: 650; color: var(--navy); margin: 0 0 8px; }
+.state-block p { color: var(--muted); font-size: .92rem; max-width: 420px; margin: 0 auto; }
+.state-block .btn { margin-top: 20px; }
+.spinner {
+  width: 30px; height: 30px; border: 3px solid var(--border); border-top-color: var(--navy);
+  border-radius: 50%; animation: spin .8s linear infinite; margin: 0 auto 14px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== Forms ===== */
+.admin-form { max-width: 640px; background: #fff; border: 1px solid var(--border); border-radius: 13px; padding: 26px; margin-bottom: 32px; }
+.admin-form h2 { margin: 0 0 18px; font-size: 1.15rem; color: var(--navy); font-weight: 700; }
+.form-row { margin-bottom: 15px; }
+.form-row label { display: block; font-size: .85rem; font-weight: 650; margin-bottom: 6px; color: var(--text); }
+.form-row .req { color: #a63842; margin-left: 2px; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; padding: 10px 13px; font-size: .93rem; font-family: inherit;
+  background: #fff; border: 1px solid var(--border); border-radius: 8px; outline: none; color: var(--text);
+  transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  border-color: var(--navy-light); box-shadow: 0 0 0 3px rgba(107,31,42,.08);
+}
+.form-row textarea { min-height: 90px; resize: vertical; }
+.form-status { padding: 10px 13px; border-radius: 8px; font-size: .88rem; margin-bottom: 12px; border: 1px solid transparent; display: none; }
+.form-status.visible { display: block; }
+.form-status.success { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+.form-status.error { background: #fef2f2; color: #a63842; border-color: #fecaca; }
+
+/* ===== Footer ===== */
+.site-footer { background: var(--navy-dark); color: rgba(255,255,255,.85); padding: 34px 20px; text-align: center; font-size: .88rem; }
+.site-footer p { margin: 0; }
+.site-footer .footer-brand { font-weight: 650; color: #fff; margin-bottom: 4px; }
+.site-footer .contact { opacity: .7; margin-top: 10px; font-size: .82rem; }
+
+
+  .editorial-grid { display: grid; grid-template-columns: .75fr 1.35fr; gap: 70px; align-items: start; }
+  .editorial-grid .section-heading { margin: 0; text-align: left; }
+  .editorial-grid .section-heading p { margin-inline: 0; }
+  .about-text { font-size: 1.02rem; line-height: 1.75; color: var(--text); }
+  .about-text p { margin: 0 0 18px; }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-subhead { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin: 26px 0 12px; }
+  .about-objectives { margin: 0; padding-left: 20px; display: grid; gap: 12px; }
+  .about-objectives li { padding-left: 4px; }
+  .about-objectives li::marker { color: var(--gold, #d97706); }
+  .leadership-bio { margin-top: 22px; font-size: .98rem; line-height: 1.75; color: var(--text); text-align: left; }
+  .leadership-bio p { margin: 0 0 14px; }
+  .leadership-bio p:last-child { margin-bottom: 0; }
+  @media (max-width: 720px) {
+    .editorial-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+  .activities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (min-width: 768px) { .activities-grid { grid-template-columns: repeat(4, 1fr); } }
+  .activity-card { padding: 27px 24px; display: block; }
+  .activity-icon-box {
+    display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px;
+    color: var(--navy); background: var(--wine-tint); border-radius: 10px; margin-bottom: 18px;
+    transition: transform .3s var(--ease);
+  }
+  .activity-card:hover .activity-icon-box { transform: scale(1.08); }
+  .activity-card h3 { font-size: 1rem; margin: 0; font-weight: 650; color: var(--navy-dark); }
+  .activity-card p { font-size: .78rem; color: var(--muted); margin-top: 8px; line-height: 1.6; }
+
+  .leadership-layout {
+    display: grid; grid-template-columns: 220px 1fr; align-items: start; gap: 56px; max-width: 1000px;
+  }
+  .leadership-photo {
+    width: 220px; height: 220px; border-radius: 50%; background: var(--wine-tint); border: 3px solid var(--border);
+    overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .leadership-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .leadership-photo .initials { font-size: 3.4rem; font-weight: 700; color: var(--navy-light); }
+  .leadership-copy .leadership-name { font-size: 1.5rem; margin: 0 0 6px; color: var(--navy); font-weight: 700; }
+  .leadership-role { font-size: .85rem; color: var(--muted); }
+  .leadership-copy blockquote {
+    margin: 24px 0 0; color: #57505a; font-size: 1.25rem; line-height: 1.55; max-width: 480px; font-style: normal;
+  }
+  .leadership-note { font-size: .72rem; color: #92939a; margin-top: 12px; }
+  @media (max-width: 720px) {
+    .leadership-layout { grid-template-columns: 1fr; text-align: center; gap: 26px; }
+    .leadership-photo { margin: 0 auto; width: 170px; height: 170px; }
+    .leadership-copy .eyebrow { justify-content: center; }
+    .leadership-copy blockquote { font-size: 1.1rem; margin-inline: auto; }
+  }
+
+  .photo-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  @media (min-width: 640px) { .photo-strip { grid-template-columns: repeat(4, 1fr); } }
+  .photo-strip-item { aspect-ratio: 1; border-radius: 12px; overflow: hidden; }
+
+  .cta-section { text-align: center; padding: 60px 20px; background: var(--navy); color: #fff; }
+  .cta-section h2 { font-size: 1.8rem; margin: 0 auto 14px; font-weight: 700; max-width: 520px; }
+  .cta-section p { font-size: 1.02rem; margin: 0 auto 26px; opacity: .9; max-width: 480px; }
+
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-size: 10px; color: #8f7e81; letter-spacing: .02em; }
+.breadcrumb a { transition: color .15s var(--ease); }
+.breadcrumb a:hover { color: var(--navy); }
+.breadcrumb svg { width: 11px; height: 11px; }
+
+/* ===== Kutch page ===== */
+.kx-hero { position: relative; min-height: 460px; display: grid; align-items: end; color: #fff; overflow: hidden; background: linear-gradient(135deg, var(--navy-dark), var(--navy)); }
+.kx-hero figure { position: absolute; inset: 0; margin: 0; }
+.kx-hero figure img { width: 100%; height: 100%; object-fit: cover; }
+.kx-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,6,10,.15) 20%, rgba(20,6,10,.78)); }
+.kx-hero .container { position: relative; z-index: 2; padding-top: 80px; padding-bottom: 48px; }
+.kx-hero .eyebrow { color: #fcd9a0; }
+.kx-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin: 8px 0 12px; color: #fff; }
+.kx-hero p { max-width: 640px; font-size: 1.05rem; line-height: 1.7; color: rgba(255,255,255,.92); margin: 0; }
+.kx-hero .kx-credit { z-index: 3; }
+.kx-hero .kx-fallback { display: none !important; }
+.kx-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.kx-jump a { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); color: #fff; border-radius: 999px; padding: 7px 14px; font-size: .84rem; font-weight: 600; backdrop-filter: blur(4px); }
+.kx-jump a:hover { background: rgba(255,255,255,.28); }
+.kx-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: -36px; position: relative; z-index: 3; }
+.kx-stat { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 18px 16px; box-shadow: 0 10px 26px rgba(74,20,32,.08); }
+.kx-stat b { display: block; font-size: 1.45rem; color: var(--navy); line-height: 1.15; }
+.kx-stat span { display: block; font-size: .8rem; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+.kx-section { padding: 70px 0; }
+.kx-section.soft { background: var(--bg-soft); }
+.kx-split { display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; }
+.kx-split.flip > :first-child { order: 2; }
+.kx-text h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 6px 0 14px; color: var(--navy-dark); }
+.kx-text p { font-size: 1rem; line-height: 1.8; color: var(--text); margin: 0 0 14px; }
+.kx-text ul { margin: 0; padding-left: 20px; line-height: 1.85; }
+.kx-img { position: relative; margin: 0; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, var(--navy), var(--navy-dark)); aspect-ratio: 4 / 3; box-shadow: 0 14px 34px rgba(74,20,32,.12); }
+.kx-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kx-fallback { display: none; position: absolute; inset: 0; place-items: center; text-align: center; padding: 20px; color: rgba(255,255,255,.9); font-weight: 700; }
+.no-img .kx-fallback { display: grid; }
+.kx-credit { position: absolute; right: 8px; bottom: 8px; font-size: .68rem; color: #fff; background: rgba(0,0,0,.5); padding: 3px 8px; border-radius: 999px; z-index: 2; }
+.no-img .kx-credit { display: none; }
+.kx-timeline { list-style: none; margin: 18px 0 0; padding: 0; border-left: 2px solid #ecd2a8; }
+.kx-timeline li { position: relative; padding: 0 0 14px 20px; line-height: 1.65; }
+.kx-timeline li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--gold); }
+.kx-timeline b { color: var(--navy); }
+.kx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.kx-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+.kx-card .kx-img { border-radius: 0; box-shadow: none; aspect-ratio: 16 / 10; }
+.kx-card-body { padding: 18px 20px 20px; }
+.kx-card h3 { margin: 0 0 6px; font-size: 1.08rem; color: var(--navy-dark); }
+.kx-card p { margin: 0; font-size: .92rem; line-height: 1.65; color: var(--muted); }
+.kx-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-hover); margin-bottom: 6px; }
+.kx-heading { max-width: 760px; margin-bottom: 30px; }
+.kx-heading h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 6px 0 10px; color: var(--navy-dark); }
+.kx-heading p { color: var(--muted); line-height: 1.75; margin: 0; }
+.kx-opps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.kx-opp { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.kx-opp .ico { width: 42px; height: 42px; border-radius: 10px; background: var(--wine-tint); color: var(--navy); display: grid; place-items: center; font-size: 1.25rem; margin-bottom: 12px; }
+.kx-opp h3 { margin: 0 0 6px; font-size: 1rem; color: var(--navy-dark); }
+.kx-opp p { margin: 0; font-size: .88rem; line-height: 1.6; color: var(--muted); }
+.kx-sources { font-size: .84rem; color: var(--muted); line-height: 1.8; }
+.kx-sources a { color: var(--navy); text-decoration: underline; }
+.kx-note { font-size: .82rem; color: var(--muted); margin-top: 18px; }
+@media (max-width: 1000px) { .kx-stats { grid-template-columns: repeat(3, 1fr); } .kx-opps { grid-template-columns: repeat(2, 1fr); } .kx-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .kx-split, .kx-split.flip { grid-template-columns: 1fr; gap: 24px; } .kx-split.flip > :first-child { order: 0; } .kx-stats { grid-template-columns: 1fr 1fr; } .kx-grid { grid-template-columns: 1fr; } .kx-hero { min-height: 420px; } }
+@media (max-width: 480px) { .kx-opps { grid-template-columns: 1fr; } .kx-stats { margin-top: -24px; } }
+
+/* ===== Company cards ===== */
+.co-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.co-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; box-shadow: 0 6px 20px rgba(74,20,32,.05); }
+.co-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.co-logo { flex: 0 0 64px; width: 64px; height: 64px; border-radius: 12px; border: 1px solid var(--border); background: #fff; display: grid; place-items: center; padding: 8px; overflow: hidden; }
+.co-logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.co-logo.mono { background: linear-gradient(135deg, var(--navy), var(--navy-dark)); color: #fff; font-weight: 800; font-size: 1.05rem; letter-spacing: .04em; border: 0; }
+.co-tag { display: block; margin-top: 3px; }
+.co-head h3 { margin: 0; font-size: 1.2rem; color: var(--navy-dark); }
+.co-tag { font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--gold-hover); }
+.co-does { margin: 0 0 14px; line-height: 1.75; color: var(--text); font-size: .95rem; }
+.co-facts { margin: 0 0 14px; display: grid; gap: 4px; }
+.co-facts dt { font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+.co-facts dd { margin: 0; line-height: 1.7; font-size: .93rem; color: var(--text); }
+.co-na { color: var(--muted); font-style: italic; }
+.co-src { margin: auto 0 0; padding-top: 12px; border-top: 1px solid var(--border); font-size: .78rem; color: var(--muted); line-height: 1.6; }
+.co-src a { color: var(--navy); text-decoration: underline; }
+@media (max-width: 860px) { .co-grid { grid-template-columns: 1fr; } }
+/* ===== Long-form article layout ===== */
+.kx-topic.solo { grid-template-columns: 1fr; max-width: 820px; }
+.kx-figs.pair { grid-template-columns: 1fr 1fr; align-content: start; }
+.kx-fig .kx-cap { display: block; margin-top: 8px; }
+.kx-figs.pair .kx-img.small { aspect-ratio: 4 / 3; }
+.kx-topic:has(.kx-figs.pair) { align-items: center; }
+.kx-welcome { position: relative; z-index: 3; max-width: 900px; margin: 56px auto 0; background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 34px 38px; box-shadow: 0 14px 34px rgba(74,20,32,.10); }
+.kx-welcome h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); color: var(--navy-dark); margin: 6px 0 14px; }
+.kx-welcome p { font-size: 1.02rem; line-height: 1.85; color: var(--text); margin: 0 0 14px; }
+.kx-welcome p:last-child { margin-bottom: 0; color: var(--muted); }
+.kx-mapcard { position: relative; z-index: 3; margin: -48px auto 0; background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 28px; box-shadow: 0 14px 34px rgba(74,20,32,.10); display: grid; grid-template-columns: 1fr; gap: 24px; align-items: stretch; }
+.kx-mapcard > .kx-text { max-width: 860px; }
+.kx-maphint { display: none; font-size: .8rem; color: var(--muted); margin: 8px 2px 0; }
+.kx-map { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: var(--wine-tint); min-height: 420px; }
+.kx-map iframe { width: 100%; height: 100%; min-height: 420px; border: 0; display: block; }
+.kx-map:has(.kx-svgmap) { min-height: 0; align-self: start; background: #e3eef4; }
+.kx-svgmap { width: 100%; height: auto; display: block; }
+@media (max-width: 600px) { .kx-map:has(.kx-svgmap) { overflow-x: auto; -webkit-overflow-scrolling: touch; } .kx-svgmap { min-width: 760px; } .kx-maphint { display: block; } }
+.kx-mapcard h2 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); color: var(--navy-dark); margin: 6px 0 12px; }
+.kx-mapcard p { font-size: .97rem; line-height: 1.8; color: var(--text); margin: 0 0 12px; }
+.kx-mapcard .btn { margin-top: 6px; }
+@media (max-width: 860px) { .kx-mapcard { grid-template-columns: 1fr; padding: 20px; } .kx-map iframe { min-height: 340px; } }
+@media (max-width: 600px) { .kx-mapcard { margin-top: -28px; border-radius: 14px; padding: 16px; } .kx-mapcard .btn { width: 100%; justify-content: center; } }
+@media (max-width: 600px) { .kx-welcome { margin-top: 36px; padding: 24px 20px; border-radius: 14px; } }
+.kx-article { max-width: 1120px; margin: 0 auto; }
+.kx-intro { max-width: 820px; margin: 0 auto 44px; text-align: center; }
+.kx-intro h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 6px 0 14px; color: var(--navy-dark); }
+.kx-intro p { font-size: 1.04rem; line-height: 1.85; color: var(--text); margin: 0; }
+.kx-topic { display: grid; grid-template-columns: 1fr 1.15fr; gap: 46px; align-items: start; padding: 34px 0; border-top: 1px solid var(--border); }
+.kx-topic:first-of-type { border-top: 0; }
+.kx-topic.flip > figure, .kx-topic.flip > .kx-figs { order: 2; }
+.kx-topic h3 { font-size: clamp(1.25rem, 2.2vw, 1.55rem); color: var(--navy-dark); margin: 4px 0 14px; line-height: 1.3; }
+.kx-topic p { font-size: 1rem; line-height: 1.85; color: var(--text); margin: 0 0 14px; }
+.kx-topic p:last-child { margin-bottom: 0; }
+.kx-topic .kx-img { position: sticky; top: 100px; }
+.kx-figs { display: grid; gap: 14px; position: sticky; top: 100px; }
+.kx-figs .kx-img { position: relative; top: auto; }
+.kx-figs .kx-img.small { aspect-ratio: 16 / 9; }
+.kx-cap { display: block; font-size: .8rem; color: var(--muted); margin-top: -6px; line-height: 1.5; }
+.kx-figs .kx-fig .kx-cap { margin-top: 8px; }
+.kx-pull { border-left: 4px solid var(--gold); background: var(--wine-tint); padding: 14px 18px; border-radius: 0 12px 12px 0; font-size: .98rem; line-height: 1.75; color: var(--navy-dark); margin: 18px 0 14px; }
+@media (max-width: 860px) {
+  .kx-topic, .kx-topic.flip { grid-template-columns: 1fr; gap: 20px; padding: 28px 0; }
+  .kx-topic.flip > figure, .kx-topic.flip > .kx-figs { order: 0; }
+  .kx-topic .kx-img, .kx-figs { position: relative; top: auto; }
+}
+
+.kx-next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; background: linear-gradient(135deg, var(--navy-dark), var(--navy)); color: #fff; border-radius: 18px; padding: 34px 38px; }
+.kx-next .eyebrow { color: #fcd9a0; }
+.kx-next h2 { color: #fff; margin: 6px 0 10px; font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
+.kx-next p { margin: 0; max-width: 680px; color: rgba(255,255,255,.88); line-height: 1.75; }
+.kx-next .btn { background: #fff; color: var(--navy-dark); }
+@media (max-width: 600px) { .kx-next { padding: 24px 20px; } .kx-next .btn { width: 100%; justify-content: center; } }
+</style>
+<!--t-theme-start--><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@500;600&display=swap"></noscript><style id="t-theme">/* ===== BCCIF theme (new look) ===== */
+:root{
+  --navy:#6b1f2a;--navy-dark:#3d0f19;--navy-light:#8c3341;
+  --gold:#b07a1c;--gold-light:#d9a441;--gold-hover:#8f6214;
+  --bg:#fbf6ee;--bg-soft:#f4ebdc;--text:#231a1c;--muted:#6e6461;--border:#e8dccb;--wine-tint:#f6ece4;
+  --t-wine-dd:#2a0911;--t-gold:#d9a441;--t-gold-l:#f3d58f;
+  --t-serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --t-sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --t-guj:"Noto Sans Gujarati","Manrope",sans-serif;
+  --t-ease:cubic-bezier(.16,1,.3,1);
+}
+html{overflow-x:clip}
+body{font-family:var(--t-sans);background:var(--bg);color:var(--text);overflow-x:clip}
+::selection{background:var(--t-gold);color:var(--t-wine-dd)}
+h1,h2,h3,.section-title,.section-heading h2,.logo-text,.footer-brand{font-family:var(--t-serif)}
+h1,h2,.section-title,.section-heading h2{font-weight:400!important;letter-spacing:-.022em}
+h3{font-weight:500;letter-spacing:-.01em}
+.gradient-text{background:none!important;-webkit-text-fill-color:currentColor!important;color:var(--navy-dark)}
+.t-it{font-style:italic;color:var(--gold)}
+.eyebrow{font-family:var(--t-sans);font-weight:800;letter-spacing:.24em;color:var(--gold)}
+.eyebrow::before{width:30px;background:currentColor}
+
+/* ---- header ---- */
+.site-header{background:rgba(251,246,238,.86)!important;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:0!important;transition:transform .55s var(--t-ease),box-shadow .3s!important}
+.site-header::after{content:"";position:absolute;left:0;right:0;bottom:0;border-top:1.5px dashed rgba(176,122,28,.45);pointer-events:none}
+.site-header.scrolled{box-shadow:0 10px 30px rgba(42,9,17,.08)!important}
+.site-header.t-hide{transform:translateY(-102%)}
+.logo-text{color:var(--navy-dark)!important;font-weight:600!important;letter-spacing:-.005em}
+.logo-sub{color:var(--gold)!important;font-family:var(--t-sans);font-weight:800!important;letter-spacing:.24em!important}
+.nav-menu a{font-family:var(--t-sans);font-weight:650!important;color:var(--text)!important}
+.nav-menu a::after{background:var(--t-gold)!important;height:2px!important}
+.nav-menu a.active,.nav-menu a[aria-current="page"]{color:var(--navy)!important}
+.nav-toggle{border:0!important;border-radius:50%!important;background:var(--t-gold)!important;width:46px!important;height:46px!important}
+.nav-toggle span{background:var(--t-wine-dd)!important;left:13px!important;right:13px!important}
+.nav-toggle span:nth-child(1){top:15px!important}.nav-toggle span:nth-child(2){top:22px!important}.nav-toggle span:nth-child(3){top:29px!important}
+.nav-toggle.open span:nth-child(1),.nav-toggle.open span:nth-child(3){top:22px!important}
+@media (max-width:1080px){
+  .nav-menu{position:fixed!important;top:var(--t-hh,72px)!important;left:0;right:0;bottom:0;height:calc(100dvh - var(--t-hh,72px));overflow-y:auto;background:var(--t-wine-dd)!important;border:0!important;padding:28px 24px 40px!important;box-shadow:none!important}
+  .nav-menu.open{display:block!important;animation:tMenu .5s var(--t-ease)}
+  .nav-menu ul{gap:0!important}
+  .nav-menu li{border-bottom:1px solid rgba(255,255,255,.08);opacity:0;transform:translateY(16px)}
+  .nav-menu.open li{animation:tUp .6s var(--t-ease) forwards}
+  .nav-menu a{color:#fff!important;font-family:var(--t-serif)!important;font-weight:400!important;font-size:clamp(1.5rem,6vw,2.1rem)!important;padding:12px 0!important;letter-spacing:-.01em}
+  .nav-menu a.active,.nav-menu a[aria-current="page"]{color:var(--t-gold)!important;font-style:italic}
+  .nav-menu a::after{display:none}
+}
+@keyframes tMenu{from{opacity:0;clip-path:inset(0 0 100% 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes tUp{to{opacity:1;transform:none}}
+
+/* ---- page hero (inner pages) ---- */
+.page-hero{background:var(--t-wine-dd)!important;color:#fff!important;padding:clamp(70px,9vw,120px) 0 clamp(64px,8vw,104px)!important;isolation:isolate}
+.page-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 82% 40%,rgba(140,51,65,.75),transparent 55%),radial-gradient(ellipse at 0% 100%,rgba(217,164,65,.16),transparent 45%)}
+.page-hero::after{content:""!important;position:absolute!important;inset:0!important;width:auto!important;height:auto!important;border:0!important;border-radius:0!important;transform:none!important;box-shadow:none!important;z-index:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.page-hero .container{position:relative;z-index:2}
+.page-hero h1,.page-hero h1.gradient-text{color:#fff!important;font-size:clamp(2.6rem,6.4vw,5.4rem)!important;line-height:1!important;margin:0 0 20px!important;max-width:16ch}
+.page-hero h1 .t-it{color:var(--t-gold)}
+.page-hero p{color:rgba(255,255,255,.8)!important;font-size:clamp(1rem,1.3vw,1.15rem)!important;line-height:1.75;max-width:620px}
+.page-hero .eyebrow{color:var(--t-gold-l)!important}
+.page-hero .breadcrumb{color:rgba(255,255,255,.55)!important;font-size:.72rem!important;letter-spacing:.14em!important;text-transform:uppercase;font-weight:700}
+.page-hero .breadcrumb a:hover{color:var(--t-gold)!important}
+.page-hero p a{color:var(--t-gold-l)!important;text-decoration:underline;text-underline-offset:3px}
+.page-hero .btn-outline{color:#fff!important;border-color:rgba(255,255,255,.4)!important}
+.t-kmap{position:absolute;right:-2%;top:50%;width:min(620px,58vw);transform:translateY(-50%);z-index:1;pointer-events:none;opacity:.9}
+.t-kmap path{fill:rgba(217,164,65,.05);stroke:rgba(217,164,65,.55);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;will-change:stroke-dashoffset;animation:tDraw 4.2s cubic-bezier(.65,0,.35,1) .2s forwards}
+.t-kmap circle.h{fill:var(--t-gold);transform-origin:491px 495px;transform:scale(0);animation:tPop 1s var(--t-ease) 3.4s forwards}
+.t-kmap circle.r{fill:none;stroke:var(--t-gold);stroke-width:2;transform-origin:491px 495px;opacity:0;animation:tRing 2.8s 3.8s infinite}
+@keyframes tDraw{to{stroke-dashoffset:0}}
+@keyframes tPop{to{transform:scale(1)}}
+@keyframes tRing{0%{transform:scale(1);opacity:.9}100%{transform:scale(5);opacity:0}}
+@media (max-width:760px){.t-kmap{width:120vw;right:-40vw;opacity:.45}}
+.t-ln{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em}
+.t-ln>span{display:inline-block;transform:translateY(105%);animation:tWord 1.1s var(--t-ease) forwards}
+@keyframes tWord{to{transform:none}}
+.page-hero .t-fade{opacity:0;transform:translateY(18px);animation:tUp 1s var(--t-ease) forwards}
+
+/* ---- sections, cards, buttons ---- */
+.section-soft{background:var(--bg-soft)!important}
+.section-heading h2,.section-title{font-size:clamp(2rem,4.2vw,3.3rem)!important;line-height:1.05!important}
+.btn{border-radius:99px!important;font-family:var(--t-sans);font-weight:700!important;letter-spacing:.01em;transition:transform .45s var(--t-ease),box-shadow .45s var(--t-ease),background .3s,color .3s,border-color .3s!important}
+.btn-primary{background:var(--navy)!important;color:#fff!important;box-shadow:0 12px 26px rgba(107,31,42,.22)!important}
+.btn-primary:hover{background:var(--t-wine-dd)!important;transform:translateY(-3px)!important;box-shadow:0 18px 34px rgba(42,9,17,.28)!important}
+.btn-outline{border:1.5px solid var(--navy)!important;color:var(--navy)!important;background:transparent!important}
+.btn-outline:hover{background:var(--navy)!important;color:#fff!important}
+.card{border-radius:22px!important;border-color:var(--border)!important;background:#fff}
+.card:hover{transform:translateY(-6px)!important;box-shadow:0 26px 54px rgba(61,15,25,.12)!important;border-color:rgba(176,122,28,.45)!important}
+input,select,textarea{font-family:var(--t-sans)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--t-gold)!important;box-shadow:0 0 0 4px rgba(217,164,65,.18)!important}
+img{image-rendering:auto}
+
+/* ---- reveal (smoother) ---- */
+@media (prefers-reduced-motion:no-preference){
+  .reveal{transform:translateY(34px)!important;transition:opacity 1s var(--t-ease),transform 1s var(--t-ease)!important}
+  .reveal.reveal-right{transform:translateY(34px)!important}
+  .reveal.reveal-visible{transform:none!important}
+}
+
+/* ---- footer ---- */
+.site-footer{background:var(--t-wine-dd)!important;color:rgba(255,255,255,.72)!important;padding:clamp(56px,7vw,90px) 20px 40px!important;position:relative;overflow:hidden}
+.site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--t-gold),transparent)}
+.site-footer .footer-brand{font-size:clamp(1.4rem,2.6vw,2rem)!important;font-weight:400!important;color:#fff!important;margin-bottom:12px!important}
+.site-footer a:hover{color:var(--t-gold)!important}
+.t-foot-mark{display:block;font-family:var(--t-serif);font-size:clamp(4rem,16vw,12rem);line-height:.9;color:transparent;-webkit-text-stroke:1px rgba(217,164,65,.22);letter-spacing:.06em;margin:28px 0 0;user-select:none}
+
+/* ---- progress bar + page curtain ---- */
+#t-prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--t-gold-l));z-index:9999;pointer-events:none}
+#t-curtain{position:fixed;inset:0;z-index:9998;background:var(--t-wine-dd);display:grid;place-items:center;transition:transform .8s var(--t-ease);pointer-events:none}
+#t-curtain span{font-family:var(--t-serif);color:var(--t-gold);font-size:1.6rem;letter-spacing:.2em;opacity:.9}
+#t-curtain.up{transform:translateY(-100%)}
+@media (prefers-reduced-motion:reduce){#t-curtain{display:none}.t-kmap path{animation:none;stroke-dashoffset:0}.t-ln>span,.page-hero .t-fade{animation:none;transform:none;opacity:1}.nav-menu li{opacity:1;transform:none}}
+
+/* ===== header v2: transparent over the hero, solid on scroll ===== */
+.site-header{position:fixed!important;top:0;left:0;right:0;z-index:100!important}
+.site-header .header-inner{max-width:1240px!important;min-height:82px;padding:0 20px!important}
+.site-header::after{transition:opacity .3s}
+.site-header.t-tr{background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important}
+.site-header.t-tr::after{opacity:0}
+.site-header .logo{gap:14px!important}
+.site-header .logo-mark{width:52px!important;height:52px!important}
+.t-seal{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex:none;font-family:var(--t-serif);font-weight:700;font-size:.72rem;letter-spacing:.02em;background:var(--t-gold);color:var(--t-wine-dd);box-shadow:0 0 0 4px rgba(217,164,65,.22)}
+.logo-mark.loaded~.t-seal{display:none}
+.site-header .logo-text.t-lt{font-size:inherit!important;line-height:1.1!important;color:var(--navy-dark)!important;transition:color .3s}
+.t-lt b{display:block;font-family:var(--t-serif);font-weight:600;font-size:1.08rem}
+.t-lt small{display:block;font-family:var(--t-sans);font-size:.6rem;font-weight:800;letter-spacing:.26em;color:var(--gold);margin-top:4px}
+.site-header.t-tr .logo-text.t-lt,.site-header.t-open .logo-text.t-lt{color:#fff!important}
+.site-header.t-tr .t-lt small,.site-header.t-open .t-lt small{color:var(--t-gold-l)}
+.t-join{display:inline-flex;align-items:center;gap:10px;padding:10px 12px 10px 20px;border-radius:99px;background:var(--t-gold);color:var(--t-wine-dd)!important;font:700 .9rem var(--t-sans);white-space:nowrap;transition:transform .4s var(--t-ease),background .3s;flex:none}
+.t-join:hover{transform:translateY(-2px);background:#fff}
+.t-join i{font-style:normal;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--t-wine-dd);color:var(--t-gold);transition:transform .4s var(--t-ease)}
+.t-join:hover i{transform:rotate(-45deg)}
+@media (min-width:1081px){
+  .site-header .nav-menu{display:block!important;position:static!important;margin-left:auto}
+  .site-header .nav-menu ul{display:flex!important;gap:2px!important;padding:6px!important;border-radius:99px;background:rgba(107,31,42,.05);transition:background .3s}
+  .site-header.t-tr .nav-menu ul{background:rgba(255,255,255,.09);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .site-header .nav-menu li.t-desk-hide{display:none!important}
+  .site-header .nav-menu a,.t-more>button{display:block;padding:9px 15px!important;border-radius:99px;font:650 .88rem var(--t-sans)!important;color:var(--text)!important;transition:background .3s,color .3s;white-space:nowrap}
+  .site-header.t-tr .nav-menu a,.site-header.t-tr .t-more>button{color:#fff!important}
+  .site-header .nav-menu a::after{display:none!important}
+  .site-header .nav-menu a.active,.site-header .nav-menu a[aria-current="page"],.t-more.cur>button{background:rgba(107,31,42,.09)!important;color:var(--navy)!important}
+  .site-header.t-tr .nav-menu a.active,.site-header.t-tr .nav-menu a[aria-current="page"],.site-header.t-tr .t-more.cur>button{background:rgba(255,255,255,.14)!important;color:var(--t-gold-l)!important}
+  .site-header .nav-menu a:hover,.t-more>button:hover,.t-more.open>button{background:var(--t-gold)!important;color:var(--t-wine-dd)!important}
+  .t-more{position:relative}
+  .t-more>button{border:0;background:none;cursor:pointer}
+  .t-drop{position:absolute;right:0;top:calc(100% + 14px);min-width:210px;background:#fff;border-radius:18px;padding:8px;box-shadow:0 24px 50px rgba(42,9,17,.2);opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .3s,transform .4s var(--t-ease)}
+  .t-drop::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+  .t-more:hover .t-drop,.t-more.open .t-drop,.t-more:focus-within .t-drop{opacity:1;transform:none;pointer-events:auto}
+  .site-header .nav-menu .t-drop a,.site-header.t-tr .nav-menu .t-drop a{color:var(--text)!important;background:none!important}
+  .site-header .nav-menu .t-drop a:hover,.site-header.t-tr .nav-menu .t-drop a:hover{background:var(--bg-soft)!important;color:var(--navy)!important}
+  .site-header .nav-menu .t-drop a.active{color:var(--navy)!important;background:rgba(107,31,42,.07)!important}
+  .site-header .header-inner{gap:18px!important}
+}
+@media (min-width:1081px) and (max-width:1240px){.site-header .nav-menu a,.t-more>button{padding:9px 10px!important;font-size:.82rem!important}.t-lt b{font-size:.98rem}}
+@media (max-width:1080px){.t-more{display:none!important}.t-join{display:none!important}.site-header .header-inner{min-height:72px}}
+.site-header.t-open{background:var(--t-wine-dd)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.site-header.t-open::after{opacity:0}
+/* room for the fixed header */
+.page-hero{padding-top:calc(var(--t-hh,82px) + clamp(52px,7vw,96px))!important}
+.kx-hero{min-height:calc(460px + var(--t-hh,82px))!important}
+.kx-hero .container{padding-top:calc(var(--t-hh,82px) + 56px)!important}
+.kx-hero::before{content:"";position:absolute;left:0;right:0;top:0;height:220px;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(20,6,10,.72),transparent)}
+body.t-nohero{padding-top:var(--t-hh,82px)}
+
+/* buttons on dark wine sections: gold so they stand out */
+.cta-section .btn-primary{background:var(--t-gold)!important;color:var(--t-wine-dd,#2a0911)!important;box-shadow:0 12px 28px rgba(0,0,0,.28)!important}
+.cta-section .btn-primary:hover{background:#fff!important;color:var(--t-wine-dd,#2a0911)!important}
+</style><!--t-theme-end--><style id="kx-mobile">
+/* phone: heading first, then its photo, then the text, so each photo clearly belongs to its section */
+@media (max-width: 860px) {
+  .kx-topic, .kx-topic.flip, .kx-topic:has(.kx-figs.pair) { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 40px 0 34px; border-top: 0; position: relative; }
+  .kx-topic + .kx-topic::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, var(--gold, #b07a1c) 0 56px, rgba(176,122,28,.18) 56px); }
+  .kx-topic > .kx-text { display: contents; }
+  .kx-topic > .kx-text > .eyebrow { order: -3; align-self: flex-start; }
+  .kx-topic > .kx-text > h3 { order: -2; margin: 6px 0 16px; }
+  .kx-topic > .kx-figs, .kx-topic > figure { order: -1; margin: 0 0 20px; }
+}
+</style>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%236b1f2a'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23d9a441'%3EB%3C/text%3E%3C/svg%3E">
+<script>/* Wikimedia photos: if the direct address fails, try the redirect address, then retry once, then show the placeholder */
+function wmErr(i){var n=+(i.dataset.t||0);i.dataset.t=n+1;i.removeAttribute('srcset');i.removeAttribute('sizes');
+if(n===0&&i.dataset.fp){i.src=i.dataset.fp;return}
+if(n===1){setTimeout(function(){i.src=(i.dataset.fp||i.src)+'&r=1'},2500);return}
+var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textContent=i.dataset.fb}else{p.classList.add('no-img');i.remove()}}</script>
+<link rel="preconnect" href="https://upload.wikimedia.org">
+<style id="logo-fit">.co-logo img{width:auto;height:auto}</style>
+</head>
+<body><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img id="siteLogo" class="logo-mark" alt="Bhuj Chamber of Commerce and Industries Federation" />
+      <span class="logo-text">Bhuj Chamber of Commerce<br>and Industries Federation<span class="logo-sub">Kutch &middot; Gujarat</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="business.html" class="active" aria-current="page">Business</a></li>
+        <li><a href="kutch.html">Kutch</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="kx-hero">
+    <figure class="kx-hero-img"><img src="images/wm/adani-mundra-port-kutch-gujarat-e81ca1.webp" width="500" height="334" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Adani_Mundra_Port_Kutch_Gujarat.jpg?width=1280" fetchpriority="high" decoding="async" alt="Mundra Port, Kutch" onerror="wmErr(this)"><span class="kx-fallback">Mundra Port, Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Adani_Mundra_Port_Kutch_Gujarat.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure>
+    <div class="container reveal">
+      <span class="eyebrow">Kutch, Gujarat</span>
+      <h1>Business &amp; Opportunities in Kutch</h1>
+      <p>Ports that connect India to the world, one of the largest renewable energy parks on earth, rich minerals, growing industries and farms &mdash; and the opportunities they open for the businesses of Kutch.</p>
+      <nav class="kx-jump" aria-label="On this page"><a href="#ports">Ports</a><a href="#energy">Renewable energy</a><a href="#companies">Companies</a><a href="#economy">Industries &amp; farming</a><a href="#crafts">Handicrafts</a><a href="#opportunities">Opportunities</a><a href="#government">Government&rsquo;s plans</a><a href="kutch.html">&larr; About Kutch</a></nav>
+    </div>
+  </section>
+
+  <section class="kx-section" id="ports">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">Ports, import &amp; export</span>
+        <h2>India&rsquo;s gateway to the world</h2>
+        <p>With the Gulf of Kutch along its southern coast, Kutch has the Indian ports closest to the Gulf countries. Two of India&rsquo;s busiest ports &mdash; Deendayal Port at Kandla and Mundra Port &mdash; are in Kutch, and together they make the district one of the most important trade gateways in the country.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/port-of-kandla-8351cd.webp" width="960" height="640" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Port_of_Kandla.jpg?width=960" decoding="async" alt="Deendayal Port, Kandla" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Deendayal Port, Kandla</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Port_of_Kandla.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Deendayal Port, Kandla.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Deendayal Port, Kandla</span>
+          <h3>How Kandla became a major port</h3>
+          <p>When India was partitioned in 1947, the great port of Karachi went to Pakistan, and western India needed a new major port. Kandla, on the Gulf of Kutch, was chosen and developed in the years after Independence. At the same time, the new township of Gandhidham was built on land given by the Maharao of Kutch, to settle Sindhi families who had come from Pakistan.</p><p>The port, now called Deendayal Port, handled a record 160.11 million tonnes of cargo in 2025-26 &mdash; the highest ever handled by any Major Port in India. Its cargo includes containers, fertilisers, iron and steel, edible oil and other liquids, coal, salt, timber and clay, while crude oil and petroleum products are handled at its terminal at Vadinar.</p><p>In 1965, India&rsquo;s first Export Processing Zone was set up at Kandla. Now called the Kandla Special Economic Zone, it is home to many units that make goods for export.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/adani-mundra-port-kutch-gujarat-e81ca1.webp" width="500" height="334" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Adani_Mundra_Port_Kutch_Gujarat.jpg?width=960" decoding="async" alt="Mundra Port, Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Mundra Port, Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Adani_Mundra_Port_Kutch_Gujarat.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Mundra Port.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Mundra Port</span>
+          <h3>Mundra and the logistics belt</h3>
+          <p>Mundra Port, run by Adani Ports, has grown from a small private jetty in the late 1990s into the largest commercial port in India. In 2024-25 it became the first Indian port to handle more than 200 million tonnes of cargo in a single year. It handles a large share of India&rsquo;s container trade, along with coal, crude oil and other cargo.</p><p>Between Kandla, Mundra and Gandhidham has grown a large belt of container freight stations, warehouses, transport companies, customs agents and timber yards. The Gandhidham&ndash;Kandla area alone has around 300 saw mills that process imported timber. Goods for much of north and west India enter and leave the country through this belt.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/gujarat-mundra-port-aerial-view-1999-to-2011-ind-d59e75.webp" width="960" height="944" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Gujarat%2C_Mundra_Port_Aerial_View_1999_to_2011%2C_India.jpg?width=960" decoding="async" alt="Aerial view of the growth of Mundra Port" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Aerial view of the growth of Mundra Port</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Gujarat%2C_Mundra_Port_Aerial_View_1999_to_2011%2C_India.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The growth of Mundra Port, seen from space.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">The next phase</span>
+          <h3>How the ports will grow</h3>
+          <p>At Tuna-Tekra, near Kandla, DP World is building a new mega container terminal for Deendayal Port, with a capacity of 2.19 million containers (TEU) a year and an estimated cost of &#8377;4,243.64 crore (about US$510 million). Deendayal Port has also proposed a second satellite port in the Kandla creek area, which its Deputy Chairman estimated in 2024 would need an investment of more than &#8377;20,000 crore; that plan was still at the proposal stage. Deendayal Port is being prepared to become one of India&rsquo;s first &ldquo;mega ports&rdquo; under the Maritime Amrit Kaal Vision 2047.</p><p>At Mundra, Adani Ports announced in January 2026 that it will double the port&rsquo;s capacity within about ten years. Together, these projects will need more warehouses, transport, logistics and service companies across the Kandla&ndash;Mundra&ndash;Gandhidham belt.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kx-section soft" id="energy">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">Renewable energy</span>
+        <h2>The biggest transformation story</h2>
+        <p>Twenty-five years ago, the Rann near Khavda was empty salt land. Today it is becoming the largest renewable energy park in the world. Wide open land, strong sunshine and steady coastal winds have made Kutch the centre of India&rsquo;s clean-energy growth &mdash; the country&rsquo;s largest renewable energy park, large wind farms, battery storage and its first green hydrogen projects are all coming up here.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/renewable-energy-park-325fd0.webp" width="960" height="670" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Renewable_energy_park.jpg?width=960" decoding="async" alt="A renewable energy park" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">A renewable energy park</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Renewable_energy_park.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">A renewable energy park.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Khavda</span>
+          <h3>The Khavda Renewable Energy Park</h3>
+          <p>In the Great Rann near Khavda, close to the border, the Government of Gujarat has set aside a huge area of barren land for the Gujarat Hybrid Renewable Energy Park, also known as the Khavda Renewable Energy Park. Prime Minister Narendra Modi laid its foundation stone on 15 December 2020. The park is planned for about 30 GW of solar and wind power and is due for completion by 2029. Because the land is unused salt desert, the park does not take away any farm land.</p><p>The land is divided among several developers. Adani Green Energy has the largest share; NTPC, the State-owned GIPCL and GSECL, and private companies such as ENGIE and KPI Green also have projects here, and a separate zone is planned for wind power. By 1 April 2026, Adani Green Energy alone had installed 9.4 GW (9,413 MW) at Khavda, along with 1,376 MWh of battery storage. At the January 2026 Vibrant Gujarat Regional Conference, the Prime Minister described it as the world&rsquo;s largest hybrid energy park.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Windfarm_Mandvi.JPG/960px-Windfarm_Mandvi.JPG" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Windfarm_Mandvi.JPG/500px-Windfarm_Mandvi.JPG 500w, https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Windfarm_Mandvi.JPG/960px-Windfarm_Mandvi.JPG 960w" sizes="(max-width:860px) 92vw, 48vw" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Windfarm_Mandvi.JPG?width=960" decoding="async" alt="Wind farm near Mandvi, Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Wind farm near Mandvi, Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Windfarm_Mandvi.JPG" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Wind farm near Mandvi, Kutch.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Wind</span>
+          <h3>Wind power from the Rann and the coast</h3>
+          <p>Kutch has some of the best wind in India, along its coast and across the Rann. Wind farms stand near Mandvi and in many other parts of the district, and at Khavda huge new turbines are rising beside the solar fields, so that the park can produce power both by day and by night.</p><p>Many of these turbines are made in Kutch itself. Adani Wind builds what it calls India&rsquo;s largest onshore wind turbines at Mundra, and more than 1 GW of them had been installed by the end of 2025.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/kurnool-ultra-mega-solar-park-2020-61be46.webp" width="960" height="679" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Kurnool_Ultra_Mega_Solar_Park_2020.jpg?width=960" decoding="async" alt="A large solar park in India" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">A large solar park in India</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Kurnool_Ultra_Mega_Solar_Park_2020.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">A large solar park in India (Kurnool, Andhra Pradesh). <em>(Illustrative image)</em></span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Storage &amp; hydrogen</span>
+          <h3>Battery storage and green hydrogen</h3>
+          <p>Solar power is only produced during the day, so large battery energy storage systems are being built in Kutch to supply power after sunset. In January 2026 the Prime Minister mentioned a massive battery storage system being set up in Kutch.</p><p>Kutch is also becoming a centre for <strong>green hydrogen</strong> &mdash; hydrogen made from water using clean electricity, which can replace coal and gas in industries such as fertilisers, steel and refineries. Adani New Industries has started India&rsquo;s first off-grid 5 MW green hydrogen pilot plant in Kutch, Welspun plans a green ammonia plant in Kutch, and in January 2026 Deendayal Port Authority signed an agreement to develop a <strong>Kutch Green Hydrogen Park</strong> at Kandla, with ready infrastructure where companies can set up their units.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kx-section" id="companies">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">Major companies</span>
+        <h2>Big companies investing in Kutch</h2>
+        <p>Some of India&rsquo;s largest companies, public-sector undertakings and global firms have major projects in Kutch. The information below is based on company announcements and reliable news reports. Where a company has not announced an amount, we say so.</p>
+      </div>
+      <div class="co-grid"><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo"><img src="images/wm/adani-logo-2012-d4db3c.png" width="250" height="88" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Adani_logo_2012.svg?width=250" data-fb="AG" decoding="async" alt="Adani Group logo" loading="lazy" onerror="wmErr(this)"></span><div><h3>Adani Group</h3><span class="co-tag">Ports, power, green energy, copper, manufacturing</span></div></div>
+          <p class="co-does">The Adani Group is the largest private investor in Kutch, and much of its business began here. <strong>Adani Ports</strong> runs Mundra Port, India&rsquo;s largest commercial port, and the special economic zone around it. <strong>Adani Power</strong> runs the 4,620 MW Mundra Thermal Power Station, commissioned between 2009 and 2012.</p><p class="co-does"><strong>Adani Green Energy</strong> is building the largest share of the Khavda Renewable Energy Park. At Mundra, <strong>Adani Solar</strong> makes silicon ingots, wafers, solar cells and modules &mdash; ingot and wafer production of 2 GW began in 2024 &mdash; and <strong>Adani Wind</strong> builds wind turbines. <strong>Kutch Copper</strong>, a group company, opened one of the world&rsquo;s largest single-location copper smelters at Mundra in March 2024, and Adani New Industries runs a 5 MW green hydrogen pilot plant in Kutch.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>Mundra Port became the first Indian port to handle over 200 million tonnes in a year (2024-25). At Khavda, 9.4 GW of renewable capacity and 1,376 MWh of battery storage were installed by 1 April 2026. The first phase of Kutch Copper (0.5 million tonnes a year) cost about US$1.2 billion.</dd><dt>Planned investment</dt><dd><strong>&#8377;1.5 lakh crore in Kutch over the next five years</strong>, announced by Karan Adani on 11 January 2026. The group also plans to double Mundra Port&rsquo;s capacity within about 10 years, complete 30 GW at Khavda by 2029, and add a second 0.5 million-tonne phase at Kutch Copper.</dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo mono" aria-hidden="true">RI</span><div><h3>Reliance Industries</h3><span class="co-tag">Solar energy</span></div></div>
+          <p class="co-does">Reliance is developing one of the world&rsquo;s largest single-site solar projects on about <strong>5,50,000 acres</strong> of arid land in Kutch &mdash; nearly three times the size of Singapore.</p><p class="co-does">At the company&rsquo;s 2025 annual general meeting, Mukesh Ambani said that within the next decade the project could produce enough power to meet almost 10% of India&rsquo;s electricity needs. The power is meant for Reliance&rsquo;s own green-energy and green-fuel businesses, and at full pace the company plans to install around 55 MW of solar modules and 150 MWh of batteries every day.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>In October 2025, Reliance said solar generation in Kutch was expected to begin in the first half of FY2026. In January 2026 it described the project as a multi-gigawatt solar project in Kutch to strengthen energy security.</dd><dt>Planned investment</dt><dd>No separate figure has been announced for Kutch. In January 2026, Reliance said it would double its investment in Gujarat to <strong>&#8377;7 lakh crore over five years</strong> &mdash; this figure is for the whole State, not Kutch alone.</dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo"><img src="images/wm/ntpc-logo-fec318.png" width="250" height="149" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/NTPC_Logo.svg?width=250" data-fb="N" decoding="async" alt="NTPC logo" loading="lazy" onerror="wmErr(this)"></span><div><h3>NTPC</h3><span class="co-tag">Solar energy (Central Government company)</span></div></div>
+          <p class="co-does">NTPC, India&rsquo;s largest power company, is building solar power projects at Khavda through its companies NTPC Green Energy and NTPC Renewable Energy. Its projects include the <strong>1,255 MW Khavda-I</strong> solar project.</p><p class="co-does">NTPC Renewable Energy is also building the 225 MW solar project of the State-owned GSECL at Khavda. These projects are being completed block by block, with new capacity being added regularly through 2025 and 2026.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>Solar blocks have been commissioned at Khavda in phases; for example, 64.76 MW of the 225 MW GSECL project began commercial operation on 24 July 2026.</dd><dt>Planned investment</dt><dd><span class="co-na">Not publicly announced</span></dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo mono" aria-hidden="true">GG</span><div><h3>GIPCL &amp; GSECL</h3><span class="co-tag">Solar energy (Gujarat Government companies)</span></div></div>
+          <p class="co-does">Gujarat Industries Power Company Ltd (GIPCL) and Gujarat State Electricity Corporation Ltd (GSECL) are the Gujarat Government&rsquo;s own power companies, and both have land in the Khavda park. GIPCL describes its area there as the 2,375 MW Khavda RE Park.</p><p class="co-does">GIPCL built its 600 MW solar project in five phases from June 2025 and sells the power to GUVNL under a 25-year agreement. It was GIPCL&rsquo;s highest-ever capacity addition. GSECL&rsquo;s 225 MW project is being built by NTPC Renewable Energy.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>GIPCL&rsquo;s full 600 MW solar project at Khavda became operational on 25 December 2025.</dd><dt>Planned investment</dt><dd><span class="co-na">Not publicly announced</span></dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo"><img src="images/wm/logo-engie-8f6a1a.png" width="250" height="91" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Logo-engie.svg?width=250" data-fb="E" decoding="async" alt="ENGIE logo" loading="lazy" onerror="wmErr(this)"></span><div><h3>ENGIE</h3><span class="co-tag">Solar energy (France)</span></div></div>
+          <p class="co-does">ENGIE, a global energy company based in France, is one of the international companies that have come to Kutch for renewable energy. It has built a <strong>200 MW solar project inside the Khavda Renewable Energy Park</strong>.</p><p class="co-does">The project won a tender in early 2024, and its financing was completed in May 2025 with MUFG Bank and Cr&eacute;dit Agricole CIB. Its power is sold to Gujarat Urja Vikas Nigam Ltd (GUVNL) under a 25-year agreement.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>The 200 MW Khavda project was commissioned, as announced by ENGIE on 29 October 2026. ENGIE has about 2 GW of projects in operation or under construction across India.</dd><dt>Planned investment</dt><dd><span class="co-na">Not publicly announced</span></dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo mono" aria-hidden="true">KG</span><div><h3>KP Group</h3><span class="co-tag">Solar energy (Gujarat)</span></div></div>
+          <p class="co-does">KP Group, a Gujarat-based renewable energy group, is active in Kutch in two ways. Its company <strong>KPI Green Energy</strong> is building a 300 MW (AC) solar project for <strong>Coal India</strong> at the GIPCL solar park in Khavda.</p><p class="co-does">At the January 2026 Vibrant Gujarat Regional Conference, KP Group also signed an MoU with the Gujarat Government for a <strong>405 MW solar project at Bhuj</strong>.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>KPI Green Energy commissioned 200 MW (AC) of the 300 MW Coal India project at Khavda in July 2026. The Bhuj project is at the MoU stage (signed 12 January 2026).</dd><dt>Planned investment</dt><dd><strong>&#8377;1,200 crore</strong> for the 405 MW solar project at Bhuj (part of a &#8377;4,000 crore MoU across Gujarat).</dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo"><img src="images/wm/tata-power-logo-f54971.png" width="250" height="151" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Tata_Power_logo.svg?width=250" data-fb="TP" decoding="async" alt="Tata Power logo" loading="lazy" onerror="wmErr(this)"></span><div><h3>Tata Power</h3><span class="co-tag">Thermal power</span></div></div>
+          <p class="co-does">Tata Power owns the <strong>Mundra Ultra Mega Power Project</strong>, run by its company Coastal Gujarat Power Ltd. It has five units of 800 MW each, a total of 4,000 MW, and was one of the first Ultra Mega Power Projects in India.</p><p class="co-does">Together with Adani&rsquo;s Mundra plant, it makes the Mundra coast one of the largest power-generating areas in the country, supplying electricity to Gujarat and other States.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>The units were commissioned from 2012, and the plant became fully operational in 2013.</dd><dt>Planned investment</dt><dd><span class="co-na">Not publicly announced</span></dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo"><img src="images/wm/iffco-logo-134508.png" width="91" height="36" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Iffco_logo.png?width=250" data-fb="I" decoding="async" alt="IFFCO logo" loading="lazy" onerror="wmErr(this)"></span><div><h3>IFFCO</h3><span class="co-tag">Fertilisers (cooperative)</span></div></div>
+          <p class="co-does">The Indian Farmers Fertiliser Cooperative (IFFCO), India&rsquo;s largest fertiliser maker, has one of its major plants at <strong>Kandla</strong>. The Kandla unit was commissioned in 1975 and was expanded in 1981 and again in 1999.</p><p class="co-does">It makes DAP and NPK fertilisers and water-soluble fertilisers used by farmers across India. Its place next to Deendayal Port lets it receive imported raw materials directly from ships. Across the country, IFFCO supplies about 19% of India&rsquo;s urea and about 31% of its complex fertilisers.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>The Kandla unit has been producing fertilisers for 50 years, since 1975.</dd><dt>Planned investment</dt><dd><span class="co-na">Not publicly announced</span></dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo"><img src="images/wm/dp-world-2021-logo-2da64c.png" width="250" height="156" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/DP_World_2021_logo.svg?width=250" data-fb="DW" decoding="async" alt="DP World logo" loading="lazy" onerror="wmErr(this)"></span><div><h3>DP World</h3><span class="co-tag">Port terminal (UAE)</span></div></div>
+          <p class="co-does">DP World, the Dubai-based global port company, is building the <strong>Tuna-Tekra mega container terminal</strong> for Deendayal Port near Kandla. The Prime Minister laid its foundation stone.</p><p class="co-does">When complete, it will be able to handle 2.19 million containers (TEU) a year and take some of the largest container ships, greatly adding to Kandla&rsquo;s container business.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>Under construction.</dd><dt>Planned investment</dt><dd><strong>&#8377;4,243.64 crore (about US$510 million)</strong>.</dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo mono" aria-hidden="true">DPA</span><div><h3>Deendayal Port Authority</h3><span class="co-tag">Major port (Government of India)</span></div></div>
+          <p class="co-does">Deendayal Port Authority runs the port at Kandla, which was India&rsquo;s top Major Port by cargo in 2025-26. Its oil terminal at Vadinar handles crude oil and petroleum products.</p><p class="co-does">It is now developing a <strong>Kutch Green Hydrogen Park</strong> at Kandla with ready (&ldquo;plug-and-play&rdquo;) infrastructure where companies can set up green hydrogen production and storage units; the MoU was signed in January 2026.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>Handled a record 160.11 million tonnes of cargo in 2025-26.</dd><dt>Planned investment</dt><dd>A proposed second satellite port in the Kandla creek, estimated in 2024 at <strong>more than &#8377;20,000 crore</strong> (proposal stage, subject to Central Government approval).</dd></dl>
+        </article><article class="co-card reveal">
+          <div class="co-head"><span class="co-logo mono" aria-hidden="true">W</span><div><h3>Welspun</h3><span class="co-tag">Green hydrogen &amp; ammonia</span></div></div>
+          <p class="co-does">Welspun, through its company <strong>Welspun New Energy</strong>, plans to build a green hydrogen and green ammonia ecosystem in Gujarat, with a green ammonia plant on its land holdings in Kutch.</p><p class="co-does">Green ammonia, made using green hydrogen, can be used to make fertilisers and as a clean fuel for ships and power plants.</p>
+          <dl class="co-facts"><dt>Built so far</dt><dd>Planning stage; production was expected within three to five years of the MoU signed in January 2024.</dd><dt>Planned investment</dt><dd>A potential investment of about <strong>&#8377;40,000 crore</strong> for the green ammonia plant (announced January 2024).</dd></dl>
+        </article></div>
+      <p class="kx-note" style="margin-top:22px">Planned investments are announcements and MoUs; the actual amount and timing can change. Company names and logos belong to their respective owners and are shown only to identify the companies. Last checked November 2026.</p>
+    </div>
+  </section>
+
+  <section class="kx-section soft" id="economy">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">Key industries</span>
+        <h2>The industries that power Kutch</h2>
+        <p>Beyond ports and energy, Kutch has a strong base of salt, cement, copper, minerals and farming.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img small"><img width="1179" height="771" decoding="async" src="images/business-01.webp" alt="Salt workers raking salt in the salt pans" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">Salt workers raking salt in the salt pans</span></figure><span class="kx-cap">Salt workers raking salt in the pans.</span></div><div class="kx-fig"><figure class="kx-img small"><img width="1179" height="778" decoding="async" src="images/business-02.webp" alt="Large salt pans and salt heaps from the air" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">Large salt pans and salt heaps from the air</span></figure><span class="kx-cap">Large-scale salt works.</span></div><div class="kx-fig"><figure class="kx-img small"><img width="1179" height="781" decoding="async" src="images/business-03.webp" alt="Salt being processed and packed in a factory" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">Salt being processed and packed in a factory</span></figure><span class="kx-cap">Salt processing and packing.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Salt</span>
+          <h3>The salt industry</h3>
+          <p>Salt is one of the oldest industries of Kutch &mdash; salt has been made here for about 600 years. Gujarat produces about three-quarters of India&rsquo;s salt, and most of it comes from Kutch and Saurashtra. In the Little Rann, around 45,000 salt workers known as <em>Agariyas</em>, from about 107 villages, pump underground brine into shallow pans and let the sun turn it into salt crystals, which they rake by hand.</p><p>Along the Gulf of Kutch, large salt works produce salt on an industrial scale. Much of this salt is not used as table salt but as a raw material for chemical industries that make soda ash, caustic soda and other chemicals. Salt from Kutch is also exported through the ports.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/port-of-kandla-8351cd.webp" width="960" height="640" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Port_of_Kandla.jpg?width=960" decoding="async" alt="Deendayal Port, Kandla" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Deendayal Port, Kandla</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Port_of_Kandla.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Cement, clinker and minerals from Kutch are shipped through its ports.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Cement &amp; limestone</span>
+          <h3>Cement and limestone</h3>
+          <p>Kutch has large deposits of limestone, the main raw material for cement, especially in the western talukas such as Abdasa and Lakhpat. These deposits have made the district an important place for cement making.</p><p>Cement plants such as Sanghi Cement at Sanghipuram in Abdasa &mdash; now part of Ambuja Cements &mdash; and Anjan Cement work in the district, and the coast and ports allow cement and clinker to be shipped to other parts of India and abroad. The <strong>lignite</strong> mined by GMDC at Panandhro and Mata no Madh also supplies fuel to power plants and industries.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/copper-wire-rod-produced-by-ls-cable-system-32345c.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Copper_wire_rod_produced_by_LS_Cable_%26_System.jpg?width=960" decoding="async" alt="Coils of copper wire rod" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Coils of copper wire rod</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Copper_wire_rod_produced_by_LS_Cable_%26_System.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Copper wire rod. <em>(Illustrative image)</em></span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Copper</span>
+          <h3>Copper: Kutch Copper at Mundra</h3>
+          <p>In March 2024, Kutch Copper Ltd, a company of the Adani Group, started the first unit of its copper smelter at Mundra and shipped its first copper cathodes to customers. Copper is a key metal for electric wires, power cables, solar panels, electric vehicles and electronics, and India imports much of the copper it needs.</p><p>The first phase has a capacity of 0.5 million tonnes of copper a year and cost about US$1.2 billion; a second phase will add another 0.5 million tonnes, making it one of the largest single-location copper plants in the world. The project is expected to create about 2,000 direct and 5,000 indirect jobs.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-figs pair"><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/bauxite-cda733.webp" width="360" height="307" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Bauxite.jpg?width=960" decoding="async" alt="Bauxite ore" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Bauxite ore</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Bauxite.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Bauxite.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/nm-selenite-crystal-cluster-534de7.webp" width="960" height="640" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/NM_Selenite_Crystal_Cluster.jpg?width=960" decoding="async" alt="Gypsum (selenite) crystals" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Gypsum (selenite) crystals</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:NM_Selenite_Crystal_Cluster.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Gypsum.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/kaolinite-a9b381.webp" width="360" height="299" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Kaolinite.jpg?width=960" decoding="async" alt="China clay (kaolin)" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">China clay (kaolin)</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Kaolinite.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">China clay (kaolin).</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/limestone-rocks-3ef512.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Limestone_rocks.jpg?width=960" decoding="async" alt="Limestone rocks" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Limestone rocks</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Limestone_rocks.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Limestone.</span></div></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Minerals</span>
+          <h3>The mineral wealth of Kutch</h3>
+          <p>Beneath its dry land, Kutch holds a wide range of minerals: lignite, bauxite, bentonite, china clay, ball clay, fire clay, gypsum, limestone, ochre and silica sand. The Indian Bureau of Mines lists all of these in the district.</p><p><strong>Bentonite</strong> is the mineral Kutch is best known for. It is a special clay that swells when it is wet, and it is used in drilling for oil, in iron-ore pellets, in foundries, cat litter and many other products. Gujarat holds roughly two-thirds of India&rsquo;s bentonite reserves, and Kutch, together with Bhavnagar, is the main bentonite-producing area of the state; companies from Kutch export it to many countries.</p><p>Kutch has about 425 million tonnes of <strong>lignite</strong> resources, and its <strong>bauxite</strong>, found in laterite rocks along the western coast, is used for alumina and refractories.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/adani-mundra-port-kutch-gujarat-e81ca1.webp" width="500" height="334" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Adani_Mundra_Port_Kutch_Gujarat.jpg?width=960" decoding="async" alt="Mundra Port and industrial area, Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Mundra Port and industrial area, Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Adani_Mundra_Port_Kutch_Gujarat.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The Mundra port and industrial area.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Industry</span>
+          <h3>Other industries of Kutch</h3>
+          <p>Since the earthquake of 2001, large industries have come up across Kutch, especially in the Anjar, Gandhidham, Mundra and Bhachau belt. The district now has steel pipe and textile units, power plants, fertiliser and chemical factories, and many engineering and food-processing units.</p><p>Gandhidham and Kandla form one of India&rsquo;s largest timber markets, with around 300 saw mills that process wood imported through the port. The Kandla Special Economic Zone, India&rsquo;s first export zone, hosts many units that make goods for export, and new estates for MSMEs keep growing around the ports.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-figs pair"><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/mango-kesar-variety-1eb65a.webp" width="960" height="775" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Mango_kesar_variety.JPG?width=960" decoding="async" alt="Kesar mangoes" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Kesar mangoes</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Mango_kesar_variety.JPG" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Kesar mangoes.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/ripe-and-dry-dates-fruit-bunches-6c10df.webp" width="960" height="718" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Ripe_and_dry_dates_fruit_bunches.jpg?width=960" decoding="async" alt="Bunches of dates" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Bunches of dates</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Ripe_and_dry_dates_fruit_bunches.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Dates (kharek).</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/pitaya-cross-section-ed2-43f822.webp" width="960" height="784" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Pitaya_cross_section_ed2.jpg?width=960" decoding="async" alt="Dragon fruit cut open" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Dragon fruit cut open</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Pitaya_cross_section_ed2.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Dragon fruit (kamalam).</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/pomegranate-fruit-whole-and-piece-with-arils-fa5ac6.webp" width="960" height="640" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Pomegranate_fruit_-_whole_and_piece_with_arils.jpg?width=960" decoding="async" alt="Pomegranate" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Pomegranate</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Pomegranate_fruit_-_whole_and_piece_with_arils.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Pomegranates.</span></div></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Fruits</span>
+          <h3>Fruits of Kutch: mango, kharek, dragon fruit and pomegranate</h3>
+          <p>Even with little rain, Kutch has become one of the leading fruit-growing areas of Gujarat, thanks to canal water, drip irrigation and the hard work of its farmers. The <strong>Kesar mango</strong> of Kutch is known for its deep orange colour, sweet taste and strong aroma, and orchards around Mandvi, Mundra, Nakhatrana and Bhuj supply mangoes across India and abroad.</p><p>Kutch is best known for its dates, called <strong>kharek</strong>. The <strong>Kachchhi Kharek</strong> has received a GI tag. Kutch has about 19,251 hectares of date palms &mdash; 94% of all date-palm farming in Gujarat &mdash; and the tradition is believed to be 400&ndash;500 years old, started from seeds brought by travellers and traders from the Gulf. The fresh yellow and red kharek are harvested in the summer and sold across the country.</p><p><strong>Dragon fruit</strong>, renamed <em>kamalam</em> by the Gujarat Government, is one of the newest crops of Kutch. Introduced around 2014, it suits the dry climate because it needs very little water and has few pests. It is grown in Anjar, Abdasa, Nakhatrana, Bhuj and Mandvi talukas, starts giving fruit in the first year, and gives about 20&ndash;25 kg per plant by the fourth year. <strong>Pomegranates</strong> are also grown on a large scale with drip irrigation.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-figs pair"><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/cotton-boll-nearly-ready-for-harvest-c598e6.webp" width="960" height="640" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Cotton_boll_nearly_ready_for_harvest.jpg?width=960" decoding="async" alt="A cotton boll" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">A cotton boll</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Cotton_boll_nearly_ready_for_harvest.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Cotton.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/3-4289cb.webp" width="960" height="1280" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/%E0%AE%86%E0%AE%AE%E0%AE%A3%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%813.jpg?width=960" decoding="async" alt="Castor plant" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Castor plant</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:%E0%AE%86%E0%AE%AE%E0%AE%A3%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%813.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Castor (erandi).</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/cluster-bean-for-sale-be67ee.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Cluster_bean_for_sale.JPG?width=960" decoding="async" alt="Fresh guar (gavar) beans" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Fresh guar (gavar) beans</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Cluster_bean_for_sale.JPG" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Guar (gavar) beans.</span></div><div class="kx-fig"><figure class="kx-img small"><img src="images/wm/mustard-seeds-7a07e2.webp" width="960" height="571" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Mustard_seeds_%28%E0%A6%B8%E0%A6%B0%E0%A6%BF%E0%A6%B7%E0%A6%BE_%E0%A6%AC%E0%A7%80%E0%A6%9C%29.JPG?width=960" decoding="async" alt="Mustard seeds" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Mustard seeds</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Mustard_seeds_%28%E0%A6%B8%E0%A6%B0%E0%A6%BF%E0%A6%B7%E0%A6%BE_%E0%A6%AC%E0%A7%80%E0%A6%9C%29.JPG" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Mustard (sarso) seeds.</span></div></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Field crops</span>
+          <h3>Field crops: cotton, groundnut, castor and more</h3>
+          <p>In the monsoon (kharif) season, the main crops of Kutch are <strong>cotton</strong> and <strong>groundnut</strong>. Cotton from Kutch goes to ginning and spinning mills, and groundnut is used for edible oil, for which Gujarat is one of the biggest producers in India. <strong>Castor</strong> (erandi) is another major crop: Gujarat grows most of India&rsquo;s castor, and Kutch is one of its main castor-growing districts. The castor oil is exported to many countries and used in industries, medicines and paints.</p><p><strong>Guar</strong> (gavar), the green cluster bean, grows well in the dry, sandy soil of Kutch. Its tender green beans are a popular vegetable across Gujarat, and when left to dry, its seeds give guar gum, used in food, textiles and oil drilling, which is an important export from India. <strong>Bajra</strong> (pearl millet), a hardy grain that needs little water, has been the staple food of Kutch for generations and is grown widely in the rainfed areas.</p><p>In the winter (rabi) season, farmers grow <strong>mustard</strong> (sarso), <strong>cumin</strong> (jeera), wheat and vegetables. With better water from the Narmada canal and drip irrigation, more farmers in Kutch are now able to take two or even three crops a year.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kx-section" id="crafts">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">Handicrafts</span>
+        <h2>The craft industry of Kutch</h2>
+        <p>Kutch is one of the richest craft regions of India. Its handicrafts are not only a part of its heritage but also a real industry, which supports thousands of artisan families and sells across India and the world. Several crafts of Kutch hold a GI (Geographical Indication) tag, which protects them from imitations.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/rogan-painting-98f61f.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Rogan_painting.jpg?width=960" decoding="async" alt="A Rogan painting from Kutch" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">A Rogan painting from Kutch</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Rogan_painting.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Rogan painting.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Rogan art</span>
+          <h3>Rogan art of Nirona</h3>
+          <p>Rogan is a rare form of painting on cloth. The paint is prepared by boiling castor oil for about two days and mixing it with natural colours. The artist then draws the design freehand with a thin metal stylus, without any outline, and often folds the cloth so that the design is printed as a mirror image on the other half.</p><p>In Kutch, this art has survived in the village of <strong>Nirona</strong> in Nakhatrana taluka, where a Khatri family has kept it alive for around eight generations, even when other artists gave it up after machine-made cloth arrived. The family&rsquo;s senior artist, <strong>Abdul Gafur Khatri</strong>, received the Padma Shri in 2019. In 2014, Prime Minister Narendra Modi presented two Rogan paintings, including a &ldquo;Tree of Life&rdquo; by Abdul Gafur Khatri, to US President Barack Obama, which brought the art worldwide attention.</p><p>Today the family is training women of the village, who were earlier not taught the art, and many of them now earn a regular income from it. Rogan art of Kutch has received a GI tag, and Nirona has become a popular stop for visitors.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/ajrak-2ae809.webp" width="960" height="423" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Ajrak.jpg?width=960" decoding="async" alt="Ajrakh block-printed cloth" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Ajrakh block-printed cloth</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Ajrak.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">Ajrakh block-printed cloth.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Ajrakh</span>
+          <h3>Ajrakh block printing of Ajrakhpur and Dhamadka</h3>
+          <p>Ajrakh is a hand block-printing craft that uses carved wooden blocks and natural dyes &mdash; indigo for blue, madder root for red, and a mix of rusted iron and tamarind seed for black. A single piece can take about three weeks to finish, because the cloth is printed, washed and dyed again and again, often eight or nine times.</p><p>The Khatri families who practise Ajrakh came from Sindh and settled at Dhamadka about 400 years ago. After the 2001 earthquake, about 100 families moved to new land and built a village named after their craft &mdash; <strong>Ajrakhpur</strong>.</p><p>In April 2024, &ldquo;Kutch Ajrakh&rdquo; received a <strong>GI tag</strong>. Since then the artisans have received orders from countries such as Uzbekistan, the USA and France. In March 2025, Ajrakh tapestries by a young artist from Dhamadka were shown at Lakm&eacute; Fashion Week, and at the Rann Utsav 2025-26, for the first time, all the Ajrakh stalls were given only to the traditional artisans of Ajrakhpur and Dhamadka.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img small"><img width="762" height="376" decoding="async" src="images/business-04.webp" alt="A group of women artisans working together on a large embroidered textile" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">A group of women artisans working together on a large embroidered textile</span></figure><span class="kx-cap">Women artisans working together on embroidery.</span></div><div class="kx-fig"><figure class="kx-img small"><img width="506" height="380" decoding="async" src="images/business-05.webp" alt="A woman weaving on a handloom" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">A woman weaving on a handloom</span></figure><span class="kx-cap">A woman weaver at her handloom.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Weaving &amp; more</span>
+          <h3>Bhujodi weaving and other crafts</h3>
+          <p><strong>Bhujodi</strong>, about 15 minutes from Bhuj, has a handloom tradition of around 500 years. Its Vankar weavers make the well-known Kutchi shawls, which hold a GI tag, along with stoles, dhurries and blankets. Around 350 artisans work in the village, its products go to more than 18 countries including the USA, Japan and Germany, and its weavers have won more than 50 national and international awards. In January 2026, Bhujodi weavers took part in the Vibrant Gujarat Regional Conference at Rajkot through a crafts village and buyer-seller meetings with well-known brands.</p><p>Kutch is also known for mirror-work embroidery by the Rabari and other communities, the <strong>black pottery of Khavda</strong>, bandhani (tie-dye), leatherwork, lacquer work and silver jewellery. Artisans sell their work directly at <strong>Bhuj Haat</strong> and at the Rann Utsav.</p><p>For local businesses, crafts open many opportunities: exports, online selling, partnerships with fashion and design brands, and craft tourism through homestays and workshops in the craft villages.</p>
+        </div>
+      </article>
+      <article class="kx-topic flip reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/anklet-from-india-19th-century-silver-with-gold-08f634.webp" width="960" height="724" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Anklet_from_India%2C_19th_century%2C_silver_with_gold_wash%2C_HAA.JPG?width=960" decoding="async" alt="A traditional Indian silver anklet" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">A traditional Indian silver anklet</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Anklet_from_India%2C_19th_century%2C_silver_with_gold_wash%2C_HAA.JPG" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">A traditional Indian silver anklet.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Silver work</span>
+          <h3>The silver work of Kutch</h3>
+          <p>Kutch has a long tradition of fine silver work. In the 19th century, silversmiths of Bhuj and Mandvi became famous for &ldquo;Kutch silver&rdquo; &mdash; tea sets, boxes, bowls and trays covered with dense, raised patterns of flowers, birds, animals and hunting scenes. Many of these pieces were bought by traders and British officers and are now kept in museums in India and abroad.</p><p>Today the tradition lives on in silver jewellery. The herding and farming communities of Kutch, such as the Rabaris, Ahirs and Jats, wear heavy silver ornaments &mdash; earrings, necklaces, anklets and bangles &mdash; each with its own design that shows the community and region of the wearer. Silversmiths in Bhuj and the villages around it make both these traditional pieces and new designs for buyers across India and abroad, and silver work is sold widely at Bhuj Haat and the Rann Utsav.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kx-section" id="opportunities">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">Opportunities</span>
+        <h2>Opportunities for local businesses</h2>
+        <p>The growth of ports, energy and industry is opening new opportunities for the businesses of Kutch.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/white-rann-of-kutch-0e41f5.webp" width="800" height="533" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/White_Rann_of_Kutch.jpg?width=960" decoding="async" alt="The White Rann, which draws visitors every winter" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">The White Rann, which draws visitors every winter</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:White_Rann_of_Kutch.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The White Rann draws visitors every winter.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">For local businesses</span>
+          <h3>Where local businesses can grow</h3>
+          <p>Logistics, warehousing, transport and clearing services are needed around Kandla, Mundra and Gandhidham, and the port expansions will increase this demand. The energy projects at Khavda need a long supply chain of contractors, equipment suppliers, transport, maintenance, security, catering and housing for workers.</p><p>There is also room to add more value to what Kutch already produces &mdash; processing salt, minerals and clay; packing and exporting mangoes, dates and cumin; and selling Kutch crafts to buyers across India and abroad, including online. Tourism around the White Rann, Dholavira, Mandvi and Bhuj keeps creating demand for hotels, homestays, travel and food services, and a growing population needs housing, shops and commercial space.</p><p>The Bhuj Chamber of Commerce and Industries Federation works to help businesses of Kutch make the most of these opportunities.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kx-section soft" id="government">
+    <div class="container kx-article">
+      <div class="kx-intro reveal">
+        <span class="eyebrow">The future</span>
+        <h2>What the government expects for Kutch</h2>
+        <p>The Central and State governments see Kutch as one of the main engines of India&rsquo;s future growth.</p>
+      </div>
+      
+      <article class="kx-topic reveal">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/gujarat-mundra-port-aerial-view-1999-to-2011-ind-d59e75.webp" width="960" height="944" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Gujarat%2C_Mundra_Port_Aerial_View_1999_to_2011%2C_India.jpg?width=960" decoding="async" alt="Aerial view of the growth of Mundra Port" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">Aerial view of the growth of Mundra Port</span><a class="kx-credit" href="https://commons.wikimedia.org/wiki/File:Gujarat%2C_Mundra_Port_Aerial_View_1999_to_2011%2C_India.jpg" target="_blank" rel="noopener">Photo: Wikimedia Commons</a></figure><span class="kx-cap">The growth of Mundra Port, seen from space.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Vibrant Gujarat 2026</span>
+          <h3>Kutch at the top of new investment</h3>
+          <p>At the Vibrant Gujarat Regional Conference for Kutch and Saurashtra, held in Rajkot in January 2026, Prime Minister Narendra Modi said that Saurashtra and Kutch are emerging as major hubs of India&rsquo;s green growth and energy security. He described the 30 GW renewable energy park in Kutch as the largest hybrid energy park in the world, said that a large battery energy storage system is being set up in Kutch, and said that Kutch is becoming a major centre for green hydrogen production.</p><p>After the conference, the Gujarat Government announced that 5,492 MoUs worth &#8377;5.78 lakh crore had been signed for the region, and that <strong>Kutch attracted the highest investment of any district &mdash; &#8377;1.25 lakh crore through 458 projects</strong>. Earlier, at the Vibrant Kutch district programme in Gandhidham on 2 January 2026, 334 MSMEs signed MoUs worth about &#8377;8,500 crore, and the State Government said Kutch can become a global hub for renewable energy, green hydrogen and the blue (sea-based) economy, as well as electronics manufacturing, data centres and marine industries.</p><p>With the Khavda park due for completion by 2029, the port expansions at Kandla and Mundra, and new green hydrogen projects, the government expects more industry, more trade and many more jobs in Kutch in the coming years.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-brand">Bhuj Chamber of Commerce and Industries Federation</p>
+    <p>&copy; Bhuj Chamber of Commerce and Industries Federation. All rights reserved.</p>
+    <p class="contact">Surmandir Cineplex Building, Opp. Jilla Panchayat, Bhuj-Kachchh 370001, Gujarat, India</p>
+    <p class="contact"><a href="mailto:infoatccifb@gmail.com" style="color:inherit">infoatccifb@gmail.com</a></p>
+    <p class="contact"><a href="contact.html" style="color:inherit">Contact Us</a> &middot; <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Nav toggle + header scroll shadow ---------- */
+  (function () {
+    var toggle = document.getElementById("navToggle");
+    var menu = document.getElementById("navMenu");
+    toggle.addEventListener("click", function () {
+      var open = menu.classList.toggle("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        menu.classList.remove("open");
+        toggle.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+    var header = document.getElementById("siteHeader");
+    function updateShadow() { header.classList.toggle("scrolled", window.scrollY > 4); }
+    window.addEventListener("scroll", updateShadow, { passive: true });
+    updateShadow();
+  })();
+
+/* ---------- Scroll reveal animations ---------- */
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var slideCounter = 0;
+    function assignDirection(el) {
+      if (!el.dataset.slideAssigned) {
+        if (slideCounter % 2 === 1) el.classList.add('reveal-right');
+        el.dataset.slideAssigned = "true";
+        slideCounter++;
+      }
+    }
+    // Reveal once and stop observing, with threshold 0 so it fires as soon as
+    // any part of an element enters the viewport -- a percentage threshold
+    // like 0.15 can take a very long scroll (or never fire) for tall elements,
+    // since the ratio IntersectionObserver reports is visible-area divided by
+    // the TARGET's own total area, not the viewport's.
+    var observer = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0 });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      assignDirection(el); observer.observe(el);
+    });
+    window.__observeReveal = function (el) {
+      if (el) { assignDirection(el); observer.observe(el); }
+    };
+  })();
+
+/* ---------- Site logo (from site_media) ---------- */
+  (function () {
+    if (typeof supabase === "undefined") return;
+    var supabaseClient = supabase.createClient("https://rvpiliwyqjowegmjcanr.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2cGlsaXd5cWpvd2VnbWpjYW5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczMDM2MjksImV4cCI6MjEwMjg3OTYyOX0.9ZQj69FLcFgqp8huYTqlWy4JGl-vYGmYZiiVUBo4Sio");
+    var logoImg = document.getElementById("siteLogo");
+    if (!logoImg) return;
+    supabaseClient
+      .from("site_media")
+      .select("image_url")
+      .eq("type", "logo")
+      .eq("active", true)
+      .order("sort_order", { ascending: true })
+      .limit(1)
+      .then(function (result) {
+        if (result.error) { console.error("Couldn't load site logo:", result.error.message); return; }
+        var rows = result.data || [];
+        if (rows.length > 0 && rows[0].image_url) {
+          logoImg.onload = function () { logoImg.classList.add("loaded"); };
+          logoImg.onerror = function () { console.warn("Site logo failed to load"); };
+          logoImg.src = rows[0].image_url;
+        }
+      })
+      .catch(function (err) { console.error("Logo fetch error:", err); });
+  })();
+</script>
+
+<!--t-theme-start--><script id="t-theme-js">(function () {
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var KPATH = 'M111.6,422.4L123.1,412.2L120.3,402.6L117.2,400.6L121.9,398.0L124.9,392.9L125.2,377.8L127.8,368.9L132.7,361.5L132.3,343.4L141.4,334.9L147.2,326.0L153.8,321.9L161.2,322.0L165.7,319.3L169.8,313.0L172.1,300.3L188.4,301.9L194.6,295.7L205.5,289.0L210.7,289.4L216.3,292.6L237.7,292.9L243.4,299.4L251.1,301.4L259.1,308.6L277.4,310.7L281.4,314.4L297.1,320.8L298.5,325.9L302.9,330.5L308.9,331.8L313.8,336.0L328.3,340.0L333.2,337.6L344.6,324.8L347.1,312.6L358.0,314.6L364.1,311.4L369.3,292.5L377.0,293.1L383.2,298.6L390.3,299.9L394.9,305.7L399.7,307.7L439.1,310.3L445.2,308.8L455.4,300.5L460.4,300.8L463.1,307.4L468.5,310.6L474.9,309.7L479.0,306.4L493.8,306.4L499.9,298.2L506.2,293.3L523.5,259.7L531.2,258.4L536.1,250.9L542.3,247.3L561.5,250.5L570.5,256.9L575.1,262.7L585.3,266.5L588.7,271.4L595.4,274.3L598.0,279.9L596.4,286.6L587.9,296.7L584.2,306.8L582.8,314.5L584.7,323.4L583.4,330.0L575.0,332.4L568.5,338.0L565.8,343.6L561.9,374.1L563.1,380.1L570.1,385.9L590.3,389.4L589.3,398.4L591.0,403.4L598.1,412.0L604.5,415.5L607.5,423.0L617.6,430.0L624.6,430.9L633.5,424.0L642.1,424.3L644.3,426.8L643.5,433.9L640.4,438.5L639.8,443.7L641.9,448.7L646.5,451.8L654.0,451.6L668.6,441.1L677.1,438.0L679.6,430.8L674.0,419.1L676.5,410.6L685.3,404.1L688.4,398.6L701.0,389.5L712.5,388.3L727.7,377.0L735.9,376.2L748.4,363.3L760.8,365.7L771.5,361.5L775.4,356.6L780.2,338.0L800.3,341.1L806.7,338.0L809.2,331.8L808.5,312.4L804.9,305.1L799.4,301.6L795.0,282.2L796.6,277.3L801.7,273.9L828.7,276.3L832.4,279.7L837.7,280.9L843.5,287.6L868.5,291.1L873.8,294.0L888.3,295.3L904.2,305.0L909.9,304.2L913.9,300.2L916.4,304.3L910.2,315.0L910.3,331.0L916.0,337.2L912.8,340.9L915.0,351.0L906.5,354.3L905.9,365.7L916.9,378.1L920.7,376.5L921.1,372.2L924.8,374.7L933.2,371.8L927.7,377.7L920.2,408.2L921.0,414.7L925.4,419.4L924.1,424.9L906.3,427.0L890.0,439.5L881.2,441.5L877.0,449.2L863.7,448.7L859.3,451.9L857.3,456.6L846.0,458.7L836.7,467.1L836.6,480.9L797.4,485.2L793.6,489.8L792.6,496.7L793.6,501.7L797.0,505.6L792.6,503.8L787.7,507.4L783.6,517.3L767.3,520.0L743.9,520.3L734.9,513.8L719.4,510.4L716.5,507.3L685.2,507.7L681.6,511.7L684.5,518.8L671.2,525.2L668.1,524.0L665.5,525.1L662.9,533.1L660.1,536.4L656.3,537.4L654.3,542.9L647.4,549.8L646.3,556.7L638.9,560.8L637.7,564.2L639.0,567.2L632.9,570.4L623.6,586.1L620.1,586.5L612.8,592.4L613.4,598.8L616.7,601.0L615.2,605.2L595.9,607.2L593.1,610.0L581.9,611.4L579.5,613.9L568.9,613.5L560.2,621.3L553.5,620.6L531.2,627.8L520.8,636.2L494.6,644.9L484.1,646.2L483.2,642.6L480.6,641.2L471.4,643.9L464.9,640.7L451.8,642.0L448.7,645.0L442.3,643.9L437.7,647.1L437.8,651.6L430.9,653.5L422.4,651.4L403.2,638.7L381.2,632.7L369.1,636.5L356.9,632.9L347.3,632.4L345.1,627.3L340.9,627.9L327.6,620.4L323.8,615.5L320.5,614.9L309.8,606.3L289.4,596.0L228.2,557.7L215.0,552.3L176.5,522.4L161.8,504.7L159.8,497.9L148.5,496.6L146.1,485.9L149.8,479.2L158.7,471.7L157.7,468.1L154.3,466.8L153.5,462.3L138.1,457.1L132.5,463.1L130.8,458.9L123.8,457.3L123.6,449.5L117.6,443.0L114.6,442.3L111.9,444.3L106.0,439.8L111.6,422.4ZM426.5,648.2L428.6,646.3L428.8,643.2L426.8,640.7L421.9,642.4L421.6,645.5L423.4,647.8L426.5,648.2Z';
+  function qa(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+
+  /* header height for the mobile menu */
+  var header = document.querySelector('.site-header'), menu = document.getElementById('navMenu');
+  function setHH() { if (header) document.documentElement.style.setProperty('--t-hh', header.getBoundingClientRect().height + 'px'); }
+  setHH(); addEventListener('resize', setHH);
+
+
+  /* ---------- header v2: logo, More menu, Join button, transparent over hero ---------- */
+  var hero0 = document.querySelector('.page-hero, .kx-hero, .hero2');
+  if (!hero0) document.body.classList.add('t-nohero');
+  if (header) {
+    var lt = header.querySelector('.logo-text');
+    if (lt && !lt.classList.contains('t-lt')) { lt.classList.add('t-lt'); lt.innerHTML = '<b>Bhuj Chamber of Commerce</b><small>AND INDUSTRIES FEDERATION</small>'; }
+    var lg = header.querySelector('.logo-mark');
+    if (lg && !header.querySelector('.t-seal')) { var seal = document.createElement('span'); seal.className = 't-seal'; seal.setAttribute('aria-hidden', 'true'); seal.textContent = 'BCCIF'; lg.parentNode.insertBefore(seal, lg.nextSibling); }
+    var ul = header.querySelector('.nav-menu ul');
+    if (ul && !ul.querySelector('.t-more')) {
+      var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase(), moreHrefs = ['projects.html', 'media.html', 'committee.html'], drop = '', cur = false;
+      qa('li', ul).forEach(function (li) {
+        var a = li.querySelector('a'); if (!a) return; var h = (a.getAttribute('href') || '').toLowerCase();
+        if (h === 'index.html' || h === 'membership.html' || moreHrefs.indexOf(h) > -1) li.classList.add('t-desk-hide');
+        if (moreHrefs.indexOf(h) > -1) { drop += '<a href="' + h + '"' + (h === here ? ' class="active"' : '') + '>' + a.textContent + '</a>'; if (h === here) cur = true; }
+      });
+      var more = document.createElement('li'); more.className = 't-more' + (cur ? ' cur' : '');
+      more.innerHTML = '<button type="button" aria-haspopup="true" aria-expanded="false">More &#9662;</button><div class="t-drop">' + drop + '</div>';
+      ul.appendChild(more);
+      var mb = more.querySelector('button');
+      mb.addEventListener('click', function (e) { e.stopPropagation(); var o = more.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+      document.addEventListener('click', function () { more.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); });
+    }
+    var tog = header.querySelector('.nav-toggle');
+    if (!header.querySelector('.t-join')) { var j = document.createElement('a'); j.className = 't-join'; j.href = 'membership.html'; j.innerHTML = 'Join <i>&#8599;</i>'; var inner = header.querySelector('.header-inner'), nm = header.querySelector('.nav-menu'); if (nm && nm.parentNode === inner) inner.insertBefore(j, nm.nextSibling); else inner.appendChild(j); }
+    if (menu && window.MutationObserver) new MutationObserver(function () { header.classList.toggle('t-open', menu.classList.contains('open')); onScroll(); }).observe(menu, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  setHH();
+  /* scroll progress + hide header on scroll down */
+  var prog = document.createElement('div'); prog.id = 't-prog'; document.body.appendChild(prog);
+  var lastY = scrollY, ticking = false;
+  function onScroll() {
+    var y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+    prog.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    if (header) {
+      var open = menu && menu.classList.contains('open');
+      header.classList.toggle('t-hide', !open && y > lastY && y > 280);
+      header.classList.toggle('scrolled', y > 10);
+      header.classList.toggle('t-tr', !!hero0 && !open && y < 40);
+    }
+    lastY = y; ticking = false;
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  /* mobile menu: staggered links */
+  qa('.nav-menu li').forEach(function (li, i) { li.style.animationDelay = (0.04 * i + 0.08) + 's'; });
+
+  /* gold italic last word in big titles */
+  function italLast(el) {
+    if (!el || el.dataset.tIt || el.children.length) return;
+    var t = el.textContent.replace(/\s+$/, ''); var i = t.lastIndexOf(' ');
+    var head = i > 0 ? t.slice(0, i + 1) : '', last = i > 0 ? t.slice(i + 1) : t;
+    el.textContent = head; var em = document.createElement('span'); em.className = 't-it'; em.textContent = last; el.appendChild(em);
+    el.dataset.tIt = '1';
+  }
+  qa('.section-heading h2, h2.section-title').forEach(italLast);
+
+  /* inner page hero: word reveal, fades, Kutch outline */
+  var hero = document.querySelector('.page-hero');
+  if (hero) {
+    var h1 = hero.querySelector('h1');
+    if (h1 && !h1.children.length) {
+      var words = h1.textContent.trim().split(/\s+/);
+      h1.innerHTML = words.map(function (w, i) {
+        var cls = i === words.length - 1 ? ' class="t-it"' : '';
+        return '<span class="t-ln"><span' + cls + ' style="animation-delay:' + (0.12 + i * 0.08).toFixed(2) + 's">' + w.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }) + '</span></span>';
+      }).join(' ');
+    }
+    qa('.breadcrumb, .eyebrow, p, .btn, .button-group', hero.querySelector('.container') || hero).forEach(function (el, i) {
+      if (el.closest('.t-fade')) return; el.classList.add('t-fade'); el.style.animationDelay = (0.35 + i * 0.1).toFixed(2) + 's';
+    });
+    var NS = 'http://www.w3.org/2000/svg', svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 1000 761'); svg.setAttribute('class', 't-kmap'); svg.setAttribute('aria-hidden', 'true');
+    svg.innerHTML = '<path pathLength="1" d="' + KPATH + '"/><circle class="r" cx="491" cy="495" r="9"/><circle class="h" cx="491" cy="495" r="9"/>';
+    hero.appendChild(svg);
+    var p = svg.querySelector('path'); try { p.style.setProperty('--len', Math.ceil(p.getTotalLength())); } catch (e) {}
+  }
+
+  /* make sure revealed content always appears, even if a page script fails */
+  qa('.page-hero .reveal').forEach(function (el) { el.classList.add('reveal-visible'); });
+  if ('IntersectionObserver' in window) {
+    var rio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('reveal-visible'); rio.unobserve(e.target); } }); }, { threshold: 0.12 });
+    qa('.reveal').forEach(function (el) { rio.observe(el); });
+  } else qa('.reveal').forEach(function (el) { el.classList.add('reveal-visible'); });
+
+  /* footer watermark */
+  var foot = document.querySelector('.site-footer .container') || document.querySelector('.site-footer');
+  if (foot && !foot.querySelector('.t-foot-mark')) { var m = document.createElement('span'); m.className = 't-foot-mark'; m.setAttribute('aria-hidden', 'true'); m.textContent = 'BCCIF'; foot.appendChild(m); }
+
+  /* page transition: curtain on internal links */
+  if (!reduce) {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]'); if (!a) return;
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var href = a.getAttribute('href') || '';
+      if (a.target && a.target !== '_self') return; if (a.hasAttribute('download')) return;
+      if (!/^[a-z0-9_-]+\.html(\?[^#]*)?(#.*)?$/i.test(href)) return;
+      var here = location.pathname.split('/').pop() || 'index.html';
+      if (href.split('#')[0] === here) return;
+      e.preventDefault();
+      try { sessionStorage.setItem('t-nav', '1'); } catch (x) {}
+      var c = document.getElementById('t-curtain');
+      if (!c) { c = document.createElement('div'); c.id = 't-curtain'; c.innerHTML = '<span>BCCIF</span>'; document.body.appendChild(c); }
+      c.style.transition = 'none'; c.style.transform = 'translateY(100%)'; c.classList.remove('up');
+      void c.offsetWidth; c.style.transition = ''; c.style.transform = 'translateY(0)';
+      setTimeout(function () { location.href = href; }, 520);
+    });
+  }
+  var cur = document.getElementById('t-curtain');
+  if (cur) { requestAnimationFrame(function () { setTimeout(function () { cur.style.transform = ''; cur.classList.add('up'); setTimeout(function () { cur.remove(); }, 900); }, 120); }); }
+  addEventListener('pageshow', function (ev) { if (ev.persisted) { var c = document.getElementById('t-curtain'); if (c) c.remove(); } });
+})();
+</script><!--t-theme-end--></body>
+</html>
