@@ -622,6 +622,10 @@ if(n===0&&i.dataset.fp){i.src=i.dataset.fp;return}
 if(n===1){setTimeout(function(){i.src=(i.dataset.fp||i.src)+'&r=1'},2500);return}
 var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textContent=i.dataset.fb}else{p.classList.add('no-img');i.remove()}}</script>
 <link rel="preconnect" href="https://upload.wikimedia.org">
+<style id="abg-credit-css">
+.site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
+.site-footer .abg-credit strong{color:var(--t-gold,#d9a441);font-weight:700;letter-spacing:.06em;white-space:nowrap}
+</style>
 </head>
 <body><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
 
@@ -940,6 +944,7 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
     <p class="contact">Surmandir Cineplex Building, Opp. Jilla Panchayat, Bhuj, Kachchh 370001, Gujarat, India</p>
     <p class="contact"><a href="mailto:infoatccifb@gmail.com" style="color:inherit">infoatccifb@gmail.com</a></p>
     <p class="contact"><a href="contact.html" style="color:inherit">Contact Us</a> &middot; <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
+    <p class="abg-credit">Website designed &amp; developed by <strong>ABG Secure Tech</strong></p>
   </div>
 </footer>
 
@@ -1157,5 +1162,46 @@ function close(){box.classList.remove('open');document.documentElement.style.ove
 m.addEventListener('click',function(){box.classList.add('open');document.documentElement.style.overflow='hidden';box.scrollLeft=(box.scrollWidth-box.clientWidth)/2;});
 box.querySelector('button').addEventListener('click',close);box.addEventListener('click',function(e){if(e.target===box)close();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();</script>
+<style id="abg-wrap-css">
+/* phone/tablet: heading on top, photo floats beside the paragraph, text wraps around it */
+@media (min-width:340px) and (max-width:860px){
+  .kx-topic.abg-wrap{display:block !important}
+  .kx-topic.abg-wrap > .kx-text{display:block !important}
+  .kx-topic.abg-wrap .kx-text > .abg-float{float:left;width:46%;margin:4px 14px 8px 0;position:relative;top:auto;gap:8px}
+  .kx-topic.abg-wrap.flip .kx-text > .abg-float{float:right;margin:4px 0 8px 14px}
+  .kx-topic.abg-wrap .abg-float .kx-img{border-radius:12px;box-shadow:0 8px 20px rgba(74,20,32,.12)}
+  .kx-topic.abg-wrap .abg-float .kx-img.small{aspect-ratio:4/3}
+  .kx-topic.abg-wrap .abg-float .kx-cap{font-size:.68rem;line-height:1.35;margin-top:5px}
+  .kx-topic.abg-wrap .abg-float .kx-credit{font-size:.5rem;padding:2px 5px}
+  .kx-topic.abg-wrap .kx-text::after{content:"";display:block;clear:both}
+}
+</style>
+<script id="abg-wrap-js">
+/* Moves each section's photo next to its paragraph on small screens, and back again on large screens */
+(function () {
+  var mq = window.matchMedia('(min-width:340px) and (max-width:860px)');
+  function apply() {
+    document.querySelectorAll('.kx-topic').forEach(function (t) {
+      var text = t.querySelector(':scope > .kx-text');
+      var figs = t.querySelector(':scope > .kx-figs:not(.pair), :scope > .kx-text > .abg-float');
+      if (!text || !figs) return;
+      if (mq.matches) {
+        if (figs.parentNode === text) return;
+        var h = text.querySelector(':scope > h3');
+        if (!h) return;
+        figs.classList.add('abg-float');
+        h.parentNode.insertBefore(figs, h.nextSibling);
+        t.classList.add('abg-wrap');
+      } else if (figs.parentNode === text) {
+        figs.classList.remove('abg-float');
+        t.insertBefore(figs, text);
+        t.classList.remove('abg-wrap');
+      }
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply); else apply();
+  if (mq.addEventListener) mq.addEventListener('change', apply); else if (mq.addListener) mq.addListener(apply);
+})();
+</script>
 </body>
 </html>

@@ -477,6 +477,63 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
 .cta-section .btn-primary{background:var(--t-gold)!important;color:var(--t-wine-dd,#2a0911)!important;box-shadow:0 12px 28px rgba(0,0,0,.28)!important}
 .cta-section .btn-primary:hover{background:#fff!important;color:var(--t-wine-dd,#2a0911)!important}
 </style><!--t-theme-end--><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%236b1f2a'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23d9a441'%3EB%3C/text%3E%3C/svg%3E">
+<style id="abg-credit-css">
+.site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
+.site-footer .abg-credit strong{color:var(--t-gold,#d9a441);font-weight:700;letter-spacing:.06em;white-space:nowrap}
+</style>
+<style id="abg-pop-css">
+.pop{opacity:0}
+.pop.pop-in{animation:abgPop .8s cubic-bezier(.2,.75,.25,1) both}
+@keyframes abgPop{0%{opacity:0;transform:translateY(38px) scale(.86) rotate(var(--r,0deg))}55%{opacity:1}100%{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.pop{opacity:1}.pop.pop-in{animation:none}}
+</style>
+<script id="abg-pop-js">
+/* Photos/cards fade + pop in as they scroll into view, one after another */
+window.abgPop = (function () {
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return function () {};
+  var io = new IntersectionObserver(function (entries) {
+    var k = 0;
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      e.target.style.animationDelay = (k++ * 110) + 'ms';
+      e.target.classList.add('pop-in');
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -6% 0px' });
+  document.addEventListener('animationend', function (e) {
+    if (e.animationName !== 'abgPop') return;
+    var t = e.target; t.classList.remove('pop', 'pop-in'); t.style.animationDelay = '';
+  }, true);
+  return function (el, i) {
+    if (!el) return;
+    el.style.setProperty('--r', (i % 2 ? 2 : -2) + 'deg');
+    el.classList.add('pop'); io.observe(el);
+  };
+})();
+</script>
+<style id="abg-events-css">
+@media (max-width:600px){
+  .ev-wrap{padding-left:12px;padding-right:12px}
+  .ev-grid{grid-template-columns:1fr 1fr !important;gap:12px;align-items:start;padding-bottom:40px}
+  .ev-grid > .ev-card:nth-child(even){margin-top:40px;margin-bottom:-40px}
+  .ev-grid .ev-card{border-radius:14px}
+  .ev-grid .ev-card .ev-photo{aspect-ratio:4/3}
+  .ev-grid .ev-card .ev-body{display:block;padding:10px 10px 12px}
+  .ev-grid .ev-card .ev-date{display:inline-flex;align-items:baseline;gap:4px;padding:4px 8px;border-radius:8px;margin-bottom:8px;box-shadow:none}
+  .ev-grid .ev-card .ev-date .d{font-size:.95rem}
+  .ev-grid .ev-card .ev-date .m,.ev-grid .ev-card .ev-date .y{margin:0;font-size:.6rem;letter-spacing:.06em}
+  .ev-grid .ev-card .ev-main h3{font-size:.86rem;line-height:1.3}
+  .ev-grid .ev-card .ev-meta{font-size:.7rem;margin-top:6px}
+  .ev-grid .ev-card .ev-meta .icon{width:12px;height:12px}
+  .ev-grid .ev-card .ev-desc{font-size:.74rem;line-height:1.5;margin-top:6px;-webkit-line-clamp:2}
+  .ev-grid .ev-card .ev-count{font-size:.64rem;margin-top:6px;padding:2px 7px}
+  .ev-grid .ev-card .ev-more{font-size:.7rem;margin-top:8px}
+  .ev-grid .ev-card .ev-strip{grid-template-columns:repeat(4,1fr);gap:3px;padding:0 10px 10px}
+  .ev-grid .ev-card .ev-strip .th{border-radius:5px}
+  .ev-grid .ev-card .ev-strip .th .more{font-size:.75rem}
+}
+</style>
 </head>
 <body><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
 
@@ -545,6 +602,7 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
     <p class="contact">Surmandir Cineplex Building, Opp. Jilla Panchayat, Bhuj, Kachchh 370001, Gujarat, India</p>
     <p class="contact"><a href="mailto:infoatccifb@gmail.com" style="color:inherit">infoatccifb@gmail.com</a></p>
     <p class="contact"><a href="contact.html" style="color:inherit">Contact Us</a> &middot; <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
+    <p class="abg-credit">Website designed &amp; developed by <strong>ABG Secure Tech</strong></p>
   </div>
 </footer>
 
@@ -843,7 +901,7 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
       return;
     }
     grid.replaceChildren();
-    list.forEach(function (e) { grid.appendChild(card(e, past)); });
+    list.forEach(function (e, i) { var c = card(e, past); grid.appendChild(c); if (window.abgPop) window.abgPop(c, i); });
   }
 
   function load() {

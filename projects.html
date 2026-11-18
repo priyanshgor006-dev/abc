@@ -423,6 +423,56 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
 .cta-section .btn-primary{background:var(--t-gold)!important;color:var(--t-wine-dd,#2a0911)!important;box-shadow:0 12px 28px rgba(0,0,0,.28)!important}
 .cta-section .btn-primary:hover{background:#fff!important;color:var(--t-wine-dd,#2a0911)!important}
 </style><!--t-theme-end--><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%236b1f2a'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23d9a441'%3EB%3C/text%3E%3C/svg%3E">
+<style id="abg-credit-css">
+.site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
+.site-footer .abg-credit strong{color:var(--t-gold,#d9a441);font-weight:700;letter-spacing:.06em;white-space:nowrap}
+</style>
+<style id="abg-pop-css">
+.pop{opacity:0}
+.pop.pop-in{animation:abgPop .8s cubic-bezier(.2,.75,.25,1) both}
+@keyframes abgPop{0%{opacity:0;transform:translateY(38px) scale(.86) rotate(var(--r,0deg))}55%{opacity:1}100%{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.pop{opacity:1}.pop.pop-in{animation:none}}
+</style>
+<script id="abg-pop-js">
+/* Photos/cards fade + pop in as they scroll into view, one after another */
+window.abgPop = (function () {
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return function () {};
+  var io = new IntersectionObserver(function (entries) {
+    var k = 0;
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      e.target.style.animationDelay = (k++ * 110) + 'ms';
+      e.target.classList.add('pop-in');
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -6% 0px' });
+  document.addEventListener('animationend', function (e) {
+    if (e.animationName !== 'abgPop') return;
+    var t = e.target; t.classList.remove('pop', 'pop-in'); t.style.animationDelay = '';
+  }, true);
+  return function (el, i) {
+    if (!el) return;
+    el.style.setProperty('--r', (i % 2 ? 2 : -2) + 'deg');
+    el.classList.add('pop'); io.observe(el);
+  };
+})();
+</script>
+<style id="abg-projects-css">
+@media (max-width:719px){
+  .projects-wrap{padding-left:12px;padding-right:12px}
+  .project-list{grid-template-columns:1fr 1fr;gap:12px;align-items:start;padding-bottom:40px}
+  .project-list > .project-card:nth-child(even){margin-top:40px;margin-bottom:-40px}
+  .project-card .project-image{aspect-ratio:4/3}
+  .project-body{padding:10px 10px 12px}
+  .project-title{font-size:.86rem;margin-bottom:7px}
+  .project-status{font-size:.58rem;padding:2px 8px}
+  .project-description{font-size:.74rem;line-height:1.5;margin:8px 0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+  .project-card.expanded .project-description{display:block;-webkit-line-clamp:unset}
+  .project-dates{gap:8px;font-size:.68rem;padding-top:8px}
+  .project-date-label{font-size:.58rem}
+}
+</style>
 </head>
 <body><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
 
@@ -475,6 +525,7 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
     <p class="contact">Surmandir Cineplex Building, Opp. Jilla Panchayat, Bhuj, Kachchh 370001, Gujarat, India</p>
     <p class="contact"><a href="mailto:infoatccifb@gmail.com" style="color:inherit">infoatccifb@gmail.com</a></p>
     <p class="contact"><a href="contact.html" style="color:inherit">Contact Us</a> &middot; <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
+    <p class="abg-credit">Website designed &amp; developed by <strong>ABG Secure Tech</strong></p>
   </div>
 </footer>
 
@@ -535,7 +586,8 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
 
     function createCard(project) {
       var card = document.createElement("article");
-      card.className = "project-card card reveal";
+      card.className = "project-card card";
+      card.addEventListener("click", function () { card.classList.toggle("expanded"); });
       var imgWrap = document.createElement("div");
       imgWrap.className = "photo-wrap project-image";
       if (project.image_url) {
@@ -620,10 +672,10 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
           if (window.__observeReveal) window.__observeReveal(heading);
           var list = document.createElement("div");
           list.className = "project-list";
-          groups[status].forEach(function (p) {
+          groups[status].forEach(function (p, i) {
             var card = createCard(p);
             list.appendChild(card);
-            if (window.__observeReveal) window.__observeReveal(card);
+            if (window.abgPop) window.abgPop(card, i);
           });
           group.appendChild(list);
           container.appendChild(group);

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#6b1f2a">
   <meta name="description" content="The shared home of Bhuj's business community. Discover Chamber news, local businesses, community projects, and the people moving Kutch forward.">
-  <link rel="canonical" href="https://bhujchamber.org/index.html">
+  <link rel="canonical" href="https://YOUR-DOMAIN-HERE.org/index.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bhuj Chamber of Commerce and Industries Federation | Rooted in Kutch. Growing Together.">
   <meta property="og:description" content="The shared home of Bhuj's business community. Discover Chamber news, local businesses, community projects, and the people moving Kutch forward.">
-  <meta property="og:url" content="https://bhujchamber.org/index.html">
+  <meta property="og:url" content="https://YOUR-DOMAIN-HERE.org/index.html">
   <meta property="og:image" content="https://res.cloudinary.com/c3josacx/image/upload/v1788577765/coc-bhuj-news/rf72yu5ypjxwy3wbxas9.jpg">
   <meta property="og:site_name" content="Bhuj Chamber of Commerce and Industries Federation">
   <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
     "@type": "Organization",
     "name": "Bhuj Chamber of Commerce and Industries Federation",
     "alternateName": "Bhuj Chamber of Commerce & Industries Federation",
-    "url": "https://bhujchamber.org/",
+    "url": "https://YOUR-DOMAIN-HERE.org/",
     "description": "The Bhuj Chamber of Commerce and Industries Federation is the collective voice of Kutch's business community, promoting trade, industry, and economic development in the region.",
     "address": {
       "@type": "PostalAddress",
@@ -139,14 +139,20 @@ img{display:block;max-width:100%}
 #loader .half.t{top:0}#loader .half.b{bottom:0}
 #loader.open .half.t{transform:translateY(-100%)}#loader.open .half.b{transform:translateY(100%)}
 #loader.open .ld{opacity:0;transform:scale(.96)}
-.ld{position:relative;z-index:2;width:min(560px,88vw);text-align:center;transition:opacity .5s,transform .8s var(--ease)}
+.ld{position:relative;z-index:2;width:min(640px,94vw);text-align:center;transition:opacity .5s,transform .8s var(--ease)}
 .ld svg{width:100%;height:auto;overflow:visible}
 .ld .outline{fill:none;stroke:var(--gold);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;will-change:stroke-dashoffset;animation:drawO 4.2s cubic-bezier(.65,0,.35,1) .2s forwards}
 .ld .fillk{fill:rgba(217,164,65,.08);opacity:0;animation:fade 1.4s ease 3.2s forwards}
-.ld .route{fill:none;stroke:var(--gold-l);stroke-width:2;stroke-dasharray:4 7;opacity:0;animation:fade .9s 3.6s forwards,flow 1.6s linear 3.6s infinite}
-.ld .hub{fill:var(--gold);transform-origin:491px 495px;transform:scale(0);animation:popS 1.1s var(--ease) 3.5s forwards}
-.ld .hubr{fill:none;stroke:var(--gold);stroke-width:2;transform-origin:491px 495px;opacity:0;animation:ring 2.6s 3.8s infinite}
-.ld .node{fill:#fff;opacity:0;animation:fade .7s 4s forwards}
+.ld .route{fill:none;stroke:var(--gold-l);stroke-width:1.6;stroke-dasharray:4 7;stroke-opacity:.5;opacity:0;animation:fade .9s 3.6s forwards,flow 1.6s linear 3.6s infinite}
+.ld .hub{fill:var(--gold);stroke:#fff;stroke-width:3;transform-origin:491px 495px;transform:scale(0);animation:popS 1.1s var(--ease) 3.5s forwards}
+.ld .hubr{fill:none;stroke:var(--gold);stroke-width:2.5;transform-origin:491px 495px;opacity:0;animation:ring 2.6s 3.8s infinite}
+.ld .glow{fill:var(--gold);opacity:0;animation:glowp 2.6s ease-in-out 3.6s infinite}
+@keyframes glowp{0%,100%{opacity:.08}50%{opacity:.28}}
+.ld .hubr2{animation-delay:5.1s}
+.ld .city{opacity:0;animation:fade .7s forwards}
+.ld .city circle{fill:#fff}
+.ld .city text{fill:#f4ebdc;font:600 25px var(--sans);letter-spacing:.02em;paint-order:stroke;stroke:var(--wine-dd);stroke-width:5px;stroke-linejoin:round}
+.ld .bhuj{fill:var(--gold-l);font:800 46px var(--sans);letter-spacing:.14em;paint-order:stroke;stroke:var(--wine-dd);stroke-width:7px;stroke-linejoin:round;opacity:0;animation:fade .8s 3.9s forwards}
 @keyframes drawO{to{stroke-dashoffset:0}}
 @keyframes fade{to{opacity:1}}
 @keyframes flow{to{stroke-dashoffset:-22}}
@@ -566,6 +572,8 @@ img{image-rendering:auto}
 .site-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--t-gold),transparent)}
 .site-footer .footer-brand{font-size:clamp(1.4rem,2.6vw,2rem)!important;font-weight:400!important;color:#fff!important;margin-bottom:12px!important}
 .site-footer a:hover{color:var(--t-gold)!important}
+.site-footer .dev{max-width:650px;margin:30px auto 0!important;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:.9rem;color:rgba(255,255,255,.72)}
+.site-footer .dev strong{color:var(--t-gold);font-weight:700;letter-spacing:.03em}
 .t-foot-mark{display:block;font-family:var(--t-serif);font-size:clamp(4rem,16vw,12rem);line-height:.9;color:transparent;-webkit-text-stroke:1px rgba(217,164,65,.22);letter-spacing:.06em;margin:28px 0 0;user-select:none}
 
 /* ---- progress bar + page curtain ---- */
@@ -670,12 +678,26 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
     <svg viewBox="0 0 1000 761">
       <path class="fillk" d="M111.6,422.4L123.1,412.2L120.3,402.6L117.2,400.6L121.9,398.0L124.9,392.9L125.2,377.8L127.8,368.9L132.7,361.5L132.3,343.4L141.4,334.9L147.2,326.0L153.8,321.9L161.2,322.0L165.7,319.3L169.8,313.0L172.1,300.3L188.4,301.9L194.6,295.7L205.5,289.0L210.7,289.4L216.3,292.6L237.7,292.9L243.4,299.4L251.1,301.4L259.1,308.6L277.4,310.7L281.4,314.4L297.1,320.8L298.5,325.9L302.9,330.5L308.9,331.8L313.8,336.0L328.3,340.0L333.2,337.6L344.6,324.8L347.1,312.6L358.0,314.6L364.1,311.4L369.3,292.5L377.0,293.1L383.2,298.6L390.3,299.9L394.9,305.7L399.7,307.7L439.1,310.3L445.2,308.8L455.4,300.5L460.4,300.8L463.1,307.4L468.5,310.6L474.9,309.7L479.0,306.4L493.8,306.4L499.9,298.2L506.2,293.3L523.5,259.7L531.2,258.4L536.1,250.9L542.3,247.3L561.5,250.5L570.5,256.9L575.1,262.7L585.3,266.5L588.7,271.4L595.4,274.3L598.0,279.9L596.4,286.6L587.9,296.7L584.2,306.8L582.8,314.5L584.7,323.4L583.4,330.0L575.0,332.4L568.5,338.0L565.8,343.6L561.9,374.1L563.1,380.1L570.1,385.9L590.3,389.4L589.3,398.4L591.0,403.4L598.1,412.0L604.5,415.5L607.5,423.0L617.6,430.0L624.6,430.9L633.5,424.0L642.1,424.3L644.3,426.8L643.5,433.9L640.4,438.5L639.8,443.7L641.9,448.7L646.5,451.8L654.0,451.6L668.6,441.1L677.1,438.0L679.6,430.8L674.0,419.1L676.5,410.6L685.3,404.1L688.4,398.6L701.0,389.5L712.5,388.3L727.7,377.0L735.9,376.2L748.4,363.3L760.8,365.7L771.5,361.5L775.4,356.6L780.2,338.0L800.3,341.1L806.7,338.0L809.2,331.8L808.5,312.4L804.9,305.1L799.4,301.6L795.0,282.2L796.6,277.3L801.7,273.9L828.7,276.3L832.4,279.7L837.7,280.9L843.5,287.6L868.5,291.1L873.8,294.0L888.3,295.3L904.2,305.0L909.9,304.2L913.9,300.2L916.4,304.3L910.2,315.0L910.3,331.0L916.0,337.2L912.8,340.9L915.0,351.0L906.5,354.3L905.9,365.7L916.9,378.1L920.7,376.5L921.1,372.2L924.8,374.7L933.2,371.8L927.7,377.7L920.2,408.2L921.0,414.7L925.4,419.4L924.1,424.9L906.3,427.0L890.0,439.5L881.2,441.5L877.0,449.2L863.7,448.7L859.3,451.9L857.3,456.6L846.0,458.7L836.7,467.1L836.6,480.9L797.4,485.2L793.6,489.8L792.6,496.7L793.6,501.7L797.0,505.6L792.6,503.8L787.7,507.4L783.6,517.3L767.3,520.0L743.9,520.3L734.9,513.8L719.4,510.4L716.5,507.3L685.2,507.7L681.6,511.7L684.5,518.8L671.2,525.2L668.1,524.0L665.5,525.1L662.9,533.1L660.1,536.4L656.3,537.4L654.3,542.9L647.4,549.8L646.3,556.7L638.9,560.8L637.7,564.2L639.0,567.2L632.9,570.4L623.6,586.1L620.1,586.5L612.8,592.4L613.4,598.8L616.7,601.0L615.2,605.2L595.9,607.2L593.1,610.0L581.9,611.4L579.5,613.9L568.9,613.5L560.2,621.3L553.5,620.6L531.2,627.8L520.8,636.2L494.6,644.9L484.1,646.2L483.2,642.6L480.6,641.2L471.4,643.9L464.9,640.7L451.8,642.0L448.7,645.0L442.3,643.9L437.7,647.1L437.8,651.6L430.9,653.5L422.4,651.4L403.2,638.7L381.2,632.7L369.1,636.5L356.9,632.9L347.3,632.4L345.1,627.3L340.9,627.9L327.6,620.4L323.8,615.5L320.5,614.9L309.8,606.3L289.4,596.0L228.2,557.7L215.0,552.3L176.5,522.4L161.8,504.7L159.8,497.9L148.5,496.6L146.1,485.9L149.8,479.2L158.7,471.7L157.7,468.1L154.3,466.8L153.5,462.3L138.1,457.1L132.5,463.1L130.8,458.9L123.8,457.3L123.6,449.5L117.6,443.0L114.6,442.3L111.9,444.3L106.0,439.8L111.6,422.4ZM426.5,648.2L428.6,646.3L428.8,643.2L426.8,640.7L421.9,642.4L421.6,645.5L423.4,647.8L426.5,648.2Z"/>
       <path class="outline" id="ldOutline" pathLength="1" d="M111.6,422.4L123.1,412.2L120.3,402.6L117.2,400.6L121.9,398.0L124.9,392.9L125.2,377.8L127.8,368.9L132.7,361.5L132.3,343.4L141.4,334.9L147.2,326.0L153.8,321.9L161.2,322.0L165.7,319.3L169.8,313.0L172.1,300.3L188.4,301.9L194.6,295.7L205.5,289.0L210.7,289.4L216.3,292.6L237.7,292.9L243.4,299.4L251.1,301.4L259.1,308.6L277.4,310.7L281.4,314.4L297.1,320.8L298.5,325.9L302.9,330.5L308.9,331.8L313.8,336.0L328.3,340.0L333.2,337.6L344.6,324.8L347.1,312.6L358.0,314.6L364.1,311.4L369.3,292.5L377.0,293.1L383.2,298.6L390.3,299.9L394.9,305.7L399.7,307.7L439.1,310.3L445.2,308.8L455.4,300.5L460.4,300.8L463.1,307.4L468.5,310.6L474.9,309.7L479.0,306.4L493.8,306.4L499.9,298.2L506.2,293.3L523.5,259.7L531.2,258.4L536.1,250.9L542.3,247.3L561.5,250.5L570.5,256.9L575.1,262.7L585.3,266.5L588.7,271.4L595.4,274.3L598.0,279.9L596.4,286.6L587.9,296.7L584.2,306.8L582.8,314.5L584.7,323.4L583.4,330.0L575.0,332.4L568.5,338.0L565.8,343.6L561.9,374.1L563.1,380.1L570.1,385.9L590.3,389.4L589.3,398.4L591.0,403.4L598.1,412.0L604.5,415.5L607.5,423.0L617.6,430.0L624.6,430.9L633.5,424.0L642.1,424.3L644.3,426.8L643.5,433.9L640.4,438.5L639.8,443.7L641.9,448.7L646.5,451.8L654.0,451.6L668.6,441.1L677.1,438.0L679.6,430.8L674.0,419.1L676.5,410.6L685.3,404.1L688.4,398.6L701.0,389.5L712.5,388.3L727.7,377.0L735.9,376.2L748.4,363.3L760.8,365.7L771.5,361.5L775.4,356.6L780.2,338.0L800.3,341.1L806.7,338.0L809.2,331.8L808.5,312.4L804.9,305.1L799.4,301.6L795.0,282.2L796.6,277.3L801.7,273.9L828.7,276.3L832.4,279.7L837.7,280.9L843.5,287.6L868.5,291.1L873.8,294.0L888.3,295.3L904.2,305.0L909.9,304.2L913.9,300.2L916.4,304.3L910.2,315.0L910.3,331.0L916.0,337.2L912.8,340.9L915.0,351.0L906.5,354.3L905.9,365.7L916.9,378.1L920.7,376.5L921.1,372.2L924.8,374.7L933.2,371.8L927.7,377.7L920.2,408.2L921.0,414.7L925.4,419.4L924.1,424.9L906.3,427.0L890.0,439.5L881.2,441.5L877.0,449.2L863.7,448.7L859.3,451.9L857.3,456.6L846.0,458.7L836.7,467.1L836.6,480.9L797.4,485.2L793.6,489.8L792.6,496.7L793.6,501.7L797.0,505.6L792.6,503.8L787.7,507.4L783.6,517.3L767.3,520.0L743.9,520.3L734.9,513.8L719.4,510.4L716.5,507.3L685.2,507.7L681.6,511.7L684.5,518.8L671.2,525.2L668.1,524.0L665.5,525.1L662.9,533.1L660.1,536.4L656.3,537.4L654.3,542.9L647.4,549.8L646.3,556.7L638.9,560.8L637.7,564.2L639.0,567.2L632.9,570.4L623.6,586.1L620.1,586.5L612.8,592.4L613.4,598.8L616.7,601.0L615.2,605.2L595.9,607.2L593.1,610.0L581.9,611.4L579.5,613.9L568.9,613.5L560.2,621.3L553.5,620.6L531.2,627.8L520.8,636.2L494.6,644.9L484.1,646.2L483.2,642.6L480.6,641.2L471.4,643.9L464.9,640.7L451.8,642.0L448.7,645.0L442.3,643.9L437.7,647.1L437.8,651.6L430.9,653.5L422.4,651.4L403.2,638.7L381.2,632.7L369.1,636.5L356.9,632.9L347.3,632.4L345.1,627.3L340.9,627.9L327.6,620.4L323.8,615.5L320.5,614.9L309.8,606.3L289.4,596.0L228.2,557.7L215.0,552.3L176.5,522.4L161.8,504.7L159.8,497.9L148.5,496.6L146.1,485.9L149.8,479.2L158.7,471.7L157.7,468.1L154.3,466.8L153.5,462.3L138.1,457.1L132.5,463.1L130.8,458.9L123.8,457.3L123.6,449.5L117.6,443.0L114.6,442.3L111.9,444.3L106.0,439.8L111.6,422.4ZM426.5,648.2L428.6,646.3L428.8,643.2L426.8,640.7L421.9,642.4L421.6,645.5L423.4,647.8L426.5,648.2Z"/>
-      <path class="route" d="M491 495 Q 470 570 501 643"/>
-      <path class="route" d="M491 495 Q 580 500 649 567"/>
-      <path class="route" d="M491 495 Q 520 400 489 303"/>
-      <path class="route" d="M491 495 Q 600 400 655 284"/>
-      <circle class="node" cx="501" cy="643" r="6"/><circle class="node" cx="649" cy="567" r="6"/><circle class="node" cx="489" cy="303" r="6"/><circle class="node" cx="655" cy="284" r="6"/>
-      <circle class="hubr" cx="491" cy="495" r="10"/><circle class="hub" cx="491" cy="495" r="10"/>
+      <path class="route" d="M491 495 Q 369 364 200 303"/>
+      <path class="route" d="M491 495 Q 352 460 213 492"/>
+      <path class="route" d="M491 495 Q 425 465 352 469"/>
+      <path class="route" d="M491 495 Q 422 551 385 632"/>
+      <path class="route" d="M491 495 Q 483 565 507 632"/>
+      <path class="route" d="M491 495 Q 545 532 610 541"/>
+      <path class="route" d="M491 495 Q 560 541 643 551"/>
+      <path class="route" d="M491 495 Q 605 515 715 482"/>
+      <path class="route" d="M491 495 Q 665 481 814 389"/>
+      <g class="city" style="animation-delay:3.9s"><circle cx="200" cy="303" r="5.5"/><text x="214" y="311" text-anchor="start">Lakhpat</text></g>
+      <g class="city" style="animation-delay:4.03s"><circle cx="213" cy="492" r="5.5"/><text x="227" y="499" text-anchor="start">Naliya</text></g>
+      <g class="city" style="animation-delay:4.16s"><circle cx="352" cy="469" r="5.5"/><text x="360" y="453" text-anchor="end">Nakhatrana</text></g>
+      <g class="city" style="animation-delay:4.29s"><circle cx="385" cy="632" r="5.5"/><text x="385" y="616" text-anchor="middle">Mandvi</text></g>
+      <g class="city" style="animation-delay:4.42s"><circle cx="507" cy="632" r="5.5"/><text x="519" y="620" text-anchor="start">Mundra</text></g>
+      <g class="city" style="animation-delay:4.55s"><circle cx="610" cy="541" r="5.5"/><text x="596" y="533" text-anchor="end">Anjar</text></g>
+      <g class="city" style="animation-delay:4.68s"><circle cx="643" cy="551" r="5.5"/><text x="657" y="573" text-anchor="start">Gandhidham</text></g>
+      <g class="city" style="animation-delay:4.81s"><circle cx="715" cy="482" r="5.5"/><text x="715" y="466" text-anchor="middle">Bhachau</text></g>
+      <g class="city" style="animation-delay:4.94s"><circle cx="814" cy="389" r="5.5"/><text x="814" y="373" text-anchor="middle">Rapar</text></g>
+      <circle class="glow" cx="491" cy="495" r="62"/><circle class="hubr" cx="491" cy="495" r="13"/><circle class="hubr hubr2" cx="491" cy="495" r="13"/><circle class="hub" cx="491" cy="495" r="13"/>
+      <text class="bhuj" x="491" y="458" text-anchor="middle">BHUJ</text>
     </svg>
     <img id="ldLogo" class="ld-logo" alt="">
     <div class="ld-word"><span>B</span><span>C</span><span>C</span><span>I</span><span>F</span></div>
@@ -870,6 +892,7 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
     <p class="contact">Surmandir Cineplex Building, Opp. Jilla Panchayat, Bhuj, Kachchh 370001, Gujarat, India</p>
     <p class="contact"><a href="mailto:infoatccifb@gmail.com" style="color:inherit">infoatccifb@gmail.com</a></p>
     <p class="contact"><a href="contact.html" style="color:inherit">Contact Us</a> &middot; <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
+    <p class="dev">Website designed &amp; developed by <strong>ABG Secure Tech</strong></p>
   </div>
 </footer>
 
