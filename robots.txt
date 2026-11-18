@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin.html
 Disallow: /edit.html
 
-Sitemap: https://YOUR-DOMAIN-HERE.org/sitemap.xml
+Sitemap: https://bhujchamber.org/sitemap.xml
