@@ -442,7 +442,7 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
 /* buttons on dark wine sections: gold so they stand out */
 .cta-section .btn-primary{background:var(--t-gold)!important;color:var(--t-wine-dd,#2a0911)!important;box-shadow:0 12px 28px rgba(0,0,0,.28)!important}
 .cta-section .btn-primary:hover{background:#fff!important;color:var(--t-wine-dd,#2a0911)!important}
-</style><!--t-theme-end--><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%236b1f2a'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%23d9a441' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23d9a441'%3EB%3C/text%3E%3C/svg%3E">
+</style><!--t-theme-end--><link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png"><link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"><link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 <style id="abg-credit-css">
 .site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
 .site-footer .abg-credit strong{color:var(--t-gold,#d9a441);font-weight:700;letter-spacing:.06em;white-space:nowrap}
@@ -607,6 +607,17 @@ window.abgPop = (function () {
       });
     }
 
+    // Ask Cloudinary for a copy sized for where the photo is shown (saves bandwidth credits).
+    // Non-Cloudinary links are left untouched.
+    function sized(u, w) {
+      u = String(u || "");
+      if (!/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u)) return u;
+      var t = "c_limit,w_" + w + ",q_auto,f_auto/";
+      return /\/image\/upload\/(.*?\/)?v\d+\//.test(u)
+        ? u.replace(/\/(v\d+\/)/, "/" + t + "$1")
+        : u.replace("/image/upload/", "/image/upload/" + t);
+    }
+
     var modal = document.getElementById("modal");
     var modalImage = document.getElementById("modalImage");
     var modalCaption = document.getElementById("modalCaption");
@@ -640,7 +651,7 @@ window.abgPop = (function () {
     function openModal(photo) {
       galIndex = galList.indexOf(photo);
       document.getElementById("modalContent").hidden = !photo.caption && !photo.event_name;
-      modalImage.src = photo.image_url;
+      modalImage.src = sized(photo.image_url, 1400);
       modalImage.alt = photo.caption || photo.event_name || "";
       modalCaption.textContent = photo.caption || "";
       modalCaption.hidden = !photo.caption;
@@ -667,9 +678,12 @@ window.abgPop = (function () {
       var thumb = document.createElement("div");
       thumb.className = "photo-wrap gallery-thumb";
       var img = document.createElement("img");
-      img.src = photo.image_url;
+      img.src = sized(photo.image_url, 400);
+      img.srcset = sized(photo.image_url, 400) + " 400w, " + sized(photo.image_url, 800) + " 800w";
+      img.sizes = "(max-width: 899px) 50vw, 380px";
       img.alt = photo.caption || photo.event_name || "";
       img.loading = "lazy";
+      img.decoding = "async";
       img.onerror = function () { thumb.style.background = "linear-gradient(135deg, var(--navy), var(--navy-dark))"; img.style.display = "none"; };
       thumb.appendChild(img);
       card.appendChild(thumb);
