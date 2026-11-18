@@ -573,7 +573,7 @@ img{image-rendering:auto}
 .site-footer .footer-brand{font-size:clamp(1.4rem,2.6vw,2rem)!important;font-weight:400!important;color:#fff!important;margin-bottom:12px!important}
 .site-footer a:hover{color:var(--t-gold)!important}
 .site-footer .dev{max-width:650px;margin:30px auto 0!important;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);font-size:.9rem;color:rgba(255,255,255,.72)}
-.site-footer .dev strong{color:var(--t-gold);font-weight:700;letter-spacing:.03em}
+.site-footer .dev strong{color:var(--t-gold);font-weight:700;letter-spacing:.03em;white-space:nowrap}
 .t-foot-mark{display:block;font-family:var(--t-serif);font-size:clamp(4rem,16vw,12rem);line-height:.9;color:transparent;-webkit-text-stroke:1px rgba(217,164,65,.22);letter-spacing:.06em;margin:28px 0 0;user-select:none}
 
 /* ---- progress bar + page curtain ---- */
@@ -666,10 +666,6 @@ function wmErr(i){var n=+(i.dataset.t||0);i.dataset.t=n+1;i.removeAttribute('src
 if(n===0&&i.dataset.fp){i.src=i.dataset.fp;return}
 if(n===1){setTimeout(function(){i.src=(i.dataset.fp||i.src)+'&r=1'},2500);return}
 var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textContent=i.dataset.fb}else{p.classList.add('no-img');i.remove()}}</script>
-<style id="abg-credit-css">
-.site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
-.site-footer .abg-credit strong{color:var(--t-gold,#d9a441);font-weight:700;letter-spacing:.06em;white-space:nowrap}
-</style>
 </head>
 <body class="locked"><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
 <div id="glow"></div>
@@ -897,7 +893,6 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
     <p class="contact"><a href="mailto:infoatccifb@gmail.com" style="color:inherit">infoatccifb@gmail.com</a></p>
     <p class="contact"><a href="contact.html" style="color:inherit">Contact Us</a> &middot; <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
     <p class="dev">Website designed &amp; developed by <strong>ABG Secure Tech</strong></p>
-    <p class="abg-credit">Website designed &amp; developed by <strong>ABG Secure Tech</strong></p>
   </div>
 </footer>
 
