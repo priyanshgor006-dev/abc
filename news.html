@@ -924,6 +924,8 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
           return tb - ta;
         });
         renderChips(); renderNews(); buildCarousel();
+        // no Chamber News posts yet: open on Newspaper Clippings, unless the visitor already picked a tab
+        if (!allPosts.length && !window.__newsTabTouched && window.__newsSwitchTab) window.__newsSwitchTab("clippings");
       } catch (err) {
         console.error(err);
         newsList.innerHTML = '<div class="state-block" style="color:#a63842">Couldn\'t load news. ' + escapeHtml(err.message || "") + '</div>';
@@ -971,8 +973,10 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
       clippingsPanel.style.display = showClippings ? "" : "none";
       if (showClippings && !clippingsLoaded) loadClippings();
     }
-    tabNews.addEventListener("click", function () { switchTab("news"); });
-    tabClippings.addEventListener("click", function () { switchTab("clippings"); });
+    tabNews.addEventListener("click", function () { window.__newsTabTouched = true; switchTab("news"); });
+    tabClippings.addEventListener("click", function () { window.__newsTabTouched = true; switchTab("clippings"); });
+    // used by the Chamber News loader: if there are no news posts, open the clippings instead
+    window.__newsSwitchTab = switchTab;
 
     function isPdfClipping(url) {
       return String(url || "").split("?")[0].toLowerCase().endsWith(".pdf");

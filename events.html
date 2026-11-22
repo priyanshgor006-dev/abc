@@ -915,6 +915,13 @@ window.abgPop = (function () {
     client.from("events").select("*").order("event_date", { ascending: true }).then(function (r) {
       if (r.error) throw r.error;
       events = r.data || [];
+      // no upcoming events: open on Past Events, unless the visitor already picked a tab
+      if (view === "upcoming" && !tabTouched) {
+        var today = dayKey(new Date());
+        var hasUpcoming = events.some(function (e) { var d = when(e.event_date); return d && dayKey(d) >= today; });
+        var hasPast = events.some(function (e) { var d = when(e.event_date); return d && dayKey(d) < today; });
+        if (!hasUpcoming && hasPast) { setView("past"); return; }
+      }
       render();
     }).catch(function () {
       stateBlock("M12 8v5m0 3h.01M12 3 2 20h20L12 3Z", "Events could not be loaded.", "Please check your connection and try again.", true);
@@ -927,8 +934,9 @@ window.abgPop = (function () {
     tabPast.classList.toggle("active", next === "past"); tabPast.setAttribute("aria-selected", String(next === "past"));
     render();
   }
-  tabUp.addEventListener("click", function () { setView("upcoming"); });
-  tabPast.addEventListener("click", function () { setView("past"); });
+  var tabTouched = false;
+  tabUp.addEventListener("click", function () { tabTouched = true; setView("upcoming"); });
+  tabPast.addEventListener("click", function () { tabTouched = true; setView("past"); });
   load();
 })();
 </script>
