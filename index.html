@@ -218,7 +218,7 @@ img{display:block;max-width:100%}
 .intro{padding:clamp(90px,11vw,150px) 0 clamp(70px,8vw,110px)}
 .intro-g{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}
 .bigq{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,3rem);line-height:1.25;letter-spacing:-.015em;margin:20px 0 0}
-.bigq .w{opacity:.14;transition:opacity .4s}
+.bigq .w{opacity:.5;transition:opacity .4s}
 .bigq .w.lit{opacity:1}
 .bigq em{font-style:italic;color:var(--gold-d)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(60px,7vw,100px);border-top:1px solid var(--line)}
@@ -669,6 +669,18 @@ function wmErr(i){var n=+(i.dataset.t||0);i.dataset.t=n+1;i.removeAttribute('src
 if(n===0&&i.dataset.fp){i.src=i.dataset.fp;return}
 if(n===1){setTimeout(function(){i.src=(i.dataset.fp||i.src)+'&r=1'},2500);return}
 var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textContent=i.dataset.fb}else{p.classList.add('no-img');i.remove()}}</script>
+<style id="bc-a11y">
+/* transparent header over the dark top banner: a faint dark fade keeps the white logo text readable */
+.site-header.t-tr{background-image:linear-gradient(180deg,rgba(42,9,17,.55),rgba(42,9,17,0))!important}
+/* small gold labels on light sections: a slightly darker gold that is easier to read */
+.section .eyebrow,.kx-section .eyebrow{color:#8f6214!important}
+.content-tabs button .tab-sub{opacity:1;color:#6e6461}
+.content-tabs button.active .tab-sub{color:#5a514e}
+/* headings only screen readers announce */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+<script id="bc-img">/* ask Cloudinary for a copy sized for where the photo is shown */
+window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u)||/\.pdf(\?|$)/i.test(u))return u;var t="c_limit,w_"+w+",q_auto,f_auto/";return /\/image\/upload\/(.*?\/)?v\d+\//.test(u)?u.replace(/\/(v\d+\/)/,"/"+t+"$1"):u.replace("/image/upload/","/image/upload/"+t);};</script>
 </head>
 <body class="locked"><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
 <div id="glow"></div>
@@ -846,7 +858,7 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
     </div>
     <div class="hs-track" id="hsTrack">
       <article class="sector"><img src="images/wm/adani-mundra-port-kutch-gujarat-e81ca1.webp" width="500" height="334" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Adani_Mundra_Port_Kutch_Gujarat.jpg?width=960" decoding="async" alt="" loading="lazy" onerror="wmErr(this)"><span class="no">01</span><span class="pill">PORTS</span><div class="c"><h3>Gateway to the world</h3><p>Mundra and Deendayal (Kandla) are among India's busiest ports, handling a large share of the country's cargo.</p></div></article>
-      <article class="sector"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Windfarm_Mandvi.JPG/960px-Windfarm_Mandvi.JPG" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Windfarm_Mandvi.JPG/500px-Windfarm_Mandvi.JPG 500w, https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Windfarm_Mandvi.JPG/960px-Windfarm_Mandvi.JPG 960w" sizes="(max-width:860px) 92vw, 48vw" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Windfarm_Mandvi.JPG?width=960" decoding="async" alt="" loading="lazy" onerror="wmErr(this)"><span class="no">02</span><span class="pill">ENERGY</span><div class="c"><h3>Sun &amp; wind power</h3><p>The Khavda renewable energy park in the Rann is planned to be one of the largest in the world.</p></div></article>
+      <article class="sector"><img src="images/wm/windfarm-mandvi-4c7f01.jpg" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Windfarm_Mandvi.JPG?width=960" decoding="async" alt="" loading="lazy" onerror="wmErr(this)"><span class="no">02</span><span class="pill">ENERGY</span><div class="c"><h3>Sun &amp; wind power</h3><p>The Khavda renewable energy park in the Rann is planned to be one of the largest in the world.</p></div></article>
       <article class="sector"><img width="900" height="596" decoding="async" src="images/home-04.webp" alt="" loading="lazy"><span class="no">03</span><span class="pill">SALT</span><div class="c"><h3>Salt of the nation</h3><p>Kutch produces most of India's salt, from the pans of the Rann and the coast.</p></div></article>
       <article class="sector"><img width="762" height="376" decoding="async" src="images/home-05.webp" alt="" loading="lazy"><span class="no">04</span><span class="pill">CRAFTS</span><div class="c"><h3>Hands that make history</h3><p>Embroidery, Ajrakh, Bhujodi weaving and Rogan art, crafts that support thousands of families.</p></div></article>
       <article class="sector"><img src="images/wm/limestone-rocks-3ef512.webp" width="960" height="720" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/Limestone_rocks.jpg?width=960" decoding="async" alt="" loading="lazy" onerror="wmErr(this)"><span class="no">05</span><span class="pill">CEMENT &amp; MINERALS</span><div class="c"><h3>Built on stone</h3><p>Limestone, bentonite, bauxite and lignite make Kutch a major centre for cement and mineral industries.</p></div></article>
@@ -1030,8 +1042,8 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
   /* logo */
   api('site_media?select=image_url&type=eq.logo&active=eq.true&order=sort_order.asc.nullslast&limit=1').then(function(rows){
     var u = rows[0] && safe(rows[0].image_url); if (!u) return;
-    var lg = document.getElementById('siteLogo'); if (lg) { lg.onload = function(){ lg.classList.add('loaded'); }; lg.src = u; }
-    var ll = document.getElementById('ldLogo'); if (ll) { ll.onload = function(){ ll.classList.add('ok'); }; ll.src = u; }
+    var lg = document.getElementById('siteLogo'); if (lg) { lg.onload = function(){ lg.classList.add('loaded'); }; lg.src = window.bcImg(u, 200); }
+    var ll = document.getElementById('ldLogo'); if (ll) { ll.onload = function(){ ll.classList.add('ok'); }; ll.src = window.bcImg(u, 200); }
   }).catch(function(){});
 
   /* committee: president photo + strip */

@@ -19,7 +19,7 @@
 <meta name="twitter:title" content="Contact Us" />
 <meta name="twitter:description" content="Contact the Bhuj Chamber of Commerce and Industries Federation with any question or query." />
 <meta name="twitter:image" content="https://res.cloudinary.com/ugrgzrst/image/upload/c_pad,w_1200,h_630,b_white/q_auto,f_jpg/v1793511746/coc-bhuj-news/ey7x8ybkipghoz3ltxk6.jpg" />
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <style>
 
 :root {
@@ -506,6 +506,21 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
 .site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
 .site-footer .abg-credit strong{color:var(--t-gold,#d9a441);font-weight:700;letter-spacing:.06em;white-space:nowrap}
 </style>
+<link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2/dist/umd/supabase.min.js">
+<link rel="preconnect" href="https://rvpiliwyqjowegmjcanr.supabase.co" crossorigin>
+<link rel="preconnect" href="https://res.cloudinary.com">
+<style id="bc-a11y">
+/* transparent header over the dark top banner: a faint dark fade keeps the white logo text readable */
+.site-header.t-tr{background-image:linear-gradient(180deg,rgba(42,9,17,.55),rgba(42,9,17,0))!important}
+/* small gold labels on light sections: a slightly darker gold that is easier to read */
+.section .eyebrow,.kx-section .eyebrow{color:#8f6214!important}
+.content-tabs button .tab-sub{opacity:1;color:#6e6461}
+.content-tabs button.active .tab-sub{color:#5a514e}
+/* headings only screen readers announce */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+<script id="bc-img">/* ask Cloudinary for a copy sized for where the photo is shown */
+window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u)||/\.pdf(\?|$)/i.test(u))return u;var t="c_limit,w_"+w+",q_auto,f_auto/";return /\/image\/upload\/(.*?\/)?v\d+\//.test(u)?u.replace(/\/(v\d+\/)/,"/"+t+"$1"):u.replace("/image/upload/","/image/upload/"+t);};</script>
 </head>
 <body><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
 
@@ -604,6 +619,9 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2/dist/umd/supabase.min.js"></script>
+<script id="bc-sb">/* one shared Supabase client per page (the site only reads data and sends forms, it never signs in) */
+(function(){if(!window.supabase)return;var o=supabase.createClient,c={};supabase.createClient=function(u,k,opt){var key=u+"|"+k;return c[key]||(c[key]=o(u,k,Object.assign({auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}},opt||{})));};})();</script>
 <script>
 /* ---------- Nav toggle + header scroll shadow ---------- */
   (function () {
@@ -678,7 +696,7 @@ body.t-nohero{padding-top:var(--t-hh,82px)}
         if (rows.length > 0 && rows[0].image_url) {
           logoImg.onload = function () { logoImg.classList.add("loaded"); };
           logoImg.onerror = function () { console.warn("Site logo failed to load"); };
-          logoImg.src = rows[0].image_url;
+          logoImg.src = window.bcImg(rows[0].image_url, 200);
         }
       })
       .catch(function (err) { console.error("Logo fetch error:", err); });

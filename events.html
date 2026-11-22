@@ -19,7 +19,7 @@
 <meta name="twitter:title" content="Events | Bhuj Chamber of Commerce and Industries Federation" />
 <meta name="twitter:description" content="Upcoming events, gatherings, and networking opportunities from the Bhuj Chamber of Commerce and Industries Federation." />
 <meta name="twitter:image" content="https://res.cloudinary.com/ugrgzrst/image/upload/c_pad,w_1200,h_630,b_white/q_auto,f_jpg/v1793511746/coc-bhuj-news/ey7x8ybkipghoz3ltxk6.jpg" />
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <style>
 
 :root {
@@ -529,7 +529,7 @@ window.abgPop = (function () {
   .ev-grid .ev-card .ev-main h3{font-size:.86rem;line-height:1.3}
   .ev-grid .ev-card .ev-meta{font-size:.7rem;margin-top:6px}
   .ev-grid .ev-card .ev-meta .icon{width:12px;height:12px}
-  .ev-grid .ev-card .ev-desc{font-size:.74rem;line-height:1.5;margin-top:6px;-webkit-line-clamp:2}
+  .ev-grid .ev-card .ev-desc{font-size:.8rem;line-height:1.5;margin-top:6px;-webkit-line-clamp:2}
   .ev-grid .ev-card .ev-count{font-size:.64rem;margin-top:6px;padding:2px 7px}
   .ev-grid .ev-card .ev-more{font-size:.7rem;margin-top:8px}
   .ev-grid .ev-card .ev-strip{grid-template-columns:repeat(4,1fr);gap:3px;padding:0 10px 10px}
@@ -537,6 +537,24 @@ window.abgPop = (function () {
   .ev-grid .ev-card .ev-strip .th .more{font-size:.75rem}
 }
 </style>
+<link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2/dist/umd/supabase.min.js">
+<link rel="preconnect" href="https://rvpiliwyqjowegmjcanr.supabase.co" crossorigin>
+<link rel="preconnect" href="https://res.cloudinary.com">
+<style id="bc-cls">/* keep room for the photos while they load, so the page doesn't jump */
+#evPanel{min-height:60vh}
+</style>
+<style id="bc-a11y">
+/* transparent header over the dark top banner: a faint dark fade keeps the white logo text readable */
+.site-header.t-tr{background-image:linear-gradient(180deg,rgba(42,9,17,.55),rgba(42,9,17,0))!important}
+/* small gold labels on light sections: a slightly darker gold that is easier to read */
+.section .eyebrow,.kx-section .eyebrow{color:#8f6214!important}
+.content-tabs button .tab-sub{opacity:1;color:#6e6461}
+.content-tabs button.active .tab-sub{color:#5a514e}
+/* headings only screen readers announce */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+<script id="bc-img">/* ask Cloudinary for a copy sized for where the photo is shown */
+window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u)||/\.pdf(\?|$)/i.test(u))return u;var t="c_limit,w_"+w+",q_auto,f_auto/";return /\/image\/upload\/(.*?\/)?v\d+\//.test(u)?u.replace(/\/(v\d+\/)/,"/"+t+"$1"):u.replace("/image/upload/","/image/upload/"+t);};</script>
 </head>
 <body><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
 
@@ -594,6 +612,7 @@ window.abgPop = (function () {
     <div class="ev-dialog" id="evDialog"></div>
   </div>
   <div class="ev-wrap">
+    <h2 class="sr-only">Events</h2>
     <div class="ev-grid" id="evPanel" role="tabpanel" aria-live="polite"></div>
   </div>
 </main>
@@ -609,6 +628,9 @@ window.abgPop = (function () {
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2/dist/umd/supabase.min.js"></script>
+<script id="bc-sb">/* one shared Supabase client per page (the site only reads data and sends forms, it never signs in) */
+(function(){if(!window.supabase)return;var o=supabase.createClient,c={};supabase.createClient=function(u,k,opt){var key=u+"|"+k;return c[key]||(c[key]=o(u,k,Object.assign({auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}},opt||{})));};})();</script>
 <script>
 /* ---------- Nav toggle + header scroll shadow ---------- */
   (function () {
@@ -685,7 +707,7 @@ window.abgPop = (function () {
         if (rows.length > 0 && rows[0].image_url) {
           logoImg.onload = function () { logoImg.classList.add("loaded"); };
           logoImg.onerror = function () { console.warn("Site logo failed to load"); };
-          logoImg.src = rows[0].image_url;
+          logoImg.src = window.bcImg(rows[0].image_url, 200);
         }
       })
       .catch(function (err) { console.error("Logo fetch error:", err); });
@@ -727,8 +749,9 @@ window.abgPop = (function () {
     return list.map(safeUrl).filter(Boolean);
   }
   // Smaller copy of a Cloudinary photo for thumbnails (the full one opens in the viewer)
-  function thumb(u) {
-    return /^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u) ? u.replace("/image/upload/", "/image/upload/c_fill,w_400,h_400/") : u;
+  function thumb(u, s) {
+    s = s || 400;
+    return /^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u) ? u.replace("/image/upload/", "/image/upload/c_fill,w_" + s + ",h_" + s + "/") : u;
   }
   // event_date is a full timestamp (date + time); work in the visitor's local time.
   function dayKey(d) {
@@ -758,15 +781,19 @@ window.abgPop = (function () {
   }
 
   function card(ev, past) {
-    var c = el("article", "ev-card" + (past ? " ev-past" : ""));
-    c.tabIndex = 0; c.setAttribute("role", "button"); c.setAttribute("aria-label", "Open event: " + (ev.title || "Untitled event"));
+    // a clickable card: screen readers read its visible text (date + title) as the button name
+    var c = el("div", "ev-card" + (past ? " ev-past" : ""));
+    c.tabIndex = 0; c.setAttribute("role", "button");
     c.addEventListener("click", function () { openEvent(ev, past); });
     c.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openEvent(ev, past); } });
     var album = eventPhotos(ev);
     var photoUrl = safeUrl(ev.image_url) || (past && album.length ? album[0] : null);
     if (photoUrl) {
       var ph = el("div", "ev-photo"); var img = document.createElement("img");
-      img.src = photoUrl; img.alt = ev.title || "Event photograph"; img.loading = "lazy"; img.decoding = "async";
+      img.src = window.bcImg(photoUrl, 700);
+      img.srcset = window.bcImg(photoUrl, 380) + " 380w, " + window.bcImg(photoUrl, 700) + " 700w";
+      img.sizes = "(max-width: 899px) 50vw, 380px";
+      img.alt = ev.title || "Event photograph"; img.loading = "lazy"; img.decoding = "async";
       img.addEventListener("error", function () { ph.remove(); });
       ph.appendChild(img); c.appendChild(ph);
     }
@@ -794,7 +821,7 @@ window.abgPop = (function () {
       if (!shown.length) shown = album;
       shown.slice(0, 4).forEach(function (u, i) {
         var th = el("div", "th"); var im = document.createElement("img");
-        im.src = thumb(u); im.alt = ""; im.loading = "lazy"; im.decoding = "async";
+        im.src = thumb(u, 180); im.alt = ""; im.loading = "lazy"; im.decoding = "async";
         im.addEventListener("error", function () { th.remove(); });
         th.appendChild(im);
         if (i === 3 && shown.length > 4) th.appendChild(el("span", "more", "+" + (shown.length - 4)));
@@ -864,7 +891,7 @@ window.abgPop = (function () {
   var lbPrev = document.getElementById("lbPrev"), lbNext = document.getElementById("lbNext");
   var lbList = [], lbIndex = 0, lbTitle = "", lbBack = null;
   function showLb() {
-    lbImg.src = lbList[lbIndex];
+    lbImg.src = window.bcImg(lbList[lbIndex], 1600);
     lbImg.alt = (lbTitle || "Event") + " photo " + (lbIndex + 1);
     lbCount.textContent = (lbIndex + 1) + " / " + lbList.length;
     var many = lbList.length > 1;
