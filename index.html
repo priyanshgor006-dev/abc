@@ -907,6 +907,7 @@ window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\
     <p class="contact">Surmandir Cineplex Building, Opp. Jilla Panchayat, Bhuj, Kachchh 370001, Gujarat, India</p>
     <p class="contact"><a href="mailto:infoatccifb@gmail.com" style="color:inherit">infoatccifb@gmail.com</a></p>
     <p class="contact"><a href="contact.html" style="color:inherit">Contact Us</a> &middot; <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
+    <p class="contact wm-credit" style="font-size:.74rem;opacity:.6">Some photos courtesy of <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Wikimedia Commons</a> contributors, used under their free licences.</p>
     <p class="dev">Website designed &amp; developed by <strong>ABG Secure Tech</strong></p>
   </div>
 </footer>
@@ -981,7 +982,7 @@ window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\
   /* Chamber photo carousel: loads the home page photos from the admin panel (site_media, type = hero) */
   (function(){
     var SB = 'https://rvpiliwyqjowegmjcanr.supabase.co', KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2cGlsaXd5cWpvd2VnbWpjYW5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczMDM2MjksImV4cCI6MjEwMjg3OTYyOX0.9ZQj69FLcFgqp8huYTqlWy4JGl-vYGmYZiiVUBo4Sio';
-    var fallback = [{"url": "https://res.cloudinary.com/c3josacx/image/upload/v1788577765/coc-bhuj-news/rf72yu5ypjxwy3wbxas9.jpg", "caption": "Bhuj Chamber of Commerce and Industries Federation"}, {"url": "images/home-19.webp", "caption": "With Prime Minister Narendra Modi"}, {"url": "images/home-20.webp", "caption": "Meeting with CM Bhupendra Patel"}, {"url": "images/home-21.webp", "caption": "Yashgatha Gujarati Award to Anil Gor"}, {"url": "images/home-22.webp", "caption": "Export Awareness Camp & E-commerce Export Summit"}, {"url": "images/home-23.webp", "caption": "BIS Seminar"}, {"url": "images/home-24.webp", "caption": "Export Awareness Camp & E-commerce Export Summit"}];
+    var fallback = [{"url": "https://res.cloudinary.com/ugrgzrst/image/upload/v1795363239/qjdxlw1y83epq61w02je.jpg", "caption": "Bhuj Chamber of Commerce and Industries Federation"}, {"url": "images/home-19.webp", "caption": "With Prime Minister Narendra Modi"}, {"url": "images/home-20.webp", "caption": "Meeting with CM Bhupendra Patel"}, {"url": "images/home-21.webp", "caption": "Yashgatha Gujarati Award to Anil Gor"}, {"url": "images/home-22.webp", "caption": "Export Awareness Camp & E-commerce Export Summit"}, {"url": "images/home-23.webp", "caption": "BIS Seminar"}, {"url": "images/home-24.webp", "caption": "Export Awareness Camp & E-commerce Export Summit"}];
     var stage = $('#stage'), thumbs = $('#thumbs'), cap = $('#stCap'), cur = 0, items = [], timer = null, paused = false;
     function esc(t){ return String(t || '').replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
     /* photos are requested at the size they are shown, and only when about to be shown */
