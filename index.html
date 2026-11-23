@@ -42,9 +42,10 @@
 
 <link rel="preconnect" href="https://rvpiliwyqjowegmjcanr.supabase.co" crossorigin>
 <link rel="preconnect" href="https://res.cloudinary.com">
+<link rel="preconnect" href="https://images.bhujchamber.org">
 <link rel="preload" as="image" href="images/home-19.webp" fetchpriority="high">
 <script>/* start loading the carousel photos as early as possible */
-(function(){try{var K='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2cGlsaXd5cWpvd2VnbWpjYW5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczMDM2MjksImV4cCI6MjEwMjg3OTYyOX0.9ZQj69FLcFgqp8huYTqlWy4JGl-vYGmYZiiVUBo4Sio';window.__heroP=fetch('https://rvpiliwyqjowegmjcanr.supabase.co/rest/v1/site_media?select=*&type=eq.hero&active=eq.true&order=sort_order.asc.nullslast,id.asc',{headers:{apikey:K,Authorization:'Bearer '+K}}).then(function(r){return r.ok?r.json():[]}).then(function(rows){try{var u=rows&&rows[0]&&rows[0].image_url;if(u&&/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\/(?!c_)/.test(u)){var l=document.createElement('link');l.rel='preload';l.as='image';l.setAttribute('fetchpriority','high');l.href=u.replace('/image/upload/','/image/upload/c_limit,w_'+(innerWidth<=700?900:1600)+',q_auto,f_auto/');document.head.appendChild(l);}}catch(e){}return rows;}).catch(function(){return [];});}catch(e){}})();</script>
+(function(){try{var K='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2cGlsaXd5cWpvd2VnbWpjYW5yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczMDM2MjksImV4cCI6MjEwMjg3OTYyOX0.9ZQj69FLcFgqp8huYTqlWy4JGl-vYGmYZiiVUBo4Sio';window.__heroP=fetch('https://rvpiliwyqjowegmjcanr.supabase.co/rest/v1/site_media?select=*&type=eq.hero&active=eq.true&order=sort_order.asc.nullslast,id.asc',{headers:{apikey:K,Authorization:'Bearer '+K}}).then(function(r){return r.ok?r.json():[]}).then(function(rows){try{var u=rows&&rows[0]&&rows[0].image_url;if(u&&/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\/(?!c_)/.test(u)){var l=document.createElement('link');l.rel='preload';l.as='image';l.setAttribute('fetchpriority','high');l.href=u.replace('/image/upload/','/image/upload/c_limit,w_'+(innerWidth<=700?900:1600)+',q_auto,f_auto/').split('https://res.cloudinary.com/ugrgzrst/image/upload/').join('https://images.bhujchamber.org/image/upload/');document.head.appendChild(l);}}catch(e){}return rows;}).catch(function(){return [];});}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -680,7 +681,7 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 <script id="bc-img">/* ask Cloudinary for a copy sized for where the photo is shown */
-window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u)||/\.pdf(\?|$)/i.test(u))return u;var t="c_limit,w_"+w+",q_auto,f_auto/";return /\/image\/upload\/(.*?\/)?v\d+\//.test(u)?u.replace(/\/(v\d+\/)/,"/"+t+"$1"):u.replace("/image/upload/","/image/upload/"+t);};</script>
+window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com\/ugrgzrst\/image\/upload\//.test(u)&&!/\.pdf(\?|$)/i.test(u)?u.split("https://res.cloudinary.com/ugrgzrst/image/upload/").join("https://images.bhujchamber.org/image/upload/"):u;};window.bcImg=function(u,w){return window.bcCdn(window.__bcImg(u,w));};window.__bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u)||/\.pdf(\?|$)/i.test(u))return u;var t="c_limit,w_"+w+",q_auto,f_auto/";return /\/image\/upload\/(.*?\/)?v\d+\//.test(u)?u.replace(/\/(v\d+\/)/,"/"+t+"$1"):u.replace("/image/upload/","/image/upload/"+t);};</script>
 </head>
 <body class="locked"><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
 <div id="glow"></div>
@@ -988,7 +989,7 @@ window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\
     /* photos are requested at the size they are shown, and only when about to be shown */
     var BIGW = innerWidth <= 700 ? 900 : 1600;
     function tz(u){ u = String(u || ''); return /^images\/home-(19|2[0-4])\.webp$/.test(u) ? u.replace('images/', 'images/t/') : cz(u, 240); }
-    function cz(u, w){ u = String(u || ''); return /^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\/(?!c_)/.test(u) ? u.replace('/image/upload/', '/image/upload/c_limit,w_' + w + ',q_auto,f_auto/') : u; }
+    function cz(u, w){ u = String(u || ''); return window.bcCdn(/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\/(?!c_)/.test(u) ? u.replace('/image/upload/', '/image/upload/c_limit,w_' + w + ',q_auto,f_auto/') : u); }
     function load(k){ var sl = $$('#slides .sl:not(.stale)'); if (!sl.length) return; var s = sl[(k + sl.length) % sl.length], im = s.querySelector('img');
       if (im && im.dataset.src) { if (k === 0) im.setAttribute('fetchpriority', 'high'); im.src = im.dataset.src; im.removeAttribute('data-src'); }
       if (s.dataset.bg) { s.style.setProperty('--bg', 'url("' + s.dataset.bg + '")'); delete s.dataset.bg; } }
@@ -1037,7 +1038,7 @@ window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\
   function api(path){ return fetch(SBU + '/rest/v1/' + path, { headers: { apikey: SBK, Authorization: 'Bearer ' + SBK } }).then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); }); }
   function safe(u){ try { var x = new URL(String(u || '').trim()); return /^https?:$/.test(x.protocol) ? x.href : ''; } catch (e) { return ''; } }
   function esc2(t){ return String(t == null ? '' : t).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
-  function small(u, w){ return /^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u) ? u.replace('/image/upload/', '/image/upload/c_limit,w_' + w + ',q_auto,f_auto/') : u; }
+  function small(u, w){ return window.bcCdn(/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u) ? u.replace('/image/upload/', '/image/upload/c_limit,w_' + w + ',q_auto,f_auto/') : u); }
   function initials(n){ return String(n || '').replace(/^(shri|smt|dr|mr|mrs|ms)\.?\s+/i, '').split(/\s+/).filter(Boolean).slice(0, 2).map(function(w){ return w[0]; }).join('').toUpperCase(); }
 
   /* logo */

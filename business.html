@@ -619,6 +619,7 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
 <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2/dist/umd/supabase.min.js">
 <link rel="preconnect" href="https://rvpiliwyqjowegmjcanr.supabase.co" crossorigin>
 <link rel="preconnect" href="https://res.cloudinary.com">
+<link rel="preconnect" href="https://images.bhujchamber.org">
 <style id="bc-a11y">
 /* transparent header over the dark top banner: a faint dark fade keeps the white logo text readable */
 .site-header.t-tr{background-image:linear-gradient(180deg,rgba(42,9,17,.55),rgba(42,9,17,0))!important}
@@ -630,7 +631,7 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
 .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 <script id="bc-img">/* ask Cloudinary for a copy sized for where the photo is shown */
-window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u)||/\.pdf(\?|$)/i.test(u))return u;var t="c_limit,w_"+w+",q_auto,f_auto/";return /\/image\/upload\/(.*?\/)?v\d+\//.test(u)?u.replace(/\/(v\d+\/)/,"/"+t+"$1"):u.replace("/image/upload/","/image/upload/"+t);};</script>
+window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com\/ugrgzrst\/image\/upload\//.test(u)&&!/\.pdf(\?|$)/i.test(u)?u.split("https://res.cloudinary.com/ugrgzrst/image/upload/").join("https://images.bhujchamber.org/image/upload/"):u;};window.bcImg=function(u,w){return window.bcCdn(window.__bcImg(u,w));};window.__bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u)||/\.pdf(\?|$)/i.test(u))return u;var t="c_limit,w_"+w+",q_auto,f_auto/";return /\/image\/upload\/(.*?\/)?v\d+\//.test(u)?u.replace(/\/(v\d+\/)/,"/"+t+"$1"):u.replace("/image/upload/","/image/upload/"+t);};</script>
 </head>
 <body><!--t-theme-start--><script>(function(){try{if(sessionStorage.getItem('t-nav')==='1'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.removeItem('t-nav');var c=document.createElement('div');c.id='t-curtain';c.innerHTML='<span>BCCIF</span>';document.body.appendChild(c);}}catch(e){}})();</script><!--t-theme-end-->
 
