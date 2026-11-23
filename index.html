@@ -1068,7 +1068,7 @@ window.bcImg=function(u,w){u=String(u||"");if(!/^https:\/\/res\.cloudinary\.com\
   function photosOf(ev){ var l = ev.photos; if (typeof l === 'string') { try { l = JSON.parse(l); } catch (e) { l = []; } } return (Array.isArray(l) ? l : []).map(safe).filter(Boolean); }
   api('events?select=*&order=event_date.desc.nullslast&limit=40').then(function(rows){
     var now = Date.now();
-    var past = (rows || []).filter(function(e){ return !e.hidden && e.event_date && new Date(e.event_date).getTime() < now; }).slice(0, 3);
+    var past = (rows || []).filter(function(e){ return !e.hidden && e.event_date && new Date(e.event_date).getTime() < now; }).slice(0, 4);
     if (!past.length) return;
     var box = document.getElementById('tl'); qa2('#tl .ev').forEach(function(n){ n.remove(); });
     past.forEach(function(ev){
