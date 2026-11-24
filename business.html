@@ -631,6 +631,35 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
 .kx-subhead h3{font-size:clamp(1.3rem,2.4vw,1.7rem);color:var(--navy-dark);margin:4px 0 8px}
 .kx-subhead p{margin:0;color:var(--text);line-height:1.75}
 .kx-photo-credits{font-size:.74rem;color:var(--muted);line-height:1.6;margin-top:10px}
+/* salt production figures */
+.salt-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0 6px}
+.salt-stat{background:var(--wine-tint);border:1px solid var(--border);border-radius:12px;padding:12px 12px 11px;min-width:0}
+.salt-stat b{display:block;font-family:var(--t-serif);font-size:clamp(1.3rem,2.4vw,1.65rem);line-height:1.1;color:var(--navy)}
+.salt-stat b small{display:block;font-family:var(--t-sans);font-size:.72rem;font-weight:700;letter-spacing:.02em;color:var(--navy-light);margin-top:2px}
+.salt-stat span{display:block;font-size:.8rem;line-height:1.4;color:var(--text);margin-top:6px}
+/* salt share chart */
+.salt-chart{margin:16px 0 6px;padding:14px 14px 12px;border:1px solid var(--border);border-radius:12px;background:#fff}
+.salt-chart h4{font-size:.92rem;margin:0 0 2px;color:var(--navy-dark)}
+.salt-chart .sc-sub{display:block;font-size:.76rem;color:var(--muted);margin-bottom:10px}
+.sc-row{margin:0 0 12px}
+.sc-row:last-of-type{margin-bottom:8px}
+.sc-name{display:block;font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:5px}
+.sc-bar{display:flex;gap:2px;height:34px}
+.sc-seg{position:relative;flex:0 0 auto;width:var(--w);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.78rem;font-weight:700;white-space:nowrap;outline:none;cursor:default;transition:filter .15s}
+.sc-seg:first-child{border-radius:6px 0 0 6px}.sc-seg:last-child{border-radius:0 6px 6px 0}
+.sc-seg.s1{background:#8c3341}.sc-seg.s2{background:#b07a1c}.sc-seg.s3{background:#3f7fb8}
+.sc-seg:hover,.sc-seg:focus-visible{filter:brightness(1.12)}
+.sc-seg::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--navy-dark);color:#fff;font-size:.74rem;font-weight:600;padding:6px 9px;border-radius:7px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:3}
+.sc-seg:first-child::after{left:0;transform:none}.sc-seg:last-child::after{left:auto;right:0;transform:none}
+.sc-seg:hover::after,.sc-seg:focus-visible::after{opacity:1}
+.sc-legend{list-style:none;margin:4px 0 0;padding:10px 0 0;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.78rem;color:var(--text)}
+.sc-legend li{display:flex;align-items:center;gap:7px}
+.sc-legend i{width:11px;height:11px;border-radius:3px;flex:0 0 11px}
+.sc-legend i.s1{background:#8c3341}.sc-legend i.s2{background:#b07a1c}.sc-legend i.s3{background:#3f7fb8}
+.sc-legend span{color:var(--muted)}
+.kx-text p.salt-year{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-hover);margin:18px 0 0}
+.kx-text p.salt-note{font-size:.74rem;color:var(--muted);line-height:1.55;margin:6px 0 14px}
+@media (max-width:600px){.salt-stats{grid-template-columns:1fr;gap:8px}.salt-stat{display:flex;align-items:center;gap:14px;padding:10px 12px}.salt-stat b{flex:0 0 96px}.salt-stat span{margin-top:0}.salt-chart{padding:12px 12px 10px}.sc-legend{flex-direction:column;gap:6px}}
 </style>
 <style id="abg-credit-css">
 .site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
@@ -909,7 +938,36 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
         <div class="kx-text">
           <span class="eyebrow">Salt</span>
           <h3>The salt industry</h3>
-          <p>Salt is one of the oldest industries of Kutch, salt has been made here for about 600 years. Gujarat produces about three-quarters of India&rsquo;s salt, and most of it comes from Kutch and Saurashtra. In the Little Rann, around 45,000 salt workers known as <em>Agariyas</em>, from about 107 villages, pump underground brine into shallow pans and let the sun turn it into salt crystals, which they rake by hand.</p><p>Along the Gulf of Kutch, large salt works produce salt on an industrial scale. Much of this salt is not used as table salt but as a raw material for chemical industries that make soda ash, caustic soda and other chemicals. Salt from Kutch is also exported through the ports.</p>
+          <p>Salt is one of the oldest industries of Kutch, salt has been made here for about 600 years. India is the world&rsquo;s third largest salt producer, after China and the USA, and Gujarat makes most of India&rsquo;s salt. Kutch alone makes about half of Gujarat&rsquo;s salt, more than any other district.</p>
+          <p class="salt-year">Salt production, 2020-21</p>
+          <div class="salt-stats">
+            <div class="salt-stat"><b>265.6<small>lakh tonnes</small></b><span>Salt made in <strong>India</strong></span></div>
+            <div class="salt-stat"><b>216.4<small>lakh tonnes</small></b><span><strong>Gujarat</strong>: about 81% of India</span></div>
+            <div class="salt-stat"><b>108.5<small>lakh tonnes</small></b><span><strong>Kutch</strong>: about 50% of Gujarat and 41% of India</span></div>
+          </div>
+          <figure class="salt-chart">
+            <h4>Who makes India&rsquo;s salt?</h4>
+            <span class="sc-sub">Share of salt production, 2020-21</span>
+            <div class="sc-row">
+              <span class="sc-name">All of India (265.6 lakh tonnes)</span>
+              <div class="sc-bar" role="img" aria-label="India's salt in 2020-21: Kutch 40.8%, rest of Gujarat 40.6%, other states 18.5%">
+                <span class="sc-seg s1" style="--w:calc(40.8% - 1.4px)" tabindex="0" data-tip="Kutch: 108.5 lakh tonnes (40.8%)">40.8%</span><span class="sc-seg s2" style="--w:calc(40.6% - 1.4px)" tabindex="0" data-tip="Rest of Gujarat: 107.9 lakh tonnes (40.6%)">40.6%</span><span class="sc-seg s3" style="--w:calc(18.6% - 1.2px)" tabindex="0" data-tip="Other states: 49.3 lakh tonnes (18.5%)">18.5%</span>
+              </div>
+            </div>
+            <div class="sc-row">
+              <span class="sc-name">Gujarat only (216.4 lakh tonnes)</span>
+              <div class="sc-bar" role="img" aria-label="Gujarat's salt in 2020-21: Kutch 50.1%, rest of Gujarat 49.9%">
+                <span class="sc-seg s1" style="--w:calc(50.1% - 1px)" tabindex="0" data-tip="Kutch: 108.5 lakh tonnes (50.1%)">50.1%</span><span class="sc-seg s2" style="--w:calc(49.9% - 1px)" tabindex="0" data-tip="Rest of Gujarat: 107.9 lakh tonnes (49.9%)">49.9%</span>
+              </div>
+            </div>
+            <ul class="sc-legend">
+              <li><i class="s1"></i>Kutch <span>108.5 lakh tonnes</span></li>
+              <li><i class="s2"></i>Rest of Gujarat <span>107.9 lakh tonnes</span></li>
+              <li><i class="s3"></i>Other states <span>49.3 lakh tonnes</span></li>
+            </ul>
+          </figure>
+          <p class="salt-note">1 lakh tonnes = 1,00,000 tonnes. In 2021-22, India made 266 lakh tonnes, and Gujarat 227.6 lakh tonnes (about 85%). Sources: Salt Commissioner, Government of India, and Indian Bureau of Mines, Indian Minerals Yearbook.</p>
+          <p>In the Little Rann, around 45,000 salt workers known as <em>Agariyas</em>, from about 107 villages, pump underground brine into shallow pans and let the sun turn it into salt crystals, which they rake by hand.</p><p>Along the Gulf of Kutch, large salt works produce salt on an industrial scale. Much of this salt is not used as table salt but as a raw material for chemical industries that make soda ash, caustic soda and other chemicals. Salt from Kutch is also exported through the ports.</p>
         </div>
       </article>
       <article class="kx-topic flip reveal">
