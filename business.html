@@ -660,6 +660,28 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
 .kx-text p.salt-year{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-hover);margin:18px 0 0}
 .kx-text p.salt-note{font-size:.74rem;color:var(--muted);line-height:1.55;margin:6px 0 14px}
 @media (max-width:600px){.salt-stats{grid-template-columns:1fr;gap:8px}.salt-stat{display:flex;align-items:center;gap:14px;padding:10px 12px}.salt-stat b{flex:0 0 96px}.salt-stat span{margin-top:0}.salt-chart{padding:12px 12px 10px}.sc-legend{flex-direction:column;gap:6px}}
+/* small data tables (fruits, minerals) */
+.fig-box{margin:16px 0 8px;border:1px solid var(--border);border-radius:12px;background:#fff;overflow:hidden}
+.fig-box h4{margin:0;padding:11px 14px 3px;font-size:.92rem;color:var(--navy-dark)}
+.fig-box .fig-sub{display:block;padding:0 14px 9px;font-size:.76rem;color:var(--muted)}
+.fig-table{width:100%;border-collapse:collapse;font-size:.84rem}
+.fig-table th,.fig-table td{padding:8px 14px;text-align:right;border-top:1px solid var(--border);white-space:nowrap}
+.fig-table th:first-child,.fig-table td:first-child{text-align:left;white-space:normal}
+.fig-table thead th{background:var(--wine-tint);color:var(--navy-dark);font-size:.74rem;font-weight:700;letter-spacing:.02em}
+.fig-table tbody tr.fig-total td{font-weight:700;background:#faf6f0}
+.fig-table td b{color:var(--navy)}
+.fig-src{padding:8px 14px 11px;font-size:.72rem;color:var(--muted);line-height:1.5;border-top:1px solid var(--border)}
+.min-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;padding:2px 14px 6px}
+.min-grid h5{grid-column:span 1;margin:8px 0 4px;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-hover)}
+.kx-text .min-list,.kx-text .opp-list{list-style:none;padding-left:0;margin-left:0}
+.kx-text .min-list li::before,.kx-text .opp-list li::before{content:none}
+.min-list{list-style:none;margin:0;padding:0;font-size:.84rem}
+.min-list li{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-top:1px dashed var(--border)}
+.min-list li span{color:var(--muted);white-space:nowrap}
+.opp-list{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px}
+.opp-list li{padding:11px 14px;border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:10px;background:#fff;line-height:1.6}
+.opp-list li strong{color:var(--navy-dark)}
+@media (max-width:600px){.fig-table{font-size:.76rem}.fig-table th,.fig-table td{padding:7px 6px}.fig-table thead th{white-space:normal;font-size:.68rem;vertical-align:bottom}.fig-table th:first-child,.fig-table td:first-child{padding-left:10px}.fig-box h4,.fig-box .fig-sub,.fig-src{padding-left:10px;padding-right:10px}.min-grid{grid-template-columns:1fr;padding:2px 10px 6px}}
 </style>
 <style id="abg-credit-css">
 .site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
@@ -1003,7 +1025,36 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
         <div class="kx-text">
           <span class="eyebrow">Minerals</span>
           <h3>The mineral wealth of Kutch</h3>
-          <p>Beneath its dry land, Kutch holds a wide range of minerals: lignite, bauxite, bentonite, china clay, ball clay, fire clay, gypsum, limestone, ochre and silica sand. The Indian Bureau of Mines lists all of these in the district.</p><p><strong>Bentonite</strong> is the mineral Kutch is best known for. It is a special clay that swells when it is wet, and it is used in drilling for oil, in iron ore pellets, in foundries, cat litter and many other products. Gujarat holds roughly two-thirds of India&rsquo;s bentonite reserves, and Kutch, together with Bhavnagar, is the main bentonite producing area of the state; companies from Kutch export it to many countries.</p><p>Kutch has about 425 million tonnes of <strong>lignite</strong> resources, and its <strong>bauxite</strong>, found in laterite rocks along the western coast, is used for alumina and refractories.</p>
+          <p>Beneath its dry land, Kutch holds a wide range of minerals: lignite, bauxite, bentonite, china clay, ball clay, fire clay, gypsum, limestone, ochre and silica sand. The latest Gujarat review of the Indian Bureau of Mines (Indian Minerals Yearbook, published in July 2024) names Kutch as a source of all ten.</p><p><strong>Bentonite</strong> is the mineral Kutch is best known for. It is a special clay that swells when it is wet, and it is used in drilling for oil, in iron ore pellets, in foundries, cat litter and many other products. Gujarat holds roughly two-thirds of India&rsquo;s bentonite reserves, and Kutch, together with Bhavnagar, is the main bentonite producing area of the state; companies from Kutch export it to many countries. The Gujarat Government&rsquo;s Commissioner of Geology and Mining describes the bentonite deposit of Kutch as one of the best in the world.</p><p>Kutch has 425.1 million tonnes of <strong>lignite</strong> resources (as on 1 April 2023), and its <strong>bauxite</strong>, found in laterite rocks along the western coast, is used for alumina and refractories.</p><p>According to the Kachchh district administration, nearly <strong>75% of all the minerals produced in Gujarat</strong> come from Kutch. Official records of the Department of Geology and Mining, Bhuj, show that <strong>17 minerals</strong> were mined in Kutch in 2014-15: <strong>9 major minerals and 8 minor minerals</strong>, together about <strong>3.6 crore tonnes</strong> in one year, on which the Government received about &#8377;179 crore in royalty.</p>
+          <div class="fig-box">
+            <h4>The 17 minerals mined in Kutch</h4>
+            <span class="fig-sub">Production in tonnes, year 2014-15</span>
+            <div class="min-grid">
+              <div><h5>9 major minerals</h5><ul class="min-list">
+                <li>Limestone <span>88,00,540</span></li>
+                <li>Lignite <span>60,13,372</span></li>
+                <li>China clay <span>42,17,876</span></li>
+                <li>White clay <span>37,35,415</span></li>
+                <li>Silica sand <span>3,53,976</span></li>
+                <li>Bauxite <span>2,77,855</span></li>
+                <li>Laterite <span>1,83,139</span></li>
+                <li>Ball clay <span>86,207</span></li>
+                <li>Gypsum <span>150</span></li>
+              </ul></div>
+              <div><h5>8 minor minerals</h5><ul class="min-list">
+                <li>Black trap <span>84,16,618</span></li>
+                <li>Ordinary sand <span>21,65,024</span></li>
+                <li>Ordinary clay <span>10,30,362</span></li>
+                <li>Sandstone <span>2,25,731</span></li>
+                <li>Bentonite <span>1,80,988</span></li>
+                <li>Building limestone <span>1,59,684</span></li>
+                <li>Soft murrum <span>1,05,943</span></li>
+                <li>Hard murrum <span>85,649</span></li>
+              </ul></div>
+            </div>
+            <div class="fig-src">Source: Department of Geology and Mining, Bhuj, as published in the District Industrial Potentiality Survey Report of Kutch 2016-17 (MSME Development Institute, Government of India).</div>
+          </div>
+          <p>The same report sees great scope for new mineral-based industries in Kutch, such as cement, tiles and bricks, and for stone crushing units that turn the district&rsquo;s plentiful black trap into grit and concrete.</p>
         </div>
       </article>
       <article class="kx-topic flip reveal">
@@ -1019,7 +1070,22 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
         <div class="kx-text">
           <span class="eyebrow">Fruits</span>
           <h3>Fruits of Kutch: mango, kharek, dragon fruit and pomegranate</h3>
-          <p>Even with little rain, Kutch has become one of the leading fruit growing areas of Gujarat, thanks to canal water, drip irrigation and the hard work of its farmers. The <strong>Kesar mango</strong> of Kutch is known for its deep orange colour, sweet taste and strong aroma, and orchards around Mandvi, Mundra, Nakhatrana and Bhuj supply mangoes across India and abroad.</p><p>Kutch is best known for its dates, called <strong>kharek</strong>. The <strong>Kachchhi Kharek</strong> has received a GI tag. Kutch has about 19,251 hectares of date palms, 94% of all date palm farming in Gujarat, and the tradition is believed to be 400&ndash;500 years old, started from seeds brought by travellers and traders from the Gulf. The fresh yellow and red kharek are harvested in the summer and sold across the country.</p><p><strong>Dragon fruit</strong>, renamed <em>kamalam</em> by the Gujarat Government, is one of the newest crops of Kutch. Introduced around 2014, it suits the dry climate because it needs very little water and has few pests. It is grown in Anjar, Abdasa, Nakhatrana, Bhuj and Mandvi talukas, starts giving fruit in the first year, and gives about 20&ndash;25 kg per plant by the fourth year. <strong>Pomegranates</strong> are also grown on a large scale with drip irrigation.</p>
+          <p>Even with little rain, Kutch has become one of the leading fruit growing areas of Gujarat, thanks to canal water, drip irrigation and the hard work of its farmers. The <strong>Kesar mango</strong> of Kutch is known for its deep orange colour, sweet taste and strong aroma, and orchards around Mandvi, Mundra, Nakhatrana and Bhuj supply mangoes across India and abroad.</p><p>Kutch is best known for its dates, called <strong>kharek</strong>. The <strong>Kachchhi Kharek</strong> has received a GI tag. In 2024-25, Kutch had 19,387 hectares of date palms, 94% of all date palm farming in Gujarat, and grew about 96% of the state&rsquo;s dates. The tradition is believed to be 400&ndash;500 years old, started from seeds brought by travellers and traders from the Gulf. The fresh yellow and red kharek are harvested in the summer and sold across the country.</p><p><strong>Dragon fruit</strong>, renamed <em>kamalam</em> by the Gujarat Government, is one of the newest crops of Kutch. Introduced around 2014, it suits the dry climate because it needs very little water and has few pests. It is grown in Anjar, Abdasa, Nakhatrana, Bhuj and Mandvi talukas, starts giving fruit in the first year, and gives about 20&ndash;25 kg per plant by the fourth year. <strong>Pomegranates</strong> are also grown on a large scale with drip irrigation: Kutch grows nearly half of all the pomegranates of Gujarat.</p>
+          <div class="fig-box">
+            <h4>How much fruit Kutch grows</h4>
+            <span class="fig-sub">Year 2024-25 &middot; area in hectares, production in tonnes</span>
+            <table class="fig-table">
+              <thead><tr><th>Fruit</th><th>Area (ha)</th><th>Production (t)</th><th>Share of Gujarat</th></tr></thead>
+              <tbody>
+                <tr><td>Kharek (date palm)</td><td>19,387</td><td>1,84,832</td><td><b>96%</b></td></tr>
+                <tr><td>Pomegranate</td><td>21,009</td><td>2,97,786</td><td><b>48%</b></td></tr>
+                <tr><td>Mango</td><td>13,426</td><td>1,09,312</td><td><b>9%</b></td></tr>
+                <tr><td>Dragon fruit (kamalam)</td><td>549</td><td>4,669</td><td><b>45%</b></td></tr>
+                <tr class="fig-total"><td>All fruits</td><td>61,569</td><td>8,90,784</td><td><b>10%</b></td></tr>
+              </tbody>
+            </table>
+            <div class="fig-src">Share of Gujarat is by production. Source: Directorate of Horticulture, Government of Gujarat, district-wise area and production of horticultural crops, 2024-25.</div>
+          </div>
         </div>
       </article>
       <article class="kx-topic flip reveal">
@@ -1028,6 +1094,23 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
           <span class="eyebrow">Field crops</span>
           <h3>Field crops: cotton, groundnut, castor and more</h3>
           <p>In the monsoon (kharif) season, the main crops of Kutch are <strong>cotton</strong> and <strong>groundnut</strong>. Cotton from Kutch goes to ginning and spinning mills, and groundnut is used for edible oil, for which Gujarat is one of the biggest producers in India. <strong>Castor</strong> (erandi) is another major crop: Gujarat grows most of India&rsquo;s castor, and Kutch is one of its main castor growing districts. The castor oil is exported to many countries and used in industries, medicines and paints.</p><p><strong>Guar</strong> (gavar), the green cluster bean, grows well in the dry, sandy soil of Kutch. Its tender green beans are a popular vegetable across Gujarat, and when left to dry, its seeds give guar gum, used in food, textiles and oil drilling, which is an important export from India. <strong>Bajra</strong> (pearl millet), a hardy grain that needs little water, has been the staple food of Kutch for generations and is grown widely in the rainfed areas.</p><p>In the winter (rabi) season, farmers grow <strong>mustard</strong> (sarso), <strong>cumin</strong> (jeera), wheat and vegetables. With better water from the Narmada canal and drip irrigation, more farmers in Kutch are now able to take two or even three crops a year.</p>
+        </div>
+      </article>
+      <article class="kx-topic reveal" id="farm-opportunities">
+        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/drip-irrigation-farm.jpg" width="1200" height="900" decoding="async" alt="Drip irrigation pipes being laid in a ploughed field" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">Drip irrigation pipes in a field</span></figure><span class="kx-cap">Drip irrigation lines being laid in a field.</span></div></div>
+        <div class="kx-text">
+          <span class="eyebrow">Opportunities</span>
+          <h3>Opportunities in farming and food processing</h3>
+          <p>With Narmada canal water, drip irrigation and more than 61,000 hectares under fruit, Kutch offers many openings for farmers, entrepreneurs and investors in agriculture and the industries around it:</p>
+          <ul class="opp-list">
+            <li><strong>Kharek processing and cold storage.</strong> Kutch grows almost all of Gujarat&rsquo;s dates, but fresh kharek is picked in a few summer weeks and spoils quickly. Pack-houses, cold stores, drying units and products like date syrup and date paste can earn farmers much more, and the GI tag helps with branding.</li>
+            <li><strong>Fruit processing.</strong> Kutch grows nearly half of Gujarat&rsquo;s pomegranates and over a lakh tonnes of mangoes a year, which suits units for juice, pulp, ready-to-eat pomegranate seeds and mango products.</li>
+            <li><strong>New, water-saving crops.</strong> Dragon fruit, already grown on about 550 hectares, needs very little water. Nurseries, new orchards and protected farming in greenhouses and net houses can grow fruits, vegetables and flowers with far less water.</li>
+            <li><strong>Exports through the ports.</strong> With Mundra and Kandla next door, fresh fruit, vegetables and spices can be shipped in refrigerated containers straight to the Gulf and other markets.</li>
+            <li><strong>Spices, oilseeds and guar.</strong> Cumin, isabgul, coriander, castor, groundnut and guar grown in Kutch support cleaning, grading and packing units, oil mills and guar gum plants.</li>
+            <li><strong>Dairy and livestock.</strong> Kutch is home to the Banni buffalo and the Kharai camel, both recognised breeds, giving scope for milk collection, dairy products and fodder farming.</li>
+            <li><strong>Farm services.</strong> Drip and sprinkler systems, solar water pumps, soil testing, farm machinery on hire and natural or organic farming are all growing needs of Kutch farmers.</li>
+          </ul>
         </div>
       </article>
     </div>
