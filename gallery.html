@@ -513,9 +513,8 @@ window.abgPop = (function () {
 .gal-sec-n{padding:4px 10px;border-radius:999px;background:#f6ece4;color:#6b1f2a!important;white-space:nowrap}
 @media (max-width:599px){
   .gallery-wrap{padding-left:16px!important;padding-right:16px!important}
-  .gal-row{gap:10px!important;margin-bottom:10px!important}
-  .gal-row-full .gallery-card{flex:1 1 100%!important}
-  .gallery-card,.gallery-thumb{border-radius:14px!important}
+  .gal-row{gap:8px!important;margin-bottom:8px!important}
+  .gallery-card,.gallery-thumb{border-radius:12px!important}
   .gal-sec{margin-bottom:30px!important}
   .gal-sec-h{font-size:1.08rem!important;margin-bottom:12px!important}
   .gal-sec-n{font-size:.7rem!important;padding:3px 8px}
@@ -806,9 +805,14 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
         // split into full rows; never leave a single photo alone on the last row
         var sizes = [], left = g.length;
         if (phone) {
-          // phones: one big photo, then a pair, then one big photo again, so photos stay large
+          // phones: rows alternate 2 photos, then 3 photos, then 2 ...
           var k = 0;
-          while (left > 0) { var s1 = (k % 2 === 0) ? 1 : Math.min(2, left); sizes.push(s1); left -= s1; k++; }
+          while (left > 0) { var s1 = Math.min(k % 2 === 0 ? 2 : 3, left); sizes.push(s1); left -= s1; k++; }
+          var pm = sizes.length;
+          if (pm > 1 && sizes[pm - 1] === 1) {
+            if (sizes[pm - 2] === 3) { sizes[pm - 2] = 2; sizes[pm - 1] = 2; }
+            else { sizes[pm - 2] = 3; sizes.pop(); }
+          }
         } else {
           while (left > 0) { sizes.push(Math.min(n, left)); left -= n; }
         }
@@ -823,10 +827,9 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
           var row = document.createElement("div");
           row.className = "gal-row";
           var single = m === 1 && sz === 1;
-          if (single && !phone) row.style.maxWidth = n === 3 ? "34%" : "50%";
-          if (phone && sz === 1) row.classList.add("gal-row-full");
+          if (single) row.style.maxWidth = (n === 3 && !phone) ? "34%" : "50%";
           // tell the browser how wide each photo is shown, so it downloads the right size
-          var vw = phone ? (sz === 1 ? 100 : 50) : single ? (n === 3 ? 34 : 50) : Math.ceil(100 / sz);
+          var vw = single ? ((n === 3 && !phone) ? 34 : 50) : Math.ceil(100 / sz);
           chunk.forEach(function (cd) {
             var im = cd.querySelector("img"); if (im) im.sizes = "(max-width: 899px) " + vw + "vw, " + Math.ceil(1160 * vw / 100) + "px";
             row.appendChild(cd);
