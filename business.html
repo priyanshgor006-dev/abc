@@ -704,7 +704,7 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
 .opp-schemes .fig-table th,.opp-schemes .fig-table td{text-align:left;white-space:normal;vertical-align:top;line-height:1.5}
 .opp-close{margin:18px 0 0;font-size:1rem;line-height:1.8;color:var(--text)}
 @media (max-width:860px){.opp-head{grid-template-columns:1fr;gap:16px}.opp-photo{aspect-ratio:16/9}.opp-grid{grid-template-columns:1fr}}
-@media (max-width:600px){.opp-nav{margin:-26px 0 22px;justify-content:flex-start}.opp-nav a{font-size:.8rem;padding:6px 11px}.opp-card{padding:14px 14px 12px}.opp-schemes .fig-table th,.opp-schemes .fig-table td{padding:8px 10px;font-size:.8rem}}
+@media (max-width:600px){.opp-nav{margin:-26px 0 22px;justify-content:flex-start}.opp-nav a{font-size:.8rem;padding:6px 11px}.opp-card{padding:14px 14px 12px}.opp-schemes .fig-table,.opp-schemes .fig-table tbody,.opp-schemes .fig-table tr,.opp-schemes .fig-table td{display:block;width:100%}.opp-schemes .fig-table thead{display:none}.opp-schemes .fig-table tr{padding:12px 14px;border-top:1px solid var(--border)}.opp-schemes .fig-table tr:first-child{border-top:0}.opp-schemes .fig-table td{border:0;padding:0;font-size:.88rem;line-height:1.55;white-space:normal;overflow-wrap:anywhere}.opp-schemes .fig-table td:first-child{font-size:.95rem;margin-bottom:6px}.opp-schemes .fig-table td+td{margin-top:6px}.opp-schemes .fig-table td+td::before{content:attr(data-label);display:block;font-size:.68rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-hover);margin-bottom:1px}}
 </style>
 <style id="abg-credit-css">
 .site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
@@ -1660,13 +1660,13 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
           <table class="fig-table">
             <thead><tr><th>Scheme</th><th>What it gives</th><th>Useful for</th></tr></thead>
             <tbody>
-              <tr><td><b>Agriculture Infrastructure Fund</b> (Govt of India)</td><td>3% interest relief on loans up to &#8377;2 crore, for up to 7 years, plus a credit guarantee</td><td>Pack-houses, grading and sorting units, cold chains, ripening chambers, warehouses</td></tr>
-              <tr><td><b>PMFME</b> (Ministry of Food Processing)</td><td>35% capital subsidy, up to &#8377;10 lakh per unit, linked to a bank loan</td><td>Small food-processing units: spices, dates, fruit, edible oil, dairy</td></tr>
-              <tr><td><b>Cold storage under MIDH / National Horticulture Board</b></td><td>35% back-ended subsidy on the project cost in general areas</td><td>Cold storages for fruit and vegetables</td></tr>
-              <tr><td><b>PM-KUSUM</b> (MNRE)</td><td>30% central assistance for standalone solar pumps, with State support</td><td>Farmers and solar-pump installers</td></tr>
-              <tr><td><b>Aatmanirbhar Gujarat scheme for MSMEs</b></td><td>Capital subsidy (up to &#8377;35 lakh for micro units) and interest subsidy; valid to October 2027</td><td>Manufacturing MSMEs of all kinds</td></tr>
-              <tr><td><b>Gujarat Integrated Logistics and Logistics Park Policy 2021</b></td><td>Capital and interest subsidy, stamp duty and electricity duty relief</td><td>Warehouses, cold chains, truck terminals (check current terms)</td></tr>
-              <tr><td><b>Gujarat homestay policy</b></td><td>Official registration, simpler rules from November 2026</td><td>Village homestays</td></tr>
+              <tr><td data-label="Scheme"><b>Agriculture Infrastructure Fund</b> (Govt of India)</td><td data-label="What it gives">3% interest relief on loans up to &#8377;2 crore, for up to 7 years, plus a credit guarantee</td><td data-label="Useful for">Pack-houses, grading and sorting units, cold chains, ripening chambers, warehouses</td></tr>
+              <tr><td data-label="Scheme"><b>PMFME</b> (Ministry of Food Processing)</td><td data-label="What it gives">35% capital subsidy, up to &#8377;10 lakh per unit, linked to a bank loan</td><td data-label="Useful for">Small food-processing units: spices, dates, fruit, edible oil, dairy</td></tr>
+              <tr><td data-label="Scheme"><b>Cold storage under MIDH / National Horticulture Board</b></td><td data-label="What it gives">35% back-ended subsidy on the project cost in general areas</td><td data-label="Useful for">Cold storages for fruit and vegetables</td></tr>
+              <tr><td data-label="Scheme"><b>PM-KUSUM</b> (MNRE)</td><td data-label="What it gives">30% central assistance for standalone solar pumps, with State support</td><td data-label="Useful for">Farmers and solar-pump installers</td></tr>
+              <tr><td data-label="Scheme"><b>Aatmanirbhar Gujarat scheme for MSMEs</b></td><td data-label="What it gives">Capital subsidy (up to &#8377;35 lakh for micro units) and interest subsidy; valid to October 2027</td><td data-label="Useful for">Manufacturing MSMEs of all kinds</td></tr>
+              <tr><td data-label="Scheme"><b>Gujarat Integrated Logistics and Logistics Park Policy 2021</b></td><td data-label="What it gives">Capital and interest subsidy, stamp duty and electricity duty relief</td><td data-label="Useful for">Warehouses, cold chains, truck terminals (check current terms)</td></tr>
+              <tr><td data-label="Scheme"><b>Gujarat homestay policy</b></td><td data-label="What it gives">Official registration, simpler rules from November 2026</td><td data-label="Useful for">Village homestays</td></tr>
             </tbody>
           </table>
           <div class="fig-src">Scheme terms change from time to time. Before investing, confirm the latest rules with the District Industries Centre, Bhuj, your bank, or the department named. Sources: myscheme.gov.in, PIB, National Horticulture Board, MNRE, Industries Commissionerate Gujarat, Gujarat Tourism.</div>
