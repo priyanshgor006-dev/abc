@@ -805,14 +805,8 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
         // split into full rows; never leave a single photo alone on the last row
         var sizes = [], left = g.length;
         if (phone) {
-          // phones: rows alternate 2 photos, then 3 photos, then 2 ...
-          var k = 0;
-          while (left > 0) { var s1 = Math.min(k % 2 === 0 ? 2 : 3, left); sizes.push(s1); left -= s1; k++; }
-          var pm = sizes.length;
-          if (pm > 1 && sizes[pm - 1] === 1) {
-            if (sizes[pm - 2] === 3) { sizes[pm - 2] = 2; sizes[pm - 1] = 2; }
-            else { sizes[pm - 2] = 3; sizes.pop(); }
-          }
+          // phones: always two photos per row
+          while (left > 0) { sizes.push(Math.min(2, left)); left -= 2; }
         } else {
           while (left > 0) { sizes.push(Math.min(n, left)); left -= n; }
         }
@@ -827,9 +821,10 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
           var row = document.createElement("div");
           row.className = "gal-row";
           var single = m === 1 && sz === 1;
-          if (single) row.style.maxWidth = (n === 3 && !phone) ? "34%" : "50%";
+          var halfRow = single || (phone && sz === 1);
+          if (halfRow) row.style.maxWidth = (n === 3 && !phone) ? "34%" : "50%";
           // tell the browser how wide each photo is shown, so it downloads the right size
-          var vw = single ? ((n === 3 && !phone) ? 34 : 50) : Math.ceil(100 / sz);
+          var vw = halfRow ? ((n === 3 && !phone) ? 34 : 50) : Math.ceil(100 / sz);
           chunk.forEach(function (cd) {
             var im = cd.querySelector("img"); if (im) im.sizes = "(max-width: 899px) " + vw + "vw, " + Math.ceil(1160 * vw / 100) + "px";
             row.appendChild(cd);
