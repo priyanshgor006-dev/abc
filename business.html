@@ -682,6 +682,29 @@ var p=i.parentNode;if(!p)return;if(i.dataset.fb){p.classList.add('mono');p.textC
 .opp-list li{padding:11px 14px;border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:10px;background:#fff;line-height:1.6}
 .opp-list li strong{color:var(--navy-dark)}
 @media (max-width:600px){.fig-table{font-size:.76rem}.fig-table th,.fig-table td{padding:7px 6px}.fig-table thead th{white-space:normal;font-size:.68rem;vertical-align:bottom}.fig-table th:first-child,.fig-table td:first-child{padding-left:10px}.fig-box h4,.fig-box .fig-sub,.fig-src{padding-left:10px;padding-right:10px}.min-grid{grid-template-columns:1fr;padding:2px 10px 6px}}
+/* opportunities, sector by sector */
+.opp-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:-18px auto 30px;max-width:920px}
+.opp-nav a{display:inline-block;padding:7px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:var(--navy-dark);font-size:.84rem;font-weight:600;text-decoration:none;transition:background .15s,border-color .15s}
+.opp-nav a:hover,.opp-nav a:focus-visible{background:var(--wine-tint);border-color:var(--gold)}
+.opp-sector{padding:38px 0 8px;border-top:1px solid var(--border);scroll-margin-top:96px}
+.opp-sector:first-of-type{border-top:0}
+.opp-head{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:28px;align-items:start;margin-bottom:22px}
+.opp-photo{margin:0;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,var(--navy),var(--navy-dark))}
+.opp-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.opp-lead h3{font-size:clamp(1.25rem,2.2vw,1.55rem);color:var(--navy-dark);margin:4px 0 12px;line-height:1.3}
+.opp-lead p{font-size:1rem;line-height:1.8;color:var(--text);margin:0}
+.opp-lead.solo{margin-bottom:6px}
+.opp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.opp-card{background:#fff;border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:12px;padding:16px 18px 14px;min-width:0}
+.opp-card h4{margin:0 0 6px;font-size:1.02rem;line-height:1.35;color:var(--navy)}
+.opp-card dl{margin:0}
+.opp-card dt{font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--gold-hover);margin-top:10px}
+.opp-card dd{margin:2px 0 0;font-size:.9rem;line-height:1.65;color:var(--text)}
+.opp-schemes{margin-top:10px}
+.opp-schemes .fig-table th,.opp-schemes .fig-table td{text-align:left;white-space:normal;vertical-align:top;line-height:1.5}
+.opp-close{margin:18px 0 0;font-size:1rem;line-height:1.8;color:var(--text)}
+@media (max-width:860px){.opp-head{grid-template-columns:1fr;gap:16px}.opp-photo{aspect-ratio:16/9}.opp-grid{grid-template-columns:1fr}}
+@media (max-width:600px){.opp-nav{margin:-26px 0 22px;justify-content:flex-start}.opp-nav a{font-size:.8rem;padding:6px 11px}.opp-card{padding:14px 14px 12px}.opp-schemes .fig-table th,.opp-schemes .fig-table td{padding:8px 10px;font-size:.8rem}}
 </style>
 <style id="abg-credit-css">
 .site-footer .abg-credit{margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;letter-spacing:.02em;color:rgba(255,255,255,.62);max-width:520px}
@@ -1128,23 +1151,6 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
           </div>
         </div>
       </article>
-      <article class="kx-topic reveal" id="farm-opportunities">
-        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/drip-irrigation-farm.jpg" width="1200" height="900" decoding="async" alt="Drip irrigation pipes being laid in a ploughed field" loading="lazy" onerror="this.parentNode.classList.add('no-img');this.remove()"><span class="kx-fallback">Drip irrigation pipes in a field</span></figure><span class="kx-cap">Drip irrigation lines being laid in a field.</span></div></div>
-        <div class="kx-text">
-          <span class="eyebrow">Opportunities</span>
-          <h3>Opportunities in farming and food processing</h3>
-          <p>With Narmada canal water, drip irrigation and more than 61,000 hectares under fruit, Kutch offers many openings for farmers, entrepreneurs and investors in agriculture and the industries around it:</p>
-          <ul class="opp-list">
-            <li><strong>Kharek processing and cold storage.</strong> Kutch grows almost all of Gujarat&rsquo;s dates, but fresh kharek is picked in a few summer weeks and spoils quickly. Pack-houses, cold stores, drying units and products like date syrup and date paste can earn farmers much more, and the GI tag helps with branding.</li>
-            <li><strong>Fruit processing.</strong> Kutch grows nearly half of Gujarat&rsquo;s pomegranates and over a lakh tonnes of mangoes a year, which suits units for juice, pulp, ready-to-eat pomegranate seeds and mango products.</li>
-            <li><strong>New, water-saving crops.</strong> Dragon fruit, already grown on about 550 hectares, needs very little water. Nurseries, new orchards and protected farming in greenhouses and net houses can grow fruits, vegetables and flowers with far less water.</li>
-            <li><strong>Exports through the ports.</strong> With Mundra and Kandla next door, fresh fruit, vegetables and spices can be shipped in refrigerated containers straight to the Gulf and other markets.</li>
-            <li><strong>Spices, oilseeds and guar.</strong> Cumin, isabgul, coriander, castor, groundnut and guar grown in Kutch support cleaning, grading and packing units, oil mills and guar gum plants.</li>
-            <li><strong>Dairy and livestock.</strong> Kutch is home to the Banni buffalo and the Kharai camel, both recognised breeds, giving scope for milk collection, dairy products and fodder farming.</li>
-            <li><strong>Farm services.</strong> Drip and sprinkler systems, solar water pumps, soil testing, farm machinery on hire and natural or organic farming are all growing needs of Kutch farmers.</li>
-          </ul>
-        </div>
-      </article>
     </div>
   </section>
 
@@ -1195,18 +1201,478 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
     <div class="container kx-article">
       <div class="kx-intro reveal">
         <span class="eyebrow">Opportunities</span>
-        <h2>Opportunities for local businesses</h2>
-        <p>The growth of ports, energy and industry is opening new opportunities for the businesses of Kutch.</p>
+        <h2>Business opportunities in Kutch, sector by sector</h2>
+        <p>Each opportunity below says plainly <strong>what business can be set up</strong>, <strong>why it works in Kutch</strong>, <strong>who will buy</strong> and <strong>what government help is available</strong>. All figures are from the official sources quoted on this page.</p>
       </div>
-      
-      <article class="kx-topic reveal">
-        <div class="kx-figs"><div class="kx-fig"><figure class="kx-img"><img src="images/wm/white-rann-of-kutch-0e41f5.webp" width="800" height="533" data-fp="https://commons.wikimedia.org/wiki/Special:FilePath/White_Rann_of_Kutch.jpg?width=960" decoding="async" alt="The White Rann, which draws visitors every winter" loading="lazy" onerror="wmErr(this)"><span class="kx-fallback">The White Rann, which draws visitors every winter</span></figure><span class="kx-cap">The White Rann draws visitors every winter.</span></div></div>
-        <div class="kx-text">
-          <span class="eyebrow">For local businesses</span>
-          <h3>Where local businesses can grow</h3>
-          <p>Logistics, warehousing, transport and clearing services are needed around Kandla, Mundra and Gandhidham, and the port expansions will increase this demand. The energy projects at Khavda need a long supply chain of contractors, equipment suppliers, transport, maintenance, security, catering and housing for workers.</p><p>There is also room to add more value to what Kutch already produces, processing salt, minerals and clay; packing and exporting mangoes, dates and cumin; and selling Kutch crafts to buyers across India and abroad, including online. Tourism around the White Rann, Dholavira, Mandvi and Bhuj keeps creating demand for hotels, homestays, travel and food services, and a growing population needs housing, shops and commercial space.</p><p>The Bhuj Chamber of Commerce and Industries Federation works to help businesses of Kutch make the most of these opportunities.</p>
+
+      <nav class="opp-nav reveal" aria-label="Jump to a sector">
+        <a href="#farm-opportunities">Farming &amp; food</a>
+        <a href="#opp-logistics">Logistics &amp; transport</a>
+        <a href="#opp-maritime">Port &amp; marine services</a>
+        <a href="#opp-energy">Solar, wind &amp; hydrogen</a>
+        <a href="#opp-suppliers">Supplying big factories</a>
+        <a href="#opp-minerals">Salt &amp; minerals</a>
+        <a href="#opp-tourism">Tourism</a>
+        <a href="#opp-crafts">Crafts</a>
+        <a href="#opp-city">Housing &amp; city services</a>
+        <a href="#opp-schemes">Government help</a>
+      </nav>
+
+      <!-- 1. Farming and food -->
+      <div class="opp-sector reveal" id="farm-opportunities">
+        <div class="opp-head">
+          <figure class="opp-photo"><img src="images/wm/ripe-and-dry-dates-fruit-bunches-6c10df.webp" width="960" height="718" decoding="async" loading="lazy" alt="Bunches of ripe dates (kharek)" onerror="this.parentNode.classList.add('no-img');this.remove()"></figure>
+          <div class="opp-lead">
+            <span class="eyebrow">1 &middot; Farming &amp; food processing</span>
+            <h3>Turn Kutch&rsquo;s harvest into higher-value products</h3>
+            <p>Kutch is a major grower: in 2024-25 it produced <strong>1,84,832 tonnes of kharek</strong> (96% of Gujarat), <strong>2,97,786 tonnes of pomegranate</strong> (48%), <strong>1,09,312 tonnes of mango</strong> and <strong>64,803 tonnes of cumin</strong>, and in 2022-23 it was Gujarat&rsquo;s largest grower of <strong>castor</strong> (3,65,996 tonnes) and <strong>guar</strong> (58% of the State). Every tonne that is graded, packed, stored or processed inside Kutch keeps more of the final price in the district. These are the main openings:</p>
+          </div>
         </div>
-      </article>
+        <div class="opp-grid">
+          <div class="opp-card">
+            <h4>Kharek pack-house, cold store and ripening</h4>
+            <dl>
+              <dt>What to set up</dt><dd>A collection and pack-house near the date orchards: sorting and grading lines, pre-cooling, cold rooms and ripening rooms, so that fresh yellow and red kharek can be sold over a longer season. Add frozen kharek, dried kharek and products such as date paste and date syrup.</dd>
+              <dt>Why Kutch</dt><dd>Almost all of Gujarat&rsquo;s kharek grows here, but it is picked in a few summer weeks and fresh kharek spoils quickly, so most of the crop has to be sold in a short window. <em>Kachchhi Kharek</em> has a GI tag, which helps branding.</dd>
+              <dt>Who buys</dt><dd>Fruit wholesalers across India, retail chains, sweet makers and bakeries, and exporters to the Gulf.</dd>
+              <dt>Help available</dt><dd>Agriculture Infrastructure Fund (3% interest relief on loans up to &#8377;2 crore for pack-houses, grading units, cold chains and ripening chambers); 35% subsidy for cold storage under the National Horticulture Board / MIDH; PMFME (35% up to &#8377;10 lakh) for small date-processing units.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Pomegranate export pack-house</h4>
+            <dl>
+              <dt>What to set up</dt><dd>An APEDA-recognised pack-house that grades, packs and cools pomegranates for export, working with farms registered on APEDA&rsquo;s <em>AnarNet</em> traceability system. A second line can sell ready-to-eat arils (seeds) and juice.</dd>
+              <dt>Why Kutch</dt><dd>Kutch grows nearly half of Gujarat&rsquo;s pomegranates, and refrigerated containers can leave from Mundra and Kandla, next door.</dd>
+              <dt>Who buys</dt><dd>Exporters and importers in the Gulf, Europe and other markets; juice companies; supermarkets and online grocers in Indian cities.</dd>
+              <dt>Help available</dt><dd>Farm registration through AnarNet is done via the State horticulture department; Agriculture Infrastructure Fund for the pack-house; PMFME for aril and juice units.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Mango ripening, pulp and export packing</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Safe ripening chambers (instead of chemical ripening), a grading and packing line, and a pulp, slices or aamras unit to use mangoes that are not fit for the fresh market.</dd>
+              <dt>Why Kutch</dt><dd>Kutch produced 1,09,312 tonnes of mango on 13,426 hectares in 2024-25. Gujarat exported about 856 tonnes of mangoes in 2024-25, mostly Kesar, so the export trade already exists and can grow.</dd>
+              <dt>Who buys</dt><dd>Exporters, juice and dairy companies, hotels and caterers, and retail chains.</dd>
+              <dt>Help available</dt><dd>Agriculture Infrastructure Fund (ripening chambers are eligible); PMFME for pulp and processing units.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Spice cleaning, grading and packing</h4>
+            <dl>
+              <dt>What to set up</dt><dd>A cleaning, colour-sorting and packing unit for cumin (jeera), fennel, coriander and isabgul, with a small laboratory for quality and pesticide-residue testing, and own-brand retail packs.</dd>
+              <dt>Why Kutch</dt><dd>Kutch grew 64,803 tonnes of cumin, 13,053 tonnes of fennel and 36% of Gujarat&rsquo;s isabgul in 2024-25. Cleaned, graded and branded spice sells for more than raw seed, and that margin can stay in Kutch.</dd>
+              <dt>Who buys</dt><dd>Spice brands, exporters, wholesale traders and large food companies.</dd>
+              <dt>Help available</dt><dd>PMFME (35% subsidy up to &#8377;10 lakh); Agriculture Infrastructure Fund for sorting and grading units; Aatmanirbhar Gujarat scheme for MSMEs.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Oil mills and guar processing</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Castor crushing and castor oil units; cold-pressed groundnut and mustard oil for the local market; guar seed cleaning and splitting for the guar gum industry.</dd>
+              <dt>Why Kutch</dt><dd>Kutch is Gujarat&rsquo;s largest producer of castor (3,65,996 tonnes) and guar (42,968 tonnes, 58% of the State), and grew 1,15,693 tonnes of groundnut and 61,274 tonnes of mustard in 2022-23.</dd>
+              <dt>Who buys</dt><dd>Castor oil exporters and chemical makers; households and shops (edible oils); guar gum factories.</dd>
+              <dt>Help available</dt><dd>PMFME for edible-oil units; Aatmanirbhar Gujarat MSME scheme (capital subsidy up to &#8377;35 lakh for micro manufacturing units, plus interest subsidy).</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Dragon fruit, nurseries and protected farming</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Dragon fruit (kamalam) orchards and plant nurseries; net houses and greenhouses for vegetables, flowers and seedlings, which give high yields with little water.</dd>
+              <dt>Why Kutch</dt><dd>Kutch already grows 45% of Gujarat&rsquo;s dragon fruit (549 hectares, 4,669 tonnes in 2024-25). The crop needs very little water and starts fruiting in its first year.</dd>
+              <dt>Who buys</dt><dd>City fruit markets and supermarkets; other farmers who need planting material.</dd>
+              <dt>Help available</dt><dd>Horticulture schemes of the Gujarat Government, applied for on the <em>iKhedut</em> portal.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Dairy and camel milk</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Village milk collection with bulk milk chillers, small dairy-product units (paneer, ghee, sweets), fodder and cattle-feed supply, and veterinary services.</dd>
+              <dt>Why Kutch</dt><dd>Kutch is home to the Banni buffalo and the Kharai camel, both recognised breeds. Sarhad Dairy in Kutch runs India&rsquo;s first camel milk processing plant (since 2019), with collection centres at Rapar, Nakhatrana, Gadhshisha and Kotda Athamana.</dd>
+              <dt>Who buys</dt><dd>The district milk cooperative, local sweet shops and hotels, and buyers of camel-milk products.</dd>
+              <dt>Help available</dt><dd>Animal husbandry schemes of the State; PMFME for dairy-product units.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Services for farmers</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Drip and sprinkler installation and repair; solar water pumps; soil and water testing; machinery and drone spraying on hire; supply of seeds, fertilisers and organic inputs.</dd>
+              <dt>Why Kutch</dt><dd>Water is the limiting factor in Kutch, so every orchard and field needs water-saving systems, and more land is coming under farming with Narmada canal water.</dd>
+              <dt>Who buys</dt><dd>Farmers across the district&rsquo;s 10 talukas.</dd>
+              <dt>Help available</dt><dd>PM-KUSUM: 30% central assistance for standalone solar pumps, with State support on top; Agriculture Infrastructure Fund for custom-hiring centres.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Logistics -->
+      <div class="opp-sector reveal" id="opp-logistics">
+        <div class="opp-head">
+          <figure class="opp-photo"><img src="images/wm/mundra-port-container-terminal.jpg" width="1600" height="1200" decoding="async" loading="lazy" alt="Containers and cranes at Mundra Port" onerror="this.parentNode.classList.add('no-img');this.remove()"></figure>
+          <div class="opp-lead">
+            <span class="eyebrow">2 &middot; Logistics, warehousing &amp; transport</span>
+            <h3>Serve the busiest cargo gateway in India</h3>
+            <p>Deendayal Port at Kandla handled a record <strong>160.11 million tonnes</strong> in 2025-26, and Mundra became the first Indian port to cross <strong>200 million tonnes</strong> in a year. A new 2.19-million-container terminal is being built at Tuna-Tekra, Adani plans to double Mundra&rsquo;s capacity in about ten years, and the Kandla Mundra highway already carries more than <strong>55,000 vehicles (PCU) a day</strong>. Almost all of this cargo needs a truck, a warehouse or a clearing agent at some point.</p>
+          </div>
+        </div>
+        <div class="opp-grid">
+          <div class="opp-card">
+            <h4>Warehouses, container yards and freight stations</h4>
+            <dl>
+              <dt>What to set up</dt><dd>General and bonded warehouses, empty-container yards, container freight stations and open storage for steel, timber, salt and fertiliser in the Gandhidham, Kandla, Anjar and Mundra belt.</dd>
+              <dt>Why Kutch</dt><dd>Port volumes are rising every year and new terminals are coming, while land is available close to both ports.</dd>
+              <dt>Who buys</dt><dd>Importers and exporters, shipping lines, freight forwarders and factories in Kutch.</dd>
+              <dt>Help available</dt><dd>Gujarat&rsquo;s Integrated Logistics and Logistics Park Policy 2021 has offered capital and interest subsidy for warehouses, cold chains and truck terminals (check the current terms with the Industries Commissionerate).</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Truck fleets, truck terminals and roadside services</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Container and bulk truck fleets; organised truck parking terminals with rest rooms, food and security; tyre, repair and spare-parts workshops; fuel stations and weighbridges.</dd>
+              <dt>Why Kutch</dt><dd>When the ports stop, thousands of trucks wait: during Cyclone Biparjoy about 8,000 trucks were held at Kandla and 3,000 at Mundra. The highway is now being widened to six lanes (&#8377;991.19 crore, approved October 2026).</dd>
+              <dt>Who buys</dt><dd>Transporters, shipping lines, port users and factories.</dd>
+              <dt>Help available</dt><dd>Logistics policy support for truck terminals; bank loans with the CGTMSE credit guarantee for small fleets.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Customs clearing, forwarding and documents</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Customs broker (CHA) and freight-forwarding offices, export documentation and certificate services, cargo insurance and surveying.</dd>
+              <dt>Why Kutch</dt><dd>Every import and export through Kandla, Mundra and the Kandla Special Economic Zone needs these services, and trade grows with every new terminal.</dd>
+              <dt>Who buys</dt><dd>Exporters and importers across north and west India, and SEZ units.</dd>
+              <dt>Help available</dt><dd>Training and licensing through the Customs department&rsquo;s customs-broker examination.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Cold chain for farm exports</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Reefer (refrigerated) trucks, pre-cooling and cold storage near the ports, and reefer-container handling, linking Kutch&rsquo;s farms to ships.</dd>
+              <dt>Why Kutch</dt><dd>Kutch grows large volumes of kharek, pomegranate and mango, and its ports can ship them straight to the Gulf and beyond.</dd>
+              <dt>Who buys</dt><dd>Fruit exporters, pack-houses and food companies.</dd>
+              <dt>Help available</dt><dd>Agriculture Infrastructure Fund (cold chains are eligible); National Horticulture Board cold storage subsidy.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Timber, pallets and packaging</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Wooden pallets and crates, plywood and timber products, and export packaging for factories and shippers.</dd>
+              <dt>Why Kutch</dt><dd>Kandla is one of India&rsquo;s largest timber import points, with nearly 2,000 saw mills around the port (Kandla Timber Association, 2020).</dd>
+              <dt>Who buys</dt><dd>Exporters, factories, builders and furniture makers.</dd>
+              <dt>Help available</dt><dd>Aatmanirbhar Gujarat MSME scheme for manufacturing units.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Port and marine services -->
+      <div class="opp-sector reveal" id="opp-maritime">
+        <div class="opp-head">
+          <figure class="opp-photo"><img src="images/wm/port-of-kandla-8351cd.webp" width="960" height="640" decoding="async" loading="lazy" alt="Ships at the Port of Kandla" onerror="this.parentNode.classList.add('no-img');this.remove()"></figure>
+          <div class="opp-lead">
+            <span class="eyebrow">3 &middot; Port &amp; marine services</span>
+            <h3>Look after the ships and their crews</h3>
+            <p>In April 2026 Kandla carried out <strong>India&rsquo;s first methanol bunkering</strong> (refuelling a ship with methanol), it has signed an agreement with the Port of Rotterdam for a green shipping corridor, and in January 2026 it signed an MoU for a <strong>Kutch Green Hydrogen Park</strong> with ready, plug-and-play infrastructure.</p>
+          </div>
+        </div>
+        <div class="opp-grid">
+          <div class="opp-card">
+            <h4>Ship supplies and crew services</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Ship chandling (food, water, stores and spare parts for ships), crew transport, hotels and medical services for sailors, and launch and boat services in the harbour.</dd>
+              <dt>Why Kutch</dt><dd>Two of India&rsquo;s busiest ports are in the district, and every ship that calls needs supplies and crew support.</dd>
+              <dt>Who buys</dt><dd>Shipping lines, ship agents and ship managers.</dd>
+              <dt>Help available</dt><dd>MSME registration (Udyam) and bank finance; port-user licences from the port authority.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Marine repair and engineering</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Workshops for marine engines, pumps, cranes and port equipment; fabrication and electrical contracting for port projects.</dd>
+              <dt>Why Kutch</dt><dd>The new Tuna-Tekra terminal, the Mundra expansion and the green hydrogen park all need construction and long-term maintenance.</dd>
+              <dt>Who buys</dt><dd>Port operators, terminal companies and contractors.</dd>
+              <dt>Help available</dt><dd>Aatmanirbhar Gujarat MSME scheme; CGTMSE-backed loans.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Green fuels and the hydrogen park</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Service companies for storage, testing, safety and transport of methanol, ammonia and hydrogen; small green-hydrogen units in the plug-and-play park.</dd>
+              <dt>Why Kutch</dt><dd>Kandla is developing as a green-fuel port, with a target of an eMethanol bunkering hub by mid-2028, and the hydrogen park is meant for MSMEs as well as large companies.</dd>
+              <dt>Who buys</dt><dd>Shipping companies, fuel suppliers and industries switching to clean fuels.</dd>
+              <dt>Help available</dt><dd>The National Green Hydrogen Mission (Deendayal Port is one of its green hydrogen hubs).</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Energy supply chain -->
+      <div class="opp-sector reveal" id="opp-energy">
+        <div class="opp-head">
+          <figure class="opp-photo"><img src="images/wm/windfarm-mandvi-4c7f01.jpg" width="960" height="720" decoding="async" loading="lazy" alt="Wind turbines near Mandvi" onerror="this.parentNode.classList.add('no-img');this.remove()"></figure>
+          <div class="opp-lead">
+            <span class="eyebrow">4 &middot; Solar, wind &amp; hydrogen</span>
+            <h3>Join the supply chain of the world&rsquo;s largest energy park</h3>
+            <p>The Khavda park is planned for <strong>30 GW</strong> by 2029, and about <strong>9.4 GW</strong> was running by March 2026, so roughly two-thirds is still to be built. Reliance is building its own solar and battery hub on about <strong>5.5 lakh acres</strong> of Kutch, aiming at full pace to install around 55 MW of solar panels and 150 MWh of batteries every day, and Adani makes 91.2-metre wind-turbine blades at Mundra. Big developers give much of this work to local contractors and suppliers.</p>
+          </div>
+        </div>
+        <div class="opp-grid">
+          <div class="opp-card">
+            <h4>Civil and electrical contracting</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Sub-contracting for piling and foundations, internal roads, fencing, cable trenches, cabling and small substations at solar and wind sites.</dd>
+              <dt>Why Kutch</dt><dd>Tens of gigawatts are being built by Adani, NTPC, GIPCL, GSECL, ENGIE, KPI Green, Reliance and others, all within the district.</dd>
+              <dt>Who buys</dt><dd>The developers and their main EPC contractors.</dd>
+              <dt>Help available</dt><dd>Vendor registration with the developers; Aatmanirbhar Gujarat MSME scheme; CGTMSE-backed working-capital loans.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Operation, maintenance and panel cleaning</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Teams for operation and maintenance of solar and wind plants, panel cleaning (including dry and robotic cleaning where water is scarce), vegetation control, inverter and transformer servicing.</dd>
+              <dt>Why Kutch</dt><dd>Every megawatt built needs maintenance for 25 years, and the dust of the Rann makes cleaning a constant need.</dd>
+              <dt>Who buys</dt><dd>Plant owners and O&amp;M companies.</dd>
+              <dt>Help available</dt><dd>Skill training for solar technicians through ITIs and MNRE&rsquo;s training programmes.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Heavy transport and cranes</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Low-bed and extendable trailers, cranes and escort services for moving blades, towers, transformers and container-loads of panels from the ports and factories to the sites.</dd>
+              <dt>Why Kutch</dt><dd>Turbine blades over 90 metres long are made at Mundra, and almost all equipment for Khavda arrives through Kutch&rsquo;s ports.</dd>
+              <dt>Who buys</dt><dd>Manufacturers, developers and logistics companies.</dd>
+              <dt>Help available</dt><dd>Bank and equipment finance; logistics policy support.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Worker camps, food, security and vehicles</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Housing camps, canteens and catering, security services, vehicle hire, water supply and clinics at remote sites such as Khavda.</dd>
+              <dt>Why Kutch</dt><dd>Large construction teams work far from towns for years at a time.</dd>
+              <dt>Who buys</dt><dd>Developers and contractors.</dd>
+              <dt>Help available</dt><dd>MSME registration and bank finance.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Supplying the big factories -->
+      <div class="opp-sector reveal" id="opp-suppliers">
+        <div class="opp-head">
+          <figure class="opp-photo"><img src="images/wm/spiral-pipe-welding.jpg" width="1600" height="1067" decoding="async" loading="lazy" alt="Welding a large spiral steel pipe" onerror="this.parentNode.classList.add('no-img');this.remove()"></figure>
+          <div class="opp-lead">
+            <span class="eyebrow">5 &middot; Supplying the big factories</span>
+            <h3>Become a vendor to the industries already here</h3>
+            <p>About <strong>30,000 people</strong> work at Welspun&rsquo;s Anjar complex. The Kutch Copper smelter expects about <strong>2,000 direct and 5,000 indirect jobs</strong> and is adding a second phase. BKT is raising carbon-black capacity at Bhuj to 3,60,000 tonnes under a <strong>&#8377;3,500 crore</strong> plan, Ambuja plans to grow the Sanghipuram cement plant to 15 million tonnes a year, and Jindal SAW, Adani Solar and Adani Wind run large plants at Mundra. All of them buy goods and services every day.</p>
+          </div>
+        </div>
+        <div class="opp-grid">
+          <div class="opp-card">
+            <h4>Fabrication, machining and maintenance</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Machine shops, fabrication and welding units, rewinding of motors, pump and gearbox repair, and annual maintenance contracts.</dd>
+              <dt>Why Kutch</dt><dd>Pipe mills, a steel plant, a copper smelter, cement kilns, power plants and tyre factories need spares and repairs quickly, close to the plant.</dd>
+              <dt>Who buys</dt><dd>The purchase and maintenance departments of these companies.</dd>
+              <dt>Help available</dt><dd>Aatmanirbhar Gujarat MSME scheme (capital subsidy up to &#8377;35 lakh for micro units, interest subsidy); Udyam registration; CGTMSE loans.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Packaging and consumables</h4>
+            <dl>
+              <dt>What to set up</dt><dd>HDPE and jumbo bags for cement, salt, fertiliser and minerals; corrugated boxes and cartons; pallets; safety equipment (PPE) and uniforms.</dd>
+              <dt>Why Kutch</dt><dd>Cement, salt, fertiliser and textile plants in Kutch use packaging in very large volumes.</dd>
+              <dt>Who buys</dt><dd>Cement, salt, fertiliser, textile and mineral companies.</dd>
+              <dt>Help available</dt><dd>Aatmanirbhar Gujarat MSME scheme.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Manpower, canteens and plant services</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Staffing and training agencies, industrial canteens, housekeeping, staff buses and security.</dd>
+              <dt>Why Kutch</dt><dd>Thousands of new jobs are being created at Anjar, Mundra and Bhuj, and every plant outsources these services.</dd>
+              <dt>Who buys</dt><dd>Factories, ports and energy companies.</dd>
+              <dt>Help available</dt><dd>Skill India and ITI tie-ups for training.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Salt and minerals -->
+      <div class="opp-sector reveal" id="opp-minerals">
+        <div class="opp-head">
+          <figure class="opp-photo"><img src="images/business-02.webp" width="1179" height="778" decoding="async" loading="lazy" alt="Large salt pans and salt heaps from the air" onerror="this.parentNode.classList.add('no-img');this.remove()"></figure>
+          <div class="opp-lead">
+            <span class="eyebrow">6 &middot; Salt &amp; minerals</span>
+            <h3>Process the salt and minerals before they leave</h3>
+            <p>Kutch made <strong>108.5 lakh tonnes of salt</strong> in 2020-21, about 41% of all of India&rsquo;s salt. In 2014-15 it mined <strong>17 minerals</strong>, including 84 lakh tonnes of black trap, 88 lakh tonnes of limestone, 42 lakh tonnes of china clay and bentonite, which the Commissioner of Geology and Mining calls one of the best deposits in the world. The official district survey report points to scope for cement, tiles, bricks and stone crushing.</p>
+          </div>
+        </div>
+        <div class="opp-grid">
+          <div class="opp-card">
+            <h4>Refined and speciality salt</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Salt washing, refining and iodising units; packed table salt; industrial-grade salt for chemical plants.</dd>
+              <dt>Why Kutch</dt><dd>Raw salt is available in huge quantity from the Little Rann and the coastal salt works, and much of it is used by chemical industries that make soda ash and caustic soda.</dd>
+              <dt>Who buys</dt><dd>Food brands, chemical companies and exporters.</dd>
+              <dt>Help available</dt><dd>Aatmanirbhar Gujarat MSME scheme.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Bentonite and clay processing</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Units that dry, grind and activate bentonite for drilling, foundries, iron-ore pellets and cat litter; washing and refining of china clay and ball clay.</dd>
+              <dt>Why Kutch</dt><dd>Kutch has some of India&rsquo;s best bentonite and large clay deposits, and Morbi, India&rsquo;s biggest ceramic tile centre, is close by.</dd>
+              <dt>Who buys</dt><dd>Oil-drilling and foundry companies, pellet plants, pet-product makers, exporters and ceramic factories.</dd>
+              <dt>Help available</dt><dd>Mining leases and permits from the Department of Geology and Mining; Aatmanirbhar Gujarat MSME scheme.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Building materials</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Stone crushers that turn black trap into grit and aggregates, ready-mix concrete plants, concrete blocks and bricks.</dd>
+              <dt>Why Kutch</dt><dd>Black trap is the largest minor mineral of Kutch, and highways, ports, factories, energy parks and housing are all being built at the same time.</dd>
+              <dt>Who buys</dt><dd>Road, port and building contractors.</dd>
+              <dt>Help available</dt><dd>Aatmanirbhar Gujarat MSME scheme; mineral permits from the Department of Geology and Mining.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Tourism -->
+      <div class="opp-sector reveal" id="opp-tourism">
+        <div class="opp-head">
+          <figure class="opp-photo"><img src="images/wm/white-rann-of-kutch-0e41f5.webp" width="800" height="533" decoding="async" loading="lazy" alt="The White Rann of Kutch" onerror="this.parentNode.classList.add('no-img');this.remove()"></figure>
+          <div class="opp-lead">
+            <span class="eyebrow">7 &middot; Tourism &amp; hospitality</span>
+            <h3>Host the visitors who come for the White Rann</h3>
+            <p>The Rann Utsav drew <strong>8,55,565 visitors in 2024</strong> and <strong>9,41,637 in 2025</strong>. Dhordo was named a UN Tourism <strong>Best Tourism Village</strong> in 2023, Dholavira is a <strong>UNESCO World Heritage Site</strong>, and the Road to Heaven and India&rsquo;s largest public observatory at Bhuj have added new reasons to stay longer.</p>
+          </div>
+        </div>
+        <div class="opp-grid">
+          <div class="opp-card">
+            <h4>Homestays and bhunga stays</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Registered homestays in villages near the White Rann, the craft villages and Dholavira, offering local food and bhunga-style rooms.</dd>
+              <dt>Why Kutch</dt><dd>Many visitors want to stay in real Kutchi villages, and villages such as Hodka and Dhordo already offer bhunga-style stays.</dd>
+              <dt>Who buys</dt><dd>Domestic and foreign tourists, travel agents and online booking sites.</dd>
+              <dt>Help available</dt><dd>Registration under the Gujarat Tourism homestay policy (the owner must live in the house; the rules were made easier in November 2026), which also opens State benefits such as rooftop-solar support.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Tours, taxis and guides</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Tour packages and taxi services for the Bhuj, White Rann, Road to Heaven and Dholavira circuit; trained local guides; birding and wildlife trips to the Little Rann and Banni.</dd>
+              <dt>Why Kutch</dt><dd>The sights are spread over a very large district, so almost every visitor needs transport and a guide.</dd>
+              <dt>Who buys</dt><dd>Tourists, schools and colleges, and travel companies.</dd>
+              <dt>Help available</dt><dd>Gujarat Tourism policy support; bank finance.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Food, experiences and business travel</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Kutchi food restaurants, craft workshops in Nirona, Bhujodi and Ajrakhpur, stargazing nights, and hotels and serviced apartments for business visitors in Bhuj, Gandhidham and Mundra.</dd>
+              <dt>Why Kutch</dt><dd>Tourists come for experiences, and the ports and energy projects bring a steady stream of engineers, buyers and officials all year.</dd>
+              <dt>Who buys</dt><dd>Tourists, companies and event organisers.</dd>
+              <dt>Help available</dt><dd>Gujarat Tourism policy support; bank finance.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Crafts -->
+      <div class="opp-sector reveal" id="opp-crafts">
+        <div class="opp-head">
+          <figure class="opp-photo"><img src="images/business-04.webp" width="762" height="376" decoding="async" loading="lazy" alt="Women artisans working together on embroidery" onerror="this.parentNode.classList.add('no-img');this.remove()"></figure>
+          <div class="opp-lead">
+            <span class="eyebrow">8 &middot; Crafts &amp; textiles</span>
+            <h3>Sell Kutch crafts to the world</h3>
+            <p>Kutch Ajrakh received a GI tag in 2024, and Rogan art, Kutchi shawls and Kachchhi embroidery are also protected. Bhujodi&rsquo;s weavers already export to more than 18 countries, and Ajrakh artisans have received orders from the USA, France and Uzbekistan.</p>
+          </div>
+        </div>
+        <div class="opp-grid">
+          <div class="opp-card">
+            <h4>Online selling and exports</h4>
+            <dl>
+              <dt>What to set up</dt><dd>An online store and marketplace accounts for artisan groups, with photography, packing, courier and export paperwork handled for them.</dd>
+              <dt>Why Kutch</dt><dd>GI-tagged crafts fetch better prices when sold directly, and many artisans have no time or skills for online sales.</dd>
+              <dt>Who buys</dt><dd>Customers in Indian cities and abroad, boutiques and museum shops.</dd>
+              <dt>Help available</dt><dd>Development Commissioner (Handicrafts) schemes and artisan cards; the Handicrafts Export Promotion Council.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Design and brand partnerships</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Design studios that work with artisans to make clothing, home furnishing and gift ranges for fashion and lifestyle brands.</dd>
+              <dt>Why Kutch</dt><dd>Kutch crafts already appear at events such as Lakm&eacute; Fashion Week, and brands look for authentic, hand-made products.</dd>
+              <dt>Who buys</dt><dd>Fashion labels, home-d&eacute;cor brands, hotels and corporate gift buyers.</dd>
+              <dt>Help available</dt><dd>Handicrafts and handloom schemes of the Central and State Governments.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. City services -->
+      <div class="opp-sector reveal" id="opp-city">
+        <div class="opp-head">
+          <figure class="opp-photo"><img src="images/wm/gujarat-mundra-port-aerial-view-1999-to-2011-ind-d59e75.webp" width="960" height="944" decoding="async" loading="lazy" alt="Aerial view of the growth of Mundra" onerror="this.parentNode.classList.add('no-img');this.remove()"></figure>
+          <div class="opp-lead">
+            <span class="eyebrow">9 &middot; Housing &amp; city services</span>
+            <h3>Serve the people who come to work in Kutch</h3>
+            <p>New factories, ports and energy parks bring thousands of workers and their families to Gandhidham, Anjar, Mundra, Bhuj and the villages around them. At the Vibrant Gujarat Regional Conference in January 2026, Kutch attracted the highest investment of any district, <strong>&#8377;1.25 lakh crore through 458 projects</strong>, and those projects are expected to employ more than 48,000 people.</p>
+          </div>
+        </div>
+        <div class="opp-grid">
+          <div class="opp-card">
+            <h4>Housing and hostels</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Rental flats, hostels and dormitories for workers and staff, and company guest houses.</dd>
+              <dt>Why Kutch</dt><dd>New jobs at Anjar, Gandhidham, Mundra and Khavda bring a need for rented homes near the work sites.</dd>
+              <dt>Who buys</dt><dd>Companies, contractors and individual employees.</dd>
+              <dt>Help available</dt><dd>Home and project loans from banks.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Schools, coaching and skills</h4>
+            <dl>
+              <dt>What to set up</dt><dd>English-medium schools, coaching classes and skill centres for welding, electrical, solar, logistics and hospitality jobs.</dd>
+              <dt>Why Kutch</dt><dd>Families of new employees need good schools, and industry needs trained local workers.</dd>
+              <dt>Who buys</dt><dd>Families, companies and government skill programmes.</dd>
+              <dt>Help available</dt><dd>Skill India programmes and tie-ups with ITIs and Kutch University.</dd>
+            </dl>
+          </div>
+          <div class="opp-card">
+            <h4>Health, retail and daily services</h4>
+            <dl>
+              <dt>What to set up</dt><dd>Clinics, diagnostic labs and pharmacies; supermarkets and shops; restaurants, banks and repair services near the industrial towns.</dd>
+              <dt>Why Kutch</dt><dd>Growing industrial towns need everyday services close to where people live and work.</dd>
+              <dt>Who buys</dt><dd>Residents, workers and companies.</dd>
+              <dt>Help available</dt><dd>MSME registration and bank finance.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- Government help at a glance -->
+      <div class="opp-sector reveal" id="opp-schemes">
+        <div class="opp-lead solo">
+          <span class="eyebrow">Government help at a glance</span>
+          <h3>Main schemes for new businesses in Kutch</h3>
+        </div>
+        <div class="fig-box opp-schemes">
+          <table class="fig-table">
+            <thead><tr><th>Scheme</th><th>What it gives</th><th>Useful for</th></tr></thead>
+            <tbody>
+              <tr><td><b>Agriculture Infrastructure Fund</b> (Govt of India)</td><td>3% interest relief on loans up to &#8377;2 crore, for up to 7 years, plus a credit guarantee</td><td>Pack-houses, grading and sorting units, cold chains, ripening chambers, warehouses</td></tr>
+              <tr><td><b>PMFME</b> (Ministry of Food Processing)</td><td>35% capital subsidy, up to &#8377;10 lakh per unit, linked to a bank loan</td><td>Small food-processing units: spices, dates, fruit, edible oil, dairy</td></tr>
+              <tr><td><b>Cold storage under MIDH / National Horticulture Board</b></td><td>35% back-ended subsidy on the project cost in general areas</td><td>Cold storages for fruit and vegetables</td></tr>
+              <tr><td><b>PM-KUSUM</b> (MNRE)</td><td>30% central assistance for standalone solar pumps, with State support</td><td>Farmers and solar-pump installers</td></tr>
+              <tr><td><b>Aatmanirbhar Gujarat scheme for MSMEs</b></td><td>Capital subsidy (up to &#8377;35 lakh for micro units) and interest subsidy; valid to October 2027</td><td>Manufacturing MSMEs of all kinds</td></tr>
+              <tr><td><b>Gujarat Integrated Logistics and Logistics Park Policy 2021</b></td><td>Capital and interest subsidy, stamp duty and electricity duty relief</td><td>Warehouses, cold chains, truck terminals (check current terms)</td></tr>
+              <tr><td><b>Gujarat homestay policy</b></td><td>Official registration, simpler rules from November 2026</td><td>Village homestays</td></tr>
+            </tbody>
+          </table>
+          <div class="fig-src">Scheme terms change from time to time. Before investing, confirm the latest rules with the District Industries Centre, Bhuj, your bank, or the department named. Sources: myscheme.gov.in, PIB, National Horticulture Board, MNRE, Industries Commissionerate Gujarat, Gujarat Tourism.</div>
+        </div>
+        <p class="opp-close">The Bhuj Chamber of Commerce and Industries Federation works to help businesses of Kutch make the most of these opportunities.</p>
+      </div>
     </div>
   </section>
 
