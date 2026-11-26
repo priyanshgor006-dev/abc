@@ -500,6 +500,28 @@ window.abgPop = (function () {
   .gallery-event{font-size:.66rem}
 }
 </style>
+<style id="bc-gallery-look">
+/* new photo look: no white print border, rounded photos with a soft shadow */
+.gallery-card{background:transparent!important;padding:0!important;border:0!important;border-radius:16px!important;box-shadow:0 8px 22px rgba(61,15,25,.12)!important;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease}
+.gallery-card:hover,.gallery-card:focus-visible{transform:translateY(-4px)!important;box-shadow:0 16px 36px rgba(61,15,25,.20),0 0 0 2px rgba(217,164,65,.85)!important}
+.gallery-thumb{border-radius:16px!important;background:linear-gradient(135deg,#f4ebdc,#efe2cf)}
+.gallery-thumb::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(61,15,25,.08);pointer-events:none}
+.gallery-card .gallery-info{background:#fff;padding:9px 12px 10px!important}
+/* event titles: gold accent and a photo-count pill */
+.gal-sec-h{align-items:center!important;border-bottom:0!important;padding:0 0 0 14px!important;position:relative}
+.gal-sec-h::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:4px;border-radius:4px;background:linear-gradient(180deg,#d9a441,#b07a1c)}
+.gal-sec-n{padding:4px 10px;border-radius:999px;background:#f6ece4;color:#6b1f2a!important;white-space:nowrap}
+@media (max-width:599px){
+  .gallery-wrap{padding-left:16px!important;padding-right:16px!important}
+  .gal-row{gap:10px!important;margin-bottom:10px!important}
+  .gal-row-full .gallery-card{flex:1 1 100%!important}
+  .gallery-card,.gallery-thumb{border-radius:14px!important}
+  .gal-sec{margin-bottom:30px!important}
+  .gal-sec-h{font-size:1.08rem!important;margin-bottom:12px!important}
+  .gal-sec-n{font-size:.7rem!important;padding:3px 8px}
+  .gallery-caption{font-size:.84rem!important}
+}
+</style>
 <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2/dist/umd/supabase.min.js">
 <link rel="preconnect" href="https://rvpiliwyqjowegmjcanr.supabase.co" crossorigin>
 <link rel="preconnect" href="https://res.cloudinary.com">
@@ -750,8 +772,10 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
     function layout(force) {
       if (!cards.length) return;
       var n = columnCount();
-      if (!force && n === currentCols) return;
-      currentCols = n;
+      var phone = window.innerWidth < 600;
+      var mode = phone ? 1 : n;
+      if (!force && mode === currentCols) return;
+      currentCols = mode;
       var groups = [], idx = {};
       cards.forEach(function (card) {
         var k = card.__key || "__none__";
@@ -781,9 +805,15 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
         });
         // split into full rows; never leave a single photo alone on the last row
         var sizes = [], left = g.length;
-        while (left > 0) { sizes.push(Math.min(n, left)); left -= n; }
+        if (phone) {
+          // phones: one big photo, then a pair, then one big photo again, so photos stay large
+          var k = 0;
+          while (left > 0) { var s1 = (k % 2 === 0) ? 1 : Math.min(2, left); sizes.push(s1); left -= s1; k++; }
+        } else {
+          while (left > 0) { sizes.push(Math.min(n, left)); left -= n; }
+        }
         var m = sizes.length;
-        if (m > 1 && sizes[m - 1] === 1) {
+        if (!phone && m > 1 && sizes[m - 1] === 1) {
           if (n === 3) { sizes[m - 2] = 2; sizes[m - 1] = 2; }
           else if (n === 2) { sizes[m - 2] = 3; sizes.pop(); }
         }
@@ -793,9 +823,10 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
           var row = document.createElement("div");
           row.className = "gal-row";
           var single = m === 1 && sz === 1;
-          if (single) row.style.maxWidth = n === 3 ? "34%" : "50%";
+          if (single && !phone) row.style.maxWidth = n === 3 ? "34%" : "50%";
+          if (phone && sz === 1) row.classList.add("gal-row-full");
           // tell the browser how wide each photo is shown, so it downloads the right size
-          var vw = single ? (n === 3 ? 34 : 50) : Math.ceil(100 / sz);
+          var vw = phone ? (sz === 1 ? 100 : 50) : single ? (n === 3 ? 34 : 50) : Math.ceil(100 / sz);
           chunk.forEach(function (cd) {
             var im = cd.querySelector("img"); if (im) im.sizes = "(max-width: 899px) " + vw + "vw, " + Math.ceil(1160 * vw / 100) + "px";
             row.appendChild(cd);
