@@ -789,7 +789,7 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
 
 <!-- PRESIDENT -->
 <section class="pres" id="president"><div class="wrap pres-g">
-  <div class="portrait rv"><div class="frame"><span class="ini" id="presIni">AG</span><img id="presPhoto" alt="" hidden></div><div class="badge">PRESIDENT &amp; FOUNDER<b>BCCIF</b></div></div>
+  <div class="portrait rv"><div class="frame"><span class="ini" id="presIni" hidden>AG</span><img id="presPhoto" src="images/president-anil-gor.webp" alt="Portrait of Anil H. Gor" width="700" height="875" decoding="async" loading="lazy"></div><div class="badge">PRESIDENT &amp; FOUNDER<b>BCCIF</b></div></div>
   <div>
     <span class="eyebrow rv"><i></i>From the President &amp; Founder</span>
     <h2 class="h2 rv d1">Anil H. <em>Gor</em></h2>
@@ -1052,7 +1052,7 @@ window.bcCdn=function(u){u=String(u||"");return /^https:\/\/res\.cloudinary\.com
   api('committee_members?select=name,photo_url,designation,business_name&order=sort_order.asc.nullslast,id.asc&limit=200').then(function(rows){
     rows = rows || [];
     var pres = rows.filter(function(r){ return /^\s*anil\s+h\s*\.?\s*gor\s*$/i.test(r.name || ''); })[0];
-    if (pres && safe(pres.photo_url)) { var im = document.getElementById('presPhoto'); im.onload = function(){ im.hidden = false; document.getElementById('presIni').hidden = true; }; im.alt = 'Portrait of Anil H. Gor'; im.src = small(safe(pres.photo_url), 700); }
+    /* the President's portrait on this page is a fixed photo (images/president-anil-gor.webp), not the committee photo */
     var tr = document.getElementById('ppTrack'); if (!rows.length) { tr.innerHTML = '<p class="empty wrap">Meet the committee on the Committee page.</p>'; tr.style.animation = 'none'; return; }
     var seen = {}; rows = rows.filter(function(r){ var k = String(r.name || '').toLowerCase().replace(/[^a-z0-9]/g, ''); if (!k || seen[k]) return false; seen[k] = 1; return true; });
     var html = rows.map(function(r){ var u = safe(r.photo_url); return '<a class="pp" href="committee.html"><span class="ph">' + (u ? '<img src="' + esc2(small(u, 320)) + '" alt="" loading="lazy" decoding="async" width="150" height="150">' : '<span>' + esc2(initials(r.name)) + '</span>') + '</span><b>' + esc2(r.name) + '</b><small>' + esc2(r.designation || '') + '</small></a>'; }).join('');
